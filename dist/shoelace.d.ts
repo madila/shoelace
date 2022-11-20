@@ -52,6 +52,7 @@ export { default as SlTooltip } from './components/tooltip/tooltip';
 export { default as SlTree } from './components/tree/tree';
 export { default as SlTreeItem } from './components/tree-item/tree-item';
 export { default as SlVisuallyHidden } from './components/visually-hidden/visually-hidden';
+export { default as SlFlex } from './components/flex/flex';
 export * from './utilities/animation';
 export * from './utilities/base-path';
 export * from './utilities/icon-library';

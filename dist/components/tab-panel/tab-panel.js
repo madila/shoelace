@@ -1,8 +1,8 @@
 import {
   SlTabPanel
-} from "../../chunks/chunk.N3C7JMTA.js";
-import "../../chunks/chunk.57R3A2AA.js";
+} from "../../chunks/chunk.QMC2464I.js";
 import "../../chunks/chunk.KFR7NC2M.js";
+import "../../chunks/chunk.57R3A2AA.js";
 import "../../chunks/chunk.KXNOOZ7Z.js";
 import "../../chunks/chunk.2JQPDYNA.js";
 import "../../chunks/chunk.HFHIZRKF.js";
