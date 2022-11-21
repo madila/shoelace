@@ -56,6 +56,40 @@
       ]
     },
     {
+      "name": "sl-badge",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's variant.",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "warning"
+            },
+            {
+              "name": "danger"
+            }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges."
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention."
+        }
+      ]
+    },
+    {
       "name": "sl-animation",
       "attributes": [
         {
@@ -101,40 +135,6 @@
         {
           "name": "playback-rate",
           "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart."
-        }
-      ]
-    },
-    {
-      "name": "sl-badge",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's variant.",
-          "values": [
-            {
-              "name": "primary"
-            },
-            {
-              "name": "success"
-            },
-            {
-              "name": "neutral"
-            },
-            {
-              "name": "warning"
-            },
-            {
-              "name": "danger"
-            }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges."
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention."
         }
       ]
     },
@@ -382,9 +382,6 @@
       ]
     },
     {
-      "name": "sl-card"
-    },
-    {
       "name": "sl-checkbox",
       "attributes": [
         {
@@ -416,6 +413,9 @@
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
+    },
+    {
+      "name": "sl-card"
     },
     {
       "name": "sl-color-picker",
@@ -1503,6 +1503,19 @@
       ]
     },
     {
+      "name": "sl-progress-ring",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The current progress, 0 to 100."
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress ring's aria label."
+        }
+      ]
+    },
+    {
       "name": "sl-progress-bar",
       "attributes": [
         {
@@ -1516,19 +1529,6 @@
         {
           "name": "label",
           "description": "A custom label for the progress bar's aria label."
-        }
-      ]
-    },
-    {
-      "name": "sl-progress-ring",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The current progress, 0 to 100."
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress ring's aria label."
         }
       ]
     },
@@ -2098,6 +2098,81 @@
       ]
     },
     {
+      "name": "sl-tooltip",
+      "attributes": [
+        {
+          "name": "content",
+          "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead."
+        },
+        {
+          "name": "placement",
+          "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
+          "values": [
+            {
+              "name": "top"
+            },
+            {
+              "name": "top-start"
+            },
+            {
+              "name": "top-end"
+            },
+            {
+              "name": "right"
+            },
+            {
+              "name": "right-start"
+            },
+            {
+              "name": "right-end"
+            },
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "bottom-start"
+            },
+            {
+              "name": "bottom-end"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "left-start"
+            },
+            {
+              "name": "left-end"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the tooltip so it won't show when triggered."
+        },
+        {
+          "name": "distance",
+          "description": "The distance in pixels from which to offset the tooltip away from its target."
+        },
+        {
+          "name": "open",
+          "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods."
+        },
+        {
+          "name": "skidding",
+          "description": "The distance in pixels from which to offset the tooltip along its target."
+        },
+        {
+          "name": "trigger",
+          "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically."
+        },
+        {
+          "name": "hoist",
+          "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`."
+        }
+      ]
+    },
+    {
       "name": "sl-textarea",
       "attributes": [
         {
@@ -2278,81 +2353,6 @@
               "name": "url"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "sl-tooltip",
-      "attributes": [
-        {
-          "name": "content",
-          "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead."
-        },
-        {
-          "name": "placement",
-          "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
-          "values": [
-            {
-              "name": "top"
-            },
-            {
-              "name": "top-start"
-            },
-            {
-              "name": "top-end"
-            },
-            {
-              "name": "right"
-            },
-            {
-              "name": "right-start"
-            },
-            {
-              "name": "right-end"
-            },
-            {
-              "name": "bottom"
-            },
-            {
-              "name": "bottom-start"
-            },
-            {
-              "name": "bottom-end"
-            },
-            {
-              "name": "left"
-            },
-            {
-              "name": "left-start"
-            },
-            {
-              "name": "left-end"
-            }
-          ]
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the tooltip so it won't show when triggered."
-        },
-        {
-          "name": "distance",
-          "description": "The distance in pixels from which to offset the tooltip away from its target."
-        },
-        {
-          "name": "open",
-          "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods."
-        },
-        {
-          "name": "skidding",
-          "description": "The distance in pixels from which to offset the tooltip along its target."
-        },
-        {
-          "name": "trigger",
-          "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically."
-        },
-        {
-          "name": "hoist",
-          "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`."
         }
       ]
     },

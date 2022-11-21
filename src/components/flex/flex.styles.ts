@@ -25,6 +25,7 @@ export default css`
 
   :host .flex-container {
     display: flex;
+    flex: 1;
     gap: var(--gap);
     column-gap: var(--column-gap);
     row-gap: var(--row-gap);
@@ -32,15 +33,27 @@ export default css`
 
   :host([direction="column"]) .flex-container {
     flex-direction: column;
+    flex: 1;
   }
 
   :host([gap]) {
     --gap: 1rem;
   }
 
+  :host([justify="center"]) .flex-container {
+    justify-content: center;
+  }
+
   :host([justify="space-between"]) .flex-container {
     justify-content: space-between;
-    width: 100%;
+  }
+
+  :host([justify="space-around"]) .flex-container {
+    justify-content: space-around;
+  }
+
+  :host([justify="space-evenly"]) .flex-container {
+    justify-content: space-evenly;
   }
 
   /* If the selector was .flex-gap > *, it wouldn't override when components have a margin 0 specified by a single
