@@ -56,38 +56,6 @@
       ]
     },
     {
-      "name": "sl-avatar",
-      "attributes": [
-        {
-          "name": "image",
-          "description": "The image source to use for the avatar."
-        },
-        {
-          "name": "label",
-          "description": "A label to use to describe the avatar to assistive devices."
-        },
-        {
-          "name": "initials",
-          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended)."
-        },
-        {
-          "name": "shape",
-          "description": "The shape of the avatar.",
-          "values": [
-            {
-              "name": "circle"
-            },
-            {
-              "name": "square"
-            },
-            {
-              "name": "rounded"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "sl-animation",
       "attributes": [
         {
@@ -171,6 +139,38 @@
       ]
     },
     {
+      "name": "sl-avatar",
+      "attributes": [
+        {
+          "name": "image",
+          "description": "The image source to use for the avatar."
+        },
+        {
+          "name": "label",
+          "description": "A label to use to describe the avatar to assistive devices."
+        },
+        {
+          "name": "initials",
+          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended)."
+        },
+        {
+          "name": "shape",
+          "description": "The shape of the avatar.",
+          "values": [
+            {
+              "name": "circle"
+            },
+            {
+              "name": "square"
+            },
+            {
+              "name": "rounded"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "sl-breadcrumb",
       "attributes": [
         {
@@ -207,48 +207,6 @@
         {
           "name": "rel",
           "description": "The `rel` attribute to use on the link. Only used when `href` is set."
-        }
-      ]
-    },
-    {
-      "name": "sl-button-group",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "A label to use for the button group's `aria-label` attribute."
-        }
-      ]
-    },
-    {
-      "name": "sl-checkbox",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair."
-        },
-        {
-          "name": "value",
-          "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the checkbox (so the user can't check / uncheck it)."
-        },
-        {
-          "name": "required",
-          "description": "Makes the checkbox a required field."
-        },
-        {
-          "name": "checked",
-          "description": "Draws the checkbox in a checked state."
-        },
-        {
-          "name": "indeterminate",
-          "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected."
-        },
-        {
-          "name": "invalid",
-          "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
     },
@@ -415,7 +373,49 @@
       ]
     },
     {
+      "name": "sl-button-group",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "A label to use for the button group's `aria-label` attribute."
+        }
+      ]
+    },
+    {
       "name": "sl-card"
+    },
+    {
+      "name": "sl-checkbox",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair."
+        },
+        {
+          "name": "value",
+          "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the checkbox (so the user can't check / uncheck it)."
+        },
+        {
+          "name": "required",
+          "description": "Makes the checkbox a required field."
+        },
+        {
+          "name": "checked",
+          "description": "Draws the checkbox in a checked state."
+        },
+        {
+          "name": "indeterminate",
+          "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected."
+        },
+        {
+          "name": "invalid",
+          "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
+        }
+      ]
     },
     {
       "name": "sl-color-picker",
@@ -536,17 +536,41 @@
       ]
     },
     {
-      "name": "sl-flex",
+      "name": "sl-drawer",
       "attributes": [
         {
-          "name": "direction",
-          "description": "An example property."
+          "name": "open",
+          "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods."
         },
         {
-          "name": "align"
+          "name": "label",
+          "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead."
         },
         {
-          "name": "justify"
+          "name": "placement",
+          "description": "The direction from which the drawer will open.",
+          "values": [
+            {
+              "name": "top"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "start"
+            }
+          ]
+        },
+        {
+          "name": "contained",
+          "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent."
+        },
+        {
+          "name": "no-header",
+          "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer."
         }
       ]
     },
@@ -622,41 +646,20 @@
       ]
     },
     {
-      "name": "sl-drawer",
+      "name": "sl-flex",
       "attributes": [
         {
-          "name": "open",
-          "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods."
+          "name": "direction",
+          "description": "An example property."
         },
         {
-          "name": "label",
-          "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead."
+          "name": "gap"
         },
         {
-          "name": "placement",
-          "description": "The direction from which the drawer will open.",
-          "values": [
-            {
-              "name": "top"
-            },
-            {
-              "name": "end"
-            },
-            {
-              "name": "bottom"
-            },
-            {
-              "name": "start"
-            }
-          ]
+          "name": "align"
         },
         {
-          "name": "contained",
-          "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent."
-        },
-        {
-          "name": "no-header",
-          "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer."
+          "name": "justify"
         }
       ]
     },
@@ -848,57 +851,6 @@
       ]
     },
     {
-      "name": "sl-icon-button",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the icon to draw."
-        },
-        {
-          "name": "library",
-          "description": "The name of a registered custom icon library."
-        },
-        {
-          "name": "src",
-          "description": "An external URL of an SVG file."
-        },
-        {
-          "name": "href",
-          "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`."
-        },
-        {
-          "name": "target",
-          "description": "Tells the browser where to open the link. Only used when `href` is set.",
-          "values": [
-            {
-              "name": "_blank"
-            },
-            {
-              "name": "_parent"
-            },
-            {
-              "name": "_self"
-            },
-            {
-              "name": "_top"
-            }
-          ]
-        },
-        {
-          "name": "download",
-          "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set."
-        },
-        {
-          "name": "label",
-          "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the button."
-        }
-      ]
-    },
-    {
       "name": "sl-format-number",
       "attributes": [
         {
@@ -990,11 +942,90 @@
       ]
     },
     {
+      "name": "sl-icon-button",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to draw."
+        },
+        {
+          "name": "library",
+          "description": "The name of a registered custom icon library."
+        },
+        {
+          "name": "src",
+          "description": "An external URL of an SVG file."
+        },
+        {
+          "name": "href",
+          "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`."
+        },
+        {
+          "name": "target",
+          "description": "Tells the browser where to open the link. Only used when `href` is set.",
+          "values": [
+            {
+              "name": "_blank"
+            },
+            {
+              "name": "_parent"
+            },
+            {
+              "name": "_self"
+            },
+            {
+              "name": "_top"
+            }
+          ]
+        },
+        {
+          "name": "download",
+          "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set."
+        },
+        {
+          "name": "label",
+          "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the button."
+        }
+      ]
+    },
+    {
       "name": "sl-image-comparer",
       "attributes": [
         {
           "name": "position",
           "description": "The position of the divider as a percentage."
+        }
+      ]
+    },
+    {
+      "name": "sl-include",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks."
+        },
+        {
+          "name": "mode",
+          "description": "The fetch mode to use.",
+          "values": [
+            {
+              "name": "cors"
+            },
+            {
+              "name": "no-cors"
+            },
+            {
+              "name": "same-origin"
+            }
+          ]
+        },
+        {
+          "name": "allow-scripts",
+          "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!"
         }
       ]
     },
@@ -1241,35 +1272,24 @@
       ]
     },
     {
-      "name": "sl-include",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks."
-        },
-        {
-          "name": "mode",
-          "description": "The fetch mode to use.",
-          "values": [
-            {
-              "name": "cors"
-            },
-            {
-              "name": "no-cors"
-            },
-            {
-              "name": "same-origin"
-            }
-          ]
-        },
-        {
-          "name": "allow-scripts",
-          "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!"
-        }
-      ]
+      "name": "sl-menu"
     },
     {
-      "name": "sl-menu"
+      "name": "sl-menu-item",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "Draws the item in a checked state."
+        },
+        {
+          "name": "value",
+          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected."
+        },
+        {
+          "name": "disabled",
+          "description": "Draws the menu item in a disabled state."
+        }
+      ]
     },
     {
       "name": "sl-menu-label"
@@ -1300,23 +1320,6 @@
         {
           "name": "disabled",
           "description": "Disables the observer."
-        }
-      ]
-    },
-    {
-      "name": "sl-menu-item",
-      "attributes": [
-        {
-          "name": "checked",
-          "description": "Draws the item in a checked state."
-        },
-        {
-          "name": "value",
-          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected."
-        },
-        {
-          "name": "disabled",
-          "description": "Draws the menu item in a disabled state."
         }
       ]
     },
@@ -1500,6 +1503,23 @@
       ]
     },
     {
+      "name": "sl-progress-bar",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The current progress, 0 to 100."
+        },
+        {
+          "name": "indeterminate",
+          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress bar's aria label."
+        }
+      ]
+    },
+    {
       "name": "sl-progress-ring",
       "attributes": [
         {
@@ -1560,19 +1580,15 @@
       ]
     },
     {
-      "name": "sl-progress-bar",
+      "name": "sl-radio",
       "attributes": [
         {
           "name": "value",
-          "description": "The current progress, 0 to 100."
+          "description": "The radio's value attribute."
         },
         {
-          "name": "indeterminate",
-          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress bar's aria label."
+          "name": "disabled",
+          "description": "Disables the radio."
         }
       ]
     },
@@ -1605,19 +1621,6 @@
         {
           "name": "pill",
           "description": "Draws a pill-style button with rounded edges."
-        }
-      ]
-    },
-    {
-      "name": "sl-radio",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The radio's value attribute."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the radio."
         }
       ]
     },

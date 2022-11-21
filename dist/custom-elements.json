@@ -416,170 +416,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/avatar/avatar.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-avatar",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-avatar",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -1088,6 +924,170 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/avatar/avatar.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-avatar",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/breadcrumb/breadcrumb.ts",
       "declarations": [
         {
@@ -1335,458 +1335,6 @@
           "declaration": {
             "name": "SlBreadcrumbItem",
             "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/button-group/button-group.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlButtonGroup",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "One or more `<sl-button>` elements to display in the button group.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "disableRole",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use for the button group's `aria-label` attribute.",
-              "attribute": "label"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseOver",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseOut",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use for the button group's `aria-label` attribute.",
-              "fieldName": "label"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-button-group",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlButtonGroup",
-            "module": "src/components/button-group/button-group.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-button-group",
-          "declaration": {
-            "name": "SlButtonGroup",
-            "module": "src/components/button-group/button-group.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/checkbox/checkbox.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCheckbox",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The checkbox control.",
-              "name": "control"
-            },
-            {
-              "description": "The container the wraps the checked icon.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The container that wraps the indeterminate icon.",
-              "name": "indeterminate-icon"
-            },
-            {
-              "description": "The checkbox label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The checkbox's label.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "input",
-              "type": {
-                "text": "HTMLInputElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "formSubmitController",
-              "privacy": "private",
-              "default": "new FormSubmitController(this, {\n    value: (control: SlCheckbox) => (control.checked ? control.value || 'on' : undefined),\n    defaultValue: (control: SlCheckbox) => control.defaultChecked,\n    setValue: (control: SlCheckbox, checked: boolean) => (control.checked = checked)\n  })"
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the checkbox (so the user can't check / uncheck it).",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the checkbox a required field.",
-              "attribute": "required",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the checkbox in a checked state.",
-              "attribute": "checked",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "indeterminate",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected.",
-              "attribute": "indeterminate",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "invalid",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
-              "attribute": "invalid",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "defaultChecked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Gets or sets the default value used to reset this element. The initial value corresponds to the one originally specified in the HTML that created this element."
-            },
-            {
-              "kind": "method",
-              "name": "click",
-              "description": "Simulates a click on the checkbox."
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the checkbox."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the checkbox."
-            },
-            {
-              "kind": "method",
-              "name": "reportValidity",
-              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
-            },
-            {
-              "kind": "method",
-              "name": "setCustomValidity",
-              "parameters": [
-                {
-                  "name": "message",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ],
-              "description": "Sets a custom validation message. If `message` is not empty, the field will be considered invalid."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleStateChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the control's checked state changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair.",
-              "fieldName": "name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the checkbox (so the user can't check / uncheck it).",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the checkbox a required field.",
-              "fieldName": "required"
-            },
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the checkbox in a checked state.",
-              "fieldName": "checked"
-            },
-            {
-              "name": "indeterminate",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected.",
-              "fieldName": "indeterminate"
-            },
-            {
-              "name": "invalid",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
-              "fieldName": "invalid"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-checkbox",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCheckbox",
-            "module": "src/components/checkbox/checkbox.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-checkbox",
-          "declaration": {
-            "name": "SlCheckbox",
-            "module": "src/components/checkbox/checkbox.ts"
           }
         }
       ]
@@ -2312,6 +1860,145 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/button-group/button-group.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlButtonGroup",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "One or more `<sl-button>` elements to display in the button group.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "disableRole",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use for the button group's `aria-label` attribute.",
+              "attribute": "label"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseOver",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseOut",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use for the button group's `aria-label` attribute.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-button-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlButtonGroup",
+            "module": "src/components/button-group/button-group.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-button-group",
+          "declaration": {
+            "name": "SlButtonGroup",
+            "module": "src/components/button-group/button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/card/card.ts",
       "declarations": [
         {
@@ -2409,6 +2096,319 @@
           "declaration": {
             "name": "SlCard",
             "module": "src/components/card/card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/checkbox/checkbox.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCheckbox",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The checkbox control.",
+              "name": "control"
+            },
+            {
+              "description": "The container the wraps the checked icon.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The container that wraps the indeterminate icon.",
+              "name": "indeterminate-icon"
+            },
+            {
+              "description": "The checkbox label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The checkbox's label.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "formSubmitController",
+              "privacy": "private",
+              "default": "new FormSubmitController(this, {\n    value: (control: SlCheckbox) => (control.checked ? control.value || 'on' : undefined),\n    defaultValue: (control: SlCheckbox) => control.defaultChecked,\n    setValue: (control: SlCheckbox, checked: boolean) => (control.checked = checked)\n  })"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the checkbox (so the user can't check / uncheck it).",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the checkbox a required field.",
+              "attribute": "required",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the checkbox in a checked state.",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected.",
+              "attribute": "indeterminate",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
+              "attribute": "invalid",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Gets or sets the default value used to reset this element. The initial value corresponds to the one originally specified in the HTML that created this element."
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "description": "Simulates a click on the checkbox."
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the checkbox."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the checkbox."
+            },
+            {
+              "kind": "method",
+              "name": "reportValidity",
+              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
+            },
+            {
+              "kind": "method",
+              "name": "setCustomValidity",
+              "parameters": [
+                {
+                  "name": "message",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Sets a custom validation message. If `message` is not empty, the field will be considered invalid."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus"
+            },
+            {
+              "kind": "method",
+              "name": "handleStateChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the control's checked state changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "Name of the HTML form control. Submitted with the form as part of a name/value pair.",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Value of the HTML form control. Primarily used to differentiate a list of related checkboxes that have the same name.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the checkbox (so the user can't check / uncheck it).",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the checkbox a required field.",
+              "fieldName": "required"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the checkbox in a checked state.",
+              "fieldName": "checked"
+            },
+            {
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the checkbox in an indeterminate state. Usually applies to a checkbox that represents \"select all\" or \"select none\" when the items to which it applies are a mix of selected and unselected.",
+              "fieldName": "indeterminate"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
+              "fieldName": "invalid"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-checkbox",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCheckbox",
+            "module": "src/components/checkbox/checkbox.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-checkbox",
+          "declaration": {
+            "name": "SlCheckbox",
+            "module": "src/components/checkbox/checkbox.ts"
           }
         }
       ]
@@ -3837,100 +3837,307 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/flex/flex.ts",
+      "path": "src/components/drawer/drawer.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlFlex",
+          "name": "SlDrawer",
           "cssProperties": [
             {
-              "description": "An example CSS custom property.",
-              "name": "--example"
+              "description": "The preferred size of the drawer. This will be applied to the drawer's width or height depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.",
+              "name": "--size"
+            },
+            {
+              "description": "The amount of padding to use for the header.",
+              "name": "--header-spacing"
+            },
+            {
+              "description": "The amount of padding to use for the body.",
+              "name": "--body-spacing"
+            },
+            {
+              "description": "The amount of padding to use for the footer.",
+              "name": "--footer-spacing"
             }
           ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
+            },
+            {
+              "description": "The overlay.",
+              "name": "overlay"
+            },
+            {
+              "description": "The drawer panel (where the drawer and its content is rendered).",
+              "name": "panel"
+            },
+            {
+              "description": "The drawer header.",
+              "name": "header"
+            },
+            {
+              "description": "The drawer title.",
+              "name": "title"
+            },
+            {
+              "description": "The close button.",
+              "name": "close-button"
+            },
+            {
+              "description": "The close button's `base` part.",
+              "name": "close-button__base"
+            },
+            {
+              "description": "The drawer body.",
+              "name": "body"
+            },
+            {
+              "description": "The drawer footer.",
+              "name": "footer"
             }
           ],
           "slots": [
             {
-              "description": "The default slot.",
+              "description": "The drawer's content.",
               "name": ""
             },
             {
-              "description": "An example slot.",
-              "name": "example"
+              "description": "The drawer's label. Alternatively, you can use the `label` attribute.",
+              "name": "label"
+            },
+            {
+              "description": "The drawer's footer, usually one or more buttons representing various options.",
+              "name": "footer"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "direction",
+              "name": "drawer",
               "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "attribute": "direction"
+                "text": "HTMLElement"
+              }
             },
             {
               "kind": "field",
-              "name": "align",
+              "name": "panel",
               "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "align"
+                "text": "HTMLElement"
+              }
             },
             {
               "kind": "field",
-              "name": "justify",
+              "name": "overlay",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer')"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "modal",
+              "type": {
+                "text": "Modal"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "originalTrigger",
+              "type": {
+                "text": "HTMLElement | null"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
               "type": {
                 "text": "string"
               },
-              "default": "'flex-start'",
-              "attribute": "justify"
+              "default": "''",
+              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "'top' | 'end' | 'bottom' | 'start'"
+              },
+              "default": "'end'",
+              "description": "The direction from which the drawer will open.",
+              "attribute": "placement",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "contained",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+              "attribute": "contained",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noHeader",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+              "attribute": "no-header",
+              "reflects": true
             },
             {
               "kind": "method",
-              "name": "doSomething"
+              "name": "show",
+              "description": "Shows the drawer."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the drawer"
+            },
+            {
+              "kind": "method",
+              "name": "requestClose",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "source",
+                  "type": {
+                    "text": "'close-button' | 'keyboard' | 'overlay'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
             }
           ],
           "events": [
             {
-              "description": "Emitted as an example.",
-              "name": "sl-event-name",
-              "reactName": "onSlEventName"
+              "description": "Emitted when the drawer opens.",
+              "name": "sl-show",
+              "reactName": "onSlShow"
+            },
+            {
+              "description": "Emitted after the drawer opens and all animations are complete.",
+              "name": "sl-after-show",
+              "reactName": "onSlAfterShow"
+            },
+            {
+              "description": "Emitted when the drawer closes.",
+              "name": "sl-hide",
+              "reactName": "onSlHide"
+            },
+            {
+              "description": "Emitted after the drawer closes and all animations are complete.",
+              "name": "sl-after-hide",
+              "reactName": "onSlAfterHide"
+            },
+            {
+              "description": "Emitted when the drawer opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.",
+              "name": "sl-initial-focus",
+              "reactName": "onSlInitialFocus"
+            },
+            {
+              "type": {
+                "text": "{ source: 'close-button' | 'keyboard' | 'overlay' }"
+              },
+              "description": "Emitted when the user attempts to close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in destructive behavior such as data loss.",
+              "name": "sl-request-close",
+              "reactName": "onSlRequestClose"
             }
           ],
           "attributes": [
             {
-              "name": "direction",
+              "name": "open",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "'row'",
-              "description": "An example property.",
-              "fieldName": "direction"
+              "default": "false",
+              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
+              "fieldName": "open"
             },
             {
-              "name": "align",
+              "name": "label",
               "type": {
                 "text": "string"
               },
-              "default": "'flex-start'",
-              "fieldName": "align"
+              "default": "''",
+              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+              "fieldName": "label"
             },
             {
-              "name": "justify",
+              "name": "placement",
               "type": {
-                "text": "string"
+                "text": "'top' | 'end' | 'bottom' | 'start'"
               },
-              "default": "'flex-start'",
-              "fieldName": "justify"
+              "default": "'end'",
+              "description": "The direction from which the drawer will open.",
+              "fieldName": "placement"
+            },
+            {
+              "name": "contained",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+              "fieldName": "contained"
+            },
+            {
+              "name": "no-header",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+              "fieldName": "noHeader"
             }
           ],
           "superclass": {
@@ -3938,11 +4145,57 @@
             "module": "/src/internal/shoelace-element"
           },
           "since": "2.0",
-          "status": "experimental",
+          "status": "stable",
           "dependencies": [
-            "sl-example"
+            "sl-icon-button"
           ],
-          "tagName": "sl-flex",
+          "animations": [
+            {
+              "name": "drawer.showTop",
+              "description": "The animation to use when showing a drawer with `top` placement."
+            },
+            {
+              "name": "drawer.showEnd",
+              "description": "The animation to use when showing a drawer with `end` placement."
+            },
+            {
+              "name": "drawer.showBottom",
+              "description": "The animation to use when showing a drawer with `bottom` placement."
+            },
+            {
+              "name": "drawer.showStart",
+              "description": "The animation to use when showing a drawer with `start` placement."
+            },
+            {
+              "name": "drawer.hideTop",
+              "description": "The animation to use when hiding a drawer with `top` placement."
+            },
+            {
+              "name": "drawer.hideEnd",
+              "description": "The animation to use when hiding a drawer with `end` placement."
+            },
+            {
+              "name": "drawer.hideBottom",
+              "description": "The animation to use when hiding a drawer with `bottom` placement."
+            },
+            {
+              "name": "drawer.hideStart",
+              "description": "The animation to use when hiding a drawer with `start` placement."
+            },
+            {
+              "name": "drawer.denyClose",
+              "description": "The animation to use when a request to close the drawer is denied."
+            },
+            {
+              "name": "drawer.overlay.show",
+              "description": "The animation to use when showing the drawer's overlay."
+            },
+            {
+              "name": "drawer.overlay.hide",
+              "description": "The animation to use when hiding the drawer's overlay."
+            }
+          ],
+          "tagName": "sl-drawer",
           "customElement": true
         }
       ],
@@ -3951,16 +4204,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
+            "name": "SlDrawer",
+            "module": "src/components/drawer/drawer.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-flex",
+          "name": "sl-drawer",
           "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
+            "name": "SlDrawer",
+            "module": "src/components/drawer/drawer.ts"
           }
         }
       ]
@@ -4358,307 +4611,117 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/drawer/drawer.ts",
+      "path": "src/components/flex/flex.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlDrawer",
+          "name": "SlFlex",
           "cssProperties": [
             {
-              "description": "The preferred size of the drawer. This will be applied to the drawer's width or height depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.",
-              "name": "--size"
-            },
-            {
-              "description": "The amount of padding to use for the header.",
-              "name": "--header-spacing"
-            },
-            {
-              "description": "The amount of padding to use for the body.",
-              "name": "--body-spacing"
-            },
-            {
-              "description": "The amount of padding to use for the footer.",
-              "name": "--footer-spacing"
+              "description": "An example CSS custom property.",
+              "name": "--example"
             }
           ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
-            },
-            {
-              "description": "The overlay.",
-              "name": "overlay"
-            },
-            {
-              "description": "The drawer panel (where the drawer and its content is rendered).",
-              "name": "panel"
-            },
-            {
-              "description": "The drawer header.",
-              "name": "header"
-            },
-            {
-              "description": "The drawer title.",
-              "name": "title"
-            },
-            {
-              "description": "The close button.",
-              "name": "close-button"
-            },
-            {
-              "description": "The close button's `base` part.",
-              "name": "close-button__base"
-            },
-            {
-              "description": "The drawer body.",
-              "name": "body"
-            },
-            {
-              "description": "The drawer footer.",
-              "name": "footer"
             }
           ],
           "slots": [
             {
-              "description": "The drawer's content.",
+              "description": "The default slot.",
               "name": ""
             },
             {
-              "description": "The drawer's label. Alternatively, you can use the `label` attribute.",
-              "name": "label"
-            },
-            {
-              "description": "The drawer's footer, usually one or more buttons representing various options.",
-              "name": "footer"
+              "description": "An example slot.",
+              "name": "example"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "drawer",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "panel",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "overlay",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer')"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "modal",
-              "type": {
-                "text": "Modal"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "originalTrigger",
-              "type": {
-                "text": "HTMLElement | null"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
+              "name": "direction",
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
-              "attribute": "label",
-              "reflects": true
+              "default": "'row'",
+              "description": "An example property.",
+              "attribute": "direction"
             },
             {
               "kind": "field",
-              "name": "placement",
+              "name": "gap",
               "type": {
-                "text": "'top' | 'end' | 'bottom' | 'start'"
+                "text": "null"
               },
-              "default": "'end'",
-              "description": "The direction from which the drawer will open.",
-              "attribute": "placement",
-              "reflects": true
+              "default": "null",
+              "attribute": "gap"
             },
             {
               "kind": "field",
-              "name": "contained",
+              "name": "align",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
-              "attribute": "contained",
-              "reflects": true
+              "default": "'flex-start'",
+              "attribute": "align"
             },
             {
               "kind": "field",
-              "name": "noHeader",
+              "name": "justify",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
-              "attribute": "no-header",
-              "reflects": true
+              "default": "'flex-start'",
+              "attribute": "justify"
             },
             {
               "kind": "method",
-              "name": "show",
-              "description": "Shows the drawer."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the drawer"
-            },
-            {
-              "kind": "method",
-              "name": "requestClose",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "source",
-                  "type": {
-                    "text": "'close-button' | 'keyboard' | 'overlay'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
+              "name": "directionChanged"
             }
           ],
           "events": [
             {
-              "description": "Emitted when the drawer opens.",
-              "name": "sl-show",
-              "reactName": "onSlShow"
-            },
-            {
-              "description": "Emitted after the drawer opens and all animations are complete.",
-              "name": "sl-after-show",
-              "reactName": "onSlAfterShow"
-            },
-            {
-              "description": "Emitted when the drawer closes.",
-              "name": "sl-hide",
-              "reactName": "onSlHide"
-            },
-            {
-              "description": "Emitted after the drawer closes and all animations are complete.",
-              "name": "sl-after-hide",
-              "reactName": "onSlAfterHide"
-            },
-            {
-              "description": "Emitted when the drawer opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.",
-              "name": "sl-initial-focus",
-              "reactName": "onSlInitialFocus"
-            },
-            {
-              "type": {
-                "text": "{ source: 'close-button' | 'keyboard' | 'overlay' }"
-              },
-              "description": "Emitted when the user attempts to close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in destructive behavior such as data loss.",
-              "name": "sl-request-close",
-              "reactName": "onSlRequestClose"
+              "description": "Emitted as an example.",
+              "name": "sl-event-name",
+              "reactName": "onSlEventName"
             }
           ],
           "attributes": [
             {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
-              "fieldName": "open"
-            },
-            {
-              "name": "label",
+              "name": "direction",
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
-              "fieldName": "label"
+              "default": "'row'",
+              "description": "An example property.",
+              "fieldName": "direction"
             },
             {
-              "name": "placement",
+              "name": "gap",
               "type": {
-                "text": "'top' | 'end' | 'bottom' | 'start'"
+                "text": "null"
               },
-              "default": "'end'",
-              "description": "The direction from which the drawer will open.",
-              "fieldName": "placement"
+              "default": "null",
+              "fieldName": "gap"
             },
             {
-              "name": "contained",
+              "name": "align",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
-              "fieldName": "contained"
+              "default": "'flex-start'",
+              "fieldName": "align"
             },
             {
-              "name": "no-header",
+              "name": "justify",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
-              "fieldName": "noHeader"
+              "default": "'flex-start'",
+              "fieldName": "justify"
             }
           ],
           "superclass": {
@@ -4666,57 +4729,11 @@
             "module": "/src/internal/shoelace-element"
           },
           "since": "2.0",
-          "status": "stable",
+          "status": "experimental",
           "dependencies": [
-            "sl-icon-button"
+            "sl-example"
           ],
-          "animations": [
-            {
-              "name": "drawer.showTop",
-              "description": "The animation to use when showing a drawer with `top` placement."
-            },
-            {
-              "name": "drawer.showEnd",
-              "description": "The animation to use when showing a drawer with `end` placement."
-            },
-            {
-              "name": "drawer.showBottom",
-              "description": "The animation to use when showing a drawer with `bottom` placement."
-            },
-            {
-              "name": "drawer.showStart",
-              "description": "The animation to use when showing a drawer with `start` placement."
-            },
-            {
-              "name": "drawer.hideTop",
-              "description": "The animation to use when hiding a drawer with `top` placement."
-            },
-            {
-              "name": "drawer.hideEnd",
-              "description": "The animation to use when hiding a drawer with `end` placement."
-            },
-            {
-              "name": "drawer.hideBottom",
-              "description": "The animation to use when hiding a drawer with `bottom` placement."
-            },
-            {
-              "name": "drawer.hideStart",
-              "description": "The animation to use when hiding a drawer with `start` placement."
-            },
-            {
-              "name": "drawer.denyClose",
-              "description": "The animation to use when a request to close the drawer is denied."
-            },
-            {
-              "name": "drawer.overlay.show",
-              "description": "The animation to use when showing the drawer's overlay."
-            },
-            {
-              "name": "drawer.overlay.hide",
-              "description": "The animation to use when hiding the drawer's overlay."
-            }
-          ],
-          "tagName": "sl-drawer",
+          "tagName": "sl-flex",
           "customElement": true
         }
       ],
@@ -4725,16 +4742,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlDrawer",
-            "module": "src/components/drawer/drawer.ts"
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-drawer",
+          "name": "sl-flex",
           "declaration": {
-            "name": "SlDrawer",
-            "module": "src/components/drawer/drawer.ts"
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
           }
         }
       ]
@@ -5094,269 +5111,6 @@
           "declaration": {
             "name": "SlFormatDate",
             "module": "src/components/format-date/format-date.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/icon-button/icon-button.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlIconButton",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "button",
-              "type": {
-                "text": "HTMLButtonElement | HTMLLinkElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "attribute": "library"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "attribute": "download"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the button.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "click",
-              "description": "Simulates a click on the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the icon button loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the icon button gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw.",
-              "fieldName": "name"
-            },
-            {
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "fieldName": "library"
-            },
-            {
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file.",
-              "fieldName": "src"
-            },
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "fieldName": "download"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
-              "fieldName": "label"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the button.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-icon-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlIconButton",
-            "module": "src/components/icon-button/icon-button.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-icon-button",
-          "declaration": {
-            "name": "SlIconButton",
-            "module": "src/components/icon-button/icon-button.ts"
           }
         }
       ]
@@ -5941,6 +5695,269 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/icon-button/icon-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlIconButton",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "button",
+              "type": {
+                "text": "HTMLButtonElement | HTMLLinkElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "library",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of a registered custom icon library.",
+              "attribute": "library"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "attribute": "download"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "description": "Simulates a click on the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the icon button loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the icon button gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw.",
+              "fieldName": "name"
+            },
+            {
+              "name": "library",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of a registered custom icon library.",
+              "fieldName": "library"
+            },
+            {
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file.",
+              "fieldName": "src"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "fieldName": "download"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
+              "fieldName": "label"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-icon-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlIconButton",
+            "module": "src/components/icon-button/icon-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-icon-button",
+          "declaration": {
+            "name": "SlIconButton",
+            "module": "src/components/icon-button/icon-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/image-comparer/image-comparer.ts",
       "declarations": [
         {
@@ -6100,6 +6117,173 @@
           "declaration": {
             "name": "SlImageComparer",
             "module": "src/components/image-comparer/image-comparer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/include/include.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlInclude",
+          "members": [
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "mode",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              },
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "attribute": "mode"
+            },
+            {
+              "kind": "field",
+              "name": "allowScripts",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
+              "attribute": "allow-scripts"
+            },
+            {
+              "kind": "method",
+              "name": "executeScript",
+              "parameters": [
+                {
+                  "name": "script",
+                  "type": {
+                    "text": "HTMLScriptElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the included file is loaded.",
+              "name": "sl-load",
+              "reactName": "onSlLoad"
+            },
+            {
+              "type": {
+                "text": "{ status: number }"
+              },
+              "description": "Emitted when the included file fails to load due to an error.",
+              "name": "sl-error",
+              "reactName": "onSlError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
+              "fieldName": "src"
+            },
+            {
+              "name": "mode",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              },
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "fieldName": "mode"
+            },
+            {
+              "name": "allow-scripts",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
+              "fieldName": "allowScripts"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-include",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlInclude",
+            "module": "src/components/include/include.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-include",
+          "declaration": {
+            "name": "SlInclude",
+            "module": "src/components/include/include.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/include/request.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "requestInclude",
+          "return": {
+            "type": {
+              "text": "Promise<IncludeFile>"
+            }
+          },
+          "parameters": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "mode",
+              "default": "'cors'",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "requestInclude",
+          "declaration": {
+            "name": "requestInclude",
+            "module": "src/components/include/request.ts"
           }
         }
       ]
@@ -7010,173 +7194,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/include/include.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlInclude",
-          "members": [
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "attribute": "mode"
-            },
-            {
-              "kind": "field",
-              "name": "allowScripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
-              "attribute": "allow-scripts"
-            },
-            {
-              "kind": "method",
-              "name": "executeScript",
-              "parameters": [
-                {
-                  "name": "script",
-                  "type": {
-                    "text": "HTMLScriptElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the included file is loaded.",
-              "name": "sl-load",
-              "reactName": "onSlLoad"
-            },
-            {
-              "type": {
-                "text": "{ status: number }"
-              },
-              "description": "Emitted when the included file fails to load due to an error.",
-              "name": "sl-error",
-              "reactName": "onSlError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
-              "fieldName": "src"
-            },
-            {
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "fieldName": "mode"
-            },
-            {
-              "name": "allow-scripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
-              "fieldName": "allowScripts"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-include",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlInclude",
-            "module": "src/components/include/include.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-include",
-          "declaration": {
-            "name": "SlInclude",
-            "module": "src/components/include/include.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/include/request.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "requestInclude",
-          "return": {
-            "type": {
-              "text": "Promise<IncludeFile>"
-            }
-          },
-          "parameters": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "name": "mode",
-              "default": "'cors'",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "requestInclude",
-          "declaration": {
-            "name": "requestInclude",
-            "module": "src/components/include/request.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/menu/menu.ts",
       "declarations": [
         {
@@ -7316,6 +7333,191 @@
           "declaration": {
             "name": "SlMenu",
             "module": "src/components/menu/menu.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/menu-item/menu-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenuItem",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The checkmark's container, only visible when the menu item is checked.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The prefix container.",
+              "name": "prefix"
+            },
+            {
+              "description": "The menu item label.",
+              "name": "label"
+            },
+            {
+              "description": "The suffix container.",
+              "name": "suffix"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The menu item's label.",
+              "name": ""
+            },
+            {
+              "description": "Used to prepend an icon or similar element to the menu item.",
+              "name": "prefix"
+            },
+            {
+              "description": "Used to append an icon or similar element to the menu item.",
+              "name": "suffix"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "cachedTextLabel",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "menuItem",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a checked state.",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the menu item in a disabled state.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getTextLabel",
+              "description": "Returns a text label based on the contents of the menu item's default slot."
+            },
+            {
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDefaultSlotChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the menu item's text label changes. For performance reasons, this event is only emitted if the default slot's `slotchange` event is triggered. It will not fire when the label is first set.",
+              "name": "sl-label-change",
+              "reactName": "onSlLabelChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a checked state.",
+              "fieldName": "checked"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the menu item in a disabled state.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-menu-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenuItem",
+            "module": "src/components/menu-item/menu-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu-item",
+          "declaration": {
+            "name": "SlMenuItem",
+            "module": "src/components/menu-item/menu-item.ts"
           }
         }
       ]
@@ -7574,191 +7776,6 @@
           "declaration": {
             "name": "SlMutationObserver",
             "module": "src/components/mutation-observer/mutation-observer.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/menu-item/menu-item.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenuItem",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The checkmark's container, only visible when the menu item is checked.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The prefix container.",
-              "name": "prefix"
-            },
-            {
-              "description": "The menu item label.",
-              "name": "label"
-            },
-            {
-              "description": "The suffix container.",
-              "name": "suffix"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The menu item's label.",
-              "name": ""
-            },
-            {
-              "description": "Used to prepend an icon or similar element to the menu item.",
-              "name": "prefix"
-            },
-            {
-              "description": "Used to append an icon or similar element to the menu item.",
-              "name": "suffix"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "cachedTextLabel",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "menuItem",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a checked state.",
-              "attribute": "checked",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the menu item in a disabled state.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "getTextLabel",
-              "description": "Returns a text label based on the contents of the menu item's default slot."
-            },
-            {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDefaultSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the menu item's text label changes. For performance reasons, this event is only emitted if the default slot's `slotchange` event is triggered. It will not fire when the label is first set.",
-              "name": "sl-label-change",
-              "reactName": "onSlLabelChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a checked state.",
-              "fieldName": "checked"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the menu item in a disabled state.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-menu-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenuItem",
-            "module": "src/components/menu-item/menu-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu-item",
-          "declaration": {
-            "name": "SlMenuItem",
-            "module": "src/components/menu-item/menu-item.ts"
           }
         }
       ]
@@ -8300,6 +8317,150 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/progress-bar/progress-bar.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlProgressBar",
+          "cssProperties": [
+            {
+              "description": "The progress bar's height.",
+              "name": "--height"
+            },
+            {
+              "description": "The track color.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The indicator color.",
+              "name": "--indicator-color"
+            },
+            {
+              "description": "The label color.",
+              "name": "--label-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The progress bar indicator.",
+              "name": "indicator"
+            },
+            {
+              "description": "The progress bar label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "A label to show inside the indicator.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "attribute": "indeterminate",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress bar's aria label.",
+              "attribute": "label"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "fieldName": "value"
+            },
+            {
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "fieldName": "indeterminate"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress bar's aria label.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-progress-bar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-progress-bar",
+          "declaration": {
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/progress-ring/progress-ring.ts",
       "declarations": [
         {
@@ -8629,117 +8790,141 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/progress-bar/progress-bar.ts",
+      "path": "src/components/radio/radio.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlProgressBar",
-          "cssProperties": [
-            {
-              "description": "The progress bar's height.",
-              "name": "--height"
-            },
-            {
-              "description": "The track color.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
-            },
-            {
-              "description": "The label color.",
-              "name": "--label-color"
-            }
-          ],
+          "name": "SlRadio",
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
             },
             {
-              "description": "The progress bar indicator.",
-              "name": "indicator"
+              "description": "The radio control.",
+              "name": "control"
             },
             {
-              "description": "The progress bar label.",
+              "description": "The radio control if radio is checked.",
+              "name": "control--checked"
+            },
+            {
+              "description": "The container the wraps the checked icon.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The radio label.",
               "name": "label"
             }
           ],
           "slots": [
             {
-              "description": "A label to show inside the indicator.",
+              "description": "The radio's label.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "default": "false"
             },
             {
               "kind": "field",
               "name": "value",
               "type": {
-                "text": "number"
+                "text": "string"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
+              "description": "The radio's value attribute.",
+              "attribute": "value"
             },
             {
               "kind": "field",
-              "name": "indeterminate",
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "attribute": "indeterminate",
+              "description": "Disables the radio.",
+              "attribute": "disabled",
               "reflects": true
             },
             {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
-              "attribute": "label"
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "addEventListeners",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setInitialAttributes",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
             }
           ],
           "attributes": [
             {
               "name": "value",
               "type": {
-                "text": "number"
+                "text": "string"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
+              "description": "The radio's value attribute.",
               "fieldName": "value"
             },
             {
-              "name": "indeterminate",
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "fieldName": "indeterminate"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
-              "fieldName": "label"
+              "description": "Disables the radio.",
+              "fieldName": "disabled"
             }
           ],
           "superclass": {
@@ -8748,7 +8933,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-progress-bar",
+          "tagName": "sl-radio",
           "customElement": true
         }
       ],
@@ -8757,16 +8942,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-progress-bar",
+          "name": "sl-radio",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
           }
         }
       ]
@@ -8998,174 +9183,6 @@
           "declaration": {
             "name": "SlRadioButton",
             "module": "src/components/radio-button/radio-button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/radio/radio.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRadio",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The radio control.",
-              "name": "control"
-            },
-            {
-              "description": "The radio control if radio is checked.",
-              "name": "control--checked"
-            },
-            {
-              "description": "The container the wraps the checked icon.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The radio label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The radio's label.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The radio's value attribute.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the radio.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "addEventListeners",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "setInitialAttributes",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The radio's value attribute.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the radio.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-radio",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-radio",
-          "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
           }
         }
       ]

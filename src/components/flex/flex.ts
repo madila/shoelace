@@ -26,13 +26,14 @@ export default class SlFlex extends ShoelaceElement {
 
   /** An example property. */
   @property() direction = 'row';
+  @property() gap = null;
   @property() align = 'flex-start';
   @property() justify = 'flex-start';
 
   @watch('row')
-  doSomething() {
+  directionChanged() {
     // Example event
-    this.emit('sl-layout');
+    this.emit('sl-layout-direction-changed');
   }
 
   render() {

@@ -18,7 +18,7 @@ export default css`
 
   :host {
     display: flex;
-    --gap: 0px;
+    --gap: 0;
     --column-gap: var(--gap);
     --row-gap: var(--gap);
   }
@@ -32,6 +32,10 @@ export default css`
 
   :host([direction="column"]) .flex-container {
     flex-direction: column;
+  }
+
+  :host([gap]) {
+    --gap: 1rem;
   }
 
   :host([justify="space-between"]) .flex-container {
