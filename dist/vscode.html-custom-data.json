@@ -105,6 +105,38 @@
       ]
     },
     {
+      "name": "sl-avatar",
+      "attributes": [
+        {
+          "name": "image",
+          "description": "The image source to use for the avatar."
+        },
+        {
+          "name": "label",
+          "description": "A label to use to describe the avatar to assistive devices."
+        },
+        {
+          "name": "initials",
+          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended)."
+        },
+        {
+          "name": "shape",
+          "description": "The shape of the avatar.",
+          "values": [
+            {
+              "name": "circle"
+            },
+            {
+              "name": "square"
+            },
+            {
+              "name": "rounded"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "sl-badge",
       "attributes": [
         {
@@ -139,43 +171,42 @@
       ]
     },
     {
-      "name": "sl-avatar",
-      "attributes": [
-        {
-          "name": "image",
-          "description": "The image source to use for the avatar."
-        },
-        {
-          "name": "label",
-          "description": "A label to use to describe the avatar to assistive devices."
-        },
-        {
-          "name": "initials",
-          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended)."
-        },
-        {
-          "name": "shape",
-          "description": "The shape of the avatar.",
-          "values": [
-            {
-              "name": "circle"
-            },
-            {
-              "name": "square"
-            },
-            {
-              "name": "rounded"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "sl-breadcrumb",
       "attributes": [
         {
           "name": "label",
           "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices."
+        }
+      ]
+    },
+    {
+      "name": "sl-breadcrumb-item",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead."
+        },
+        {
+          "name": "target",
+          "description": "Tells the browser where to open the link. Only used when `href` is set.",
+          "values": [
+            {
+              "name": "_blank"
+            },
+            {
+              "name": "_parent"
+            },
+            {
+              "name": "_self"
+            },
+            {
+              "name": "_top"
+            }
+          ]
+        },
+        {
+          "name": "rel",
+          "description": "The `rel` attribute to use on the link. Only used when `href` is set."
         }
       ]
     },
@@ -338,37 +369,6 @@
               "name": "_top"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "sl-breadcrumb-item",
-      "attributes": [
-        {
-          "name": "href",
-          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead."
-        },
-        {
-          "name": "target",
-          "description": "Tells the browser where to open the link. Only used when `href` is set.",
-          "values": [
-            {
-              "name": "_blank"
-            },
-            {
-              "name": "_parent"
-            },
-            {
-              "name": "_self"
-            },
-            {
-              "name": "_top"
-            }
-          ]
-        },
-        {
-          "name": "rel",
-          "description": "The `rel` attribute to use on the link. Only used when `href` is set."
         }
       ]
     },
@@ -646,24 +646,6 @@
       ]
     },
     {
-      "name": "sl-flex",
-      "attributes": [
-        {
-          "name": "direction",
-          "description": "An example property."
-        },
-        {
-          "name": "gap"
-        },
-        {
-          "name": "align"
-        },
-        {
-          "name": "justify"
-        }
-      ]
-    },
-    {
       "name": "sl-format-bytes",
       "attributes": [
         {
@@ -847,6 +829,24 @@
               "name": "24"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "sl-flex",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "An example property."
+        },
+        {
+          "name": "gap"
+        },
+        {
+          "name": "alignItems"
+        },
+        {
+          "name": "justify"
         }
       ]
     },
@@ -1272,9 +1272,6 @@
       ]
     },
     {
-      "name": "sl-menu"
-    },
-    {
       "name": "sl-menu-item",
       "attributes": [
         {
@@ -1322,6 +1319,9 @@
           "description": "Disables the observer."
         }
       ]
+    },
+    {
+      "name": "sl-menu"
     },
     {
       "name": "sl-popup",
@@ -2357,6 +2357,26 @@
       ]
     },
     {
+      "name": "sl-tree",
+      "attributes": [
+        {
+          "name": "selection",
+          "description": "Specifies the selection behavior of the Tree",
+          "values": [
+            {
+              "name": "single"
+            },
+            {
+              "name": "multiple"
+            },
+            {
+              "name": "leaf"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "sl-tree-item",
       "attributes": [
         {
@@ -2379,26 +2399,6 @@
     },
     {
       "name": "sl-visually-hidden"
-    },
-    {
-      "name": "sl-tree",
-      "attributes": [
-        {
-          "name": "selection",
-          "description": "Specifies the selection behavior of the Tree",
-          "values": [
-            {
-              "name": "single"
-            },
-            {
-              "name": "multiple"
-            },
-            {
-              "name": "leaf"
-            }
-          ]
-        }
-      ]
     }
   ]
 }

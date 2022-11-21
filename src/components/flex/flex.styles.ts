@@ -52,23 +52,23 @@ export default css`
     justify-content: space-around;
   }
 
-  :host([align="space-evenly"]) .flex-container {
+  :host([align-items="space-evenly"]) .flex-container {
     justify-content: space-evenly;
   }
 
-    :host([align="center"]) .flex-container {
+    :host([align-items="center"]) .flex-container {
       align-items: center;
     }
 
-    :host([align="start"]) .flex-container {
+    :host([align-items="start"]) .flex-container {
       align-items: flex-start;
     }
 
-    :host([align="end"]) .flex-container {
+    :host([align-items="end"]) .flex-container {
       align-items: flex-end;
     }
 
-    :host([align="baseline"]) .flex-container {
+    :host([align-items="baseline"]) .flex-container {
       align-items: baseline;
     }
 

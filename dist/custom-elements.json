@@ -811,119 +811,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/badge/badge.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/avatar/avatar.ts",
       "declarations": [
         {
@@ -1088,6 +975,119 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/badge/badge.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/breadcrumb/breadcrumb.ts",
       "declarations": [
         {
@@ -1195,6 +1195,146 @@
           "declaration": {
             "name": "SlBreadcrumb",
             "module": "src/components/breadcrumb/breadcrumb.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBreadcrumbItem",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The breadcrumb item's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix slot.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix slot.",
+              "name": "suffix"
+            },
+            {
+              "description": "The container that wraps the separator slot.",
+              "name": "separator"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The breadcrumb item's label.",
+              "name": ""
+            },
+            {
+              "description": "An optional prefix, usually an icon or icon button.",
+              "name": "prefix"
+            },
+            {
+              "description": "An optional suffix, usually an icon or icon button.",
+              "name": "suffix"
+            },
+            {
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'prefix', 'suffix')"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "attribute": "rel"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "fieldName": "rel"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-breadcrumb-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-breadcrumb-item",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
           }
         }
       ]
@@ -1714,146 +1854,6 @@
           "declaration": {
             "name": "SlButton",
             "module": "src/components/button/button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBreadcrumbItem",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The breadcrumb item's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix slot.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix slot.",
-              "name": "suffix"
-            },
-            {
-              "description": "The container that wraps the separator slot.",
-              "name": "separator"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The breadcrumb item's label.",
-              "name": ""
-            },
-            {
-              "description": "An optional prefix, usually an icon or icon button.",
-              "name": "prefix"
-            },
-            {
-              "description": "An optional suffix, usually an icon or icon button.",
-              "name": "suffix"
-            },
-            {
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'prefix', 'suffix')"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "attribute": "rel"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "fieldName": "rel"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-breadcrumb-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-breadcrumb-item",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
           }
         }
       ]
@@ -4611,153 +4611,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/flex/flex.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlFlex",
-          "cssProperties": [
-            {
-              "description": "An example CSS custom property.",
-              "name": "--example"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "An example slot.",
-              "name": "example"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "attribute": "gap"
-            },
-            {
-              "kind": "field",
-              "name": "align",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "align"
-            },
-            {
-              "kind": "field",
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "justify"
-            },
-            {
-              "kind": "method",
-              "name": "directionChanged"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted as an example.",
-              "name": "sl-event-name",
-              "reactName": "onSlEventName"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "fieldName": "direction"
-            },
-            {
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "fieldName": "gap"
-            },
-            {
-              "name": "align",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "align"
-            },
-            {
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "justify"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "sl-example"
-          ],
-          "tagName": "sl-flex",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-flex",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/format-bytes/format-bytes.ts",
       "declarations": [
         {
@@ -5111,6 +4964,153 @@
           "declaration": {
             "name": "SlFormatDate",
             "module": "src/components/format-date/format-date.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/flex/flex.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlFlex",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "attribute": "gap"
+            },
+            {
+              "kind": "field",
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "alignItems"
+            },
+            {
+              "kind": "field",
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "justify"
+            },
+            {
+              "kind": "method",
+              "name": "directionChanged"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted as an example.",
+              "name": "sl-event-name",
+              "reactName": "onSlEventName"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "fieldName": "direction"
+            },
+            {
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "fieldName": "gap"
+            },
+            {
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "alignItems"
+            },
+            {
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "justify"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "sl-example"
+          ],
+          "tagName": "sl-flex",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-flex",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
           }
         }
       ]
@@ -7194,151 +7194,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/menu/menu.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenu",
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectString",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getAllItems",
-              "parameters": [
-                {
-                  "name": "options",
-                  "default": "{ includeDisabled: true }",
-                  "type": {
-                    "text": "{ includeDisabled: boolean }"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "typeToSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ],
-              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: SlMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "sl-select",
-              "reactName": "onSlSelect"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-menu",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/menu-item/menu-item.ts",
       "declarations": [
         {
@@ -7776,6 +7631,151 @@
           "declaration": {
             "name": "SlMutationObserver",
             "module": "src/components/mutation-observer/mutation-observer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/menu/menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenu",
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectString",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getAllItems",
+              "parameters": [
+                {
+                  "name": "options",
+                  "default": "{ includeDisabled: true }",
+                  "type": {
+                    "text": "{ includeDisabled: boolean }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "typeToSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ item: SlMenuItem }"
+              },
+              "description": "Emitted when a menu item is selected.",
+              "name": "sl-select",
+              "reactName": "onSlSelect"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
           }
         }
       ]
@@ -14144,6 +14144,285 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/tree/tree.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTree",
+          "cssProperties": [
+            {
+              "description": "The size of the indentation for nested items.",
+              "name": "--indent-size",
+              "default": "var(--sl-spacing-medium)"
+            },
+            {
+              "description": "The color of the indentation line.",
+              "name": "--indent-guide-color",
+              "default": "var(--sl-color-neutral-200)"
+            },
+            {
+              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
+              "name": "--indent-guide-offset",
+              "default": "0"
+            },
+            {
+              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
+              "name": "--indent-guide-style",
+              "default": "solid"
+            },
+            {
+              "description": "The width of the indentation line.",
+              "name": "--indent-guide-width",
+              "default": "0"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "The icon to show when the tree item is expanded.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "The icon to show when the tree item is collapsed.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "collapsedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "attribute": "selection"
+            },
+            {
+              "kind": "field",
+              "name": "treeItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "lastFocusedItem",
+              "type": {
+                "text": "SlTreeItem"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "type": {
+                "text": "MutationObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getExpandButtonIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "status",
+                  "type": {
+                    "text": "'expand' | 'collapse'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initTreeItem",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleTreeChanged"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectionChange"
+            },
+            {
+              "kind": "method",
+              "name": "syncTreeItems",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectItem",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "selectedItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusableItems"
+            },
+            {
+              "kind": "method",
+              "name": "focusItem",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": true,
+                  "type": {
+                    "text": "SlTreeItem | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusOut"
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusIn"
+            },
+            {
+              "kind": "method",
+              "name": "updateItems"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ selection: TreeItem[] }"
+              },
+              "description": "Emitted when an item gets selected or deselected",
+              "name": "sl-selection-change",
+              "reactName": "onSlSelectionChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "fieldName": "selection"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "tagName": "sl-tree",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tree",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/tree-item/tree-item.ts",
       "declarations": [
         {
@@ -14555,285 +14834,6 @@
           "declaration": {
             "name": "SlVisuallyHidden",
             "module": "src/components/visually-hidden/visually-hidden.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/tree/tree.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTree",
-          "cssProperties": [
-            {
-              "description": "The size of the indentation for nested items.",
-              "name": "--indent-size",
-              "default": "var(--sl-spacing-medium)"
-            },
-            {
-              "description": "The color of the indentation line.",
-              "name": "--indent-guide-color",
-              "default": "var(--sl-color-neutral-200)"
-            },
-            {
-              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
-              "name": "--indent-guide-offset",
-              "default": "0"
-            },
-            {
-              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
-              "name": "--indent-guide-style",
-              "default": "solid"
-            },
-            {
-              "description": "The width of the indentation line.",
-              "name": "--indent-guide-width",
-              "default": "0"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "The icon to show when the tree item is expanded.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "The icon to show when the tree item is collapsed.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "collapsedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "attribute": "selection"
-            },
-            {
-              "kind": "field",
-              "name": "treeItems",
-              "type": {
-                "text": "SlTreeItem[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "lastFocusedItem",
-              "type": {
-                "text": "SlTreeItem"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "mutationObserver",
-              "type": {
-                "text": "MutationObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getExpandButtonIcon",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "status",
-                  "type": {
-                    "text": "'expand' | 'collapse'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "initTreeItem",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleTreeChanged"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectionChange"
-            },
-            {
-              "kind": "method",
-              "name": "syncTreeItems",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "selectItem",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "selectedItems",
-              "type": {
-                "text": "SlTreeItem[]"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getFocusableItems"
-            },
-            {
-              "kind": "method",
-              "name": "focusItem",
-              "parameters": [
-                {
-                  "name": "item",
-                  "optional": true,
-                  "type": {
-                    "text": "SlTreeItem | null"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusOut"
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusIn"
-            },
-            {
-              "kind": "method",
-              "name": "updateItems"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ selection: TreeItem[] }"
-              },
-              "description": "Emitted when an item gets selected or deselected",
-              "name": "sl-selection-change",
-              "reactName": "onSlSelectionChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "fieldName": "selection"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "tagName": "sl-tree",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tree",
-          "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
           }
         }
       ]

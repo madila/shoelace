@@ -518,60 +518,6 @@
           "attributes": []
         },
         {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-avatar",
           "description": "",
           "doc-url": "https://shoelace.style/components/avatar",
@@ -650,6 +596,60 @@
           ]
         },
         {
+          "name": "sl-badge",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-breadcrumb",
           "description": "",
           "doc-url": "https://shoelace.style/components/breadcrumb",
@@ -697,6 +697,64 @@
             {
               "name": "label",
               "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-breadcrumb-item",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/breadcrumb-item",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "href",
+                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "value": {
+                  "type": "string | undefined"
+                }
+              },
+              {
+                "name": "target",
+                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "value": {
+                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                }
+              },
+              {
+                "name": "rel",
+                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "value": {
+                  "type": "string"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "href",
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "value": {
+                "type": "string | undefined"
+              }
+            },
+            {
+              "name": "target",
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "value": {
+                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              }
+            },
+            {
+              "name": "rel",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
               "value": {
                 "type": "string"
               }
@@ -1037,64 +1095,6 @@
               "description": "Used to override the form owner's `target` attribute.",
               "value": {
                 "type": "'_self' | '_blank' | '_parent' | '_top' | string"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-breadcrumb-item",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/breadcrumb-item",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "href",
-                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-                "value": {
-                  "type": "string | undefined"
-                }
-              },
-              {
-                "name": "target",
-                "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "value": {
-                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-                }
-              },
-              {
-                "name": "rel",
-                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-                "value": {
-                  "type": "string"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "href",
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "value": {
-                "type": "string | undefined"
-              }
-            },
-            {
-              "name": "target",
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "value": {
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              }
-            },
-            {
-              "name": "rel",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "value": {
-                "type": "string"
               }
             }
           ]
@@ -2430,77 +2430,6 @@
           ]
         },
         {
-          "name": "sl-flex",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/flex",
-          "js": {
-            "properties": [
-              {
-                "name": "direction",
-                "description": "An example property.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "gap",
-                "value": {
-                  "type": "null"
-                }
-              },
-              {
-                "name": "align",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "justify",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "directionChanged",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-event-name",
-                "description": "Emitted as an example."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "direction",
-              "description": "An example property.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "gap",
-              "value": {
-                "type": "null"
-              }
-            },
-            {
-              "name": "align",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "justify",
-              "value": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-format-bytes",
           "description": "",
           "doc-url": "https://shoelace.style/components/format-bytes",
@@ -2738,6 +2667,77 @@
               "description": "When set, 24 hour time will always be used.",
               "value": {
                 "type": "'auto' | '12' | '24'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-flex",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/flex",
+          "js": {
+            "properties": [
+              {
+                "name": "direction",
+                "description": "An example property.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "gap",
+                "value": {
+                  "type": "null"
+                }
+              },
+              {
+                "name": "alignItems",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "justify",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "directionChanged",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-event-name",
+                "description": "Emitted as an example."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "direction",
+              "description": "An example property.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "gap",
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "name": "alignItems",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "justify",
+              "value": {
+                "type": "string"
               }
             }
           ]
@@ -3941,65 +3941,6 @@
           ]
         },
         {
-          "name": "sl-menu",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "typeToSelectString",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "typeToSelectTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "getAllItems",
-                "value": {}
-              },
-              {
-                "name": "typeToSelect",
-                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-menu-item",
           "description": "",
           "doc-url": "https://shoelace.style/components/menu-item",
@@ -4229,6 +4170,65 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "typeToSelectString",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "typeToSelectTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "getAllItems",
+                "value": {}
+              },
+              {
+                "name": "typeToSelect",
+                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
         },
         {
           "name": "sl-popup",
@@ -7771,6 +7771,135 @@
           ]
         },
         {
+          "name": "sl-tree",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tree",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "expandedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "collapsedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "selection",
+                "description": "Specifies the selection behavior of the Tree",
+                "value": {
+                  "type": "'single' | 'multiple' | 'leaf'"
+                }
+              },
+              {
+                "name": "treeItems",
+                "value": {
+                  "type": "SlTreeItem[]"
+                }
+              },
+              {
+                "name": "lastFocusedItem",
+                "value": {
+                  "type": "SlTreeItem"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "mutationObserver",
+                "value": {
+                  "type": "MutationObserver"
+                }
+              },
+              {
+                "name": "getExpandButtonIcon",
+                "value": {}
+              },
+              {
+                "name": "initTreeItem",
+                "value": {}
+              },
+              {
+                "name": "handleTreeChanged",
+                "value": {}
+              },
+              {
+                "name": "handleSelectionChange",
+                "value": {}
+              },
+              {
+                "name": "syncTreeItems",
+                "value": {}
+              },
+              {
+                "name": "selectItem",
+                "value": {}
+              },
+              {
+                "name": "selectedItems",
+                "value": {
+                  "type": "SlTreeItem[]"
+                }
+              },
+              {
+                "name": "getFocusableItems",
+                "value": {}
+              },
+              {
+                "name": "focusItem",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleFocusOut",
+                "value": {}
+              },
+              {
+                "name": "handleFocusIn",
+                "value": {}
+              },
+              {
+                "name": "updateItems",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-selection-change",
+                "description": "Emitted when an item gets selected or deselected"
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "selection",
+              "description": "Specifies the selection behavior of the Tree",
+              "value": {
+                "type": "'single' | 'multiple' | 'leaf'"
+              }
+            }
+          ]
+        },
+        {
           "doc-url": "https://shoelace.style/components/",
           "js": {
             "properties": [],
@@ -7982,135 +8111,6 @@
             "events": []
           },
           "attributes": []
-        },
-        {
-          "name": "sl-tree",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tree",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "expandedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "collapsedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "selection",
-                "description": "Specifies the selection behavior of the Tree",
-                "value": {
-                  "type": "'single' | 'multiple' | 'leaf'"
-                }
-              },
-              {
-                "name": "treeItems",
-                "value": {
-                  "type": "SlTreeItem[]"
-                }
-              },
-              {
-                "name": "lastFocusedItem",
-                "value": {
-                  "type": "SlTreeItem"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "mutationObserver",
-                "value": {
-                  "type": "MutationObserver"
-                }
-              },
-              {
-                "name": "getExpandButtonIcon",
-                "value": {}
-              },
-              {
-                "name": "initTreeItem",
-                "value": {}
-              },
-              {
-                "name": "handleTreeChanged",
-                "value": {}
-              },
-              {
-                "name": "handleSelectionChange",
-                "value": {}
-              },
-              {
-                "name": "syncTreeItems",
-                "value": {}
-              },
-              {
-                "name": "selectItem",
-                "value": {}
-              },
-              {
-                "name": "selectedItems",
-                "value": {
-                  "type": "SlTreeItem[]"
-                }
-              },
-              {
-                "name": "getFocusableItems",
-                "value": {}
-              },
-              {
-                "name": "focusItem",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleFocusOut",
-                "value": {}
-              },
-              {
-                "name": "handleFocusIn",
-                "value": {}
-              },
-              {
-                "name": "updateItems",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-selection-change",
-                "description": "Emitted when an item gets selected or deselected"
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "selection",
-              "description": "Specifies the selection behavior of the Tree",
-              "value": {
-                "type": "'single' | 'multiple' | 'leaf'"
-              }
-            }
-          ]
         }
       ]
     }

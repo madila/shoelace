@@ -27,7 +27,7 @@ export default class SlFlex extends ShoelaceElement {
   /** An example property. */
   @property() direction = 'row';
   @property() gap = null;
-  @property() align = 'flex-start';
+  @property() alignItems = 'flex-start';
   @property() justify = 'flex-start';
 
   @watch('row')
@@ -37,7 +37,7 @@ export default class SlFlex extends ShoelaceElement {
   }
 
   render() {
-    return html` <div class="flex-container"><slot></slot></div> `;
+    return html` <div part="base" class="flex-container"><slot></slot></div> `;
   }
 }
 
