@@ -52,15 +52,31 @@ export default css`
     justify-content: space-around;
   }
 
-  :host([justify="space-evenly"]) .flex-container {
+  :host([align="space-evenly"]) .flex-container {
     justify-content: space-evenly;
   }
+
+    :host([align="center"]) .flex-container {
+      align-items: center;
+    }
+
+    :host([align="start"]) .flex-container {
+      align-items: flex-start;
+    }
+
+    :host([align="end"]) .flex-container {
+      align-items: flex-end;
+    }
+
+    :host([align="baseline"]) .flex-container {
+      align-items: baseline;
+    }
 
   /* If the selector was .flex-gap > *, it wouldn't override when components have a margin 0 specified by a single
    * class selector, specificity is equal. Both are one class. Neither > nor * contribute to specificity.
    * We need to make it more specific, so we raise it by 1 class.
    */
-  .flex-container .flex-gap > * {
+  :host([gap]) .flex-container > * {
     /* apply half of the gap to each side of every item */
     margin: calc(var(--row-gap) / 2) calc(var(--column-gap) / 2);
   }

@@ -416,119 +416,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/badge/badge.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -924,6 +811,119 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/badge/badge.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/avatar/avatar.ts",
       "declarations": [
         {
@@ -1195,146 +1195,6 @@
           "declaration": {
             "name": "SlBreadcrumb",
             "module": "src/components/breadcrumb/breadcrumb.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBreadcrumbItem",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The breadcrumb item's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix slot.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix slot.",
-              "name": "suffix"
-            },
-            {
-              "description": "The container that wraps the separator slot.",
-              "name": "separator"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The breadcrumb item's label.",
-              "name": ""
-            },
-            {
-              "description": "An optional prefix, usually an icon or icon button.",
-              "name": "prefix"
-            },
-            {
-              "description": "An optional suffix, usually an icon or icon button.",
-              "name": "suffix"
-            },
-            {
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'prefix', 'suffix')"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "attribute": "rel"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "fieldName": "rel"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-breadcrumb-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-breadcrumb-item",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
           }
         }
       ]
@@ -1860,6 +1720,146 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBreadcrumbItem",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The breadcrumb item's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix slot.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix slot.",
+              "name": "suffix"
+            },
+            {
+              "description": "The container that wraps the separator slot.",
+              "name": "separator"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The breadcrumb item's label.",
+              "name": ""
+            },
+            {
+              "description": "An optional prefix, usually an icon or icon button.",
+              "name": "prefix"
+            },
+            {
+              "description": "An optional suffix, usually an icon or icon button.",
+              "name": "suffix"
+            },
+            {
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'prefix', 'suffix')"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "attribute": "rel"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "fieldName": "rel"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-breadcrumb-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-breadcrumb-item",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/button-group/button-group.ts",
       "declarations": [
         {
@@ -1993,6 +1993,109 @@
           "declaration": {
             "name": "SlButtonGroup",
             "module": "src/components/button-group/button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for card edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of card borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for card sections.*",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The card's image, if present.",
+              "name": "image"
+            },
+            {
+              "description": "The card's header, if present.",
+              "name": "header"
+            },
+            {
+              "description": "The card's body.",
+              "name": "body"
+            },
+            {
+              "description": "The card's footer, if present.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's body.",
+              "name": ""
+            },
+            {
+              "description": "The card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The card's footer.",
+              "name": "footer"
+            },
+            {
+              "description": "The card's image.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -2306,109 +2409,6 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "src/components/checkbox/checkbox.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/card/card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for card edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of card borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for card sections.*",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The card's image, if present.",
-              "name": "image"
-            },
-            {
-              "description": "The card's header, if present.",
-              "name": "header"
-            },
-            {
-              "description": "The card's body.",
-              "name": "body"
-            },
-            {
-              "description": "The card's footer, if present.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's body.",
-              "name": ""
-            },
-            {
-              "description": "The card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The card's footer.",
-              "name": "footer"
-            },
-            {
-              "description": "The card's image.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -8317,144 +8317,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/progress-ring/progress-ring.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlProgressRing",
-          "cssProperties": [
-            {
-              "description": "The diameter of the progress ring (cannot be a percentage).",
-              "name": "--size"
-            },
-            {
-              "description": "The width of the track.",
-              "name": "--track-width"
-            },
-            {
-              "description": "The color of the track.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The width of the indicator. Defaults to the track width.",
-              "name": "--indicator-width"
-            },
-            {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The progress ring label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "A label to show inside the ring.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "indicator",
-              "type": {
-                "text": "SVGCircleElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "indicatorOffset",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "attribute": "label"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "fieldName": "label"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-progress-ring",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-progress-ring",
-          "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/progress-bar/progress-bar.ts",
       "declarations": [
         {
@@ -8593,6 +8455,144 @@
           "declaration": {
             "name": "SlProgressBar",
             "module": "src/components/progress-bar/progress-bar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/progress-ring/progress-ring.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlProgressRing",
+          "cssProperties": [
+            {
+              "description": "The diameter of the progress ring (cannot be a percentage).",
+              "name": "--size"
+            },
+            {
+              "description": "The width of the track.",
+              "name": "--track-width"
+            },
+            {
+              "description": "The color of the track.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The width of the indicator. Defaults to the track width.",
+              "name": "--indicator-width"
+            },
+            {
+              "description": "The indicator color.",
+              "name": "--indicator-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The progress ring label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "A label to show inside the ring.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "indicator",
+              "type": {
+                "text": "SVGCircleElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "indicatorOffset",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "attribute": "label"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-progress-ring",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-progress-ring",
+          "declaration": {
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
           }
         }
       ]
@@ -13070,383 +13070,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/tooltip/tooltip.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTooltip",
-          "cssProperties": [
-            {
-              "description": "The maximum width of the tooltip before its content will wrap.",
-              "name": "--max-width"
-            },
-            {
-              "description": "The amount of time to wait before hiding the tooltip when hovering.",
-              "name": "--hide-delay"
-            },
-            {
-              "description": "The amount of time to wait before showing the tooltip when hovering.",
-              "name": "--show-delay"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper, an `<sl-popup>` element.",
-              "name": "base"
-            },
-            {
-              "description": "The popup's `popup` part. Use this to target the tooltip's popup container.",
-              "name": "base__popup"
-            },
-            {
-              "description": "The popup's `arrow` part. Use this to target the tooltip's arrow.",
-              "name": "base__arrow"
-            },
-            {
-              "description": "The tooltip's body.",
-              "name": "body"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tooltip's target element. Only the first element will be used as the target.",
-              "name": ""
-            },
-            {
-              "description": "The tooltip's content. Alternatively, you can use the `content` attribute.",
-              "name": "content"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "body",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "popup",
-              "type": {
-                "text": "SlPopup"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hoverTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "content",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead.",
-              "attribute": "content"
-            },
-            {
-              "kind": "field",
-              "name": "placement",
-              "type": {
-                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
-              },
-              "default": "'top'",
-              "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
-              "attribute": "placement"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the tooltip so it won't show when triggered.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "distance",
-              "type": {
-                "text": "number"
-              },
-              "default": "8",
-              "description": "The distance in pixels from which to offset the tooltip away from its target.",
-              "attribute": "distance"
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "skidding",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the tooltip along its target.",
-              "attribute": "skidding"
-            },
-            {
-              "kind": "field",
-              "name": "trigger",
-              "type": {
-                "text": "string"
-              },
-              "default": "'hover focus'",
-              "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically.",
-              "attribute": "trigger"
-            },
-            {
-              "kind": "field",
-              "name": "hoist",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`.",
-              "attribute": "hoist"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the tooltip."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the tooltip"
-            },
-            {
-              "kind": "method",
-              "name": "getTarget"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseOver"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseOut"
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleOptionsChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "hasTrigger",
-              "parameters": [
-                {
-                  "name": "triggerType",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the tooltip begins to show.",
-              "name": "sl-show",
-              "reactName": "onSlShow"
-            },
-            {
-              "description": "Emitted after the tooltip has shown and all animations are complete.",
-              "name": "sl-after-show",
-              "reactName": "onSlAfterShow"
-            },
-            {
-              "description": "Emitted when the tooltip begins to hide.",
-              "name": "sl-hide",
-              "reactName": "onSlHide"
-            },
-            {
-              "description": "Emitted after the tooltip has hidden and all animations are complete.",
-              "name": "sl-after-hide",
-              "reactName": "onSlAfterHide"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "content",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead.",
-              "fieldName": "content"
-            },
-            {
-              "name": "placement",
-              "type": {
-                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
-              },
-              "default": "'top'",
-              "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
-              "fieldName": "placement"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the tooltip so it won't show when triggered.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "distance",
-              "type": {
-                "text": "number"
-              },
-              "default": "8",
-              "description": "The distance in pixels from which to offset the tooltip away from its target.",
-              "fieldName": "distance"
-            },
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods.",
-              "fieldName": "open"
-            },
-            {
-              "name": "skidding",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the tooltip along its target.",
-              "fieldName": "skidding"
-            },
-            {
-              "name": "trigger",
-              "type": {
-                "text": "string"
-              },
-              "default": "'hover focus'",
-              "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically.",
-              "fieldName": "trigger"
-            },
-            {
-              "name": "hoist",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`.",
-              "fieldName": "hoist"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-popup"
-          ],
-          "animations": [
-            {
-              "name": "tooltip.show",
-              "description": "The animation to use when showing the tooltip."
-            },
-            {
-              "name": "tooltip.hide",
-              "description": "The animation to use when hiding the tooltip."
-            }
-          ],
-          "tagName": "sl-tooltip",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTooltip",
-            "module": "src/components/tooltip/tooltip.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tooltip",
-          "declaration": {
-            "name": "SlTooltip",
-            "module": "src/components/tooltip/tooltip.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/textarea/textarea.ts",
       "declarations": [
         {
@@ -14144,57 +13767,52 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/tree/tree.ts",
+      "path": "src/components/tooltip/tooltip.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlTree",
+          "name": "SlTooltip",
           "cssProperties": [
             {
-              "description": "The size of the indentation for nested items.",
-              "name": "--indent-size",
-              "default": "var(--sl-spacing-medium)"
+              "description": "The maximum width of the tooltip before its content will wrap.",
+              "name": "--max-width"
             },
             {
-              "description": "The color of the indentation line.",
-              "name": "--indent-guide-color",
-              "default": "var(--sl-color-neutral-200)"
+              "description": "The amount of time to wait before hiding the tooltip when hovering.",
+              "name": "--hide-delay"
             },
             {
-              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
-              "name": "--indent-guide-offset",
-              "default": "0"
-            },
-            {
-              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
-              "name": "--indent-guide-style",
-              "default": "solid"
-            },
-            {
-              "description": "The width of the indentation line.",
-              "name": "--indent-guide-width",
-              "default": "0"
+              "description": "The amount of time to wait before showing the tooltip when hovering.",
+              "name": "--show-delay"
             }
           ],
           "cssParts": [
             {
-              "description": "The component's internal wrapper.",
+              "description": "The component's base wrapper, an `<sl-popup>` element.",
               "name": "base"
+            },
+            {
+              "description": "The popup's `popup` part. Use this to target the tooltip's popup container.",
+              "name": "base__popup"
+            },
+            {
+              "description": "The popup's `arrow` part. Use this to target the tooltip's arrow.",
+              "name": "base__arrow"
+            },
+            {
+              "description": "The tooltip's body.",
+              "name": "body"
             }
           ],
           "slots": [
             {
-              "description": "The default slot.",
+              "description": "The tooltip's target element. Only the first element will be used as the target.",
               "name": ""
             },
             {
-              "description": "The icon to show when the tree item is expanded.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "The icon to show when the tree item is collapsed.",
-              "name": "collapse-icon"
+              "description": "The tooltip's content. Alternatively, you can use the `content` attribute.",
+              "name": "content"
             }
           ],
           "members": [
@@ -14207,42 +13825,23 @@
             },
             {
               "kind": "field",
-              "name": "expandedIconSlot",
+              "name": "body",
               "type": {
-                "text": "HTMLSlotElement"
+                "text": "HTMLElement"
               }
             },
             {
               "kind": "field",
-              "name": "collapsedIconSlot",
+              "name": "popup",
               "type": {
-                "text": "HTMLSlotElement"
+                "text": "SlPopup"
               }
             },
             {
               "kind": "field",
-              "name": "selection",
+              "name": "hoverTimeout",
               "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "attribute": "selection"
-            },
-            {
-              "kind": "field",
-              "name": "treeItems",
-              "type": {
-                "text": "SlTreeItem[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "lastFocusedItem",
-              "type": {
-                "text": "SlTreeItem"
+                "text": "number"
               },
               "privacy": "private"
             },
@@ -14254,85 +13853,111 @@
             },
             {
               "kind": "field",
-              "name": "mutationObserver",
+              "name": "content",
               "type": {
-                "text": "MutationObserver"
+                "text": "string"
               },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getExpandButtonIcon",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "status",
-                  "type": {
-                    "text": "'expand' | 'collapse'"
-                  }
-                }
-              ]
+              "default": "''",
+              "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead.",
+              "attribute": "content"
             },
             {
               "kind": "field",
-              "name": "initTreeItem",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleTreeChanged"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectionChange"
-            },
-            {
-              "kind": "method",
-              "name": "syncTreeItems",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "selectItem",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "selectedItems",
+              "name": "placement",
               "type": {
-                "text": "SlTreeItem[]"
-              }
+                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+              },
+              "default": "'top'",
+              "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
+              "attribute": "placement"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the tooltip so it won't show when triggered.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "distance",
+              "type": {
+                "text": "number"
+              },
+              "default": "8",
+              "description": "The distance in pixels from which to offset the tooltip away from its target.",
+              "attribute": "distance"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "skidding",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the tooltip along its target.",
+              "attribute": "skidding"
+            },
+            {
+              "kind": "field",
+              "name": "trigger",
+              "type": {
+                "text": "string"
+              },
+              "default": "'hover focus'",
+              "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically.",
+              "attribute": "trigger"
+            },
+            {
+              "kind": "field",
+              "name": "hoist",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`.",
+              "attribute": "hoist"
             },
             {
               "kind": "method",
-              "name": "getFocusableItems"
+              "name": "show",
+              "description": "Shows the tooltip."
             },
             {
               "kind": "method",
-              "name": "focusItem",
-              "parameters": [
-                {
-                  "name": "item",
-                  "optional": true,
-                  "type": {
-                    "text": "SlTreeItem | null"
-                  }
-                }
-              ]
+              "name": "hide",
+              "description": "Hides the tooltip"
+            },
+            {
+              "kind": "method",
+              "name": "getTarget"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus"
             },
             {
               "kind": "method",
@@ -14348,48 +13973,131 @@
             },
             {
               "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusOut"
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusIn"
+              "name": "handleMouseOver"
             },
             {
               "kind": "method",
-              "name": "updateItems"
+              "name": "handleMouseOut"
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleOptionsChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "hasTrigger",
+              "parameters": [
+                {
+                  "name": "triggerType",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
             }
           ],
           "events": [
             {
-              "type": {
-                "text": "{ selection: TreeItem[] }"
-              },
-              "description": "Emitted when an item gets selected or deselected",
-              "name": "sl-selection-change",
-              "reactName": "onSlSelectionChange"
+              "description": "Emitted when the tooltip begins to show.",
+              "name": "sl-show",
+              "reactName": "onSlShow"
+            },
+            {
+              "description": "Emitted after the tooltip has shown and all animations are complete.",
+              "name": "sl-after-show",
+              "reactName": "onSlAfterShow"
+            },
+            {
+              "description": "Emitted when the tooltip begins to hide.",
+              "name": "sl-hide",
+              "reactName": "onSlHide"
+            },
+            {
+              "description": "Emitted after the tooltip has hidden and all animations are complete.",
+              "name": "sl-after-hide",
+              "reactName": "onSlAfterHide"
             }
           ],
           "attributes": [
             {
-              "name": "selection",
+              "name": "content",
               "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
+                "text": "string"
               },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "fieldName": "selection"
+              "default": "''",
+              "description": "The tooltip's content. If you need to display HTML, you can use the `content` slot instead.",
+              "fieldName": "content"
+            },
+            {
+              "name": "placement",
+              "type": {
+                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+              },
+              "default": "'top'",
+              "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
+              "fieldName": "placement"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the tooltip so it won't show when triggered.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "distance",
+              "type": {
+                "text": "number"
+              },
+              "default": "8",
+              "description": "The distance in pixels from which to offset the tooltip away from its target.",
+              "fieldName": "distance"
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the tooltip is open. You can use this in lieu of the show/hide methods.",
+              "fieldName": "open"
+            },
+            {
+              "name": "skidding",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the tooltip along its target.",
+              "fieldName": "skidding"
+            },
+            {
+              "name": "trigger",
+              "type": {
+                "text": "string"
+              },
+              "default": "'hover focus'",
+              "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically.",
+              "fieldName": "trigger"
+            },
+            {
+              "name": "hoist",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`.",
+              "fieldName": "hoist"
             }
           ],
           "superclass": {
@@ -14397,8 +14105,21 @@
             "module": "/src/internal/shoelace-element"
           },
           "since": "2.0",
-          "status": "experimental",
-          "tagName": "sl-tree",
+          "status": "stable",
+          "dependencies": [
+            "sl-popup"
+          ],
+          "animations": [
+            {
+              "name": "tooltip.show",
+              "description": "The animation to use when showing the tooltip."
+            },
+            {
+              "name": "tooltip.hide",
+              "description": "The animation to use when hiding the tooltip."
+            }
+          ],
+          "tagName": "sl-tooltip",
           "customElement": true
         }
       ],
@@ -14407,16 +14128,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
+            "name": "SlTooltip",
+            "module": "src/components/tooltip/tooltip.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-tree",
+          "name": "sl-tooltip",
           "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
+            "name": "SlTooltip",
+            "module": "src/components/tooltip/tooltip.ts"
           }
         }
       ]
@@ -14834,6 +14555,285 @@
           "declaration": {
             "name": "SlVisuallyHidden",
             "module": "src/components/visually-hidden/visually-hidden.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tree/tree.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTree",
+          "cssProperties": [
+            {
+              "description": "The size of the indentation for nested items.",
+              "name": "--indent-size",
+              "default": "var(--sl-spacing-medium)"
+            },
+            {
+              "description": "The color of the indentation line.",
+              "name": "--indent-guide-color",
+              "default": "var(--sl-color-neutral-200)"
+            },
+            {
+              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
+              "name": "--indent-guide-offset",
+              "default": "0"
+            },
+            {
+              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
+              "name": "--indent-guide-style",
+              "default": "solid"
+            },
+            {
+              "description": "The width of the indentation line.",
+              "name": "--indent-guide-width",
+              "default": "0"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "The icon to show when the tree item is expanded.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "The icon to show when the tree item is collapsed.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "collapsedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "attribute": "selection"
+            },
+            {
+              "kind": "field",
+              "name": "treeItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "lastFocusedItem",
+              "type": {
+                "text": "SlTreeItem"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "type": {
+                "text": "MutationObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getExpandButtonIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "status",
+                  "type": {
+                    "text": "'expand' | 'collapse'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initTreeItem",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleTreeChanged"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectionChange"
+            },
+            {
+              "kind": "method",
+              "name": "syncTreeItems",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectItem",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "selectedItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusableItems"
+            },
+            {
+              "kind": "method",
+              "name": "focusItem",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": true,
+                  "type": {
+                    "text": "SlTreeItem | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusOut"
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusIn"
+            },
+            {
+              "kind": "method",
+              "name": "updateItems"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ selection: TreeItem[] }"
+              },
+              "description": "Emitted when an item gets selected or deselected",
+              "name": "sl-selection-change",
+              "reactName": "onSlSelectionChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "fieldName": "selection"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "tagName": "sl-tree",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tree",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
           }
         }
       ]
