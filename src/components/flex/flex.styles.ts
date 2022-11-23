@@ -18,22 +18,15 @@ export default css`
 
   :host {
     display: flex;
-    --width: auto;
-    --gap: 0;
-    --column-gap: var(--gap);
-    --row-gap: var(--gap);
-    --layout-width: 768px;
-    --layout-wide: 980px;
-    --padding: 0;
   }
 
   :host .flex-container {
     display: flex;
     flex: 1;
-    gap: var(--gap);
-    column-gap: var(--column-gap);
-    row-gap: var(--row-gap);
-    padding: var(--padding);
+    gap: var(--gap, 0);
+    column-gap: var(--column-gap, 0);
+    row-gap: var(--row-gap, 0);
+    padding: var(--padding, 0);
   }
 
   :host([direction="column"]) .flex-container {
@@ -51,14 +44,14 @@ export default css`
     }
 
     :host([layout-contained]) .flex-container {
-        max-width: var(--layout-width);
+        max-width: var(--layout-width, 980px);
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
     :host([layout-contained="wide"]) {
-        max-width: var(--layout-width-wide);
+        max-width: var(--layout-width-wide, 1200px);
     }
 
   :host([justify="center"]) .flex-container {
@@ -99,6 +92,6 @@ export default css`
    */
   :host([gap]) .flex-container > * {
     /* apply half of the gap to each side of every item */
-    margin: calc(var(--row-gap) / 2) calc(var(--column-gap) / 2);
+    margin: calc(var(--row-gap, 0) / 2) calc(var(--column-gap, 0) / 2);
   }
 `;
