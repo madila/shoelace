@@ -32,6 +32,8 @@ export default css`
     row-gap: var(--row-gap);
     max-width: var(--width, none);
     width: var(--width, auto);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   :host([direction="column"]) .flex-container {
@@ -49,6 +51,11 @@ export default css`
     }
 
     :host([layout-contained]) {
+      --width: 1200px;
+      --max-width: 100%;
+    }
+
+    :host([layout-contained="center"]) {
       --width: 1200px;
       --max-width: 100%;
     }
