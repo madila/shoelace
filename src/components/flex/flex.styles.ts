@@ -49,16 +49,16 @@ export default css`
     }
 
     :host([layout-contained]) .flex-container {
-        width: var(--layout-width);
-        max-width: 100%;
+        max-width: var(--layout-width);
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
     :host([layout-contained="wide"]) {
-        width: var(--layout-width-wide);
+        max-width: var(--layout-width-wide);
     }
-    
+
   :host([justify="center"]) .flex-container {
     justify-content: center;
   }
