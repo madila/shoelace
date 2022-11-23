@@ -1158,21 +1158,6 @@
           ]
         },
         {
-          "name": "sl-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-checkbox",
           "description": "",
           "doc-url": "https://shoelace.style/components/checkbox",
@@ -1362,6 +1347,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-color-picker",
@@ -2430,6 +2430,77 @@
           ]
         },
         {
+          "name": "sl-flex",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/flex",
+          "js": {
+            "properties": [
+              {
+                "name": "direction",
+                "description": "An example property.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "gap",
+                "value": {
+                  "type": "null"
+                }
+              },
+              {
+                "name": "alignItems",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "justify",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "directionChanged",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-event-name",
+                "description": "Emitted as an example."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "direction",
+              "description": "An example property.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "gap",
+              "value": {
+                "type": "null"
+              }
+            },
+            {
+              "name": "alignItems",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "justify",
+              "value": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-format-bytes",
           "description": "",
           "doc-url": "https://shoelace.style/components/format-bytes",
@@ -2667,77 +2738,6 @@
               "description": "When set, 24 hour time will always be used.",
               "value": {
                 "type": "'auto' | '12' | '24'"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-flex",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/flex",
-          "js": {
-            "properties": [
-              {
-                "name": "direction",
-                "description": "An example property.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "gap",
-                "value": {
-                  "type": "null"
-                }
-              },
-              {
-                "name": "alignItems",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "justify",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "directionChanged",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-event-name",
-                "description": "Emitted as an example."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "direction",
-              "description": "An example property.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "gap",
-              "value": {
-                "type": "null"
-              }
-            },
-            {
-              "name": "alignItems",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "justify",
-              "value": {
-                "type": "string"
               }
             }
           ]
@@ -3941,6 +3941,65 @@
           ]
         },
         {
+          "name": "sl-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "typeToSelectString",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "typeToSelectTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "getAllItems",
+                "value": {}
+              },
+              {
+                "name": "typeToSelect",
+                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
+        },
+        {
           "name": "sl-menu-item",
           "description": "",
           "doc-url": "https://shoelace.style/components/menu-item",
@@ -4170,65 +4229,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "sl-menu",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "typeToSelectString",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "typeToSelectTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "getAllItems",
-                "value": {}
-              },
-              {
-                "name": "typeToSelect",
-                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
-          },
-          "attributes": []
         },
         {
           "name": "sl-popup",

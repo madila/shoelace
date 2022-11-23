@@ -1999,109 +1999,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/card/card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for card edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of card borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for card sections.*",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The card's image, if present.",
-              "name": "image"
-            },
-            {
-              "description": "The card's header, if present.",
-              "name": "header"
-            },
-            {
-              "description": "The card's body.",
-              "name": "body"
-            },
-            {
-              "description": "The card's footer, if present.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's body.",
-              "name": ""
-            },
-            {
-              "description": "The card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The card's footer.",
-              "name": "footer"
-            },
-            {
-              "description": "The card's image.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/checkbox/checkbox.ts",
       "declarations": [
         {
@@ -2409,6 +2306,109 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "src/components/checkbox/checkbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for card edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of card borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for card sections.*",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The card's image, if present.",
+              "name": "image"
+            },
+            {
+              "description": "The card's header, if present.",
+              "name": "header"
+            },
+            {
+              "description": "The card's body.",
+              "name": "body"
+            },
+            {
+              "description": "The card's footer, if present.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's body.",
+              "name": ""
+            },
+            {
+              "description": "The card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The card's footer.",
+              "name": "footer"
+            },
+            {
+              "description": "The card's image.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -4611,6 +4611,153 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/flex/flex.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlFlex",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "attribute": "gap"
+            },
+            {
+              "kind": "field",
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "alignItems"
+            },
+            {
+              "kind": "field",
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "justify"
+            },
+            {
+              "kind": "method",
+              "name": "directionChanged"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted as an example.",
+              "name": "sl-event-name",
+              "reactName": "onSlEventName"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "fieldName": "direction"
+            },
+            {
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "fieldName": "gap"
+            },
+            {
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "alignItems"
+            },
+            {
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "justify"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "sl-example"
+          ],
+          "tagName": "sl-flex",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-flex",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/format-bytes/format-bytes.ts",
       "declarations": [
         {
@@ -4964,153 +5111,6 @@
           "declaration": {
             "name": "SlFormatDate",
             "module": "src/components/format-date/format-date.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/flex/flex.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlFlex",
-          "cssProperties": [
-            {
-              "description": "An example CSS custom property.",
-              "name": "--example"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "An example slot.",
-              "name": "example"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "attribute": "gap"
-            },
-            {
-              "kind": "field",
-              "name": "alignItems",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "alignItems"
-            },
-            {
-              "kind": "field",
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "justify"
-            },
-            {
-              "kind": "method",
-              "name": "directionChanged"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted as an example.",
-              "name": "sl-event-name",
-              "reactName": "onSlEventName"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "fieldName": "direction"
-            },
-            {
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "fieldName": "gap"
-            },
-            {
-              "name": "alignItems",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "alignItems"
-            },
-            {
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "justify"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "sl-example"
-          ],
-          "tagName": "sl-flex",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-flex",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
           }
         }
       ]
@@ -7194,6 +7194,151 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/menu/menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenu",
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectString",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getAllItems",
+              "parameters": [
+                {
+                  "name": "options",
+                  "default": "{ includeDisabled: true }",
+                  "type": {
+                    "text": "{ includeDisabled: boolean }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "typeToSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ item: SlMenuItem }"
+              },
+              "description": "Emitted when a menu item is selected.",
+              "name": "sl-select",
+              "reactName": "onSlSelect"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/menu-item/menu-item.ts",
       "declarations": [
         {
@@ -7631,151 +7776,6 @@
           "declaration": {
             "name": "SlMutationObserver",
             "module": "src/components/mutation-observer/mutation-observer.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/menu/menu.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenu",
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectString",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getAllItems",
-              "parameters": [
-                {
-                  "name": "options",
-                  "default": "{ includeDisabled: true }",
-                  "type": {
-                    "text": "{ includeDisabled: boolean }"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "typeToSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ],
-              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: SlMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "sl-select",
-              "reactName": "onSlSelect"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-menu",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
           }
         }
       ]

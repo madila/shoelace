@@ -382,9 +382,6 @@
       ]
     },
     {
-      "name": "sl-card"
-    },
-    {
       "name": "sl-checkbox",
       "attributes": [
         {
@@ -416,6 +413,9 @@
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
+    },
+    {
+      "name": "sl-card"
     },
     {
       "name": "sl-color-picker",
@@ -646,6 +646,24 @@
       ]
     },
     {
+      "name": "sl-flex",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "An example property."
+        },
+        {
+          "name": "gap"
+        },
+        {
+          "name": "alignItems"
+        },
+        {
+          "name": "justify"
+        }
+      ]
+    },
+    {
       "name": "sl-format-bytes",
       "attributes": [
         {
@@ -829,24 +847,6 @@
               "name": "24"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "sl-flex",
-      "attributes": [
-        {
-          "name": "direction",
-          "description": "An example property."
-        },
-        {
-          "name": "gap"
-        },
-        {
-          "name": "alignItems"
-        },
-        {
-          "name": "justify"
         }
       ]
     },
@@ -1272,6 +1272,9 @@
       ]
     },
     {
+      "name": "sl-menu"
+    },
+    {
       "name": "sl-menu-item",
       "attributes": [
         {
@@ -1319,9 +1322,6 @@
           "description": "Disables the observer."
         }
       ]
-    },
-    {
-      "name": "sl-menu"
     },
     {
       "name": "sl-popup",

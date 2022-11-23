@@ -18,6 +18,7 @@ export default css`
 
   :host {
     display: flex;
+    --width: auto;
     --gap: 0;
     --column-gap: var(--gap);
     --row-gap: var(--gap);
@@ -29,6 +30,8 @@ export default css`
     gap: var(--gap);
     column-gap: var(--column-gap);
     row-gap: var(--row-gap);
+    max-width: var(--width, none);
+    width: var(--width, auto);
   }
 
   :host([direction="column"]) .flex-container {
@@ -39,6 +42,16 @@ export default css`
   :host([gap]) {
     --gap: 1rem;
   }
+
+    :host([grow]) {
+      --max-width: 100%;
+      --width: 100%;
+    }
+
+    :host([layout-contained]) {
+      --width: 1200px;
+      --max-width: 100%;
+    }
 
   :host([justify="center"]) .flex-container {
     justify-content: center;
