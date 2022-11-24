@@ -26,7 +26,7 @@ export default css`
     gap: var(--gap, 0);
     column-gap: var(--column-gap, 0);
     row-gap: var(--row-gap, 0);
-    padding: var(--padding, 0);
+    padding: var(--inner-padding, 0);
   }
 
   :host([direction="column"]) .flex-container {
