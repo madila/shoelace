@@ -24,8 +24,6 @@ export default css`
     display: flex;
     flex: 1;
     gap: var(--gap, 0);
-    column-gap: var(--column-gap, 0);
-    row-gap: var(--row-gap, 0);
     padding: var(--inner-padding, 0);
   }
 
@@ -34,9 +32,13 @@ export default css`
     flex: 1;
   }
 
-  :host([gap]) {
-    --gap: 1rem;
+  :host([gap][direction="row"]) .flex-container {
+    row-gap: var(--row-gap, 1rem);
   }
+
+    :host([gap][direction="column"]) .flex-container {
+        column-gap: var(--column-gap, 1rem);
+    }
 
     :host([grow]) {
       --max-width: 100%;
