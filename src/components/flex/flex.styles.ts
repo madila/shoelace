@@ -46,14 +46,14 @@ export default css`
     }
 
     :host([layout-contained]) .flex-container {
-        max-width: var(--layout-width, 980px);
-        width: 100%;
+        max-width: 100%;
+        width: var(--layout-width, 980px);
         margin-left: auto;
         margin-right: auto;
     }
 
     :host([layout-contained="wide"]) {
-        max-width: var(--layout-width-wide, 1200px);
+        width: var(--layout-width-wide, 1200px);
     }
 
   :host([justify="center"]) .flex-container {
