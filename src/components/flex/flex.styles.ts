@@ -25,6 +25,7 @@ export default css`
     flex: 1;
     gap: var(--gap, 0);
     padding: var(--inner-padding, 0);
+    flex-direction: var(--flex-direction, row);
   }
 
   :host([direction="column"]) .flex-container {
