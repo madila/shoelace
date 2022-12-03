@@ -256,166 +256,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/animated-image/animated-image.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's src attribute.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's alt attribute.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "When set, the image will animate. Otherwise, it will be paused.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad"
-            },
-            {
-              "kind": "method",
-              "name": "handleError"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "sl-load",
-              "reactName": "onSlLoad"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "sl-error",
-              "reactName": "onSlError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's src attribute.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's alt attribute.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "When set, the image will animate. Otherwise, it will be paused.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-animated-image",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "src/components/animated-image/animated-image.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-animated-image",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "src/components/animated-image/animated-image.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -811,6 +651,166 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/animated-image/animated-image.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's src attribute.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's alt attribute.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "When set, the image will animate. Otherwise, it will be paused.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad"
+            },
+            {
+              "kind": "method",
+              "name": "handleError"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "sl-load",
+              "reactName": "onSlLoad"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "sl-error",
+              "reactName": "onSlError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's src attribute.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's alt attribute.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "When set, the image will animate. Otherwise, it will be paused.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-animated-image",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "src/components/animated-image/animated-image.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-animated-image",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "src/components/animated-image/animated-image.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/avatar/avatar.ts",
       "declarations": [
         {
@@ -969,372 +969,6 @@
           "declaration": {
             "name": "SlAvatar",
             "module": "src/components/avatar/avatar.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/badge/badge.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/breadcrumb/breadcrumb.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBreadcrumb",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "One or more breadcrumb items to display.",
-              "name": ""
-            },
-            {
-              "description": "The separator to use between breadcrumb items.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "separatorSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "separatorDir",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Breadcrumb'",
-              "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "method",
-              "name": "getSeparator",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Breadcrumb'",
-              "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices.",
-              "fieldName": "label"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-breadcrumb",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBreadcrumb",
-            "module": "src/components/breadcrumb/breadcrumb.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-breadcrumb",
-          "declaration": {
-            "name": "SlBreadcrumb",
-            "module": "src/components/breadcrumb/breadcrumb.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBreadcrumbItem",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The breadcrumb item's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix slot.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix slot.",
-              "name": "suffix"
-            },
-            {
-              "description": "The container that wraps the separator slot.",
-              "name": "separator"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The breadcrumb item's label.",
-              "name": ""
-            },
-            {
-              "description": "An optional prefix, usually an icon or icon button.",
-              "name": "prefix"
-            },
-            {
-              "description": "An optional suffix, usually an icon or icon button.",
-              "name": "suffix"
-            },
-            {
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'prefix', 'suffix')"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "attribute": "rel"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "'noreferrer noopener'",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "fieldName": "rel"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-breadcrumb-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-breadcrumb-item",
-          "declaration": {
-            "name": "SlBreadcrumbItem",
-            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
           }
         }
       ]
@@ -1860,6 +1494,372 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/breadcrumb-item/breadcrumb-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBreadcrumbItem",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The breadcrumb item's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix slot.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix slot.",
+              "name": "suffix"
+            },
+            {
+              "description": "The container that wraps the separator slot.",
+              "name": "separator"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The breadcrumb item's label.",
+              "name": ""
+            },
+            {
+              "description": "An optional prefix, usually an icon or icon button.",
+              "name": "prefix"
+            },
+            {
+              "description": "An optional suffix, usually an icon or icon button.",
+              "name": "suffix"
+            },
+            {
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'prefix', 'suffix')"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "attribute": "rel"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "'noreferrer noopener'",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "fieldName": "rel"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-breadcrumb-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-breadcrumb-item",
+          "declaration": {
+            "name": "SlBreadcrumbItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/badge/badge.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/breadcrumb/breadcrumb.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBreadcrumb",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "One or more breadcrumb items to display.",
+              "name": ""
+            },
+            {
+              "description": "The separator to use between breadcrumb items.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "separatorSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "separatorDir",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Breadcrumb'",
+              "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "method",
+              "name": "getSeparator",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Breadcrumb'",
+              "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-breadcrumb",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBreadcrumb",
+            "module": "src/components/breadcrumb/breadcrumb.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-breadcrumb",
+          "declaration": {
+            "name": "SlBreadcrumb",
+            "module": "src/components/breadcrumb/breadcrumb.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/button-group/button-group.ts",
       "declarations": [
         {
@@ -1993,6 +1993,109 @@
           "declaration": {
             "name": "SlButtonGroup",
             "module": "src/components/button-group/button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for card edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of card borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for card sections.*",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The card's image, if present.",
+              "name": "image"
+            },
+            {
+              "description": "The card's header, if present.",
+              "name": "header"
+            },
+            {
+              "description": "The card's body.",
+              "name": "body"
+            },
+            {
+              "description": "The card's footer, if present.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's body.",
+              "name": ""
+            },
+            {
+              "description": "The card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The card's footer.",
+              "name": "footer"
+            },
+            {
+              "description": "The card's image.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -2306,109 +2409,6 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "src/components/checkbox/checkbox.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/card/card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for card edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of card borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for card sections.*",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The card's image, if present.",
-              "name": "image"
-            },
-            {
-              "description": "The card's header, if present.",
-              "name": "header"
-            },
-            {
-              "description": "The card's body.",
-              "name": "body"
-            },
-            {
-              "description": "The card's footer, if present.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's body.",
-              "name": ""
-            },
-            {
-              "description": "The card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The card's footer.",
-              "name": "footer"
-            },
-            {
-              "description": "The card's image.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -4220,6 +4220,110 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/format-bytes/format-bytes.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlFormatBytes",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format in bytes.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "'byte' | 'bit'"
+              },
+              "default": "'byte'",
+              "description": "The unit to display.",
+              "attribute": "unit"
+            },
+            {
+              "kind": "field",
+              "name": "display",
+              "type": {
+                "text": "'long' | 'short' | 'narrow'"
+              },
+              "default": "'short'",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "attribute": "display"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format in bytes.",
+              "fieldName": "value"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "'byte' | 'bit'"
+              },
+              "default": "'byte'",
+              "description": "The unit to display.",
+              "fieldName": "unit"
+            },
+            {
+              "name": "display",
+              "type": {
+                "text": "'long' | 'short' | 'narrow'"
+              },
+              "default": "'short'",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "fieldName": "display"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-format-bytes",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlFormatBytes",
+            "module": "src/components/format-bytes/format-bytes.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-format-bytes",
+          "declaration": {
+            "name": "SlFormatBytes",
+            "module": "src/components/format-bytes/format-bytes.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/dropdown/dropdown.ts",
       "declarations": [
         {
@@ -4605,257 +4709,6 @@
           "declaration": {
             "name": "SlDropdown",
             "module": "src/components/dropdown/dropdown.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/flex/flex.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlFlex",
-          "cssProperties": [
-            {
-              "description": "An example CSS custom property.",
-              "name": "--example"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "An example slot.",
-              "name": "example"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "attribute": "gap"
-            },
-            {
-              "kind": "field",
-              "name": "alignItems",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "alignItems"
-            },
-            {
-              "kind": "field",
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "justify"
-            },
-            {
-              "kind": "method",
-              "name": "directionChanged"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted as an example.",
-              "name": "sl-event-name",
-              "reactName": "onSlEventName"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "direction",
-              "type": {
-                "text": "string"
-              },
-              "default": "'row'",
-              "description": "An example property.",
-              "fieldName": "direction"
-            },
-            {
-              "name": "gap",
-              "type": {
-                "text": "null"
-              },
-              "default": "null",
-              "fieldName": "gap"
-            },
-            {
-              "name": "alignItems",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "alignItems"
-            },
-            {
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "justify"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "sl-example"
-          ],
-          "tagName": "sl-flex",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-flex",
-          "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/format-bytes/format-bytes.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlFormatBytes",
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format in bytes.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "unit",
-              "type": {
-                "text": "'byte' | 'bit'"
-              },
-              "default": "'byte'",
-              "description": "The unit to display.",
-              "attribute": "unit"
-            },
-            {
-              "kind": "field",
-              "name": "display",
-              "type": {
-                "text": "'long' | 'short' | 'narrow'"
-              },
-              "default": "'short'",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "attribute": "display"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format in bytes.",
-              "fieldName": "value"
-            },
-            {
-              "name": "unit",
-              "type": {
-                "text": "'byte' | 'bit'"
-              },
-              "default": "'byte'",
-              "description": "The unit to display.",
-              "fieldName": "unit"
-            },
-            {
-              "name": "display",
-              "type": {
-                "text": "'long' | 'short' | 'narrow'"
-              },
-              "default": "'short'",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "fieldName": "display"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-format-bytes",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlFormatBytes",
-            "module": "src/components/format-bytes/format-bytes.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-format-bytes",
-          "declaration": {
-            "name": "SlFormatBytes",
-            "module": "src/components/format-bytes/format-bytes.ts"
           }
         }
       ]
@@ -5344,6 +5197,269 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/icon-button/icon-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlIconButton",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "button",
+              "type": {
+                "text": "HTMLButtonElement | HTMLLinkElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "library",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of a registered custom icon library.",
+              "attribute": "library"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "attribute": "download"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "description": "Simulates a click on the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the icon button."
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the icon button loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the icon button gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw.",
+              "fieldName": "name"
+            },
+            {
+              "name": "library",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of a registered custom icon library.",
+              "fieldName": "library"
+            },
+            {
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file.",
+              "fieldName": "src"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "fieldName": "download"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
+              "fieldName": "label"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-icon-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlIconButton",
+            "module": "src/components/icon-button/icon-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-icon-button",
+          "declaration": {
+            "name": "SlIconButton",
+            "module": "src/components/icon-button/icon-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/icon/icon.ts",
       "declarations": [
         {
@@ -5695,233 +5811,117 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/icon-button/icon-button.ts",
+      "path": "src/components/flex/flex.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlIconButton",
+          "name": "SlFlex",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
             }
           ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
           "members": [
             {
               "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "button",
-              "type": {
-                "text": "HTMLButtonElement | HTMLLinkElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "attribute": "library"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "attribute": "download"
-            },
-            {
-              "kind": "field",
-              "name": "label",
+              "name": "direction",
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
-              "attribute": "label"
+              "default": "'row'",
+              "description": "An example property.",
+              "attribute": "direction"
             },
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "gap",
               "type": {
-                "text": "boolean"
+                "text": "null"
               },
-              "default": "false",
-              "description": "Disables the button.",
-              "attribute": "disabled",
-              "reflects": true
+              "default": "null",
+              "attribute": "gap"
+            },
+            {
+              "kind": "field",
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "alignItems"
+            },
+            {
+              "kind": "field",
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "justify"
             },
             {
               "kind": "method",
-              "name": "click",
-              "description": "Simulates a click on the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
+              "name": "directionChanged"
             }
           ],
           "events": [
             {
-              "description": "Emitted when the icon button loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the icon button gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
+              "description": "Emitted as an example.",
+              "name": "sl-event-name",
+              "reactName": "onSlEventName"
             }
           ],
           "attributes": [
             {
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw.",
-              "fieldName": "name"
-            },
-            {
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "fieldName": "library"
-            },
-            {
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file.",
-              "fieldName": "src"
-            },
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "fieldName": "download"
-            },
-            {
-              "name": "label",
+              "name": "direction",
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "description": "A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should\nalways include a label that describes what the icon button does.",
-              "fieldName": "label"
+              "default": "'row'",
+              "description": "An example property.",
+              "fieldName": "direction"
             },
             {
-              "name": "disabled",
+              "name": "gap",
               "type": {
-                "text": "boolean"
+                "text": "null"
               },
-              "default": "false",
-              "description": "Disables the button.",
-              "fieldName": "disabled"
+              "default": "null",
+              "fieldName": "gap"
+            },
+            {
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "alignItems"
+            },
+            {
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "justify"
             }
           ],
           "superclass": {
@@ -5929,11 +5929,11 @@
             "module": "/src/internal/shoelace-element"
           },
           "since": "2.0",
-          "status": "stable",
+          "status": "experimental",
           "dependencies": [
-            "sl-icon"
+            "sl-example"
           ],
-          "tagName": "sl-icon-button",
+          "tagName": "sl-flex",
           "customElement": true
         }
       ],
@@ -5942,16 +5942,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlIconButton",
-            "module": "src/components/icon-button/icon-button.ts"
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-icon-button",
+          "name": "sl-flex",
           "declaration": {
-            "name": "SlIconButton",
-            "module": "src/components/icon-button/icon-button.ts"
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
           }
         }
       ]
@@ -7194,151 +7194,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/menu/menu.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenu",
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectString",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getAllItems",
-              "parameters": [
-                {
-                  "name": "options",
-                  "default": "{ includeDisabled: true }",
-                  "type": {
-                    "text": "{ includeDisabled: boolean }"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "typeToSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ],
-              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: SlMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "sl-select",
-              "reactName": "onSlSelect"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-menu",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/menu-item/menu-item.ts",
       "declarations": [
         {
@@ -8317,117 +8172,118 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/progress-bar/progress-bar.ts",
+      "path": "src/components/menu/menu.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlProgressBar",
-          "cssProperties": [
-            {
-              "description": "The progress bar's height.",
-              "name": "--height"
-            },
-            {
-              "description": "The track color.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
-            },
-            {
-              "description": "The label color.",
-              "name": "--label-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The progress bar indicator.",
-              "name": "indicator"
-            },
-            {
-              "description": "The progress bar label.",
-              "name": "label"
-            }
-          ],
+          "name": "SlMenu",
           "slots": [
             {
-              "description": "A label to show inside the indicator.",
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
+              "name": "defaultSlot",
               "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
+                "text": "HTMLSlotElement"
+              }
             },
             {
               "kind": "field",
-              "name": "indeterminate",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "attribute": "indeterminate",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
+              "name": "typeToSelectString",
               "type": {
                 "text": "string"
               },
-              "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
-              "attribute": "label"
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getAllItems",
+              "parameters": [
+                {
+                  "name": "options",
+                  "default": "{ includeDisabled: true }",
+                  "type": {
+                    "text": "{ includeDisabled: boolean }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "typeToSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
             }
           ],
-          "attributes": [
+          "events": [
             {
-              "name": "value",
               "type": {
-                "text": "number"
+                "text": "{ item: SlMenuItem }"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "fieldName": "value"
-            },
-            {
-              "name": "indeterminate",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "fieldName": "indeterminate"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
-              "fieldName": "label"
+              "description": "Emitted when a menu item is selected.",
+              "name": "sl-select",
+              "reactName": "onSlSelect"
             }
           ],
           "superclass": {
@@ -8436,7 +8292,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-progress-bar",
+          "tagName": "sl-menu",
           "customElement": true
         }
       ],
@@ -8445,127 +8301,157 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-progress-bar",
+          "name": "sl-menu",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/progress-ring/progress-ring.ts",
+      "path": "src/components/radio/radio.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlProgressRing",
-          "cssProperties": [
-            {
-              "description": "The diameter of the progress ring (cannot be a percentage).",
-              "name": "--size"
-            },
-            {
-              "description": "The width of the track.",
-              "name": "--track-width"
-            },
-            {
-              "description": "The color of the track.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The width of the indicator. Defaults to the track width.",
-              "name": "--indicator-width"
-            },
-            {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
-            }
-          ],
+          "name": "SlRadio",
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
             },
             {
-              "description": "The progress ring label.",
+              "description": "The radio control.",
+              "name": "control"
+            },
+            {
+              "description": "The radio control if radio is checked.",
+              "name": "control--checked"
+            },
+            {
+              "description": "The container the wraps the checked icon.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The radio label.",
               "name": "label"
             }
           ],
           "slots": [
             {
-              "description": "A label to show inside the ring.",
+              "description": "The radio's label.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
             },
             {
               "kind": "field",
-              "name": "indicator",
+              "name": "hasFocus",
               "type": {
-                "text": "SVGCircleElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "indicatorOffset",
-              "type": {
-                "text": "string"
-              }
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "default": "false"
             },
             {
               "kind": "field",
               "name": "value",
               "type": {
-                "text": "number"
+                "text": "string"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
+              "description": "The radio's value attribute.",
+              "attribute": "value"
             },
             {
               "kind": "field",
-              "name": "label",
+              "name": "disabled",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "attribute": "label"
+              "default": "false",
+              "description": "Disables the radio.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "addEventListeners",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setInitialAttributes",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
             }
           ],
           "attributes": [
             {
               "name": "value",
               "type": {
-                "text": "number"
+                "text": "string"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
+              "description": "The radio's value attribute.",
               "fieldName": "value"
             },
             {
-              "name": "label",
+              "name": "disabled",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "fieldName": "label"
+              "default": "false",
+              "description": "Disables the radio.",
+              "fieldName": "disabled"
             }
           ],
           "superclass": {
@@ -8574,7 +8460,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-progress-ring",
+          "tagName": "sl-radio",
           "customElement": true
         }
       ],
@@ -8583,16 +8469,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-progress-ring",
+          "name": "sl-radio",
           "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
           }
         }
       ]
@@ -8790,141 +8676,111 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/radio/radio.ts",
+      "path": "src/components/progress-ring/progress-ring.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlRadio",
+          "name": "SlProgressRing",
+          "cssProperties": [
+            {
+              "description": "The diameter of the progress ring (cannot be a percentage).",
+              "name": "--size"
+            },
+            {
+              "description": "The width of the track.",
+              "name": "--track-width"
+            },
+            {
+              "description": "The color of the track.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The width of the indicator. Defaults to the track width.",
+              "name": "--indicator-width"
+            },
+            {
+              "description": "The indicator color.",
+              "name": "--indicator-color"
+            }
+          ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
             },
             {
-              "description": "The radio control.",
-              "name": "control"
-            },
-            {
-              "description": "The radio control if radio is checked.",
-              "name": "control--checked"
-            },
-            {
-              "description": "The container the wraps the checked icon.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The radio label.",
+              "description": "The progress ring label.",
               "name": "label"
             }
           ],
           "slots": [
             {
-              "description": "The radio's label.",
+              "description": "A label to show inside the ring.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
             },
             {
               "kind": "field",
-              "name": "hasFocus",
+              "name": "indicator",
               "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected",
-              "default": "false"
+                "text": "SVGCircleElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "indicatorOffset",
+              "type": {
+                "text": "string"
+              }
             },
             {
               "kind": "field",
               "name": "value",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "description": "The radio's value attribute.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the radio.",
-              "attribute": "disabled",
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
               "reflects": true
             },
             {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "addEventListeners",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "setInitialAttributes",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "attribute": "label"
             }
           ],
           "attributes": [
             {
               "name": "value",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "description": "The radio's value attribute.",
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
               "fieldName": "value"
             },
             {
-              "name": "disabled",
+              "name": "label",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "Disables the radio.",
-              "fieldName": "disabled"
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "fieldName": "label"
             }
           ],
           "superclass": {
@@ -8933,7 +8789,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-radio",
+          "tagName": "sl-progress-ring",
           "customElement": true
         }
       ],
@@ -8942,16 +8798,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-radio",
+          "name": "sl-progress-ring",
           "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
           }
         }
       ]
@@ -9520,6 +9376,412 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/rating/rating.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlRating",
+          "cssProperties": [
+            {
+              "description": "The inactive color for symbols.",
+              "name": "--symbol-color"
+            },
+            {
+              "description": "The active color for symbols.",
+              "name": "--symbol-color-active"
+            },
+            {
+              "description": "The size of symbols.",
+              "name": "--symbol-size"
+            },
+            {
+              "description": "The spacing to use around symbols.",
+              "name": "--symbol-spacing"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "rating",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "hoverValue",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "isHovering",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to describe the rating to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The minimum increment value allowed by the control.",
+              "attribute": "precision"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "attribute": "readonly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "The name of the icon to display as the symbol.",
+              "attribute": "getSymbol"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the rating."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the rating."
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromMousePosition",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromTouchPosition",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromXCoordinate",
+              "parameters": [
+                {
+                  "name": "coordinate",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "setValue",
+              "parameters": [
+                {
+                  "name": "newValue",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave"
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchStart",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchMove",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchEnd",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "roundToPrecision",
+              "parameters": [
+                {
+                  "name": "numberToRound",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "precision",
+                  "default": "0.5"
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the rating's value changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to describe the rating to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "fieldName": "value"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "fieldName": "max"
+            },
+            {
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The minimum increment value allowed by the control.",
+              "fieldName": "precision"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "The name of the icon to display as the symbol.",
+              "fieldName": "getSymbol"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-rating",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlRating",
+            "module": "src/components/rating/rating.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-rating",
+          "declaration": {
+            "name": "SlRating",
+            "module": "src/components/rating/rating.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/range/range.ts",
       "declarations": [
         {
@@ -9999,44 +10261,51 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/rating/rating.ts",
+      "path": "src/components/progress-bar/progress-bar.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlRating",
+          "name": "SlProgressBar",
           "cssProperties": [
             {
-              "description": "The inactive color for symbols.",
-              "name": "--symbol-color"
+              "description": "The progress bar's height.",
+              "name": "--height"
             },
             {
-              "description": "The active color for symbols.",
-              "name": "--symbol-color-active"
+              "description": "The track color.",
+              "name": "--track-color"
             },
             {
-              "description": "The size of symbols.",
-              "name": "--symbol-size"
+              "description": "The indicator color.",
+              "name": "--indicator-color"
             },
             {
-              "description": "The spacing to use around symbols.",
-              "name": "--symbol-spacing"
+              "description": "The label color.",
+              "name": "--label-color"
             }
           ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
+            },
+            {
+              "description": "The progress bar indicator.",
+              "name": "indicator"
+            },
+            {
+              "description": "The progress bar label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "A label to show inside the indicator.",
+              "name": ""
             }
           ],
           "members": [
-            {
-              "kind": "field",
-              "name": "rating",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
             {
               "kind": "field",
               "name": "localize",
@@ -10045,21 +10314,25 @@
             },
             {
               "kind": "field",
-              "name": "hoverValue",
+              "name": "value",
               "type": {
                 "text": "number"
               },
-              "privacy": "private",
-              "default": "0"
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
+              "reflects": true
             },
             {
               "kind": "field",
-              "name": "isHovering",
+              "name": "indeterminate",
               "type": {
                 "text": "boolean"
               },
-              "privacy": "private",
-              "default": "false"
+              "default": "false",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "attribute": "indeterminate",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -10068,307 +10341,37 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "A label to describe the rating to assistive devices.",
+              "description": "A custom label for the progress bar's aria label.",
               "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The minimum increment value allowed by the control.",
-              "attribute": "precision"
-            },
-            {
-              "kind": "field",
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "attribute": "readonly",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "The name of the icon to display as the symbol.",
-              "attribute": "getSymbol"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the rating."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the rating."
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromMousePosition",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromTouchPosition",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromXCoordinate",
-              "parameters": [
-                {
-                  "name": "coordinate",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "setValue",
-              "parameters": [
-                {
-                  "name": "newValue",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave"
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchStart",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchMove",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchEnd",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "roundToPrecision",
-              "parameters": [
-                {
-                  "name": "numberToRound",
-                  "type": {
-                    "text": "number"
-                  }
-                },
-                {
-                  "name": "precision",
-                  "default": "0.5"
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the rating's value changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
             }
           ],
           "attributes": [
             {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to describe the rating to assistive devices.",
-              "fieldName": "label"
-            },
-            {
               "name": "value",
               "type": {
                 "text": "number"
               },
               "default": "0",
-              "description": "The current rating.",
+              "description": "The current progress, 0 to 100.",
               "fieldName": "value"
             },
             {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "fieldName": "max"
-            },
-            {
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The minimum increment value allowed by the control.",
-              "fieldName": "precision"
-            },
-            {
-              "name": "readonly",
+              "name": "indeterminate",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Makes the rating readonly.",
-              "fieldName": "readonly"
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "fieldName": "indeterminate"
             },
             {
-              "name": "disabled",
+              "name": "label",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "description": "Disables the rating.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "The name of the icon to display as the symbol.",
-              "fieldName": "getSymbol"
+              "default": "''",
+              "description": "A custom label for the progress bar's aria label.",
+              "fieldName": "label"
             }
           ],
           "superclass": {
@@ -10377,10 +10380,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-rating",
+          "tagName": "sl-progress-bar",
           "customElement": true
         }
       ],
@@ -10389,16 +10389,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlRating",
-            "module": "src/components/rating/rating.ts"
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-rating",
+          "name": "sl-progress-bar",
           "declaration": {
-            "name": "SlRating",
-            "module": "src/components/rating/rating.ts"
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
           }
         }
       ]
@@ -10561,83 +10561,57 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/resize-observer/resize-observer.ts",
+      "path": "src/components/skeleton/skeleton.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlResizeObserver",
-          "slots": [
+          "name": "SlSkeleton",
+          "cssProperties": [
             {
-              "description": "One or more elements to watch for resizing.",
-              "name": ""
+              "description": "The skeleton's border radius.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The color of the skeleton.",
+              "name": "--color"
+            },
+            {
+              "description": "The sheen color when the skeleton is in its loading state.",
+              "name": "--sheen-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The skeleton's indicator which is responsible for its color and animation.",
+              "name": "indicator"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "resizeObserver",
+              "name": "effect",
               "type": {
-                "text": "ResizeObserver"
+                "text": "'pulse' | 'sheen' | 'none'"
               },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "observedElements",
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the observer.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            },
-            {
-              "kind": "method",
-              "name": "startObserver"
-            },
-            {
-              "kind": "method",
-              "name": "stopObserver"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ entries: ResizeObserverEntry[] }"
-              },
-              "description": "Emitted when the element is resized.",
-              "name": "sl-resize",
-              "reactName": "onSlResize"
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "attribute": "effect"
             }
           ],
           "attributes": [
             {
-              "name": "disabled",
+              "name": "effect",
               "type": {
-                "text": "boolean"
+                "text": "'pulse' | 'sheen' | 'none'"
               },
-              "default": "false",
-              "description": "Disables the observer.",
-              "fieldName": "disabled"
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "fieldName": "effect"
             }
           ],
           "superclass": {
@@ -10646,7 +10620,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-resize-observer",
+          "tagName": "sl-skeleton",
           "customElement": true
         }
       ],
@@ -10655,16 +10629,85 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "src/components/resize-observer/resize-observer.ts"
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-resize-observer",
+          "name": "sl-skeleton",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "src/components/resize-observer/resize-observer.ts"
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/spinner/spinner.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlSpinner",
+          "cssProperties": [
+            {
+              "description": "The width of the track.",
+              "name": "--track-width"
+            },
+            {
+              "description": "The color of the track.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The color of the indicator.",
+              "name": "--indicator-color"
+            },
+            {
+              "description": "The time it takes for the spinner to complete one animation cycle.",
+              "name": "--speed"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-spinner",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlSpinner",
+            "module": "src/components/spinner/spinner.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-spinner",
+          "declaration": {
+            "name": "SlSpinner",
+            "module": "src/components/spinner/spinner.ts"
           }
         }
       ]
@@ -11396,57 +11439,83 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/skeleton/skeleton.ts",
+      "path": "src/components/resize-observer/resize-observer.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlSkeleton",
-          "cssProperties": [
+          "name": "SlResizeObserver",
+          "slots": [
             {
-              "description": "The skeleton's border radius.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The color of the skeleton.",
-              "name": "--color"
-            },
-            {
-              "description": "The sheen color when the skeleton is in its loading state.",
-              "name": "--sheen-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The skeleton's indicator which is responsible for its color and animation.",
-              "name": "indicator"
+              "description": "One or more elements to watch for resizing.",
+              "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "effect",
+              "name": "resizeObserver",
               "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
+                "text": "ResizeObserver"
               },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "attribute": "effect"
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "observedElements",
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "startObserver"
+            },
+            {
+              "kind": "method",
+              "name": "stopObserver"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ entries: ResizeObserverEntry[] }"
+              },
+              "description": "Emitted when the element is resized.",
+              "name": "sl-resize",
+              "reactName": "onSlResize"
             }
           ],
           "attributes": [
             {
-              "name": "effect",
+              "name": "disabled",
               "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
+                "text": "boolean"
               },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "fieldName": "effect"
+              "default": "false",
+              "description": "Disables the observer.",
+              "fieldName": "disabled"
             }
           ],
           "superclass": {
@@ -11455,7 +11524,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-skeleton",
+          "tagName": "sl-resize-observer",
           "customElement": true
         }
       ],
@@ -11464,85 +11533,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
+            "name": "SlResizeObserver",
+            "module": "src/components/resize-observer/resize-observer.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-skeleton",
+          "name": "sl-resize-observer",
           "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/spinner/spinner.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlSpinner",
-          "cssProperties": [
-            {
-              "description": "The width of the track.",
-              "name": "--track-width"
-            },
-            {
-              "description": "The color of the track.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The color of the indicator.",
-              "name": "--indicator-color"
-            },
-            {
-              "description": "The time it takes for the spinner to complete one animation cycle.",
-              "name": "--speed"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-spinner",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlSpinner",
-            "module": "src/components/spinner/spinner.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-spinner",
-          "declaration": {
-            "name": "SlSpinner",
-            "module": "src/components/spinner/spinner.ts"
+            "name": "SlResizeObserver",
+            "module": "src/components/resize-observer/resize-observer.ts"
           }
         }
       ]
@@ -11891,321 +11891,6 @@
           "declaration": {
             "name": "SlSplitPanel",
             "module": "src/components/split-panel/split-panel.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/switch/switch.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlSwitch",
-          "cssProperties": [
-            {
-              "description": "The width of the switch.",
-              "name": "--width"
-            },
-            {
-              "description": "The height of the switch.",
-              "name": "--height"
-            },
-            {
-              "description": "The size of the thumb.",
-              "name": "--thumb-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The switch control.",
-              "name": "control"
-            },
-            {
-              "description": "The switch position indicator.",
-              "name": "thumb"
-            },
-            {
-              "description": "The switch label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The switch's label.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "input",
-              "type": {
-                "text": "HTMLInputElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "formSubmitController",
-              "privacy": "private",
-              "default": "new FormSubmitController(this, {\n    value: (control: SlSwitch) => (control.checked ? control.value : undefined),\n    defaultValue: (control: SlSwitch) => control.defaultChecked,\n    setValue: (control: SlSwitch, checked: boolean) => (control.checked = checked)\n  })"
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "The switch's name attribute.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The switch's value attribute.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the switch.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the switch a required field.",
-              "attribute": "required",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the switch in a checked state.",
-              "attribute": "checked",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "invalid",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
-              "attribute": "invalid",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "defaultChecked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Gets or sets the default value used to reset this element. The initial value corresponds to the one originally specified in the HTML that created this element."
-            },
-            {
-              "kind": "method",
-              "name": "click",
-              "description": "Simulates a click on the switch."
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the switch."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the switch."
-            },
-            {
-              "kind": "method",
-              "name": "reportValidity",
-              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
-            },
-            {
-              "kind": "method",
-              "name": "setCustomValidity",
-              "parameters": [
-                {
-                  "name": "message",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ],
-              "description": "Sets a custom validation message. If `message` is not empty, the field will be considered invalid."
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur"
-            },
-            {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the control's checked state changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "The switch's name attribute.",
-              "fieldName": "name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The switch's value attribute.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the switch.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the switch a required field.",
-              "fieldName": "required"
-            },
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the switch in a checked state.",
-              "fieldName": "checked"
-            },
-            {
-              "name": "invalid",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
-              "fieldName": "invalid"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-switch",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlSwitch",
-            "module": "src/components/switch/switch.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-switch",
-          "declaration": {
-            "name": "SlSwitch",
-            "module": "src/components/switch/switch.ts"
           }
         }
       ]
@@ -12786,6 +12471,321 @@
           "declaration": {
             "name": "SlTabGroup",
             "module": "src/components/tab-group/tab-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/switch/switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlSwitch",
+          "cssProperties": [
+            {
+              "description": "The width of the switch.",
+              "name": "--width"
+            },
+            {
+              "description": "The height of the switch.",
+              "name": "--height"
+            },
+            {
+              "description": "The size of the thumb.",
+              "name": "--thumb-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The switch control.",
+              "name": "control"
+            },
+            {
+              "description": "The switch position indicator.",
+              "name": "thumb"
+            },
+            {
+              "description": "The switch label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The switch's label.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "formSubmitController",
+              "privacy": "private",
+              "default": "new FormSubmitController(this, {\n    value: (control: SlSwitch) => (control.checked ? control.value : undefined),\n    defaultValue: (control: SlSwitch) => control.defaultChecked,\n    setValue: (control: SlSwitch, checked: boolean) => (control.checked = checked)\n  })"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "The switch's name attribute.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The switch's value attribute.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the switch.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the switch a required field.",
+              "attribute": "required",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the switch in a checked state.",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
+              "attribute": "invalid",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Gets or sets the default value used to reset this element. The initial value corresponds to the one originally specified in the HTML that created this element."
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "description": "Simulates a click on the switch."
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the switch."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the switch."
+            },
+            {
+              "kind": "method",
+              "name": "reportValidity",
+              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
+            },
+            {
+              "kind": "method",
+              "name": "setCustomValidity",
+              "parameters": [
+                {
+                  "name": "message",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Sets a custom validation message. If `message` is not empty, the field will be considered invalid."
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus"
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the control's checked state changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "The switch's name attribute.",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The switch's value attribute.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the switch.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the switch a required field.",
+              "fieldName": "required"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the switch in a checked state.",
+              "fieldName": "checked"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
+              "fieldName": "invalid"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlSwitch",
+            "module": "src/components/switch/switch.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-switch",
+          "declaration": {
+            "name": "SlSwitch",
+            "module": "src/components/switch/switch.ts"
           }
         }
       ]
@@ -14144,285 +14144,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/tree/tree.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTree",
-          "cssProperties": [
-            {
-              "description": "The size of the indentation for nested items.",
-              "name": "--indent-size",
-              "default": "var(--sl-spacing-medium)"
-            },
-            {
-              "description": "The color of the indentation line.",
-              "name": "--indent-guide-color",
-              "default": "var(--sl-color-neutral-200)"
-            },
-            {
-              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
-              "name": "--indent-guide-offset",
-              "default": "0"
-            },
-            {
-              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
-              "name": "--indent-guide-style",
-              "default": "solid"
-            },
-            {
-              "description": "The width of the indentation line.",
-              "name": "--indent-guide-width",
-              "default": "0"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "The icon to show when the tree item is expanded.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "The icon to show when the tree item is collapsed.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "collapsedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "attribute": "selection"
-            },
-            {
-              "kind": "field",
-              "name": "treeItems",
-              "type": {
-                "text": "SlTreeItem[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "lastFocusedItem",
-              "type": {
-                "text": "SlTreeItem"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "mutationObserver",
-              "type": {
-                "text": "MutationObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getExpandButtonIcon",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "status",
-                  "type": {
-                    "text": "'expand' | 'collapse'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "initTreeItem",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleTreeChanged"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectionChange"
-            },
-            {
-              "kind": "method",
-              "name": "syncTreeItems",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "selectItem",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "selectedItems",
-              "type": {
-                "text": "SlTreeItem[]"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getFocusableItems"
-            },
-            {
-              "kind": "method",
-              "name": "focusItem",
-              "parameters": [
-                {
-                  "name": "item",
-                  "optional": true,
-                  "type": {
-                    "text": "SlTreeItem | null"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusOut"
-            },
-            {
-              "kind": "field",
-              "name": "handleFocusIn"
-            },
-            {
-              "kind": "method",
-              "name": "updateItems"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ selection: TreeItem[] }"
-              },
-              "description": "Emitted when an item gets selected or deselected",
-              "name": "sl-selection-change",
-              "reactName": "onSlSelectionChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "Specifies the selection behavior of the Tree",
-              "fieldName": "selection"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "tagName": "sl-tree",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tree",
-          "declaration": {
-            "name": "SlTree",
-            "module": "src/components/tree/tree.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/tree-item/tree-item.ts",
       "declarations": [
         {
@@ -14790,6 +14511,285 @@
           "declaration": {
             "name": "SlTreeItem",
             "module": "src/components/tree-item/tree-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tree/tree.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTree",
+          "cssProperties": [
+            {
+              "description": "The size of the indentation for nested items.",
+              "name": "--indent-size",
+              "default": "var(--sl-spacing-medium)"
+            },
+            {
+              "description": "The color of the indentation line.",
+              "name": "--indent-guide-color",
+              "default": "var(--sl-color-neutral-200)"
+            },
+            {
+              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
+              "name": "--indent-guide-offset",
+              "default": "0"
+            },
+            {
+              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
+              "name": "--indent-guide-style",
+              "default": "solid"
+            },
+            {
+              "description": "The width of the indentation line.",
+              "name": "--indent-guide-width",
+              "default": "0"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "The icon to show when the tree item is expanded.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "The icon to show when the tree item is collapsed.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "collapsedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "attribute": "selection"
+            },
+            {
+              "kind": "field",
+              "name": "treeItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "lastFocusedItem",
+              "type": {
+                "text": "SlTreeItem"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "type": {
+                "text": "MutationObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getExpandButtonIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "status",
+                  "type": {
+                    "text": "'expand' | 'collapse'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initTreeItem",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleTreeChanged"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectionChange"
+            },
+            {
+              "kind": "method",
+              "name": "syncTreeItems",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectItem",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "selectedItems",
+              "type": {
+                "text": "SlTreeItem[]"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getFocusableItems"
+            },
+            {
+              "kind": "method",
+              "name": "focusItem",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": true,
+                  "type": {
+                    "text": "SlTreeItem | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusOut"
+            },
+            {
+              "kind": "field",
+              "name": "handleFocusIn"
+            },
+            {
+              "kind": "method",
+              "name": "updateItems"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ selection: TreeItem[] }"
+              },
+              "description": "Emitted when an item gets selected or deselected",
+              "name": "sl-selection-change",
+              "reactName": "onSlSelectionChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "Specifies the selection behavior of the Tree",
+              "fieldName": "selection"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "tagName": "sl-tree",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tree",
+          "declaration": {
+            "name": "SlTree",
+            "module": "src/components/tree/tree.ts"
           }
         }
       ]

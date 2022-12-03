@@ -39,23 +39,6 @@
       ]
     },
     {
-      "name": "sl-animated-image",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The image's src attribute."
-        },
-        {
-          "name": "alt",
-          "description": "The image's alt attribute."
-        },
-        {
-          "name": "play",
-          "description": "When set, the image will animate. Otherwise, it will be paused."
-        }
-      ]
-    },
-    {
       "name": "sl-animation",
       "attributes": [
         {
@@ -105,6 +88,23 @@
       ]
     },
     {
+      "name": "sl-animated-image",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The image's src attribute."
+        },
+        {
+          "name": "alt",
+          "description": "The image's alt attribute."
+        },
+        {
+          "name": "play",
+          "description": "When set, the image will animate. Otherwise, it will be paused."
+        }
+      ]
+    },
+    {
       "name": "sl-avatar",
       "attributes": [
         {
@@ -133,80 +133,6 @@
               "name": "rounded"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "sl-badge",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's variant.",
-          "values": [
-            {
-              "name": "primary"
-            },
-            {
-              "name": "success"
-            },
-            {
-              "name": "neutral"
-            },
-            {
-              "name": "warning"
-            },
-            {
-              "name": "danger"
-            }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges."
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention."
-        }
-      ]
-    },
-    {
-      "name": "sl-breadcrumb",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices."
-        }
-      ]
-    },
-    {
-      "name": "sl-breadcrumb-item",
-      "attributes": [
-        {
-          "name": "href",
-          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead."
-        },
-        {
-          "name": "target",
-          "description": "Tells the browser where to open the link. Only used when `href` is set.",
-          "values": [
-            {
-              "name": "_blank"
-            },
-            {
-              "name": "_parent"
-            },
-            {
-              "name": "_self"
-            },
-            {
-              "name": "_top"
-            }
-          ]
-        },
-        {
-          "name": "rel",
-          "description": "The `rel` attribute to use on the link. Only used when `href` is set."
         }
       ]
     },
@@ -373,6 +299,80 @@
       ]
     },
     {
+      "name": "sl-breadcrumb-item",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead."
+        },
+        {
+          "name": "target",
+          "description": "Tells the browser where to open the link. Only used when `href` is set.",
+          "values": [
+            {
+              "name": "_blank"
+            },
+            {
+              "name": "_parent"
+            },
+            {
+              "name": "_self"
+            },
+            {
+              "name": "_top"
+            }
+          ]
+        },
+        {
+          "name": "rel",
+          "description": "The `rel` attribute to use on the link. Only used when `href` is set."
+        }
+      ]
+    },
+    {
+      "name": "sl-badge",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's variant.",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "warning"
+            },
+            {
+              "name": "danger"
+            }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges."
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention."
+        }
+      ]
+    },
+    {
+      "name": "sl-breadcrumb",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and\nother assistive devices."
+        }
+      ]
+    },
+    {
       "name": "sl-button-group",
       "attributes": [
         {
@@ -380,6 +380,9 @@
           "description": "A label to use for the button group's `aria-label` attribute."
         }
       ]
+    },
+    {
+      "name": "sl-card"
     },
     {
       "name": "sl-checkbox",
@@ -413,9 +416,6 @@
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
-    },
-    {
-      "name": "sl-card"
     },
     {
       "name": "sl-color-picker",
@@ -575,6 +575,42 @@
       ]
     },
     {
+      "name": "sl-format-bytes",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format in bytes."
+        },
+        {
+          "name": "unit",
+          "description": "The unit to display.",
+          "values": [
+            {
+              "name": "byte"
+            },
+            {
+              "name": "bit"
+            }
+          ]
+        },
+        {
+          "name": "display",
+          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+          "values": [
+            {
+              "name": "long"
+            },
+            {
+              "name": "short"
+            },
+            {
+              "name": "narrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "sl-dropdown",
       "attributes": [
         {
@@ -642,60 +678,6 @@
         {
           "name": "hoist",
           "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`."
-        }
-      ]
-    },
-    {
-      "name": "sl-flex",
-      "attributes": [
-        {
-          "name": "direction",
-          "description": "An example property."
-        },
-        {
-          "name": "gap"
-        },
-        {
-          "name": "alignItems"
-        },
-        {
-          "name": "justify"
-        }
-      ]
-    },
-    {
-      "name": "sl-format-bytes",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format in bytes."
-        },
-        {
-          "name": "unit",
-          "description": "The unit to display.",
-          "values": [
-            {
-              "name": "byte"
-            },
-            {
-              "name": "bit"
-            }
-          ]
-        },
-        {
-          "name": "display",
-          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-          "values": [
-            {
-              "name": "long"
-            },
-            {
-              "name": "short"
-            },
-            {
-              "name": "narrow"
-            }
-          ]
         }
       ]
     },
@@ -921,27 +903,6 @@
       ]
     },
     {
-      "name": "sl-icon",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the icon to draw."
-        },
-        {
-          "name": "src",
-          "description": "An external URL of an SVG file.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks."
-        },
-        {
-          "name": "label",
-          "description": "An alternate description to use for accessibility. If omitted, the icon will be ignored by assistive devices."
-        },
-        {
-          "name": "library",
-          "description": "The name of a registered custom icon library."
-        }
-      ]
-    },
-    {
       "name": "sl-icon-button",
       "attributes": [
         {
@@ -989,6 +950,45 @@
         {
           "name": "disabled",
           "description": "Disables the button."
+        }
+      ]
+    },
+    {
+      "name": "sl-icon",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to draw."
+        },
+        {
+          "name": "src",
+          "description": "An external URL of an SVG file.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks."
+        },
+        {
+          "name": "label",
+          "description": "An alternate description to use for accessibility. If omitted, the icon will be ignored by assistive devices."
+        },
+        {
+          "name": "library",
+          "description": "The name of a registered custom icon library."
+        }
+      ]
+    },
+    {
+      "name": "sl-flex",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "An example property."
+        },
+        {
+          "name": "gap"
+        },
+        {
+          "name": "alignItems"
+        },
+        {
+          "name": "justify"
         }
       ]
     },
@@ -1272,9 +1272,6 @@
       ]
     },
     {
-      "name": "sl-menu"
-    },
-    {
       "name": "sl-menu-item",
       "attributes": [
         {
@@ -1503,32 +1500,18 @@
       ]
     },
     {
-      "name": "sl-progress-bar",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The current progress, 0 to 100."
-        },
-        {
-          "name": "indeterminate",
-          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress bar's aria label."
-        }
-      ]
+      "name": "sl-menu"
     },
     {
-      "name": "sl-progress-ring",
+      "name": "sl-radio",
       "attributes": [
         {
           "name": "value",
-          "description": "The current progress, 0 to 100."
+          "description": "The radio's value attribute."
         },
         {
-          "name": "label",
-          "description": "A custom label for the progress ring's aria label."
+          "name": "disabled",
+          "description": "Disables the radio."
         }
       ]
     },
@@ -1580,15 +1563,15 @@
       ]
     },
     {
-      "name": "sl-radio",
+      "name": "sl-progress-ring",
       "attributes": [
         {
           "name": "value",
-          "description": "The radio's value attribute."
+          "description": "The current progress, 0 to 100."
         },
         {
-          "name": "disabled",
-          "description": "Disables the radio."
+          "name": "label",
+          "description": "A custom label for the progress ring's aria label."
         }
       ]
     },
@@ -1654,6 +1637,39 @@
       ]
     },
     {
+      "name": "sl-rating",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "A label to describe the rating to assistive devices."
+        },
+        {
+          "name": "value",
+          "description": "The current rating."
+        },
+        {
+          "name": "max",
+          "description": "The highest rating to show."
+        },
+        {
+          "name": "precision",
+          "description": "The minimum increment value allowed by the control."
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the rating readonly."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the rating."
+        },
+        {
+          "name": "getSymbol",
+          "description": "The name of the icon to display as the symbol."
+        }
+      ]
+    },
+    {
       "name": "sl-range",
       "attributes": [
         {
@@ -1710,35 +1726,19 @@
       ]
     },
     {
-      "name": "sl-rating",
+      "name": "sl-progress-bar",
       "attributes": [
         {
-          "name": "label",
-          "description": "A label to describe the rating to assistive devices."
-        },
-        {
           "name": "value",
-          "description": "The current rating."
+          "description": "The current progress, 0 to 100."
         },
         {
-          "name": "max",
-          "description": "The highest rating to show."
+          "name": "indeterminate",
+          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
         },
         {
-          "name": "precision",
-          "description": "The minimum increment value allowed by the control."
-        },
-        {
-          "name": "readonly",
-          "description": "Makes the rating readonly."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the rating."
-        },
-        {
-          "name": "getSymbol",
-          "description": "The name of the icon to display as the symbol."
+          "name": "label",
+          "description": "A custom label for the progress bar's aria label."
         }
       ]
     },
@@ -1783,13 +1783,27 @@
       ]
     },
     {
-      "name": "sl-resize-observer",
+      "name": "sl-skeleton",
       "attributes": [
         {
-          "name": "disabled",
-          "description": "Disables the observer."
+          "name": "effect",
+          "description": "Determines which effect the skeleton will use.",
+          "values": [
+            {
+              "name": "pulse"
+            },
+            {
+              "name": "sheen"
+            },
+            {
+              "name": "none"
+            }
+          ]
         }
       ]
+    },
+    {
+      "name": "sl-spinner"
     },
     {
       "name": "sl-select",
@@ -1880,27 +1894,13 @@
       ]
     },
     {
-      "name": "sl-skeleton",
+      "name": "sl-resize-observer",
       "attributes": [
         {
-          "name": "effect",
-          "description": "Determines which effect the skeleton will use.",
-          "values": [
-            {
-              "name": "pulse"
-            },
-            {
-              "name": "sheen"
-            },
-            {
-              "name": "none"
-            }
-          ]
+          "name": "disabled",
+          "description": "Disables the observer."
         }
       ]
-    },
-    {
-      "name": "sl-spinner"
     },
     {
       "name": "sl-split-panel",
@@ -1940,35 +1940,6 @@
         {
           "name": "snap-threshold",
           "description": "How close the divider must be to a snap point until snapping occurs."
-        }
-      ]
-    },
-    {
-      "name": "sl-switch",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The switch's name attribute."
-        },
-        {
-          "name": "value",
-          "description": "The switch's value attribute."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the switch."
-        },
-        {
-          "name": "required",
-          "description": "Makes the switch a required field."
-        },
-        {
-          "name": "checked",
-          "description": "Draws the switch in a checked state."
-        },
-        {
-          "name": "invalid",
-          "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
     },
@@ -2029,6 +2000,35 @@
         {
           "name": "no-scroll-controls",
           "description": "Disables the scroll arrows that appear when tabs overflow."
+        }
+      ]
+    },
+    {
+      "name": "sl-switch",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The switch's name attribute."
+        },
+        {
+          "name": "value",
+          "description": "The switch's value attribute."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the switch."
+        },
+        {
+          "name": "required",
+          "description": "Makes the switch a required field."
+        },
+        {
+          "name": "checked",
+          "description": "Draws the switch in a checked state."
+        },
+        {
+          "name": "invalid",
+          "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
     },
@@ -2357,26 +2357,6 @@
       ]
     },
     {
-      "name": "sl-tree",
-      "attributes": [
-        {
-          "name": "selection",
-          "description": "Specifies the selection behavior of the Tree",
-          "values": [
-            {
-              "name": "single"
-            },
-            {
-              "name": "multiple"
-            },
-            {
-              "name": "leaf"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "sl-tree-item",
       "attributes": [
         {
@@ -2394,6 +2374,26 @@
         {
           "name": "lazy",
           "description": "Enables lazy loading behavior."
+        }
+      ]
+    },
+    {
+      "name": "sl-tree",
+      "attributes": [
+        {
+          "name": "selection",
+          "description": "Specifies the selection behavior of the Tree",
+          "values": [
+            {
+              "name": "single"
+            },
+            {
+              "name": "multiple"
+            },
+            {
+              "name": "leaf"
+            }
+          ]
         }
       ]
     },
