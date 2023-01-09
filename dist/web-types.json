@@ -2036,226 +2036,72 @@
           ]
         },
         {
-          "name": "sl-drawer",
+          "name": "sl-flex",
           "description": "",
-          "doc-url": "https://shoelace.style/components/drawer",
+          "doc-url": "https://shoelace.style/components/flex",
           "js": {
             "properties": [
               {
-                "name": "drawer",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "panel",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "overlay",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "modal",
-                "value": {
-                  "type": "Modal"
-                }
-              },
-              {
-                "name": "originalTrigger",
-                "value": {
-                  "type": "HTMLElement | null"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "label",
-                "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+                "name": "direction",
+                "description": "An example property.",
                 "value": {
                   "type": "string"
                 }
               },
               {
-                "name": "placement",
-                "description": "The direction from which the drawer will open.",
+                "name": "gap",
                 "value": {
-                  "type": "'top' | 'end' | 'bottom' | 'start'"
+                  "type": "null"
                 }
               },
               {
-                "name": "contained",
-                "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+                "name": "alignItems",
                 "value": {
-                  "type": "boolean"
+                  "type": "string"
                 }
               },
               {
-                "name": "noHeader",
-                "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+                "name": "justify",
                 "value": {
-                  "type": "boolean"
+                  "type": "string"
                 }
               },
               {
-                "name": "show",
-                "description": "Shows the drawer.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the drawer",
-                "value": {}
-              },
-              {
-                "name": "requestClose",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
+                "name": "directionChanged",
                 "value": {}
               }
             ],
             "events": [
               {
-                "name": "sl-show",
-                "description": "Emitted when the drawer opens."
-              },
-              {
-                "name": "sl-after-show",
-                "description": "Emitted after the drawer opens and all animations are complete."
-              },
-              {
-                "name": "sl-hide",
-                "description": "Emitted when the drawer closes."
-              },
-              {
-                "name": "sl-after-hide",
-                "description": "Emitted after the drawer closes and all animations are complete."
-              },
-              {
-                "name": "sl-initial-focus",
-                "description": "Emitted when the drawer opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input."
-              },
-              {
-                "name": "sl-request-close",
-                "description": "Emitted when the user attempts to close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in destructive behavior such as data loss."
+                "name": "sl-event-name",
+                "description": "Emitted as an example."
               }
             ]
           },
           "attributes": [
             {
-              "name": "open",
-              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "label",
-              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+              "name": "direction",
+              "description": "An example property.",
               "value": {
                 "type": "string"
               }
             },
             {
-              "name": "placement",
-              "description": "The direction from which the drawer will open.",
+              "name": "gap",
               "value": {
-                "type": "'top' | 'end' | 'bottom' | 'start'"
+                "type": "null"
               }
             },
             {
-              "name": "contained",
-              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+              "name": "alignItems",
               "value": {
-                "type": "boolean"
+                "type": "string"
               }
             },
             {
-              "name": "no-header",
-              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+              "name": "justify",
               "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-format-bytes",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/format-bytes",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "value",
-                "description": "The number to format in bytes.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "unit",
-                "description": "The unit to display.",
-                "value": {
-                  "type": "'byte' | 'bit'"
-                }
-              },
-              {
-                "name": "display",
-                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-                "value": {
-                  "type": "'long' | 'short' | 'narrow'"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The number to format in bytes.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "unit",
-              "description": "The unit to display.",
-              "value": {
-                "type": "'byte' | 'bit'"
-              }
-            },
-            {
-              "name": "display",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "value": {
-                "type": "'long' | 'short' | 'narrow'"
+                "type": "string"
               }
             }
           ]
@@ -2483,6 +2329,231 @@
               "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
               "value": {
                 "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-drawer",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/drawer",
+          "js": {
+            "properties": [
+              {
+                "name": "drawer",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "panel",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "overlay",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "modal",
+                "value": {
+                  "type": "Modal"
+                }
+              },
+              {
+                "name": "originalTrigger",
+                "value": {
+                  "type": "HTMLElement | null"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "label",
+                "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "placement",
+                "description": "The direction from which the drawer will open.",
+                "value": {
+                  "type": "'top' | 'end' | 'bottom' | 'start'"
+                }
+              },
+              {
+                "name": "contained",
+                "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "noHeader",
+                "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "show",
+                "description": "Shows the drawer.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the drawer",
+                "value": {}
+              },
+              {
+                "name": "requestClose",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-show",
+                "description": "Emitted when the drawer opens."
+              },
+              {
+                "name": "sl-after-show",
+                "description": "Emitted after the drawer opens and all animations are complete."
+              },
+              {
+                "name": "sl-hide",
+                "description": "Emitted when the drawer closes."
+              },
+              {
+                "name": "sl-after-hide",
+                "description": "Emitted after the drawer closes and all animations are complete."
+              },
+              {
+                "name": "sl-initial-focus",
+                "description": "Emitted when the drawer opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input."
+              },
+              {
+                "name": "sl-request-close",
+                "description": "Emitted when the user attempts to close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in destructive behavior such as data loss."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "label",
+              "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "placement",
+              "description": "The direction from which the drawer will open.",
+              "value": {
+                "type": "'top' | 'end' | 'bottom' | 'start'"
+              }
+            },
+            {
+              "name": "contained",
+              "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "no-header",
+              "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-format-bytes",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/format-bytes",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "value",
+                "description": "The number to format in bytes.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "unit",
+                "description": "The unit to display.",
+                "value": {
+                  "type": "'byte' | 'bit'"
+                }
+              },
+              {
+                "name": "display",
+                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+                "value": {
+                  "type": "'long' | 'short' | 'narrow'"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The number to format in bytes.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "unit",
+              "description": "The unit to display.",
+              "value": {
+                "type": "'byte' | 'bit'"
+              }
+            },
+            {
+              "name": "display",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "value": {
+                "type": "'long' | 'short' | 'narrow'"
               }
             }
           ]
@@ -3159,136 +3230,6 @@
           "attributes": []
         },
         {
-          "name": "sl-flex",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/flex",
-          "js": {
-            "properties": [
-              {
-                "name": "direction",
-                "description": "An example property.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "gap",
-                "value": {
-                  "type": "null"
-                }
-              },
-              {
-                "name": "alignItems",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "justify",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "directionChanged",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-event-name",
-                "description": "Emitted as an example."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "direction",
-              "description": "An example property.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "gap",
-              "value": {
-                "type": "null"
-              }
-            },
-            {
-              "name": "alignItems",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "justify",
-              "value": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-image-comparer",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/image-comparer",
-          "js": {
-            "properties": [
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "handle",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "position",
-                "description": "The position of the divider as a percentage.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "handleDrag",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handlePositionChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-change",
-                "description": "Emitted when the position changes."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "position",
-              "description": "The position of the divider as a percentage.",
-              "value": {
-                "type": "number"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-include",
           "description": "",
           "doc-url": "https://shoelace.style/components/include",
@@ -3366,6 +3307,65 @@
             "events": []
           },
           "attributes": []
+        },
+        {
+          "name": "sl-image-comparer",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/image-comparer",
+          "js": {
+            "properties": [
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "handle",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "position",
+                "description": "The position of the divider as a percentage.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "handleDrag",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handlePositionChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-change",
+                "description": "Emitted when the position changes."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "position",
+              "description": "The position of the divider as a percentage.",
+              "value": {
+                "type": "number"
+              }
+            }
+          ]
         },
         {
           "name": "sl-input",
@@ -3939,6 +3939,65 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "typeToSelectString",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "typeToSelectTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "getAllItems",
+                "value": {}
+              },
+              {
+                "name": "typeToSelect",
+                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
         },
         {
           "name": "sl-menu-item",
@@ -4525,149 +4584,115 @@
           ]
         },
         {
-          "name": "sl-menu",
+          "name": "sl-progress-bar",
           "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
+          "doc-url": "https://shoelace.style/components/progress-bar",
           "js": {
             "properties": [
               {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
+                "name": "localize",
+                "value": {}
               },
               {
-                "name": "typeToSelectString",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "typeToSelectTimeout",
+                "name": "value",
+                "description": "The current progress, 0 to 100.",
                 "value": {
                   "type": "number"
                 }
               },
               {
-                "name": "getAllItems",
-                "value": {}
+                "name": "indeterminate",
+                "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+                "value": {
+                  "type": "boolean"
+                }
               },
               {
-                "name": "typeToSelect",
-                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
+                "name": "label",
+                "description": "A custom label for the progress bar's aria label.",
+                "value": {
+                  "type": "string"
+                }
               }
             ],
-            "events": [
-              {
-                "name": "sl-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
+            "events": []
           },
-          "attributes": []
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The current progress, 0 to 100.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "indeterminate",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "label",
+              "description": "A custom label for the progress bar's aria label.",
+              "value": {
+                "type": "string"
+              }
+            }
+          ]
         },
         {
-          "name": "sl-radio",
+          "name": "sl-progress-ring",
           "description": "",
-          "doc-url": "https://shoelace.style/components/radio",
+          "doc-url": "https://shoelace.style/components/progress-ring",
           "js": {
             "properties": [
               {
-                "name": "checked",
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "indicator",
                 "value": {
-                  "type": "boolean"
+                  "type": "SVGCircleElement"
                 }
               },
               {
-                "name": "hasFocus",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The radio's value attribute.",
+                "name": "indicatorOffset",
                 "value": {
                   "type": "string"
                 }
               },
               {
-                "name": "disabled",
-                "description": "Disables the radio.",
+                "name": "value",
+                "description": "The current progress, 0 to 100.",
                 "value": {
-                  "type": "boolean"
+                  "type": "number"
                 }
               },
               {
-                "name": "handleCheckedChange",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              },
-              {
-                "name": "handleBlur",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleFocus",
-                "value": {}
-              },
-              {
-                "name": "addEventListeners",
-                "value": {}
-              },
-              {
-                "name": "setInitialAttributes",
-                "value": {}
+                "name": "label",
+                "description": "A custom label for the progress ring's aria label.",
+                "value": {
+                  "type": "string"
+                }
               }
             ],
-            "events": [
-              {
-                "name": "sl-blur",
-                "description": "Emitted when the control loses focus."
-              },
-              {
-                "name": "sl-focus",
-                "description": "Emitted when the control gains focus."
-              }
-            ]
+            "events": []
           },
           "attributes": [
             {
               "name": "value",
-              "description": "The radio's value attribute.",
+              "description": "The current progress, 0 to 100.",
               "value": {
-                "type": "string"
+                "type": "number"
               }
             },
             {
-              "name": "disabled",
-              "description": "Disables the radio.",
+              "name": "label",
+              "description": "A custom label for the progress ring's aria label.",
               "value": {
-                "type": "boolean"
+                "type": "string"
               }
             }
           ]
@@ -4793,62 +4818,6 @@
           ]
         },
         {
-          "name": "sl-progress-ring",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/progress-ring",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "indicator",
-                "value": {
-                  "type": "SVGCircleElement"
-                }
-              },
-              {
-                "name": "indicatorOffset",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The current progress, 0 to 100.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A custom label for the progress ring's aria label.",
-                "value": {
-                  "type": "string"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The current progress, 0 to 100.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "label",
-              "description": "A custom label for the progress ring's aria label.",
-              "value": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-radio-button",
           "description": "",
           "doc-url": "https://shoelace.style/components/radio-button",
@@ -4963,6 +4932,95 @@
             {
               "name": "pill",
               "description": "Draws a pill-style button with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-radio",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/radio",
+          "js": {
+            "properties": [
+              {
+                "name": "checked",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "hasFocus",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "value",
+                "description": "The radio's value attribute.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the radio.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleCheckedChange",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              },
+              {
+                "name": "handleBlur",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleFocus",
+                "value": {}
+              },
+              {
+                "name": "addEventListeners",
+                "value": {}
+              },
+              {
+                "name": "setInitialAttributes",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-blur",
+                "description": "Emitted when the control loses focus."
+              },
+              {
+                "name": "sl-focus",
+                "description": "Emitted when the control gains focus."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The radio's value attribute.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the radio.",
               "value": {
                 "type": "boolean"
               }
@@ -5150,209 +5208,6 @@
               "description": "Ensures a child radio is checked before allowing the containing form to submit.",
               "value": {
                 "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-rating",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/rating",
-          "js": {
-            "properties": [
-              {
-                "name": "rating",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "hoverValue",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "isHovering",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A label to describe the rating to assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The current rating.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "max",
-                "description": "The highest rating to show.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "precision",
-                "description": "The minimum increment value allowed by the control.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "readonly",
-                "description": "Makes the rating readonly.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the rating.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "getSymbol",
-                "description": "The name of the icon to display as the symbol.",
-                "value": {
-                  "type": "(value: number) => string"
-                }
-              },
-              {
-                "name": "focus",
-                "description": "Sets focus on the rating.",
-                "value": {}
-              },
-              {
-                "name": "blur",
-                "description": "Removes focus from the rating.",
-                "value": {}
-              },
-              {
-                "name": "getValueFromMousePosition",
-                "value": {}
-              },
-              {
-                "name": "getValueFromTouchPosition",
-                "value": {}
-              },
-              {
-                "name": "getValueFromXCoordinate",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "setValue",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseEnter",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleMouseLeave",
-                "value": {}
-              },
-              {
-                "name": "handleTouchStart",
-                "value": {}
-              },
-              {
-                "name": "handleTouchMove",
-                "value": {}
-              },
-              {
-                "name": "handleTouchEnd",
-                "value": {}
-              },
-              {
-                "name": "handleValueChange",
-                "value": {}
-              },
-              {
-                "name": "roundToPrecision",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-change",
-                "description": "Emitted when the rating's value changes."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "label",
-              "description": "A label to describe the rating to assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "value",
-              "description": "The current rating.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "max",
-              "description": "The highest rating to show.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "precision",
-              "description": "The minimum increment value allowed by the control.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "readonly",
-              "description": "Makes the rating readonly.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Disables the rating.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "getSymbol",
-              "description": "The name of the icon to display as the symbol.",
-              "value": {
-                "type": "(value: number) => string"
               }
             }
           ]
@@ -5634,59 +5489,204 @@
           ]
         },
         {
-          "name": "sl-progress-bar",
+          "name": "sl-rating",
           "description": "",
-          "doc-url": "https://shoelace.style/components/progress-bar",
+          "doc-url": "https://shoelace.style/components/rating",
           "js": {
             "properties": [
+              {
+                "name": "rating",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
               {
                 "name": "localize",
                 "value": {}
               },
               {
-                "name": "value",
-                "description": "The current progress, 0 to 100.",
+                "name": "hoverValue",
                 "value": {
                   "type": "number"
                 }
               },
               {
-                "name": "indeterminate",
-                "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+                "name": "isHovering",
                 "value": {
                   "type": "boolean"
                 }
               },
               {
                 "name": "label",
-                "description": "A custom label for the progress bar's aria label.",
+                "description": "A label to describe the rating to assistive devices.",
                 "value": {
                   "type": "string"
                 }
+              },
+              {
+                "name": "value",
+                "description": "The current rating.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "max",
+                "description": "The highest rating to show.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "precision",
+                "description": "The minimum increment value allowed by the control.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "readonly",
+                "description": "Makes the rating readonly.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the rating.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "getSymbol",
+                "description": "The name of the icon to display as the symbol.",
+                "value": {
+                  "type": "(value: number) => string"
+                }
+              },
+              {
+                "name": "focus",
+                "description": "Sets focus on the rating.",
+                "value": {}
+              },
+              {
+                "name": "blur",
+                "description": "Removes focus from the rating.",
+                "value": {}
+              },
+              {
+                "name": "getValueFromMousePosition",
+                "value": {}
+              },
+              {
+                "name": "getValueFromTouchPosition",
+                "value": {}
+              },
+              {
+                "name": "getValueFromXCoordinate",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "setValue",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseEnter",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleMouseLeave",
+                "value": {}
+              },
+              {
+                "name": "handleTouchStart",
+                "value": {}
+              },
+              {
+                "name": "handleTouchMove",
+                "value": {}
+              },
+              {
+                "name": "handleTouchEnd",
+                "value": {}
+              },
+              {
+                "name": "handleValueChange",
+                "value": {}
+              },
+              {
+                "name": "roundToPrecision",
+                "value": {}
               }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "sl-change",
+                "description": "Emitted when the rating's value changes."
+              }
+            ]
           },
           "attributes": [
             {
+              "name": "label",
+              "description": "A label to describe the rating to assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
               "name": "value",
-              "description": "The current progress, 0 to 100.",
+              "description": "The current rating.",
               "value": {
                 "type": "number"
               }
             },
             {
-              "name": "indeterminate",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "name": "max",
+              "description": "The highest rating to show.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "precision",
+              "description": "The minimum increment value allowed by the control.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "readonly",
+              "description": "Makes the rating readonly.",
               "value": {
                 "type": "boolean"
               }
             },
             {
-              "name": "label",
-              "description": "A custom label for the progress bar's aria label.",
+              "name": "disabled",
+              "description": "Disables the rating.",
               "value": {
-                "type": "string"
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "getSymbol",
+              "description": "The name of the icon to display as the symbol.",
+              "value": {
+                "type": "(value: number) => string"
               }
             }
           ]
@@ -5788,45 +5788,63 @@
           ]
         },
         {
-          "name": "sl-skeleton",
+          "name": "sl-resize-observer",
           "description": "",
-          "doc-url": "https://shoelace.style/components/skeleton",
+          "doc-url": "https://shoelace.style/components/resize-observer",
           "js": {
             "properties": [
               {
-                "name": "effect",
-                "description": "Determines which effect the skeleton will use.",
+                "name": "resizeObserver",
                 "value": {
-                  "type": "'pulse' | 'sheen' | 'none'"
+                  "type": "ResizeObserver"
                 }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "effect",
-              "description": "Determines which effect the skeleton will use.",
-              "value": {
-                "type": "'pulse' | 'sheen' | 'none'"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-spinner",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/spinner",
-          "js": {
-            "properties": [
+              },
               {
-                "name": "localize",
+                "name": "observedElements",
+                "value": {
+                  "type": "HTMLElement[]"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the observer.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "startObserver",
+                "value": {}
+              },
+              {
+                "name": "stopObserver",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
                 "value": {}
               }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "sl-resize",
+                "description": "Emitted when the element is resized."
+              }
+            ]
           },
-          "attributes": []
+          "attributes": [
+            {
+              "name": "disabled",
+              "description": "Disables the observer.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
         },
         {
           "name": "sl-select",
@@ -6253,63 +6271,45 @@
           ]
         },
         {
-          "name": "sl-resize-observer",
+          "name": "sl-skeleton",
           "description": "",
-          "doc-url": "https://shoelace.style/components/resize-observer",
+          "doc-url": "https://shoelace.style/components/skeleton",
           "js": {
             "properties": [
               {
-                "name": "resizeObserver",
+                "name": "effect",
+                "description": "Determines which effect the skeleton will use.",
                 "value": {
-                  "type": "ResizeObserver"
+                  "type": "'pulse' | 'sheen' | 'none'"
                 }
-              },
-              {
-                "name": "observedElements",
-                "value": {
-                  "type": "HTMLElement[]"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the observer.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "startObserver",
-                "value": {}
-              },
-              {
-                "name": "stopObserver",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
               }
             ],
-            "events": [
-              {
-                "name": "sl-resize",
-                "description": "Emitted when the element is resized."
-              }
-            ]
+            "events": []
           },
           "attributes": [
             {
-              "name": "disabled",
-              "description": "Disables the observer.",
+              "name": "effect",
+              "description": "Determines which effect the skeleton will use.",
               "value": {
-                "type": "boolean"
+                "type": "'pulse' | 'sheen' | 'none'"
               }
             }
           ]
+        },
+        {
+          "name": "sl-spinner",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/spinner",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-split-panel",
@@ -6486,119 +6486,6 @@
               "description": "How close the divider must be to a snap point until snapping occurs.",
               "value": {
                 "type": "number"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-tab",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tab",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "tab",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "attrId",
-                "value": {}
-              },
-              {
-                "name": "componentId",
-                "value": {}
-              },
-              {
-                "name": "panel",
-                "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "active",
-                "description": "Draws the tab in an active state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "closable",
-                "description": "Makes the tab closable and shows a close icon.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Draws the tab in a disabled state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "focus",
-                "description": "Sets focus to the tab.",
-                "value": {}
-              },
-              {
-                "name": "blur",
-                "description": "Removes focus from the tab.",
-                "value": {}
-              },
-              {
-                "name": "handleCloseClick",
-                "value": {}
-              },
-              {
-                "name": "handleActiveChange",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-close",
-                "description": "Emitted when the tab is closable and the close button is activated."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "panel",
-              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "active",
-              "description": "Draws the tab in an active state.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "closable",
-              "description": "Makes the tab closable and shows a close icon.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Draws the tab in a disabled state.",
-              "value": {
-                "type": "boolean"
               }
             }
           ]
@@ -6785,6 +6672,119 @@
             {
               "name": "no-scroll-controls",
               "description": "Disables the scroll arrows that appear when tabs overflow.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-tab",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tab",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "tab",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "attrId",
+                "value": {}
+              },
+              {
+                "name": "componentId",
+                "value": {}
+              },
+              {
+                "name": "panel",
+                "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "active",
+                "description": "Draws the tab in an active state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "closable",
+                "description": "Makes the tab closable and shows a close icon.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Draws the tab in a disabled state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "focus",
+                "description": "Sets focus to the tab.",
+                "value": {}
+              },
+              {
+                "name": "blur",
+                "description": "Removes focus from the tab.",
+                "value": {}
+              },
+              {
+                "name": "handleCloseClick",
+                "value": {}
+              },
+              {
+                "name": "handleActiveChange",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-close",
+                "description": "Emitted when the tab is closable and the close button is activated."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "panel",
+              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "active",
+              "description": "Draws the tab in an active state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "closable",
+              "description": "Makes the tab closable and shows a close icon.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Draws the tab in a disabled state.",
               "value": {
                 "type": "boolean"
               }
@@ -7018,87 +7018,6 @@
             {
               "name": "active",
               "description": "When true, the tab panel will be shown.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-tag",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tag",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "variant",
-                "description": "The tag's variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
-                }
-              },
-              {
-                "name": "size",
-                "description": "The tag's size.",
-                "value": {
-                  "type": "'small' | 'medium' | 'large'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style tag with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "removable",
-                "description": "Makes the tag removable.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleRemoveClick",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-remove",
-                "description": "Emitted when the remove button is activated."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The tag's variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
-              }
-            },
-            {
-              "name": "size",
-              "description": "The tag's size.",
-              "value": {
-                "type": "'small' | 'medium' | 'large'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style tag with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "removable",
-              "description": "Makes the tag removable.",
               "value": {
                 "type": "boolean"
               }
@@ -7764,6 +7683,87 @@
             {
               "name": "hoist",
               "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-tag",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tag",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "variant",
+                "description": "The tag's variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                }
+              },
+              {
+                "name": "size",
+                "description": "The tag's size.",
+                "value": {
+                  "type": "'small' | 'medium' | 'large'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style tag with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "removable",
+                "description": "Makes the tag removable.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleRemoveClick",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-remove",
+                "description": "Emitted when the remove button is activated."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The tag's variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+              }
+            },
+            {
+              "name": "size",
+              "description": "The tag's size.",
+              "value": {
+                "type": "'small' | 'medium' | 'large'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style tag with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "removable",
+              "description": "Makes the tag removable.",
               "value": {
                 "type": "boolean"
               }

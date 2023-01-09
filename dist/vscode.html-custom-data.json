@@ -536,77 +536,20 @@
       ]
     },
     {
-      "name": "sl-drawer",
+      "name": "sl-flex",
       "attributes": [
         {
-          "name": "open",
-          "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods."
+          "name": "direction",
+          "description": "An example property."
         },
         {
-          "name": "label",
-          "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead."
+          "name": "gap"
         },
         {
-          "name": "placement",
-          "description": "The direction from which the drawer will open.",
-          "values": [
-            {
-              "name": "top"
-            },
-            {
-              "name": "end"
-            },
-            {
-              "name": "bottom"
-            },
-            {
-              "name": "start"
-            }
-          ]
+          "name": "alignItems"
         },
         {
-          "name": "contained",
-          "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent."
-        },
-        {
-          "name": "no-header",
-          "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer."
-        }
-      ]
-    },
-    {
-      "name": "sl-format-bytes",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format in bytes."
-        },
-        {
-          "name": "unit",
-          "description": "The unit to display.",
-          "values": [
-            {
-              "name": "byte"
-            },
-            {
-              "name": "bit"
-            }
-          ]
-        },
-        {
-          "name": "display",
-          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-          "values": [
-            {
-              "name": "long"
-            },
-            {
-              "name": "short"
-            },
-            {
-              "name": "narrow"
-            }
-          ]
+          "name": "justify"
         }
       ]
     },
@@ -678,6 +621,81 @@
         {
           "name": "hoist",
           "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`."
+        }
+      ]
+    },
+    {
+      "name": "sl-drawer",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the drawer is open. You can use this in lieu of the show/hide methods."
+        },
+        {
+          "name": "label",
+          "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot\ninstead."
+        },
+        {
+          "name": "placement",
+          "description": "The direction from which the drawer will open.",
+          "values": [
+            {
+              "name": "top"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "start"
+            }
+          ]
+        },
+        {
+          "name": "contained",
+          "description": "By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of\nits parent element, set this prop and add `position: relative` to the parent."
+        },
+        {
+          "name": "no-header",
+          "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer."
+        }
+      ]
+    },
+    {
+      "name": "sl-format-bytes",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format in bytes."
+        },
+        {
+          "name": "unit",
+          "description": "The unit to display.",
+          "values": [
+            {
+              "name": "byte"
+            },
+            {
+              "name": "bit"
+            }
+          ]
+        },
+        {
+          "name": "display",
+          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+          "values": [
+            {
+              "name": "long"
+            },
+            {
+              "name": "short"
+            },
+            {
+              "name": "narrow"
+            }
+          ]
         }
       ]
     },
@@ -975,33 +993,6 @@
       ]
     },
     {
-      "name": "sl-flex",
-      "attributes": [
-        {
-          "name": "direction",
-          "description": "An example property."
-        },
-        {
-          "name": "gap"
-        },
-        {
-          "name": "alignItems"
-        },
-        {
-          "name": "justify"
-        }
-      ]
-    },
-    {
-      "name": "sl-image-comparer",
-      "attributes": [
-        {
-          "name": "position",
-          "description": "The position of the divider as a percentage."
-        }
-      ]
-    },
-    {
       "name": "sl-include",
       "attributes": [
         {
@@ -1026,6 +1017,15 @@
         {
           "name": "allow-scripts",
           "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!"
+        }
+      ]
+    },
+    {
+      "name": "sl-image-comparer",
+      "attributes": [
+        {
+          "name": "position",
+          "description": "The position of the divider as a percentage."
         }
       ]
     },
@@ -1272,6 +1272,9 @@
       ]
     },
     {
+      "name": "sl-menu"
+    },
+    {
       "name": "sl-menu-item",
       "attributes": [
         {
@@ -1500,18 +1503,32 @@
       ]
     },
     {
-      "name": "sl-menu"
-    },
-    {
-      "name": "sl-radio",
+      "name": "sl-progress-bar",
       "attributes": [
         {
           "name": "value",
-          "description": "The radio's value attribute."
+          "description": "The current progress, 0 to 100."
         },
         {
-          "name": "disabled",
-          "description": "Disables the radio."
+          "name": "indeterminate",
+          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress bar's aria label."
+        }
+      ]
+    },
+    {
+      "name": "sl-progress-ring",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The current progress, 0 to 100."
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress ring's aria label."
         }
       ]
     },
@@ -1563,19 +1580,6 @@
       ]
     },
     {
-      "name": "sl-progress-ring",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The current progress, 0 to 100."
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress ring's aria label."
-        }
-      ]
-    },
-    {
       "name": "sl-radio-button",
       "attributes": [
         {
@@ -1608,6 +1612,19 @@
       ]
     },
     {
+      "name": "sl-radio",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The radio's value attribute."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the radio."
+        }
+      ]
+    },
+    {
       "name": "sl-radio-group",
       "attributes": [
         {
@@ -1633,39 +1650,6 @@
         {
           "name": "required",
           "description": "Ensures a child radio is checked before allowing the containing form to submit."
-        }
-      ]
-    },
-    {
-      "name": "sl-rating",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "A label to describe the rating to assistive devices."
-        },
-        {
-          "name": "value",
-          "description": "The current rating."
-        },
-        {
-          "name": "max",
-          "description": "The highest rating to show."
-        },
-        {
-          "name": "precision",
-          "description": "The minimum increment value allowed by the control."
-        },
-        {
-          "name": "readonly",
-          "description": "Makes the rating readonly."
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the rating."
-        },
-        {
-          "name": "getSymbol",
-          "description": "The name of the icon to display as the symbol."
         }
       ]
     },
@@ -1726,19 +1710,35 @@
       ]
     },
     {
-      "name": "sl-progress-bar",
+      "name": "sl-rating",
       "attributes": [
         {
-          "name": "value",
-          "description": "The current progress, 0 to 100."
-        },
-        {
-          "name": "indeterminate",
-          "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state."
-        },
-        {
           "name": "label",
-          "description": "A custom label for the progress bar's aria label."
+          "description": "A label to describe the rating to assistive devices."
+        },
+        {
+          "name": "value",
+          "description": "The current rating."
+        },
+        {
+          "name": "max",
+          "description": "The highest rating to show."
+        },
+        {
+          "name": "precision",
+          "description": "The minimum increment value allowed by the control."
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the rating readonly."
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the rating."
+        },
+        {
+          "name": "getSymbol",
+          "description": "The name of the icon to display as the symbol."
         }
       ]
     },
@@ -1783,27 +1783,13 @@
       ]
     },
     {
-      "name": "sl-skeleton",
+      "name": "sl-resize-observer",
       "attributes": [
         {
-          "name": "effect",
-          "description": "Determines which effect the skeleton will use.",
-          "values": [
-            {
-              "name": "pulse"
-            },
-            {
-              "name": "sheen"
-            },
-            {
-              "name": "none"
-            }
-          ]
+          "name": "disabled",
+          "description": "Disables the observer."
         }
       ]
-    },
-    {
-      "name": "sl-spinner"
     },
     {
       "name": "sl-select",
@@ -1894,13 +1880,27 @@
       ]
     },
     {
-      "name": "sl-resize-observer",
+      "name": "sl-skeleton",
       "attributes": [
         {
-          "name": "disabled",
-          "description": "Disables the observer."
+          "name": "effect",
+          "description": "Determines which effect the skeleton will use.",
+          "values": [
+            {
+              "name": "pulse"
+            },
+            {
+              "name": "sheen"
+            },
+            {
+              "name": "none"
+            }
+          ]
         }
       ]
+    },
+    {
+      "name": "sl-spinner"
     },
     {
       "name": "sl-split-panel",
@@ -1944,27 +1944,6 @@
       ]
     },
     {
-      "name": "sl-tab",
-      "attributes": [
-        {
-          "name": "panel",
-          "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group."
-        },
-        {
-          "name": "active",
-          "description": "Draws the tab in an active state."
-        },
-        {
-          "name": "closable",
-          "description": "Makes the tab closable and shows a close icon."
-        },
-        {
-          "name": "disabled",
-          "description": "Draws the tab in a disabled state."
-        }
-      ]
-    },
-    {
       "name": "sl-tab-group",
       "attributes": [
         {
@@ -2000,6 +1979,27 @@
         {
           "name": "no-scroll-controls",
           "description": "Disables the scroll arrows that appear when tabs overflow."
+        }
+      ]
+    },
+    {
+      "name": "sl-tab",
+      "attributes": [
+        {
+          "name": "panel",
+          "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group."
+        },
+        {
+          "name": "active",
+          "description": "Draws the tab in an active state."
+        },
+        {
+          "name": "closable",
+          "description": "Makes the tab closable and shows a close icon."
+        },
+        {
+          "name": "disabled",
+          "description": "Draws the tab in a disabled state."
         }
       ]
     },
@@ -2042,58 +2042,6 @@
         {
           "name": "active",
           "description": "When true, the tab panel will be shown."
-        }
-      ]
-    },
-    {
-      "name": "sl-tag",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The tag's variant.",
-          "values": [
-            {
-              "name": "primary"
-            },
-            {
-              "name": "success"
-            },
-            {
-              "name": "neutral"
-            },
-            {
-              "name": "warning"
-            },
-            {
-              "name": "danger"
-            },
-            {
-              "name": "text"
-            }
-          ]
-        },
-        {
-          "name": "size",
-          "description": "The tag's size.",
-          "values": [
-            {
-              "name": "small"
-            },
-            {
-              "name": "medium"
-            },
-            {
-              "name": "large"
-            }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style tag with rounded edges."
-        },
-        {
-          "name": "removable",
-          "description": "Makes the tag removable."
         }
       ]
     },
@@ -2353,6 +2301,58 @@
         {
           "name": "hoist",
           "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`."
+        }
+      ]
+    },
+    {
+      "name": "sl-tag",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The tag's variant.",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "warning"
+            },
+            {
+              "name": "danger"
+            },
+            {
+              "name": "text"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "The tag's size.",
+          "values": [
+            {
+              "name": "small"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "large"
+            }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style tag with rounded edges."
+        },
+        {
+          "name": "removable",
+          "description": "Makes the tag removable."
         }
       ]
     },

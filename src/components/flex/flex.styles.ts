@@ -75,6 +75,10 @@ export default css`
     justify-content: space-around;
   }
 
+  :host([justify="end"]) .flex-container {
+    justify-content: flex-end;
+  }
+
   :host([align-items="space-evenly"]) .flex-container {
     justify-content: space-evenly;
   }

@@ -3837,6 +3837,544 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/flex/flex.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlFlex",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "attribute": "gap"
+            },
+            {
+              "kind": "field",
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "alignItems"
+            },
+            {
+              "kind": "field",
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "attribute": "justify"
+            },
+            {
+              "kind": "method",
+              "name": "directionChanged"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted as an example.",
+              "name": "sl-event-name",
+              "reactName": "onSlEventName"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "direction",
+              "type": {
+                "text": "string"
+              },
+              "default": "'row'",
+              "description": "An example property.",
+              "fieldName": "direction"
+            },
+            {
+              "name": "gap",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "fieldName": "gap"
+            },
+            {
+              "name": "alignItems",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "alignItems"
+            },
+            {
+              "name": "justify",
+              "type": {
+                "text": "string"
+              },
+              "default": "'flex-start'",
+              "fieldName": "justify"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "sl-example"
+          ],
+          "tagName": "sl-flex",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-flex",
+          "declaration": {
+            "name": "SlFlex",
+            "module": "src/components/flex/flex.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/dropdown/dropdown.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlDropdown",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the trigger.",
+              "name": "trigger"
+            },
+            {
+              "description": "The panel that gets shown when the dropdown is open.",
+              "name": "panel"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The dropdown's content.",
+              "name": ""
+            },
+            {
+              "description": "The dropdown's trigger, usually a `<sl-button>` element.",
+              "name": "trigger"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "popup",
+              "type": {
+                "text": "SlPopup"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "trigger",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "panel",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+              },
+              "default": "'bottom-start'",
+              "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
+              "attribute": "placement",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the dropdown so the panel will not open.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "stayOpenOnSelect",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "By default, the dropdown is closed when an item is selected. This attribute will keep it open instead. Useful for\ncontrols that allow multiple selections.",
+              "attribute": "stay-open-on-select",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "containingElement",
+              "type": {
+                "text": "HTMLElement | undefined"
+              },
+              "description": "The dropdown will close when the user interacts outside of this element (e.g. clicking)."
+            },
+            {
+              "kind": "field",
+              "name": "distance",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the panel away from its trigger.",
+              "attribute": "distance"
+            },
+            {
+              "kind": "field",
+              "name": "skidding",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the panel along its trigger.",
+              "attribute": "skidding"
+            },
+            {
+              "kind": "field",
+              "name": "hoist",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
+              "attribute": "hoist"
+            },
+            {
+              "kind": "method",
+              "name": "focusOnTrigger"
+            },
+            {
+              "kind": "method",
+              "name": "getMenu"
+            },
+            {
+              "kind": "method",
+              "name": "handleDocumentKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleDocumentMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMenuItemActivate",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handlePanelSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerKeyUp",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "updateAccessibleTrigger"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the dropdown panel."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the dropdown panel"
+            },
+            {
+              "kind": "method",
+              "name": "reposition",
+              "description": "Instructs the dropdown menu to reposition. Useful when the position or size of the trigger changes when the menu\nis activated."
+            },
+            {
+              "kind": "method",
+              "name": "addOpenListeners"
+            },
+            {
+              "kind": "method",
+              "name": "removeOpenListeners"
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the dropdown opens.",
+              "name": "sl-show",
+              "reactName": "onSlShow"
+            },
+            {
+              "description": "Emitted after the dropdown opens and all animations are complete.",
+              "name": "sl-after-show",
+              "reactName": "onSlAfterShow"
+            },
+            {
+              "description": "Emitted when the dropdown closes.",
+              "name": "sl-hide",
+              "reactName": "onSlHide"
+            },
+            {
+              "description": "Emitted after the dropdown closes and all animations are complete.",
+              "name": "sl-after-hide",
+              "reactName": "onSlAfterHide"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods.",
+              "fieldName": "open"
+            },
+            {
+              "name": "placement",
+              "type": {
+                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+              },
+              "default": "'bottom-start'",
+              "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
+              "fieldName": "placement"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the dropdown so the panel will not open.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "stay-open-on-select",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "By default, the dropdown is closed when an item is selected. This attribute will keep it open instead. Useful for\ncontrols that allow multiple selections.",
+              "fieldName": "stayOpenOnSelect"
+            },
+            {
+              "name": "distance",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the panel away from its trigger.",
+              "fieldName": "distance"
+            },
+            {
+              "name": "skidding",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The distance in pixels from which to offset the panel along its trigger.",
+              "fieldName": "skidding"
+            },
+            {
+              "name": "hoist",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
+              "fieldName": "hoist"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-popup"
+          ],
+          "animations": [
+            {
+              "name": "dropdown.show",
+              "description": "The animation to use when showing the dropdown."
+            },
+            {
+              "name": "dropdown.hide",
+              "description": "The animation to use when hiding the dropdown."
+            }
+          ],
+          "tagName": "sl-dropdown",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlDropdown",
+            "module": "src/components/dropdown/dropdown.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-dropdown",
+          "declaration": {
+            "name": "SlDropdown",
+            "module": "src/components/dropdown/dropdown.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/drawer/drawer.ts",
       "declarations": [
         {
@@ -4318,397 +4856,6 @@
           "declaration": {
             "name": "SlFormatBytes",
             "module": "src/components/format-bytes/format-bytes.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/dropdown/dropdown.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlDropdown",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the trigger.",
-              "name": "trigger"
-            },
-            {
-              "description": "The panel that gets shown when the dropdown is open.",
-              "name": "panel"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The dropdown's content.",
-              "name": ""
-            },
-            {
-              "description": "The dropdown's trigger, usually a `<sl-button>` element.",
-              "name": "trigger"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "popup",
-              "type": {
-                "text": "SlPopup"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "trigger",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "panel",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "placement",
-              "type": {
-                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
-              },
-              "default": "'bottom-start'",
-              "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
-              "attribute": "placement",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the dropdown so the panel will not open.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "stayOpenOnSelect",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "By default, the dropdown is closed when an item is selected. This attribute will keep it open instead. Useful for\ncontrols that allow multiple selections.",
-              "attribute": "stay-open-on-select",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "containingElement",
-              "type": {
-                "text": "HTMLElement | undefined"
-              },
-              "description": "The dropdown will close when the user interacts outside of this element (e.g. clicking)."
-            },
-            {
-              "kind": "field",
-              "name": "distance",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the panel away from its trigger.",
-              "attribute": "distance"
-            },
-            {
-              "kind": "field",
-              "name": "skidding",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the panel along its trigger.",
-              "attribute": "skidding"
-            },
-            {
-              "kind": "field",
-              "name": "hoist",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
-              "attribute": "hoist"
-            },
-            {
-              "kind": "method",
-              "name": "focusOnTrigger"
-            },
-            {
-              "kind": "method",
-              "name": "getMenu"
-            },
-            {
-              "kind": "method",
-              "name": "handleDocumentKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleDocumentMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMenuItemActivate",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handlePanelSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTriggerClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleTriggerKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTriggerKeyUp",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTriggerSlotChange"
-            },
-            {
-              "kind": "method",
-              "name": "updateAccessibleTrigger"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the dropdown panel."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the dropdown panel"
-            },
-            {
-              "kind": "method",
-              "name": "reposition",
-              "description": "Instructs the dropdown menu to reposition. Useful when the position or size of the trigger changes when the menu\nis activated."
-            },
-            {
-              "kind": "method",
-              "name": "addOpenListeners"
-            },
-            {
-              "kind": "method",
-              "name": "removeOpenListeners"
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the dropdown opens.",
-              "name": "sl-show",
-              "reactName": "onSlShow"
-            },
-            {
-              "description": "Emitted after the dropdown opens and all animations are complete.",
-              "name": "sl-after-show",
-              "reactName": "onSlAfterShow"
-            },
-            {
-              "description": "Emitted when the dropdown closes.",
-              "name": "sl-hide",
-              "reactName": "onSlHide"
-            },
-            {
-              "description": "Emitted after the dropdown closes and all animations are complete.",
-              "name": "sl-after-hide",
-              "reactName": "onSlAfterHide"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods.",
-              "fieldName": "open"
-            },
-            {
-              "name": "placement",
-              "type": {
-                "text": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
-              },
-              "default": "'bottom-start'",
-              "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
-              "fieldName": "placement"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the dropdown so the panel will not open.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "stay-open-on-select",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "By default, the dropdown is closed when an item is selected. This attribute will keep it open instead. Useful for\ncontrols that allow multiple selections.",
-              "fieldName": "stayOpenOnSelect"
-            },
-            {
-              "name": "distance",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the panel away from its trigger.",
-              "fieldName": "distance"
-            },
-            {
-              "name": "skidding",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The distance in pixels from which to offset the panel along its trigger.",
-              "fieldName": "skidding"
-            },
-            {
-              "name": "hoist",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
-              "fieldName": "hoist"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-popup"
-          ],
-          "animations": [
-            {
-              "name": "dropdown.show",
-              "description": "The animation to use when showing the dropdown."
-            },
-            {
-              "name": "dropdown.hide",
-              "description": "The animation to use when hiding the dropdown."
-            }
-          ],
-          "tagName": "sl-dropdown",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlDropdown",
-            "module": "src/components/dropdown/dropdown.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-dropdown",
-          "declaration": {
-            "name": "SlDropdown",
-            "module": "src/components/dropdown/dropdown.ts"
           }
         }
       ]
@@ -5811,117 +5958,100 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/flex/flex.ts",
+      "path": "src/components/include/include.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlFlex",
-          "cssProperties": [
-            {
-              "description": "An example CSS custom property.",
-              "name": "--example"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "An example slot.",
-              "name": "example"
-            }
-          ],
+          "name": "SlInclude",
           "members": [
             {
               "kind": "field",
-              "name": "direction",
+              "name": "src",
               "type": {
                 "text": "string"
               },
-              "default": "'row'",
-              "description": "An example property.",
-              "attribute": "direction"
+              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
+              "attribute": "src"
             },
             {
               "kind": "field",
-              "name": "gap",
+              "name": "mode",
               "type": {
-                "text": "null"
+                "text": "'cors' | 'no-cors' | 'same-origin'"
               },
-              "default": "null",
-              "attribute": "gap"
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "attribute": "mode"
             },
             {
               "kind": "field",
-              "name": "alignItems",
+              "name": "allowScripts",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "'flex-start'",
-              "attribute": "alignItems"
-            },
-            {
-              "kind": "field",
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "attribute": "justify"
+              "default": "false",
+              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
+              "attribute": "allow-scripts"
             },
             {
               "kind": "method",
-              "name": "directionChanged"
+              "name": "executeScript",
+              "parameters": [
+                {
+                  "name": "script",
+                  "type": {
+                    "text": "HTMLScriptElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
             }
           ],
           "events": [
             {
-              "description": "Emitted as an example.",
-              "name": "sl-event-name",
-              "reactName": "onSlEventName"
+              "description": "Emitted when the included file is loaded.",
+              "name": "sl-load",
+              "reactName": "onSlLoad"
+            },
+            {
+              "type": {
+                "text": "{ status: number }"
+              },
+              "description": "Emitted when the included file fails to load due to an error.",
+              "name": "sl-error",
+              "reactName": "onSlError"
             }
           ],
           "attributes": [
             {
-              "name": "direction",
+              "name": "src",
               "type": {
                 "text": "string"
               },
-              "default": "'row'",
-              "description": "An example property.",
-              "fieldName": "direction"
+              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
+              "fieldName": "src"
             },
             {
-              "name": "gap",
+              "name": "mode",
               "type": {
-                "text": "null"
+                "text": "'cors' | 'no-cors' | 'same-origin'"
               },
-              "default": "null",
-              "fieldName": "gap"
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "fieldName": "mode"
             },
             {
-              "name": "alignItems",
+              "name": "allow-scripts",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "'flex-start'",
-              "fieldName": "alignItems"
-            },
-            {
-              "name": "justify",
-              "type": {
-                "text": "string"
-              },
-              "default": "'flex-start'",
-              "fieldName": "justify"
+              "default": "false",
+              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
+              "fieldName": "allowScripts"
             }
           ],
           "superclass": {
@@ -5929,11 +6059,8 @@
             "module": "/src/internal/shoelace-element"
           },
           "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "sl-example"
-          ],
-          "tagName": "sl-flex",
+          "status": "stable",
+          "tagName": "sl-include",
           "customElement": true
         }
       ],
@@ -5942,16 +6069,56 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
+            "name": "SlInclude",
+            "module": "src/components/include/include.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-flex",
+          "name": "sl-include",
           "declaration": {
-            "name": "SlFlex",
-            "module": "src/components/flex/flex.ts"
+            "name": "SlInclude",
+            "module": "src/components/include/include.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/include/request.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "requestInclude",
+          "return": {
+            "type": {
+              "text": "Promise<IncludeFile>"
+            }
+          },
+          "parameters": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "mode",
+              "default": "'cors'",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "requestInclude",
+          "declaration": {
+            "name": "requestInclude",
+            "module": "src/components/include/request.ts"
           }
         }
       ]
@@ -6117,173 +6284,6 @@
           "declaration": {
             "name": "SlImageComparer",
             "module": "src/components/image-comparer/image-comparer.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/include/include.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlInclude",
-          "members": [
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "attribute": "mode"
-            },
-            {
-              "kind": "field",
-              "name": "allowScripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
-              "attribute": "allow-scripts"
-            },
-            {
-              "kind": "method",
-              "name": "executeScript",
-              "parameters": [
-                {
-                  "name": "script",
-                  "type": {
-                    "text": "HTMLScriptElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the included file is loaded.",
-              "name": "sl-load",
-              "reactName": "onSlLoad"
-            },
-            {
-              "type": {
-                "text": "{ status: number }"
-              },
-              "description": "Emitted when the included file fails to load due to an error.",
-              "name": "sl-error",
-              "reactName": "onSlError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include.\n\nWARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.",
-              "fieldName": "src"
-            },
-            {
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "fieldName": "mode"
-            },
-            {
-              "name": "allow-scripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!",
-              "fieldName": "allowScripts"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-include",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlInclude",
-            "module": "src/components/include/include.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-include",
-          "declaration": {
-            "name": "SlInclude",
-            "module": "src/components/include/include.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/include/request.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "requestInclude",
-          "return": {
-            "type": {
-              "text": "Promise<IncludeFile>"
-            }
-          },
-          "parameters": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "name": "mode",
-              "default": "'cors'",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "requestInclude",
-          "declaration": {
-            "name": "requestInclude",
-            "module": "src/components/include/request.ts"
           }
         }
       ]
@@ -7188,6 +7188,151 @@
           "declaration": {
             "name": "SlInput",
             "module": "src/components/input/input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/menu/menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenu",
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectString",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getAllItems",
+              "parameters": [
+                {
+                  "name": "options",
+                  "default": "{ includeDisabled: true }",
+                  "type": {
+                    "text": "{ includeDisabled: boolean }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "typeToSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ item: SlMenuItem }"
+              },
+              "description": "Emitted when a menu item is selected.",
+              "name": "sl-select",
+              "reactName": "onSlSelect"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
           }
         }
       ]
@@ -8172,286 +8317,117 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/menu/menu.ts",
+      "path": "src/components/progress-bar/progress-bar.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlMenu",
-          "slots": [
+          "name": "SlProgressBar",
+          "cssProperties": [
             {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
+              "description": "The progress bar's height.",
+              "name": "--height"
+            },
+            {
+              "description": "The track color.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The indicator color.",
+              "name": "--indicator-color"
+            },
+            {
+              "description": "The label color.",
+              "name": "--label-color"
             }
           ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectString",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getAllItems",
-              "parameters": [
-                {
-                  "name": "options",
-                  "default": "{ includeDisabled: true }",
-                  "type": {
-                    "text": "{ includeDisabled: boolean }"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "typeToSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ],
-              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: SlMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "sl-select",
-              "reactName": "onSlSelect"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-menu",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/radio/radio.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRadio",
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
             },
             {
-              "description": "The radio control.",
-              "name": "control"
+              "description": "The progress bar indicator.",
+              "name": "indicator"
             },
             {
-              "description": "The radio control if radio is checked.",
-              "name": "control--checked"
-            },
-            {
-              "description": "The container the wraps the checked icon.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The radio label.",
+              "description": "The progress bar label.",
               "name": "label"
             }
           ],
           "slots": [
             {
-              "description": "The radio's label.",
+              "description": "A label to show inside the indicator.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected",
-              "default": "false"
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
             },
             {
               "kind": "field",
               "name": "value",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "description": "The radio's value attribute.",
-              "attribute": "value"
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
+              "reflects": true
             },
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "indeterminate",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Disables the radio.",
-              "attribute": "disabled",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "attribute": "indeterminate",
               "reflects": true
             },
             {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "addEventListeners",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "setInitialAttributes",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "sl-blur",
-              "reactName": "onSlBlur"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "sl-focus",
-              "reactName": "onSlFocus"
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress bar's aria label.",
+              "attribute": "label"
             }
           ],
           "attributes": [
             {
               "name": "value",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "description": "The radio's value attribute.",
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
               "fieldName": "value"
             },
             {
-              "name": "disabled",
+              "name": "indeterminate",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Disables the radio.",
-              "fieldName": "disabled"
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "fieldName": "indeterminate"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress bar's aria label.",
+              "fieldName": "label"
             }
           ],
           "superclass": {
@@ -8460,7 +8436,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-radio",
+          "tagName": "sl-progress-bar",
           "customElement": true
         }
       ],
@@ -8469,16 +8445,154 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-radio",
+          "name": "sl-progress-bar",
           "declaration": {
-            "name": "SlRadio",
-            "module": "src/components/radio/radio.ts"
+            "name": "SlProgressBar",
+            "module": "src/components/progress-bar/progress-bar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/progress-ring/progress-ring.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlProgressRing",
+          "cssProperties": [
+            {
+              "description": "The diameter of the progress ring (cannot be a percentage).",
+              "name": "--size"
+            },
+            {
+              "description": "The width of the track.",
+              "name": "--track-width"
+            },
+            {
+              "description": "The color of the track.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The width of the indicator. Defaults to the track width.",
+              "name": "--indicator-width"
+            },
+            {
+              "description": "The indicator color.",
+              "name": "--indicator-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The progress ring label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "A label to show inside the ring.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "indicator",
+              "type": {
+                "text": "SVGCircleElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "indicatorOffset",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "attribute": "label"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current progress, 0 to 100.",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A custom label for the progress ring's aria label.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-progress-ring",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-progress-ring",
+          "declaration": {
+            "name": "SlProgressRing",
+            "module": "src/components/progress-ring/progress-ring.ts"
           }
         }
       ]
@@ -8670,144 +8784,6 @@
           "declaration": {
             "name": "SlQrCode",
             "module": "src/components/qr-code/qr-code.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/progress-ring/progress-ring.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlProgressRing",
-          "cssProperties": [
-            {
-              "description": "The diameter of the progress ring (cannot be a percentage).",
-              "name": "--size"
-            },
-            {
-              "description": "The width of the track.",
-              "name": "--track-width"
-            },
-            {
-              "description": "The color of the track.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The width of the indicator. Defaults to the track width.",
-              "name": "--indicator-width"
-            },
-            {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The progress ring label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "A label to show inside the ring.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "indicator",
-              "type": {
-                "text": "SVGCircleElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "indicatorOffset",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "attribute": "label"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A custom label for the progress ring's aria label.",
-              "fieldName": "label"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-progress-ring",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-progress-ring",
-          "declaration": {
-            "name": "SlProgressRing",
-            "module": "src/components/progress-ring/progress-ring.ts"
           }
         }
       ]
@@ -9039,6 +9015,174 @@
           "declaration": {
             "name": "SlRadioButton",
             "module": "src/components/radio-button/radio-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/radio/radio.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlRadio",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The radio control.",
+              "name": "control"
+            },
+            {
+              "description": "The radio control if radio is checked.",
+              "name": "control--checked"
+            },
+            {
+              "description": "The container the wraps the checked icon.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The radio label.",
+              "name": "label"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The radio's label.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The radio's value attribute.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the radio.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "addEventListeners",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setInitialAttributes",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "sl-blur",
+              "reactName": "onSlBlur"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "sl-focus",
+              "reactName": "onSlFocus"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The radio's value attribute.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the radio.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-radio",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-radio",
+          "declaration": {
+            "name": "SlRadio",
+            "module": "src/components/radio/radio.ts"
           }
         }
       ]
@@ -9370,412 +9514,6 @@
           "declaration": {
             "name": "SlRadioGroup",
             "module": "src/components/radio-group/radio-group.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/rating/rating.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRating",
-          "cssProperties": [
-            {
-              "description": "The inactive color for symbols.",
-              "name": "--symbol-color"
-            },
-            {
-              "description": "The active color for symbols.",
-              "name": "--symbol-color-active"
-            },
-            {
-              "description": "The size of symbols.",
-              "name": "--symbol-size"
-            },
-            {
-              "description": "The spacing to use around symbols.",
-              "name": "--symbol-spacing"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "rating",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "hoverValue",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "0"
-            },
-            {
-              "kind": "field",
-              "name": "isHovering",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to describe the rating to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The minimum increment value allowed by the control.",
-              "attribute": "precision"
-            },
-            {
-              "kind": "field",
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "attribute": "readonly",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "The name of the icon to display as the symbol.",
-              "attribute": "getSymbol"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the rating."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the rating."
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromMousePosition",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromTouchPosition",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromXCoordinate",
-              "parameters": [
-                {
-                  "name": "coordinate",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "setValue",
-              "parameters": [
-                {
-                  "name": "newValue",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave"
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchStart",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchMove",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchEnd",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "roundToPrecision",
-              "parameters": [
-                {
-                  "name": "numberToRound",
-                  "type": {
-                    "text": "number"
-                  }
-                },
-                {
-                  "name": "precision",
-                  "default": "0.5"
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the rating's value changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to describe the rating to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "fieldName": "value"
-            },
-            {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "fieldName": "max"
-            },
-            {
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The minimum increment value allowed by the control.",
-              "fieldName": "precision"
-            },
-            {
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "fieldName": "readonly"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "The name of the icon to display as the symbol.",
-              "fieldName": "getSymbol"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-rating",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlRating",
-            "module": "src/components/rating/rating.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-rating",
-          "declaration": {
-            "name": "SlRating",
-            "module": "src/components/rating/rating.ts"
           }
         }
       ]
@@ -10261,51 +9999,44 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/progress-bar/progress-bar.ts",
+      "path": "src/components/rating/rating.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlProgressBar",
+          "name": "SlRating",
           "cssProperties": [
             {
-              "description": "The progress bar's height.",
-              "name": "--height"
+              "description": "The inactive color for symbols.",
+              "name": "--symbol-color"
             },
             {
-              "description": "The track color.",
-              "name": "--track-color"
+              "description": "The active color for symbols.",
+              "name": "--symbol-color-active"
             },
             {
-              "description": "The indicator color.",
-              "name": "--indicator-color"
+              "description": "The size of symbols.",
+              "name": "--symbol-size"
             },
             {
-              "description": "The label color.",
-              "name": "--label-color"
+              "description": "The spacing to use around symbols.",
+              "name": "--symbol-spacing"
             }
           ],
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
               "name": "base"
-            },
-            {
-              "description": "The progress bar indicator.",
-              "name": "indicator"
-            },
-            {
-              "description": "The progress bar label.",
-              "name": "label"
-            }
-          ],
-          "slots": [
-            {
-              "description": "A label to show inside the indicator.",
-              "name": ""
             }
           ],
           "members": [
+            {
+              "kind": "field",
+              "name": "rating",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
             {
               "kind": "field",
               "name": "localize",
@@ -10314,25 +10045,21 @@
             },
             {
               "kind": "field",
-              "name": "value",
+              "name": "hoverValue",
               "type": {
                 "text": "number"
               },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "attribute": "value",
-              "reflects": true
+              "privacy": "private",
+              "default": "0"
             },
             {
               "kind": "field",
-              "name": "indeterminate",
+              "name": "isHovering",
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "attribute": "indeterminate",
-              "reflects": true
+              "privacy": "private",
+              "default": "false"
             },
             {
               "kind": "field",
@@ -10341,37 +10068,307 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
+              "description": "A label to describe the rating to assistive devices.",
               "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The minimum increment value allowed by the control.",
+              "attribute": "precision"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "attribute": "readonly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "The name of the icon to display as the symbol.",
+              "attribute": "getSymbol"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the rating."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the rating."
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromMousePosition",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromTouchPosition",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromXCoordinate",
+              "parameters": [
+                {
+                  "name": "coordinate",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "setValue",
+              "parameters": [
+                {
+                  "name": "newValue",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave"
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchStart",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchMove",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchEnd",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "roundToPrecision",
+              "parameters": [
+                {
+                  "name": "numberToRound",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "precision",
+                  "default": "0.5"
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the rating's value changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
             }
           ],
           "attributes": [
             {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current progress, 0 to 100.",
-              "fieldName": "value"
-            },
-            {
-              "name": "indeterminate",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "fieldName": "indeterminate"
-            },
-            {
               "name": "label",
               "type": {
                 "text": "string"
               },
               "default": "''",
-              "description": "A custom label for the progress bar's aria label.",
+              "description": "A label to describe the rating to assistive devices.",
               "fieldName": "label"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "fieldName": "value"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "fieldName": "max"
+            },
+            {
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The minimum increment value allowed by the control.",
+              "fieldName": "precision"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "The name of the icon to display as the symbol.",
+              "fieldName": "getSymbol"
             }
           ],
           "superclass": {
@@ -10380,7 +10377,10 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-progress-bar",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-rating",
           "customElement": true
         }
       ],
@@ -10389,16 +10389,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlRating",
+            "module": "src/components/rating/rating.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-progress-bar",
+          "name": "sl-rating",
           "declaration": {
-            "name": "SlProgressBar",
-            "module": "src/components/progress-bar/progress-bar.ts"
+            "name": "SlRating",
+            "module": "src/components/rating/rating.ts"
           }
         }
       ]
@@ -10561,57 +10561,83 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/skeleton/skeleton.ts",
+      "path": "src/components/resize-observer/resize-observer.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlSkeleton",
-          "cssProperties": [
+          "name": "SlResizeObserver",
+          "slots": [
             {
-              "description": "The skeleton's border radius.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The color of the skeleton.",
-              "name": "--color"
-            },
-            {
-              "description": "The sheen color when the skeleton is in its loading state.",
-              "name": "--sheen-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The skeleton's indicator which is responsible for its color and animation.",
-              "name": "indicator"
+              "description": "One or more elements to watch for resizing.",
+              "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "effect",
+              "name": "resizeObserver",
               "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
+                "text": "ResizeObserver"
               },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "attribute": "effect"
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "observedElements",
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "startObserver"
+            },
+            {
+              "kind": "method",
+              "name": "stopObserver"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ entries: ResizeObserverEntry[] }"
+              },
+              "description": "Emitted when the element is resized.",
+              "name": "sl-resize",
+              "reactName": "onSlResize"
             }
           ],
           "attributes": [
             {
-              "name": "effect",
+              "name": "disabled",
               "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
+                "text": "boolean"
               },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "fieldName": "effect"
+              "default": "false",
+              "description": "Disables the observer.",
+              "fieldName": "disabled"
             }
           ],
           "superclass": {
@@ -10620,7 +10646,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-skeleton",
+          "tagName": "sl-resize-observer",
           "customElement": true
         }
       ],
@@ -10629,85 +10655,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
+            "name": "SlResizeObserver",
+            "module": "src/components/resize-observer/resize-observer.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-skeleton",
+          "name": "sl-resize-observer",
           "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/spinner/spinner.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlSpinner",
-          "cssProperties": [
-            {
-              "description": "The width of the track.",
-              "name": "--track-width"
-            },
-            {
-              "description": "The color of the track.",
-              "name": "--track-color"
-            },
-            {
-              "description": "The color of the indicator.",
-              "name": "--indicator-color"
-            },
-            {
-              "description": "The time it takes for the spinner to complete one animation cycle.",
-              "name": "--speed"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "sl-spinner",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlSpinner",
-            "module": "src/components/spinner/spinner.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-spinner",
-          "declaration": {
-            "name": "SlSpinner",
-            "module": "src/components/spinner/spinner.ts"
+            "name": "SlResizeObserver",
+            "module": "src/components/resize-observer/resize-observer.ts"
           }
         }
       ]
@@ -11439,83 +11396,57 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/resize-observer/resize-observer.ts",
+      "path": "src/components/skeleton/skeleton.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlResizeObserver",
-          "slots": [
+          "name": "SlSkeleton",
+          "cssProperties": [
             {
-              "description": "One or more elements to watch for resizing.",
-              "name": ""
+              "description": "The skeleton's border radius.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The color of the skeleton.",
+              "name": "--color"
+            },
+            {
+              "description": "The sheen color when the skeleton is in its loading state.",
+              "name": "--sheen-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The skeleton's indicator which is responsible for its color and animation.",
+              "name": "indicator"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "resizeObserver",
+              "name": "effect",
               "type": {
-                "text": "ResizeObserver"
+                "text": "'pulse' | 'sheen' | 'none'"
               },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "observedElements",
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the observer.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            },
-            {
-              "kind": "method",
-              "name": "startObserver"
-            },
-            {
-              "kind": "method",
-              "name": "stopObserver"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ entries: ResizeObserverEntry[] }"
-              },
-              "description": "Emitted when the element is resized.",
-              "name": "sl-resize",
-              "reactName": "onSlResize"
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "attribute": "effect"
             }
           ],
           "attributes": [
             {
-              "name": "disabled",
+              "name": "effect",
               "type": {
-                "text": "boolean"
+                "text": "'pulse' | 'sheen' | 'none'"
               },
-              "default": "false",
-              "description": "Disables the observer.",
-              "fieldName": "disabled"
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "fieldName": "effect"
             }
           ],
           "superclass": {
@@ -11524,7 +11455,7 @@
           },
           "since": "2.0",
           "status": "stable",
-          "tagName": "sl-resize-observer",
+          "tagName": "sl-skeleton",
           "customElement": true
         }
       ],
@@ -11533,16 +11464,85 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "src/components/resize-observer/resize-observer.ts"
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-resize-observer",
+          "name": "sl-skeleton",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "src/components/resize-observer/resize-observer.ts"
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/spinner/spinner.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlSpinner",
+          "cssProperties": [
+            {
+              "description": "The width of the track.",
+              "name": "--track-width"
+            },
+            {
+              "description": "The color of the track.",
+              "name": "--track-color"
+            },
+            {
+              "description": "The color of the indicator.",
+              "name": "--indicator-color"
+            },
+            {
+              "description": "The time it takes for the spinner to complete one animation cycle.",
+              "name": "--speed"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "sl-spinner",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlSpinner",
+            "module": "src/components/spinner/spinner.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-spinner",
+          "declaration": {
+            "name": "SlSpinner",
+            "module": "src/components/spinner/spinner.ts"
           }
         }
       ]
@@ -11891,211 +11891,6 @@
           "declaration": {
             "name": "SlSplitPanel",
             "module": "src/components/split-panel/split-panel.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/tab/tab.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTab",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The close button.",
-              "name": "close-button"
-            },
-            {
-              "description": "The close button's `base` part.",
-              "name": "close-button__base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tab's label.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "tab",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "attrId",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "componentId",
-              "privacy": "private",
-              "default": "`sl-tab-${this.attrId}`"
-            },
-            {
-              "kind": "field",
-              "name": "panel",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
-              "attribute": "panel",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the tab in an active state.",
-              "attribute": "active",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the tab closable and shows a close icon.",
-              "attribute": "closable"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the tab in a disabled state.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus to the tab."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the tab."
-            },
-            {
-              "kind": "method",
-              "name": "handleCloseClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleActiveChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the tab is closable and the close button is activated.",
-              "name": "sl-close",
-              "reactName": "onSlClose"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "panel",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
-              "fieldName": "panel"
-            },
-            {
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the tab in an active state.",
-              "fieldName": "active"
-            },
-            {
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the tab closable and shows a close icon.",
-              "fieldName": "closable"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the tab in a disabled state.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon-button"
-          ],
-          "tagName": "sl-tab",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTab",
-            "module": "src/components/tab/tab.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tab",
-          "declaration": {
-            "name": "SlTab",
-            "module": "src/components/tab/tab.ts"
           }
         }
       ]
@@ -12471,6 +12266,211 @@
           "declaration": {
             "name": "SlTabGroup",
             "module": "src/components/tab-group/tab-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tab/tab.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTab",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The close button.",
+              "name": "close-button"
+            },
+            {
+              "description": "The close button's `base` part.",
+              "name": "close-button__base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The tab's label.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "tab",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "attrId",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "componentId",
+              "privacy": "private",
+              "default": "`sl-tab-${this.attrId}`"
+            },
+            {
+              "kind": "field",
+              "name": "panel",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
+              "attribute": "panel",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the tab in an active state.",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the tab closable and shows a close icon.",
+              "attribute": "closable"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the tab in a disabled state.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus to the tab."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the tab."
+            },
+            {
+              "kind": "method",
+              "name": "handleCloseClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleActiveChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the tab is closable and the close button is activated.",
+              "name": "sl-close",
+              "reactName": "onSlClose"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "panel",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
+              "fieldName": "panel"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the tab in an active state.",
+              "fieldName": "active"
+            },
+            {
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the tab closable and shows a close icon.",
+              "fieldName": "closable"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the tab in a disabled state.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon-button"
+          ],
+          "tagName": "sl-tab",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTab",
+            "module": "src/components/tab/tab.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tab",
+          "declaration": {
+            "name": "SlTab",
+            "module": "src/components/tab/tab.ts"
           }
         }
       ]
@@ -12900,170 +12900,6 @@
           "declaration": {
             "name": "SlTabPanel",
             "module": "src/components/tab-panel/tab-panel.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/tag/tag.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTag",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The tag content.",
-              "name": "content"
-            },
-            {
-              "description": "The remove button.",
-              "name": "remove-button"
-            },
-            {
-              "description": "The remove button's `base` part.",
-              "name": "remove-button__base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tag's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
-              },
-              "default": "'neutral'",
-              "description": "The tag's variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "size",
-              "type": {
-                "text": "'small' | 'medium' | 'large'"
-              },
-              "default": "'medium'",
-              "description": "The tag's size.",
-              "attribute": "size",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style tag with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "removable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the tag removable.",
-              "attribute": "removable"
-            },
-            {
-              "kind": "method",
-              "name": "handleRemoveClick"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the remove button is activated.",
-              "name": "sl-remove",
-              "reactName": "onSlRemove"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
-              },
-              "default": "'neutral'",
-              "description": "The tag's variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "size",
-              "type": {
-                "text": "'small' | 'medium' | 'large'"
-              },
-              "default": "'medium'",
-              "description": "The tag's size.",
-              "fieldName": "size"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style tag with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "removable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the tag removable.",
-              "fieldName": "removable"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "sl-icon-button"
-          ],
-          "tagName": "sl-tag",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTag",
-            "module": "src/components/tag/tag.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tag",
-          "declaration": {
-            "name": "SlTag",
-            "module": "src/components/tag/tag.ts"
           }
         }
       ]
@@ -14138,6 +13974,170 @@
           "declaration": {
             "name": "SlTooltip",
             "module": "src/components/tooltip/tooltip.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tag/tag.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTag",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The tag content.",
+              "name": "content"
+            },
+            {
+              "description": "The remove button.",
+              "name": "remove-button"
+            },
+            {
+              "description": "The remove button's `base` part.",
+              "name": "remove-button__base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The tag's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+              },
+              "default": "'neutral'",
+              "description": "The tag's variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "'small' | 'medium' | 'large'"
+              },
+              "default": "'medium'",
+              "description": "The tag's size.",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style tag with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "removable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the tag removable.",
+              "attribute": "removable"
+            },
+            {
+              "kind": "method",
+              "name": "handleRemoveClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the remove button is activated.",
+              "name": "sl-remove",
+              "reactName": "onSlRemove"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+              },
+              "default": "'neutral'",
+              "description": "The tag's variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'small' | 'medium' | 'large'"
+              },
+              "default": "'medium'",
+              "description": "The tag's size.",
+              "fieldName": "size"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style tag with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "removable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the tag removable.",
+              "fieldName": "removable"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "sl-icon-button"
+          ],
+          "tagName": "sl-tag",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTag",
+            "module": "src/components/tag/tag.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tag",
+          "declaration": {
+            "name": "SlTag",
+            "module": "src/components/tag/tag.ts"
           }
         }
       ]
