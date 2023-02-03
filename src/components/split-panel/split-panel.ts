@@ -1,28 +1,30 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { drag } from '../../internal/drag';
 import { clamp } from '../../internal/math';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
+import { customElement, property, query } from 'lit/decorators.js';
+import { drag } from '../../internal/drag';
+import { html } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { LocalizeController } from '../../utilities/localize';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './split-panel.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Split panels display two adjacent panels, allowing the user to reposition them.
+ * @documentation https://shoelace.style/components/split-panel
  * @status stable
+ * @since 2.0
  *
  * @event sl-reposition - Emitted when the divider's position changes.
+ *
+ * @slot start - Content to place in the start panel.
+ * @slot end - Content to place in the end panel.
+ * @slot divider - The divider. Useful for slotting in a custom icon that renders as a handle.
  *
  * @csspart start - The start panel.
  * @csspart end - The end panel.
  * @csspart panel - Targets both the start and end panels.
  * @csspart divider - The divider that separates the start and end panels.
- *
- * @slot start - The start panel.
- * @slot end - The end panel.
- * @slot handle - An optional handle to render at the center of the divider.
  *
  * @cssproperty [--divider-width=4px] - The width of the visible divider.
  * @cssproperty [--divider-hit-area=12px] - The invisible region around the divider where dragging can occur. This is
@@ -47,9 +49,7 @@ export default class SlSplitPanel extends ShoelaceElement {
    */
   @property({ type: Number, reflect: true }) position = 50;
 
-  /**
-   * The current position of the divider from the primary panel's edge in pixels.
-   */
+  /** The current position of the divider from the primary panel's edge in pixels. */
   @property({ attribute: 'position-in-pixels', type: Number }) positionInPixels: number;
 
   /** Draws the split panel in a vertical orientation with the start and end panels stacked. */
@@ -101,7 +101,7 @@ export default class SlSplitPanel extends ShoelaceElement {
     return (value / this.size) * 100;
   }
 
-  handleDrag(event: PointerEvent) {
+  private handleDrag(event: PointerEvent) {
     const isRtl = this.localize.dir() === 'rtl';
 
     if (this.disabled) {
@@ -154,7 +154,7 @@ export default class SlSplitPanel extends ShoelaceElement {
     });
   }
 
-  handleKeyDown(event: KeyboardEvent) {
+  private handleKeyDown(event: KeyboardEvent) {
     if (this.disabled) {
       return;
     }
@@ -185,6 +185,16 @@ export default class SlSplitPanel extends ShoelaceElement {
     }
   }
 
+  private handleResize(entries: ResizeObserverEntry[]) {
+    const { width, height } = entries[0].contentRect;
+    this.size = this.vertical ? height : width;
+
+    // Resize when a primary panel is set
+    if (this.primary) {
+      this.position = this.pixelsToPercentage(this.cachedPositionInPixels);
+    }
+  }
+
   @watch('position')
   handlePositionChange() {
     this.cachedPositionInPixels = this.percentageToPixels(this.position);
@@ -200,16 +210,6 @@ export default class SlSplitPanel extends ShoelaceElement {
   @watch('vertical')
   handleVerticalChange() {
     this.detectSize();
-  }
-
-  handleResize(entries: ResizeObserverEntry[]) {
-    const { width, height } = entries[0].contentRect;
-    this.size = this.vertical ? height : width;
-
-    // Resize when a primary panel is set
-    if (this.primary) {
-      this.position = this.pixelsToPercentage(this.cachedPositionInPixels);
-    }
   }
 
   render() {
@@ -247,11 +247,10 @@ export default class SlSplitPanel extends ShoelaceElement {
     this.style[gridTemplateAlt] = '';
 
     return html`
-      <div part="panel start" class="start">
-        <slot name="start"></slot>
-      </div>
+      <slot name="start" part="panel start" class="start"></slot>
 
-      <div
+      <slot
+        name="divider"
         part="divider"
         class="divider"
         tabindex=${ifDefined(this.disabled ? undefined : '0')}
@@ -260,13 +259,9 @@ export default class SlSplitPanel extends ShoelaceElement {
         @keydown=${this.handleKeyDown}
         @mousedown=${this.handleDrag}
         @touchstart=${this.handleDrag}
-      >
-        <slot name="handle"></slot>
-      </div>
+      ></slot>
 
-      <div part="panel end" class="end">
-        <slot name="end"></slot>
-      </div>
+      <slot name="end" part="panel end" class="end"></slot>
     `;
   }
 }

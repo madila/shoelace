@@ -1,25 +1,30 @@
-import { html } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import '../icon/icon';
+import { clamp } from '../../internal/math';
 import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import { clamp } from '../../internal/math';
-import ShoelaceElement from '../../internal/shoelace-element';
 import { watch } from '../../internal/watch';
-import { LocalizeController } from '../../utilities/localize';
-import '../icon/icon';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './rating.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Ratings give users a way to quickly view and provide feedback.
+ * @documentation https://shoelace.style/components/rating
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
  * @event sl-change - Emitted when the rating's value changes.
+ * @event {{ phase: 'start' | 'move' | 'end', value: number }} sl-hover - Emitted when the user hovers over a value. The
+ *  `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the
+ *  rating's value would be if the user were to commit to the hovered value.
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  *
  * @cssproperty --symbol-color - The inactive color for symbols.
  * @cssproperty --symbol-color-active - The active color for symbols.
@@ -30,14 +35,14 @@ import type { CSSResultGroup } from 'lit';
 export default class SlRating extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  @query('.rating') rating: HTMLElement;
-
   private readonly localize = new LocalizeController(this);
+
+  @query('.rating') rating: HTMLElement;
 
   @state() private hoverValue = 0;
   @state() private isHovering = false;
 
-  /** A label to describe the rating to assistive devices. */
+  /** A label that describes the rating to assistive devices. */
   @property() label = '';
 
   /** The current rating. */
@@ -46,7 +51,10 @@ export default class SlRating extends ShoelaceElement {
   /** The highest rating to show. */
   @property({ type: Number }) max = 5;
 
-  /** The minimum increment value allowed by the control. */
+  /**
+   * The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
+   * attribute to `0.5`.
+   */
   @property({ type: Number }) precision = 1;
 
   /** Makes the rating readonly. */
@@ -55,28 +63,22 @@ export default class SlRating extends ShoelaceElement {
   /** Disables the rating. */
   @property({ type: Boolean, reflect: true }) disabled = false;
 
-  /** The name of the icon to display as the symbol. */
+  /**
+   * A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
+   * The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
+   * well with `<sl-icon>` elements.
+   */
   @property() getSymbol: (value: number) => string = () => '<sl-icon name="star-fill" library="system"></sl-icon>';
 
-  /** Sets focus on the rating. */
-  focus(options?: FocusOptions) {
-    this.rating.focus(options);
-  }
-
-  /** Removes focus from the rating. */
-  blur() {
-    this.rating.blur();
-  }
-
-  getValueFromMousePosition(event: MouseEvent) {
+  private getValueFromMousePosition(event: MouseEvent) {
     return this.getValueFromXCoordinate(event.clientX);
   }
 
-  getValueFromTouchPosition(event: TouchEvent) {
+  private getValueFromTouchPosition(event: TouchEvent) {
     return this.getValueFromXCoordinate(event.touches[0].clientX);
   }
 
-  getValueFromXCoordinate(coordinate: number) {
+  private getValueFromXCoordinate(coordinate: number) {
     const isRtl = this.localize.dir() === 'rtl';
     const { left, right, width } = this.rating.getBoundingClientRect();
     const value = isRtl
@@ -86,11 +88,12 @@ export default class SlRating extends ShoelaceElement {
     return clamp(value, 0, this.max);
   }
 
-  handleClick(event: MouseEvent) {
+  private handleClick(event: MouseEvent) {
     this.setValue(this.getValueFromMousePosition(event));
+    this.emit('sl-change');
   }
 
-  setValue(newValue: number) {
+  private setValue(newValue: number) {
     if (this.disabled || this.readonly) {
       return;
     }
@@ -99,9 +102,10 @@ export default class SlRating extends ShoelaceElement {
     this.isHovering = false;
   }
 
-  handleKeyDown(event: KeyboardEvent) {
+  private handleKeyDown(event: KeyboardEvent) {
     const isLtr = this.localize.dir() === 'ltr';
     const isRtl = this.localize.dir() === 'rtl';
+    const oldValue = this.value;
 
     if (this.disabled || this.readonly) {
       return;
@@ -128,48 +132,79 @@ export default class SlRating extends ShoelaceElement {
       this.value = this.max;
       event.preventDefault();
     }
+
+    if (this.value !== oldValue) {
+      this.emit('sl-change');
+    }
   }
 
-  handleMouseEnter() {
+  private handleMouseEnter(event: MouseEvent) {
     this.isHovering = true;
-  }
-
-  handleMouseMove(event: MouseEvent) {
     this.hoverValue = this.getValueFromMousePosition(event);
   }
 
-  handleMouseLeave() {
+  private handleMouseMove(event: MouseEvent) {
+    this.hoverValue = this.getValueFromMousePosition(event);
+  }
+
+  private handleMouseLeave() {
     this.isHovering = false;
   }
 
-  handleTouchStart(event: TouchEvent) {
+  private handleTouchStart(event: TouchEvent) {
+    this.isHovering = true;
     this.hoverValue = this.getValueFromTouchPosition(event);
 
     // Prevent scrolling when touch is initiated
     event.preventDefault();
   }
 
-  handleTouchMove(event: TouchEvent) {
-    this.isHovering = true;
+  private handleTouchMove(event: TouchEvent) {
     this.hoverValue = this.getValueFromTouchPosition(event);
   }
 
-  handleTouchEnd(event: TouchEvent) {
+  private handleTouchEnd(event: TouchEvent) {
     this.isHovering = false;
     this.setValue(this.hoverValue);
+    this.emit('sl-change');
 
     // Prevent click on mobile devices
     event.preventDefault();
   }
 
-  @watch('value', { waitUntilFirstUpdate: true })
-  handleValueChange() {
-    this.emit('sl-change');
-  }
-
-  roundToPrecision(numberToRound: number, precision = 0.5) {
+  private roundToPrecision(numberToRound: number, precision = 0.5) {
     const multiplier = 1 / precision;
     return Math.ceil(numberToRound * multiplier) / multiplier;
+  }
+
+  @watch('hoverValue')
+  handleHoverValueChange() {
+    this.emit('sl-hover', {
+      detail: {
+        phase: 'move',
+        value: this.hoverValue
+      }
+    });
+  }
+
+  @watch('isHovering')
+  handleIsHoveringChange() {
+    this.emit('sl-hover', {
+      detail: {
+        phase: this.isHovering ? 'start' : 'end',
+        value: this.hoverValue
+      }
+    });
+  }
+
+  /** Sets focus on the rating. */
+  focus(options?: FocusOptions) {
+    this.rating.focus(options);
+  }
+
+  /** Removes focus from the rating. */
+  blur() {
+    this.rating.blur();
   }
 
   render() {

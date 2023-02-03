@@ -1,31 +1,33 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { styleMap } from 'lit/directives/style-map.js';
-import { drag } from '../../internal/drag';
-import { clamp } from '../../internal/math';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon/icon';
+import { clamp } from '../../internal/math';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query } from 'lit/decorators.js';
+import { drag } from '../../internal/drag';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import { styleMap } from 'lit/directives/style-map.js';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './image-comparer.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Compare visual differences between similar photos with a sliding panel.
+ * @documentation https://shoelace.style/components/image-comparer
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
  * @slot before - The before image, an `<img>` or `<svg>` element.
  * @slot after - The after image, an `<img>` or `<svg>` element.
- * @slot handle-icon - The icon used inside the handle.
+ * @slot handle - The icon used inside the handle.
  *
  * @event sl-change - Emitted when the position changes.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart before - The container that holds the "before" image.
- * @csspart after - The container that holds the "after" image.
+ * @csspart base - The component's base wrapper.
+ * @csspart before - The container that wraps the before image.
+ * @csspart after - The container that wraps the after image.
  * @csspart divider - The divider that separates the images.
  * @csspart handle - The handle that the user drags to expose the after image.
  *
@@ -36,15 +38,15 @@ import type { CSSResultGroup } from 'lit';
 export default class SlImageComparer extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
+  private readonly localize = new LocalizeController(this);
+
   @query('.image-comparer') base: HTMLElement;
   @query('.image-comparer__handle') handle: HTMLElement;
-
-  private readonly localize = new LocalizeController(this);
 
   /** The position of the divider as a percentage. */
   @property({ type: Number, reflect: true }) position = 50;
 
-  handleDrag(event: PointerEvent) {
+  private handleDrag(event: PointerEvent) {
     const { width } = this.base.getBoundingClientRect();
     const isRtl = this.localize.dir() === 'rtl';
 
@@ -59,7 +61,7 @@ export default class SlImageComparer extends ShoelaceElement {
     });
   }
 
-  handleKeyDown(event: KeyboardEvent) {
+  private handleKeyDown(event: KeyboardEvent) {
     const isLtr = this.localize.dir() === 'ltr';
     const isRtl = this.localize.dir() === 'rtl';
 
@@ -106,19 +108,16 @@ export default class SlImageComparer extends ShoelaceElement {
         @keydown=${this.handleKeyDown}
       >
         <div class="image-comparer__image">
-          <div part="before" class="image-comparer__before">
-            <slot name="before"></slot>
-          </div>
+          <slot name="before" part="before" class="image-comparer__before"></slot>
 
-          <div
+          <slot
+            name="after"
             part="after"
             class="image-comparer__after"
             style=${styleMap({
               clipPath: isRtl ? `inset(0 0 0 ${100 - this.position}%)` : `inset(0 ${100 - this.position}% 0 0)`
             })}
-          >
-            <slot name="after"></slot>
-          </div>
+          ></slot>
         </div>
 
         <div
@@ -130,7 +129,8 @@ export default class SlImageComparer extends ShoelaceElement {
           @mousedown=${this.handleDrag}
           @touchstart=${this.handleDrag}
         >
-          <div
+          <slot
+            name="handle"
             part="handle"
             class="image-comparer__handle"
             role="scrollbar"
@@ -140,16 +140,8 @@ export default class SlImageComparer extends ShoelaceElement {
             aria-controls="image-comparer"
             tabindex="0"
           >
-            <slot name="handle-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="currentColor" fill-rule="nonzero">
-                  <path
-                    d="m21.14 12.55-5.482 4.796c-.646.566-1.658.106-1.658-.753V7a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506h.001ZM2.341 12.55l5.482 4.796c.646.566 1.658.106 1.658-.753V7a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506h-.001Z"
-                  />
-                </g>
-              </svg>
-            </slot>
-          </div>
+            <sl-icon library="system" name="grip-vertical"></sl-icon>
+          </slot>
         </div>
       </div>
     `;

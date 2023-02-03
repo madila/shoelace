@@ -4,8 +4,6 @@
 
 [component-header:sl-dialog]
 
-Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
-
 ```html preview
 <sl-dialog label="Dialog" class="dialog-overview">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -142,6 +140,59 @@ const App = () => {
           <p>Scroll down and give it a try! 👇</p>
         </div>
 
+        <SlButton slot="footer" variant="primary" onClick={() => setOpen(false)}>
+          Close
+        </SlButton>
+      </SlDialog>
+
+      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>
+    </>
+  );
+};
+```
+
+### Header Actions
+
+The header shows a functional close button by default. You can use the `header-actions` slot to add additional [icon buttons](/components/icon-button) if needed.
+
+```html preview
+<sl-dialog label="Dialog" class="dialog-header-actions">
+  <sl-icon-button class="new-window" slot="header-actions" name="box-arrow-up-right"></sl-icon-button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <sl-button slot="footer" variant="primary">Close</sl-button>
+</sl-dialog>
+
+<sl-button>Open Dialog</sl-button>
+
+<script>
+  const dialog = document.querySelector('.dialog-header-actions');
+  const openButton = dialog.nextElementSibling;
+  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+  const newWindowButton = dialog.querySelector('.new-window');
+
+  openButton.addEventListener('click', () => dialog.show());
+  closeButton.addEventListener('click', () => dialog.hide());
+  newWindowButton.addEventListener('click', () => window.open(location.href));
+</script>
+```
+
+```jsx react
+import { useState } from 'react';
+import { SlButton, SlDialog, SlIconButton } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <SlDialog label="Dialog" open={open} onSlAfterHide={() => setOpen(false)}>
+        <SlIconButton
+          class="new-window"
+          slot="header-actions"
+          name="box-arrow-up-right"
+          onClick={() => window.open(location.href)}
+        />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         <SlButton slot="footer" variant="primary" onClick={() => setOpen(false)}>
           Close
         </SlButton>

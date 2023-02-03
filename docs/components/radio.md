@@ -2,8 +2,6 @@
 
 [component-header:sl-radio]
 
-Radios allow the user to select a single option from a group.
-
 Radios are designed to be used with [radio groups](/components/radio-group).
 
 ```html preview
@@ -77,6 +75,30 @@ const App = () => (
     </SlRadio>
     <SlRadio value="3">Option 3</SlRadio>
   </SlRadioGroup>
+);
+```
+
+## Sizes
+
+Use the `size` attribute to change a radio's size.
+
+```html preview
+<sl-radio size="small">Small</sl-radio>
+<sl-radio size="medium">Medium</sl-radio>
+<sl-radio size="large">Large</sl-radio>
+```
+
+```jsx react
+import { SlRadio } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => (
+  <>
+    <SlRadio size="small">Small</SlRadio>
+    <br />
+    <SlRadio size="medium">Medium</SlRadio>
+    <br />
+    <SlRadio size="large">Large</SlRadio>
+  </>
 );
 ```
 

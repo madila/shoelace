@@ -1,25 +1,27 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { animateTo, parseDuration, stopAnimations } from '../../internal/animate';
-import { waitForEvent } from '../../internal/event';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
-import { LocalizeController } from '../../utilities/localize';
 import '../popup/popup';
+import { animateTo, parseDuration, stopAnimations } from '../../internal/animate';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query } from 'lit/decorators.js';
+import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import { waitForEvent } from '../../internal/event';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './tooltip.styles';
-import type SlPopup from '../popup/popup';
 import type { CSSResultGroup } from 'lit';
+import type SlPopup from '../popup/popup';
 
 /**
- * @since 2.0
+ * @summary Tooltips display additional information based on a specific action.
+ * @documentation https://shoelace.style/components/tooltip
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-popup
  *
- * @slot - The tooltip's target element. Only the first element will be used as the target.
- * @slot content - The tooltip's content. Alternatively, you can use the `content` attribute.
+ * @slot - The tooltip's target element. Avoid slotting in more than one element, as subsequent ones will be ignored.
+ * @slot content - The content to render in the tooltip. Alternatively, you can use the `content` attribute.
  *
  * @event sl-show - Emitted when the tooltip begins to show.
  * @event sl-after-show - Emitted after the tooltip has shown and all animations are complete.
@@ -27,9 +29,9 @@ import type { CSSResultGroup } from 'lit';
  * @event sl-after-hide - Emitted after the tooltip has hidden and all animations are complete.
  *
  * @csspart base - The component's base wrapper, an `<sl-popup>` element.
- * @csspart base__popup - The popup's `popup` part. Use this to target the tooltip's popup container.
- * @csspart base__arrow - The popup's `arrow` part. Use this to target the tooltip's arrow.
- * @csspart body - The tooltip's body.
+ * @csspart base__popup - The popup's exported `popup` part. Use this to target the tooltip's popup container.
+ * @csspart base__arrow - The popup's exported `arrow` part. Use this to target the tooltip's arrow.
+ * @csspart body - The tooltip's body where its content is rendered.
  *
  * @cssproperty --max-width - The maximum width of the tooltip before its content will wrap.
  * @cssproperty --hide-delay - The amount of time to wait before hiding the tooltip when hovering.
@@ -42,14 +44,14 @@ import type { CSSResultGroup } from 'lit';
 export default class SlTooltip extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
+  private hoverTimeout: number;
+  private readonly localize = new LocalizeController(this);
+
   @query('slot:not([name])') defaultSlot: HTMLSlotElement;
   @query('.tooltip__body') body: HTMLElement;
   @query('sl-popup') popup: SlPopup;
 
-  private hoverTimeout: number;
-  private readonly localize = new LocalizeController(this);
-
-  /** The tooltip's content. If you need to display HTML, you can use the `content` slot instead. */
+  /** The tooltip's content. If you need to display HTML, use the `content` slot instead. */
   @property() content = '';
 
   /**
@@ -91,7 +93,8 @@ export default class SlTooltip extends ShoelaceElement {
 
   /**
    * Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with
-   * `overflow: auto|hidden|scroll`.
+   * `overflow: auto|hidden|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all,
+   * scenarios.
    */
   @property({ type: Boolean }) hoist = false;
 
@@ -134,46 +137,13 @@ export default class SlTooltip extends ShoelaceElement {
     this.removeEventListener('mouseout', this.handleMouseOut);
   }
 
-  /** Shows the tooltip. */
-  async show() {
-    if (this.open) {
-      return undefined;
-    }
-
-    this.open = true;
-    return waitForEvent(this, 'sl-after-show');
-  }
-
-  /** Hides the tooltip */
-  async hide() {
-    if (!this.open) {
-      return undefined;
-    }
-
-    this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
-  }
-
-  getTarget() {
-    // Get the first child that isn't a <style> or content slot
-    const target = [...this.children].find(
-      el => el.tagName.toLowerCase() !== 'style' && el.getAttribute('slot') !== 'content'
-    );
-
-    if (!target) {
-      throw new Error('Invalid tooltip target: no child element was found.');
-    }
-
-    return target as HTMLElement;
-  }
-
-  handleBlur() {
+  private handleBlur() {
     if (this.hasTrigger('focus')) {
       this.hide();
     }
   }
 
-  handleClick() {
+  private handleClick() {
     if (this.hasTrigger('click')) {
       if (this.open) {
         this.hide();
@@ -183,13 +153,13 @@ export default class SlTooltip extends ShoelaceElement {
     }
   }
 
-  handleFocus() {
+  private handleFocus() {
     if (this.hasTrigger('focus')) {
       this.show();
     }
   }
 
-  handleKeyDown(event: KeyboardEvent) {
+  private handleKeyDown(event: KeyboardEvent) {
     // Pressing escape when the target element has focus should dismiss the tooltip
     if (this.open && event.key === 'Escape') {
       event.stopPropagation();
@@ -197,7 +167,7 @@ export default class SlTooltip extends ShoelaceElement {
     }
   }
 
-  handleMouseOver() {
+  private handleMouseOver() {
     if (this.hasTrigger('hover')) {
       const delay = parseDuration(getComputedStyle(this).getPropertyValue('--show-delay'));
       clearTimeout(this.hoverTimeout);
@@ -205,12 +175,17 @@ export default class SlTooltip extends ShoelaceElement {
     }
   }
 
-  handleMouseOut() {
+  private handleMouseOut() {
     if (this.hasTrigger('hover')) {
       const delay = parseDuration(getComputedStyle(this).getPropertyValue('--hide-delay'));
       clearTimeout(this.hoverTimeout);
       this.hoverTimeout = window.setTimeout(() => this.hide(), delay);
     }
+  }
+
+  private hasTrigger(triggerType: string) {
+    const triggers = this.trigger.split(' ');
+    return triggers.includes(triggerType);
   }
 
   @watch('open', { waitUntilFirstUpdate: true })
@@ -244,11 +219,7 @@ export default class SlTooltip extends ShoelaceElement {
     }
   }
 
-  @watch('content')
-  @watch('distance')
-  @watch('hoist')
-  @watch('placement')
-  @watch('skidding')
+  @watch(['content', 'distance', 'hoist', 'placement', 'skidding'])
   async handleOptionsChange() {
     if (this.hasUpdated) {
       await this.updateComplete;
@@ -263,9 +234,24 @@ export default class SlTooltip extends ShoelaceElement {
     }
   }
 
-  hasTrigger(triggerType: string) {
-    const triggers = this.trigger.split(' ');
-    return triggers.includes(triggerType);
+  /** Shows the tooltip. */
+  async show() {
+    if (this.open) {
+      return undefined;
+    }
+
+    this.open = true;
+    return waitForEvent(this, 'sl-after-show');
+  }
+
+  /** Hides the tooltip */
+  async hide() {
+    if (!this.open) {
+      return undefined;
+    }
+
+    this.open = false;
+    return waitForEvent(this, 'sl-after-hide');
   }
 
   render() {
@@ -290,9 +276,16 @@ export default class SlTooltip extends ShoelaceElement {
       >
         <slot slot="anchor" aria-describedby="tooltip"></slot>
 
-        <div part="body" id="tooltip" class="tooltip__body" role="tooltip" aria-hidden=${this.open ? 'false' : 'true'}>
-          <slot name="content" aria-live=${this.open ? 'polite' : 'off'}> ${this.content} </slot>
-        </div>
+        <slot
+          name="content"
+          part="body"
+          id="tooltip"
+          class="tooltip__body"
+          role="tooltip"
+          aria-live=${this.open ? 'polite' : 'off'}
+        >
+          ${this.content}
+        </slot>
       </sl-popup>
     `;
   }
@@ -300,16 +293,16 @@ export default class SlTooltip extends ShoelaceElement {
 
 setDefaultAnimation('tooltip.show', {
   keyframes: [
-    { opacity: 0, transform: 'scale(0.8)' },
-    { opacity: 1, transform: 'scale(1)' }
+    { opacity: 0, scale: 0.8 },
+    { opacity: 1, scale: 1 }
   ],
   options: { duration: 150, easing: 'ease' }
 });
 
 setDefaultAnimation('tooltip.hide', {
   keyframes: [
-    { opacity: 1, transform: 'scale(1)' },
-    { opacity: 0, transform: 'scale(0.8)' }
+    { opacity: 1, scale: 1 },
+    { opacity: 0, scale: 0.8 }
   ],
   options: { duration: 150, easing: 'ease' }
 });

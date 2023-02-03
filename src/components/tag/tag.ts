@@ -1,15 +1,17 @@
-import { html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon-button/icon-button';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property } from 'lit/decorators.js';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './tag.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Tags are used as labels to organize things or to indicate a selection.
+ * @documentation https://shoelace.style/components/tag
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon-button
  *
@@ -17,17 +19,17 @@ import type { CSSResultGroup } from 'lit';
  *
  * @event sl-remove - Emitted when the remove button is activated.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart content - The tag content.
- * @csspart remove-button - The remove button.
- * @csspart remove-button__base - The remove button's `base` part.
+ * @csspart base - The component's base wrapper.
+ * @csspart content - The tag's content.
+ * @csspart remove-button - The tag's remove button, an `<sl-icon-button>`.
+ * @csspart remove-button__base - The remove button's exported `base` part.
  */
 @customElement('sl-tag')
 export default class SlTag extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 
-  /** The tag's variant. */
+  /** The tag's theme variant. */
   @property({ reflect: true }) variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text' = 'neutral';
 
   /** The tag's size. */
@@ -36,10 +38,10 @@ export default class SlTag extends ShoelaceElement {
   /** Draws a pill-style tag with rounded edges. */
   @property({ type: Boolean, reflect: true }) pill = false;
 
-  /** Makes the tag removable. */
+  /** Makes the tag removable and shows a remove button. */
   @property({ type: Boolean }) removable = false;
 
-  handleRemoveClick() {
+  private handleRemoveClick() {
     this.emit('sl-remove');
   }
 
@@ -68,20 +70,19 @@ export default class SlTag extends ShoelaceElement {
           'tag--removable': this.removable
         })}
       >
-        <span part="content" class="tag__content">
-          <slot></slot>
-        </span>
+        <slot part="content" class="tag__content"></slot>
 
         ${this.removable
           ? html`
               <sl-icon-button
                 part="remove-button"
                 exportparts="base:remove-button__base"
-                name="x"
+                name="x-lg"
                 library="system"
                 label=${this.localize.term('remove')}
                 class="tag__remove"
                 @click=${this.handleRemoveClick}
+                tabindex="-1"
               ></sl-icon-button>
             `
           : ''}

@@ -1,40 +1,42 @@
-import { html } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { scrollIntoView } from '../../internal/scroll';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon-button/icon-button';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import { scrollIntoView } from '../../internal/scroll';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './tab-group.styles';
-import type SlTabPanel from '../tab-panel/tab-panel';
-import type SlTab from '../tab/tab';
 import type { CSSResultGroup } from 'lit';
+import type SlTab from '../tab/tab';
+import type SlTabPanel from '../tab-panel/tab-panel';
 
 /**
- * @since 2.0
+ * @summary Tab groups organize content into a container that shows one section at a time.
+ * @documentation https://shoelace.style/components/tab-group
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon-button
  *
- * @slot - Used for grouping tab panels in the tab group.
- * @slot nav - Used for grouping tabs in the tab group.
+ * @slot - Used for grouping tab panels in the tab group. Must be `<sl-tab-panel>` elements.
+ * @slot nav - Used for grouping tabs in the tab group. Must be `<sl-tab>` elements.
  *
  * @event {{ name: String }} sl-tab-show - Emitted when a tab is shown.
  * @event {{ name: String }} sl-tab-hide - Emitted when a tab is hidden.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart nav - The tab group navigation container.
- * @csspart tabs - The container that wraps the slotted tabs.
- * @csspart active-tab-indicator - An element that displays the currently selected tab. This is a child of the tabs container.
- * @csspart body - The tab group body where tab panels are slotted in.
- * @csspart scroll-button - The previous and next scroll buttons that appear when tabs are scrollable.
- * @csspart scroll-button--start - Targets the starting scroll button.
- * @csspart scroll-button--end - Targets the ending scroll button.
- * @csspart scroll-button__base - The scroll button's `base` part.
+ * @csspart base - The component's base wrapper.
+ * @csspart nav - The tab group's navigation container where tabs are slotted in.
+ * @csspart tabs - The container that wraps the tabs.
+ * @csspart active-tab-indicator - The line that highlights the currently selected tab.
+ * @csspart body - The tab group's body where tab panels are slotted in.
+ * @csspart scroll-button - The previous/next scroll buttons that show when tabs are scrollable, an `<sl-icon-button>`.
+ * @csspart scroll-button--start - The starting scroll button.
+ * @csspart scroll-button--end - The ending scroll button.
+ * @csspart scroll-button__base - The scroll button's exported `base` part.
  *
  * @cssproperty --indicator-color - The color of the active tab indicator.
- * @cssproperty --track-color - The color of the indicator's track (i.e. the line that separates tabs from panels).
+ * @cssproperty --track-color - The color of the indicator's track (the line that separates tabs from panels).
  * @cssproperty --track-width - The width of the indicator's track (the line that separates tabs from panels).
  */
 @customElement('sl-tab-group')
@@ -42,16 +44,16 @@ export default class SlTabGroup extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 
-  @query('.tab-group') tabGroup: HTMLElement;
-  @query('.tab-group__body') body: HTMLElement;
-  @query('.tab-group__nav') nav: HTMLElement;
-  @query('.tab-group__indicator') indicator: HTMLElement;
-
   private activeTab?: SlTab;
   private mutationObserver: MutationObserver;
   private resizeObserver: ResizeObserver;
   private tabs: SlTab[] = [];
   private panels: SlTabPanel[] = [];
+
+  @query('.tab-group') tabGroup: HTMLElement;
+  @query('.tab-group__body') body: HTMLSlotElement;
+  @query('.tab-group__nav') nav: HTMLElement;
+  @query('.tab-group__indicator') indicator: HTMLElement;
 
   @state() private hasScrollControls = false;
 
@@ -71,7 +73,6 @@ export default class SlTabGroup extends ShoelaceElement {
     super.connectedCallback();
 
     this.resizeObserver = new ResizeObserver(() => {
-      this.preventIndicatorTransition();
       this.repositionIndicator();
       this.updateScrollControls();
     });
@@ -110,16 +111,7 @@ export default class SlTabGroup extends ShoelaceElement {
     this.resizeObserver.unobserve(this.nav);
   }
 
-  /** Shows the specified tab panel. */
-  show(panel: string) {
-    const tab = this.tabs.find(el => el.panel === panel);
-
-    if (tab) {
-      this.setActiveTab(tab, { scrollBehavior: 'smooth' });
-    }
-  }
-
-  getAllTabs(options: { includeDisabled: boolean } = { includeDisabled: true }) {
+  private getAllTabs(options: { includeDisabled: boolean } = { includeDisabled: true }) {
     const slot = this.shadowRoot!.querySelector<HTMLSlotElement>('slot[name="nav"]')!;
 
     return [...(slot.assignedElements() as SlTab[])].filter(el => {
@@ -129,16 +121,15 @@ export default class SlTabGroup extends ShoelaceElement {
     });
   }
 
-  getAllPanels() {
-    const slot = this.body.querySelector('slot')!;
-    return [...slot.assignedElements()].filter(el => el.tagName.toLowerCase() === 'sl-tab-panel') as [SlTabPanel];
+  private getAllPanels() {
+    return [...this.body.assignedElements()].filter(el => el.tagName.toLowerCase() === 'sl-tab-panel') as [SlTabPanel];
   }
 
-  getActiveTab() {
+  private getActiveTab() {
     return this.tabs.find(el => el.active);
   }
 
-  handleClick(event: MouseEvent) {
+  private handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
     const tab = target.closest('sl-tab');
     const tabGroup = tab?.closest('sl-tab-group');
@@ -153,7 +144,7 @@ export default class SlTabGroup extends ShoelaceElement {
     }
   }
 
-  handleKeyDown(event: KeyboardEvent) {
+  private handleKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
     const tab = target.closest('sl-tab');
     const tabGroup = tab?.closest('sl-tab-group');
@@ -218,7 +209,7 @@ export default class SlTabGroup extends ShoelaceElement {
     }
   }
 
-  handleScrollToStart() {
+  private handleScrollToStart() {
     this.nav.scroll({
       left:
         this.localize.dir() === 'rtl'
@@ -228,7 +219,7 @@ export default class SlTabGroup extends ShoelaceElement {
     });
   }
 
-  handleScrollToEnd() {
+  private handleScrollToEnd() {
     this.nav.scroll({
       left:
         this.localize.dir() === 'rtl'
@@ -238,17 +229,7 @@ export default class SlTabGroup extends ShoelaceElement {
     });
   }
 
-  @watch('noScrollControls', { waitUntilFirstUpdate: true })
-  updateScrollControls() {
-    if (this.noScrollControls) {
-      this.hasScrollControls = false;
-    } else {
-      this.hasScrollControls =
-        ['top', 'bottom'].includes(this.placement) && this.nav.scrollWidth > this.nav.clientWidth;
-    }
-  }
-
-  setActiveTab(tab: SlTab, options?: { emitEvents?: boolean; scrollBehavior?: 'auto' | 'smooth' }) {
+  private setActiveTab(tab: SlTab, options?: { emitEvents?: boolean; scrollBehavior?: 'auto' | 'smooth' }) {
     options = {
       emitEvents: true,
       scrollBehavior: 'auto',
@@ -279,7 +260,7 @@ export default class SlTabGroup extends ShoelaceElement {
     }
   }
 
-  setAriaLabels() {
+  private setAriaLabels() {
     // Link each tab with its corresponding panel
     this.tabs.forEach(tab => {
       const panel = this.panels.find(el => el.name === tab.panel);
@@ -290,19 +271,7 @@ export default class SlTabGroup extends ShoelaceElement {
     });
   }
 
-  @watch('placement', { waitUntilFirstUpdate: true })
-  syncIndicator() {
-    const tab = this.getActiveTab();
-
-    if (tab) {
-      this.indicator.style.display = 'block';
-      this.repositionIndicator();
-    } else {
-      this.indicator.style.display = 'none';
-    }
-  }
-
-  repositionIndicator() {
+  private repositionIndicator() {
     const currentTab = this.getActiveTab();
 
     if (!currentTab) {
@@ -330,34 +299,54 @@ export default class SlTabGroup extends ShoelaceElement {
       case 'bottom':
         this.indicator.style.width = `${width}px`;
         this.indicator.style.height = 'auto';
-        this.indicator.style.transform = isRtl ? `translateX(${-1 * offset.left}px)` : `translateX(${offset.left}px)`;
+        this.indicator.style.translate = isRtl ? `${-1 * offset.left}px` : `${offset.left}px`;
         break;
 
       case 'start':
       case 'end':
         this.indicator.style.width = 'auto';
         this.indicator.style.height = `${height}px`;
-        this.indicator.style.transform = `translateY(${offset.top}px)`;
+        this.indicator.style.translate = `0 ${offset.top}px`;
         break;
     }
   }
 
-  // In some orientations, when the component is resized, the indicator's position will change causing it to animate
-  // while you resize. Calling this method will prevent the transition from running on resize, which feels more natural.
-  preventIndicatorTransition() {
-    const transitionValue = this.indicator.style.transition;
-    this.indicator.style.transition = 'none';
-
-    requestAnimationFrame(() => {
-      this.indicator.style.transition = transitionValue;
-    });
-  }
-
   // This stores tabs and panels so we can refer to a cache instead of calling querySelectorAll() multiple times.
-  syncTabsAndPanels() {
+  private syncTabsAndPanels() {
     this.tabs = this.getAllTabs({ includeDisabled: false });
     this.panels = this.getAllPanels();
     this.syncIndicator();
+  }
+
+  @watch('noScrollControls', { waitUntilFirstUpdate: true })
+  updateScrollControls() {
+    if (this.noScrollControls) {
+      this.hasScrollControls = false;
+    } else {
+      this.hasScrollControls =
+        ['top', 'bottom'].includes(this.placement) && this.nav.scrollWidth > this.nav.clientWidth;
+    }
+  }
+
+  @watch('placement', { waitUntilFirstUpdate: true })
+  syncIndicator() {
+    const tab = this.getActiveTab();
+
+    if (tab) {
+      this.indicator.style.display = 'block';
+      this.repositionIndicator();
+    } else {
+      this.indicator.style.display = 'none';
+    }
+  }
+
+  /** Shows the specified tab panel. */
+  show(panel: string) {
+    const tab = this.tabs.find(el => el.panel === panel);
+
+    if (tab) {
+      this.setActiveTab(tab, { scrollBehavior: 'smooth' });
+    }
   }
 
   render() {
@@ -415,9 +404,7 @@ export default class SlTabGroup extends ShoelaceElement {
             : ''}
         </div>
 
-        <div part="body" class="tab-group__body">
-          <slot @slotchange=${this.syncTabsAndPanels}></slot>
-        </div>
+        <slot part="body" class="tab-group__body" @slotchange=${this.syncTabsAndPanels}></slot>
       </div>
     `;
   }

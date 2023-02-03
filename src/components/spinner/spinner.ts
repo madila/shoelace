@@ -1,19 +1,21 @@
-import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './spinner.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Spinners are used to show the progress of an indeterminate operation.
+ * @documentation https://shoelace.style/components/spinner
  * @status stable
+ * @since 2.0
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  *
  * @cssproperty --track-width - The width of the track.
  * @cssproperty --track-color - The color of the track.
- * @cssproperty --indicator-color - The color of the indicator.
+ * @cssproperty --indicator-color - The color of the spinner's indicator.
  * @cssproperty --speed - The time it takes for the spinner to complete one animation cycle.
  */
 @customElement('sl-spinner')

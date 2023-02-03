@@ -11,7 +11,7 @@ export default css`
   }
 
   :host(:focus) {
-    outline: 0;
+    outline: none;
   }
 
   slot:not([name])::slotted(sl-icon) {
@@ -43,18 +43,6 @@ export default css`
     letter-spacing: var(--sl-letter-spacing-normal);
   }
 
-  .tree-item__default-toggle-button {
-    transition: var(--sl-transition-medium) transform ease;
-  }
-
-  .tree-item--expanded .tree-item__default-toggle-button {
-    transform: rotate(90deg);
-  }
-
-  .tree-item--expanded.tree-item--rtl .tree-item__default-toggle-button {
-    transform: rotate(-90deg);
-  }
-
   .tree-item__checkbox::part(base) {
     display: flex;
     align-items: center;
@@ -76,6 +64,27 @@ export default css`
     width: 1rem;
     height: 1rem;
     cursor: pointer;
+  }
+
+  .tree-item__expand-button {
+    transition: var(--sl-transition-medium) rotate ease;
+  }
+
+  .tree-item--expanded .tree-item__expand-button {
+    rotate: 90deg;
+  }
+
+  .tree-item--expanded.tree-item--rtl .tree-item__expand-button {
+    rotate: -90deg;
+  }
+
+  .tree-item--expanded slot[name='expand-icon'],
+  .tree-item:not(.tree-item--expanded) slot[name='collapse-icon'] {
+    display: none;
+  }
+
+  .tree-item:not(.tree-item--has-expand-button) .tree-item__expand-icon-slot {
+    display: none;
   }
 
   .tree-item__expand-button--visible {
@@ -116,6 +125,7 @@ export default css`
   }
 
   .tree-item__children {
+    display: block;
     font-size: calc(1em + var(--indent-size, var(--sl-spacing-medium)));
   }
 
@@ -137,5 +147,11 @@ export default css`
   .tree-item--rtl .tree-item__children::before {
     left: auto;
     right: 1em;
+  }
+
+  @media (forced-colors: active) {
+    :host(:not([aria-disabled='true'])) .tree-item--selected .tree-item__item {
+      outline: dashed 1px SelectedItem;
+    }
   }
 `;

@@ -1,23 +1,25 @@
-import { html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property } from 'lit/decorators.js';
+import { html } from 'lit';
 import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './badge.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Badges are used to draw attention and display statuses or counts.
+ * @documentation https://shoelace.style/components/badge
  * @status stable
+ * @since 2.0
  *
  * @slot - The badge's content.
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  */
 @customElement('sl-badge')
 export default class SlBadge extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  /** The badge's variant. */
+  /** The badge's theme variant. */
   @property({ reflect: true }) variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger' = 'primary';
 
   /** Draws a pill-style badge with rounded edges. */
@@ -28,7 +30,7 @@ export default class SlBadge extends ShoelaceElement {
 
   render() {
     return html`
-      <span
+      <slot
         part="base"
         class=${classMap({
           badge: true,
@@ -41,9 +43,7 @@ export default class SlBadge extends ShoelaceElement {
           'badge--pulse': this.pulse
         })}
         role="status"
-      >
-        <slot></slot>
-      </span>
+      ></slot>
     `;
   }
 }

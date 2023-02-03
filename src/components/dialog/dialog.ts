@@ -1,28 +1,31 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { animateTo, stopAnimations } from '../../internal/animate';
-import { waitForEvent } from '../../internal/event';
-import Modal from '../../internal/modal';
-import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { HasSlotController } from '../../internal/slot';
-import { watch } from '../../internal/watch';
-import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon-button/icon-button';
+import { animateTo, stopAnimations } from '../../internal/animate';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query } from 'lit/decorators.js';
+import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
+import { HasSlotController } from '../../internal/slot';
+import { html } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { LocalizeController } from '../../utilities/localize';
+import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
+import { waitForEvent } from '../../internal/event';
+import { watch } from '../../internal/watch';
+import Modal from '../../internal/modal';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './dialog.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
+ * @documentation https://shoelace.style/components/dialog
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon-button
  *
- * @slot - The dialog's content.
+ * @slot - The dialog's main content.
  * @slot label - The dialog's label. Alternatively, you can use the `label` attribute.
+ * @slot header-actions - Optional actions to add to the header. Works best with `<sl-icon-button>`.
  * @slot footer - The dialog's footer, usually one or more buttons representing various options.
  *
  * @event sl-show - Emitted when the dialog opens.
@@ -36,15 +39,16 @@ import type { CSSResultGroup } from 'lit';
  *   `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in
  *   destructive behavior such as data loss.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart overlay - The overlay.
- * @csspart panel - The dialog panel (where the dialog and its content is rendered).
- * @csspart header - The dialog header.
- * @csspart title - The dialog title.
- * @csspart close-button - The close button.
- * @csspart close-button__base - The close button's `base` part.
- * @csspart body - The dialog body.
- * @csspart footer - The dialog footer.
+ * @csspart base - The component's base wrapper.
+ * @csspart overlay - The overlay that covers the screen behind the dialog.
+ * @csspart panel - The dialog's panel (where the dialog and its content are rendered).
+ * @csspart header - The dialog's header. This element wraps the title and header actions.
+ * @csspart header-actions - Optional actions to add to the header. Works best with `<sl-icon-button>`.
+ * @csspart title - The dialog's title.
+ * @csspart close-button - The close button, an `<sl-icon-button>`.
+ * @csspart close-button__base - The close button's exported `base` part.
+ * @csspart body - The dialog's body.
+ * @csspart footer - The dialog's footer.
  *
  * @cssproperty --width - The preferred width of the dialog. Note that the dialog will shrink to accommodate smaller screens.
  * @cssproperty --header-spacing - The amount of padding to use for the header.
@@ -61,22 +65,24 @@ import type { CSSResultGroup } from 'lit';
 export default class SlDialog extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  @query('.dialog') dialog: HTMLElement;
-  @query('.dialog__panel') panel: HTMLElement;
-  @query('.dialog__overlay') overlay: HTMLElement;
-
   private readonly hasSlotController = new HasSlotController(this, 'footer');
   private readonly localize = new LocalizeController(this);
   private modal: Modal;
   private originalTrigger: HTMLElement | null;
 
-  /** Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods. */
+  @query('.dialog') dialog: HTMLElement;
+  @query('.dialog__panel') panel: HTMLElement;
+  @query('.dialog__overlay') overlay: HTMLElement;
+
+  /**
+   * Indicates whether or not the dialog is open. You can toggle this attribute to show and hide the dialog, or you can
+   * use the `show()` and `hide()` methods and this attribute will reflect the dialog's open state.
+   */
   @property({ type: Boolean, reflect: true }) open = false;
 
   /**
    * The dialog's label as displayed in the header. You should always include a relevant label even when using
-   * `no-header`, as it is required for proper accessibility. If you need to display HTML, you can use the `label` slot
-   * instead.
+   * `no-header`, as it is required for proper accessibility. If you need to display HTML, use the `label` slot instead.
    */
   @property({ reflect: true }) label = '';
 
@@ -88,6 +94,7 @@ export default class SlDialog extends ShoelaceElement {
 
   connectedCallback() {
     super.connectedCallback();
+    this.handleDocumentKeyDown = this.handleDocumentKeyDown.bind(this);
     this.modal = new Modal(this);
   }
 
@@ -95,6 +102,7 @@ export default class SlDialog extends ShoelaceElement {
     this.dialog.hidden = !this.open;
 
     if (this.open) {
+      this.addOpenListeners();
       this.modal.activate();
       lockBodyScrolling(this);
     }
@@ -103,26 +111,6 @@ export default class SlDialog extends ShoelaceElement {
   disconnectedCallback() {
     super.disconnectedCallback();
     unlockBodyScrolling(this);
-  }
-
-  /** Shows the dialog. */
-  async show() {
-    if (this.open) {
-      return undefined;
-    }
-
-    this.open = true;
-    return waitForEvent(this, 'sl-after-show');
-  }
-
-  /** Hides the dialog */
-  async hide() {
-    if (!this.open) {
-      return undefined;
-    }
-
-    this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
   }
 
   private requestClose(source: 'close-button' | 'keyboard' | 'overlay') {
@@ -140,8 +128,16 @@ export default class SlDialog extends ShoelaceElement {
     this.hide();
   }
 
-  handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
+  private addOpenListeners() {
+    document.addEventListener('keydown', this.handleDocumentKeyDown);
+  }
+
+  private removeOpenListeners() {
+    document.removeEventListener('keydown', this.handleDocumentKeyDown);
+  }
+
+  private handleDocumentKeyDown(event: KeyboardEvent) {
+    if (this.open && event.key === 'Escape') {
       event.stopPropagation();
       this.requestClose('keyboard');
     }
@@ -152,6 +148,7 @@ export default class SlDialog extends ShoelaceElement {
     if (this.open) {
       // Show
       this.emit('sl-show');
+      this.addOpenListeners();
       this.originalTrigger = document.activeElement as HTMLElement;
       this.modal.activate();
 
@@ -201,6 +198,7 @@ export default class SlDialog extends ShoelaceElement {
     } else {
       // Hide
       this.emit('sl-hide');
+      this.removeOpenListeners();
       this.modal.deactivate();
 
       await Promise.all([stopAnimations(this.dialog), stopAnimations(this.overlay)]);
@@ -237,8 +235,27 @@ export default class SlDialog extends ShoelaceElement {
     }
   }
 
+  /** Shows the dialog. */
+  async show() {
+    if (this.open) {
+      return undefined;
+    }
+
+    this.open = true;
+    return waitForEvent(this, 'sl-after-show');
+  }
+
+  /** Hides the dialog */
+  async hide() {
+    if (!this.open) {
+      return undefined;
+    }
+
+    this.open = false;
+    return waitForEvent(this, 'sl-after-hide');
+  }
+
   render() {
-    /* eslint-disable lit-a11y/click-events-have-key-events */
     return html`
       <div
         part="base"
@@ -247,7 +264,6 @@ export default class SlDialog extends ShoelaceElement {
           'dialog--open': this.open,
           'dialog--has-footer': this.hasSlotController.test('footer')
         })}
-        @keydown=${this.handleKeyDown}
       >
         <div part="overlay" class="dialog__overlay" @click=${() => this.requestClose('overlay')} tabindex="-1"></div>
 
@@ -267,22 +283,23 @@ export default class SlDialog extends ShoelaceElement {
                   <h2 part="title" class="dialog__title" id="title">
                     <slot name="label"> ${this.label.length > 0 ? this.label : String.fromCharCode(65279)} </slot>
                   </h2>
-                  <sl-icon-button
-                    part="close-button"
-                    exportparts="base:close-button__base"
-                    class="dialog__close"
-                    name="x"
-                    label=${this.localize.term('close')}
-                    library="system"
-                    @click="${() => this.requestClose('close-button')}"
-                  ></sl-icon-button>
+                  <div part="header-actions" class="dialog__header-actions">
+                    <slot name="header-actions"></slot>
+                    <sl-icon-button
+                      part="close-button"
+                      exportparts="base:close-button__base"
+                      class="dialog__close"
+                      name="x-lg"
+                      label=${this.localize.term('close')}
+                      library="system"
+                      @click="${() => this.requestClose('close-button')}"
+                    ></sl-icon-button>
+                  </div>
                 </header>
               `
             : ''}
 
-          <div part="body" class="dialog__body">
-            <slot></slot>
-          </div>
+          <slot part="body" class="dialog__body"></slot>
 
           <footer part="footer" class="dialog__footer">
             <slot name="footer"></slot>
@@ -290,28 +307,27 @@ export default class SlDialog extends ShoelaceElement {
         </div>
       </div>
     `;
-    /* eslint-enable lit-a11y/click-events-have-key-events */
   }
 }
 
 setDefaultAnimation('dialog.show', {
   keyframes: [
-    { opacity: 0, transform: 'scale(0.8)' },
-    { opacity: 1, transform: 'scale(1)' }
+    { opacity: 0, scale: 0.8 },
+    { opacity: 1, scale: 1 }
   ],
   options: { duration: 250, easing: 'ease' }
 });
 
 setDefaultAnimation('dialog.hide', {
   keyframes: [
-    { opacity: 1, transform: 'scale(1)' },
-    { opacity: 0, transform: 'scale(0.8)' }
+    { opacity: 1, scale: 1 },
+    { opacity: 0, scale: 0.8 }
   ],
   options: { duration: 250, easing: 'ease' }
 });
 
 setDefaultAnimation('dialog.denyClose', {
-  keyframes: [{ transform: 'scale(1)' }, { transform: 'scale(1.02)' }, { transform: 'scale(1)' }],
+  keyframes: [{ scale: 1 }, { scale: 1.02 }, { scale: 1 }],
   options: { duration: 250 }
 });
 

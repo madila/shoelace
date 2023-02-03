@@ -2,8 +2,6 @@
 
 [component-header:sl-button]
 
-Buttons represent actions that are available to the user.
-
 ```html preview
 <sl-button>Button</sl-button>
 ```
@@ -136,7 +134,7 @@ const App = () => (
 
 ### Circle Buttons
 
-Use the `circle` attribute to create circular icon buttons.
+Use the `circle` attribute to create circular icon buttons. When this attribute is set, the button expects a single `<sl-icon>` in the default slot.
 
 ```html preview
 <sl-button variant="default" size="small" circle>

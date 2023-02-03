@@ -36,12 +36,13 @@ export default css`
     font-family: var(--sl-font-sans);
     font-size: var(--sl-font-size-medium);
     font-weight: var(--sl-font-weight-normal);
-    color: var(--color);
     box-shadow: var(--sl-shadow-large);
+    border-radius: var(--sl-border-radius-medium);
     pointer-events: none;
   }
 
   .dropdown--open .dropdown__panel {
+    display: block;
     pointer-events: all;
   }
 

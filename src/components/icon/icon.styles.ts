@@ -8,11 +8,9 @@ export default css`
     display: inline-block;
     width: 1em;
     height: 1em;
-    contain: strict;
     box-sizing: content-box !important;
   }
 
-  .icon,
   svg {
     display: block;
     height: 100%;

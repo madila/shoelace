@@ -2,8 +2,6 @@
 
 [component-header:sl-breadcrumb]
 
-Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
-
 Breadcrumbs are usually placed before a page's main content with the current page shown last to indicate the user's position in the navigation.
 
 ```html preview
@@ -205,9 +203,9 @@ Dropdown menus can be placed in a prefix or suffix slot to provide additional op
         <sl-icon label="More options" name="three-dots"></sl-icon>
       </sl-button>
       <sl-menu>
-        <sl-menu-item checked>Web Design</sl-menu-item>
-        <sl-menu-item>Web Development</sl-menu-item>
-        <sl-menu-item>Marketing</sl-menu-item>
+        <sl-menu-item type="checkbox" checked>Web Design</sl-menu-item>
+        <sl-menu-item type="checkbox">Web Development</sl-menu-item>
+        <sl-menu-item type="checkbox">Marketing</sl-menu-item>
       </sl-menu>
     </sl-dropdown>
   </sl-breadcrumb-item>
@@ -237,9 +235,11 @@ const App = () => (
           <SlIcon label="More options" name="three-dots"></SlIcon>
         </SlButton>
         <SlMenu>
-          <SlMenuItem checked>Web Design</SlMenuItem>
-          <SlMenuItem>Web Development</SlMenuItem>
-          <SlMenuItem>Marketing</SlMenuItem>
+          <SlMenuItem type="checkbox" checked>
+            Web Design
+          </SlMenuItem>
+          <SlMenuItem type="checkbox">Web Development</SlMenuItem>
+          <SlMenuItem type="checkbox">Marketing</SlMenuItem>
         </SlMenu>
       </SlDropdown>
     </SlBreadcrumbItem>

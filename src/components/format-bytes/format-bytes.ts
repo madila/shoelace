@@ -1,11 +1,12 @@
 import { customElement, property } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
 import { LocalizeController } from '../../utilities/localize';
+import ShoelaceElement from '../../internal/shoelace-element';
 
 /**
-
- * @since 2.0
+ * @summary Formats a number as a human readable bytes value.
+ * @documentation https://shoelace.style/components/format-bytes
  * @status stable
+ * @since 2.0
  */
 @customElement('sl-format-bytes')
 export default class SlFormatBytes extends ShoelaceElement {
@@ -14,7 +15,7 @@ export default class SlFormatBytes extends ShoelaceElement {
   /** The number to format in bytes. */
   @property({ type: Number }) value = 0;
 
-  /** The unit to display. */
+  /** The type of unit to display. */
   @property() unit: 'byte' | 'bit' = 'byte';
 
   /** Determines how to display the result, e.g. "100 bytes", "100 b", or "100b". */

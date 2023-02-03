@@ -2,8 +2,6 @@
 
 [component-header:sl-checkbox]
 
-Checkboxes allow the user to toggle an option on or off.
-
 ```html preview
 <sl-checkbox>Checkbox</sl-checkbox>
 ```
@@ -60,6 +58,32 @@ import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlCheckbox disabled>Disabled</SlCheckbox>;
 ```
 
+## Sizes
+
+Use the `size` attribute to change a checkbox's size.
+
+```html preview
+<sl-checkbox size="small">Small</sl-checkbox>
+<br />
+<sl-checkbox size="medium">Medium</sl-checkbox>
+<br />
+<sl-checkbox size="large">Large</sl-checkbox>
+```
+
+```jsx react
+import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => (
+  <>
+    <SlCheckbox size="small">Small</SlCheckbox>
+    <br />
+    <SlCheckbox size="medium">Medium</SlCheckbox>
+    <br />
+    <SlCheckbox size="large">Large</SlCheckbox>
+  </>
+);
+```
+
 ### Custom Validity
 
 Use the `setCustomValidity()` method to set a custom validation message. This will prevent the form from submitting and make the browser display the error message you provide. To clear the error, call this function with an empty string.
@@ -74,14 +98,17 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
   const form = document.querySelector('.custom-validity');
   const checkbox = form.querySelector('sl-checkbox');
   const errorMessage = `Don't forget to check me!`;
+
   // Set initial validity as soon as the element is defined
   customElements.whenDefined('sl-checkbox').then(() => {
     checkbox.setCustomValidity(errorMessage);
   });
+
   // Update validity on change
   checkbox.addEventListener('sl-change', () => {
     checkbox.setCustomValidity(checkbox.checked ? '' : errorMessage);
   });
+
   // Handle submit
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -93,19 +120,24 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 ```jsx react
 import { useEffect, useRef } from 'react';
 import { SlButton, SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+
 const App = () => {
   const checkbox = useRef(null);
   const errorMessage = `Don't forget to check me!`;
+
   function handleChange() {
     checkbox.current.setCustomValidity(checkbox.current.checked ? '' : errorMessage);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     alert('All fields are valid!');
   }
+
   useEffect(() => {
     checkbox.current.setCustomValidity(errorMessage);
   }, []);
+
   return (
     <form class="custom-validity" onSubmit={handleSubmit}>
       <SlCheckbox ref={checkbox} onSlChange={handleChange}>

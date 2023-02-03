@@ -1,7 +1,7 @@
-import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
+import ShoelaceElement from '../../internal/shoelace-element';
 
 interface UnitConfig {
   max: number;
@@ -19,8 +19,10 @@ const availableUnits: UnitConfig[] = [
 ];
 
 /**
- * @since 2.0
+ * @summary Outputs a localized time phrase relative to the current date and time.
+ * @documentation https://shoelace.style/components/relative-time
  * @status stable
+ * @since 2.0
  */
 @customElement('sl-relative-time')
 export default class SlRelativeTime extends ShoelaceElement {
@@ -31,8 +33,12 @@ export default class SlRelativeTime extends ShoelaceElement {
   @state() private relativeTime = '';
   @state() private titleTime = '';
 
-  /** The date from which to calculate time from. */
-  @property() date: Date | string;
+  /**
+   * The date from which to calculate time from. If not set, the current date and time will be used. When passing a
+   * string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
+   * a date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).
+   */
+  @property() date: Date | string = new Date();
 
   /** The formatting style to use. */
   @property() format: 'long' | 'short' | 'narrow' = 'long';

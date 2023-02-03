@@ -1,3 +1,4 @@
+/** Gets an array of components from a CEM object. */
 export function getAllComponents(metadata) {
   const allComponents = [];
 
@@ -5,10 +6,10 @@ export function getAllComponents(metadata) {
     module.declarations?.map(declaration => {
       if (declaration.customElement) {
         const component = declaration;
-        const modulePath = module.path;
+        const path = module.path;
 
         if (component) {
-          allComponents.push(Object.assign(component, { modulePath }));
+          allComponents.push(Object.assign(component, { path }));
         }
       }
     });

@@ -1,24 +1,26 @@
-import { html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
 import '../icon/icon';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, state } from 'lit/decorators.js';
+import { html } from 'lit';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './avatar.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Avatars are used to represent a person or object.
+ * @documentation https://shoelace.style/components/avatar
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
- * @slot icon - The default icon to use when no image or initials are present.
+ * @slot icon - The default icon to use when no image or initials are present. Works best with `<sl-icon>`.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart icon - The container that wraps the avatar icon.
- * @csspart initials - The container that wraps the avatar initials.
- * @csspart image - The avatar image.
+ * @csspart base - The component's base wrapper.
+ * @csspart icon - The container that wraps the avatar's icon.
+ * @csspart initials - The container that wraps the avatar's initials.
+ * @csspart image - The avatar image. Only shown when the `image` attribute is set.
  *
  * @cssproperty --size - The size of the avatar.
  */
@@ -36,6 +38,9 @@ export default class SlAvatar extends ShoelaceElement {
 
   /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
   @property() initials = '';
+
+  /** Indicates how the browser should load the image. */
+  @property() loading: 'eager' | 'lazy' = 'eager';
 
   /** The shape of the avatar. */
   @property({ reflect: true }) shape: 'circle' | 'square' | 'rounded' = 'circle';
@@ -62,11 +67,9 @@ export default class SlAvatar extends ShoelaceElement {
         ${this.initials
           ? html` <div part="initials" class="avatar__initials">${this.initials}</div> `
           : html`
-              <div part="icon" class="avatar__icon" aria-hidden="true">
-                <slot name="icon">
-                  <sl-icon name="person-fill" library="system"></sl-icon>
-                </slot>
-              </div>
+              <slot name="icon" part="icon" class="avatar__icon" aria-hidden="true">
+                <sl-icon name="person-fill" library="system"></sl-icon>
+              </slot>
             `}
         ${this.image && !this.hasError
           ? html`
@@ -74,6 +77,7 @@ export default class SlAvatar extends ShoelaceElement {
                 part="image"
                 class="avatar__image"
                 src="${this.image}"
+                loading="${this.loading}"
                 alt=""
                 @error="${() => (this.hasError = true)}"
               />

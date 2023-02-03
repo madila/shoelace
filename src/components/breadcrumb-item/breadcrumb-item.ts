@@ -1,15 +1,17 @@
-import { html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property } from 'lit/decorators.js';
+import { HasSlotController } from '../../internal/slot';
+import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import ShoelaceElement from '../../internal/shoelace-element';
-import { HasSlotController } from '../../internal/slot';
 import styles from './breadcrumb-item.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
+ * @documentation https://shoelace.style/components/breadcrumb-item
  * @status stable
+ * @since 2.0
  *
  * @slot - The breadcrumb item's label.
  * @slot prefix - An optional prefix, usually an icon or icon button.
@@ -17,11 +19,11 @@ import type { CSSResultGroup } from 'lit';
  * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If
  * you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  * @csspart label - The breadcrumb item's label.
- * @csspart prefix - The container that wraps the prefix slot.
- * @csspart suffix - The container that wraps the suffix slot.
- * @csspart separator - The container that wraps the separator slot.
+ * @csspart prefix - The container that wraps the prefix.
+ * @csspart suffix - The container that wraps the suffix.
+ * @csspart separator - The container that wraps the separator.
  */
 @customElement('sl-breadcrumb-item')
 export default class SlBreadcrumbItem extends ShoelaceElement {
@@ -53,9 +55,7 @@ export default class SlBreadcrumbItem extends ShoelaceElement {
           'breadcrumb-item--has-suffix': this.hasSlotController.test('suffix')
         })}
       >
-        <span part="prefix" class="breadcrumb-item__prefix">
-          <slot name="prefix"></slot>
-        </span>
+        <slot name="prefix" part="prefix" class="breadcrumb-item__prefix"></slot>
 
         ${isLink
           ? html`
@@ -75,13 +75,9 @@ export default class SlBreadcrumbItem extends ShoelaceElement {
               </button>
             `}
 
-        <span part="suffix" class="breadcrumb-item__suffix">
-          <slot name="suffix"></slot>
-        </span>
+        <slot name="suffix" part="suffix" class="breadcrumb-item__suffix"></slot>
 
-        <span part="separator" class="breadcrumb-item__separator" aria-hidden="true">
-          <slot name="separator"></slot>
-        </span>
+        <slot name="separator" part="separator" class="breadcrumb-item__separator" aria-hidden="true"></slot>
       </div>
     `;
   }

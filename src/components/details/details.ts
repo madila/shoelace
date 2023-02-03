@@ -1,34 +1,38 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { animateTo, shimKeyframesHeightAuto, stopAnimations } from '../../internal/animate';
-import { waitForEvent } from '../../internal/event';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon/icon';
+import { animateTo, shimKeyframesHeightAuto, stopAnimations } from '../../internal/animate';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query } from 'lit/decorators.js';
+import { getAnimation, setDefaultAnimation } from '../../utilities/animation-registry';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import { waitForEvent } from '../../internal/event';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './details.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Details show a brief summary and expand to show additional content.
+ * @documentation https://shoelace.style/components/details
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
- * @slot - The details' content.
+ * @slot - The details' main content.
  * @slot summary - The details' summary. Alternatively, you can use the `summary` attribute.
+ * @slot expand-icon - Optional expand icon to use instead of the default. Works best with `<sl-icon>`.
+ * @slot collapse-icon - Optional collapse icon to use instead of the default. Works best with `<sl-icon>`.
  *
  * @event sl-show - Emitted when the details opens.
  * @event sl-after-show - Emitted after the details opens and all animations are complete.
  * @event sl-hide - Emitted when the details closes.
  * @event sl-after-hide - Emitted after the details closes and all animations are complete.
  *
- * @csspart base - The component's internal wrapper.
- * @csspart header - The summary header.
- * @csspart summary - The details summary.
- * @csspart summary-icon - The expand/collapse summary icon.
+ * @csspart base - The component's base wrapper.
+ * @csspart header - The header that wraps both the summary and the expand/collapse icon.
+ * @csspart summary - The container that wraps the summary.
+ * @csspart summary-icon - The container that wraps the expand/collapse icons.
  * @csspart content - The details content.
  *
  * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.
@@ -38,16 +42,20 @@ import type { CSSResultGroup } from 'lit';
 export default class SlDetails extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
+  private readonly localize = new LocalizeController(this);
+
   @query('.details') details: HTMLElement;
   @query('.details__header') header: HTMLElement;
   @query('.details__body') body: HTMLElement;
+  @query('.details__expand-icon-slot') expandIconSlot: HTMLSlotElement;
 
-  private readonly localize = new LocalizeController(this);
-
-  /** Indicates whether or not the details is open. You can use this in lieu of the show/hide methods. */
+  /**
+   * Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you
+   * can use the `show()` and `hide()` methods and this attribute will reflect the details' open state.
+   */
   @property({ type: Boolean, reflect: true }) open = false;
 
-  /** The summary to show in the details header. If you need to display HTML, use the `summary` slot instead. */
+  /** The summary to show in the header. If you need to display HTML, use the `summary` slot instead. */
   @property() summary: string;
 
   /** Disables the details so it can't be toggled. */
@@ -58,27 +66,7 @@ export default class SlDetails extends ShoelaceElement {
     this.body.style.height = this.open ? 'auto' : '0';
   }
 
-  /** Shows the details. */
-  async show() {
-    if (this.open || this.disabled) {
-      return undefined;
-    }
-
-    this.open = true;
-    return waitForEvent(this, 'sl-after-show');
-  }
-
-  /** Hides the details */
-  async hide() {
-    if (!this.open || this.disabled) {
-      return undefined;
-    }
-
-    this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
-  }
-
-  handleSummaryClick() {
+  private handleSummaryClick() {
     if (!this.disabled) {
       if (this.open) {
         this.hide();
@@ -90,7 +78,7 @@ export default class SlDetails extends ShoelaceElement {
     }
   }
 
-  handleSummaryKeyDown(event: KeyboardEvent) {
+  private handleSummaryKeyDown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
 
@@ -116,7 +104,11 @@ export default class SlDetails extends ShoelaceElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      this.emit('sl-show');
+      const slShow = this.emit('sl-show', { cancelable: true });
+      if (slShow.defaultPrevented) {
+        this.open = false;
+        return;
+      }
 
       await stopAnimations(this.body);
       this.body.hidden = false;
@@ -128,7 +120,11 @@ export default class SlDetails extends ShoelaceElement {
       this.emit('sl-after-show');
     } else {
       // Hide
-      this.emit('sl-hide');
+      const slHide = this.emit('sl-hide', { cancelable: true });
+      if (slHide.defaultPrevented) {
+        this.open = true;
+        return;
+      }
 
       await stopAnimations(this.body);
 
@@ -141,14 +137,37 @@ export default class SlDetails extends ShoelaceElement {
     }
   }
 
+  /** Shows the details. */
+  async show() {
+    if (this.open || this.disabled) {
+      return undefined;
+    }
+
+    this.open = true;
+    return waitForEvent(this, 'sl-after-show');
+  }
+
+  /** Hides the details */
+  async hide() {
+    if (!this.open || this.disabled) {
+      return undefined;
+    }
+
+    this.open = false;
+    return waitForEvent(this, 'sl-after-hide');
+  }
+
   render() {
+    const isRtl = this.localize.dir() === 'rtl';
+
     return html`
       <div
         part="base"
         class=${classMap({
           details: true,
           'details--open': this.open,
-          'details--disabled': this.disabled
+          'details--disabled': this.disabled,
+          'details--rtl': isRtl
         })}
       >
         <header
@@ -163,19 +182,20 @@ export default class SlDetails extends ShoelaceElement {
           @click=${this.handleSummaryClick}
           @keydown=${this.handleSummaryKeyDown}
         >
-          <div part="summary" class="details__summary">
-            <slot name="summary">${this.summary}</slot>
-          </div>
+          <slot name="summary" part="summary" class="details__summary">${this.summary}</slot>
 
           <span part="summary-icon" class="details__summary-icon">
-            <sl-icon name="chevron-right" library="system"></sl-icon>
+            <slot name="expand-icon">
+              <sl-icon library="system" name=${isRtl ? 'chevron-left' : 'chevron-right'}></sl-icon>
+            </slot>
+            <slot name="collapse-icon">
+              <sl-icon library="system" name=${isRtl ? 'chevron-left' : 'chevron-right'}></sl-icon>
+            </slot>
           </span>
         </header>
 
         <div class="details__body">
-          <div part="content" id="content" class="details__content" role="region" aria-labelledby="header">
-            <slot></slot>
-          </div>
+          <slot part="content" id="content" class="details__content" role="region" aria-labelledby="header"></slot>
         </div>
       </div>
     `;

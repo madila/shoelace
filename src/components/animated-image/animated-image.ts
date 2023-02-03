@@ -1,23 +1,26 @@
-import { html } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
 import '../icon/icon';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import { html } from 'lit';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './animated-image.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+ * @documentation https://shoelace.style/components/animated-image
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
  * @event sl-load - Emitted when the image loads successfully.
  * @event sl-error - Emitted when the image fails to load.
  *
+ * @slot play-icon - Optional play icon to use instead of the default. Works best with `<sl-icon>`.
+ * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.
+ *
  * @part - control-box - The container that surrounds the pause/play icons and provides their background.
- * @part - play-icon - The icon to use for the play button.
- * @part - pause-icon - The icon to use for the pause button.
  *
  * @cssproperty --control-box-size - The size of the icon box.
  * @cssproperty --icon-size - The size of the play/pause icons.
@@ -26,25 +29,25 @@ import type { CSSResultGroup } from 'lit';
 export default class SlAnimatedImage extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
+  @query('.animated-image__animated') animatedImage: HTMLImageElement;
+
   @state() frozenFrame: string;
   @state() isLoaded = false;
 
-  @query('.animated-image__animated') animatedImage: HTMLImageElement;
-
-  /** The image's src attribute. */
+  /** The path to the image to load. */
   @property() src: string;
 
-  /** The image's alt attribute. */
+  /** A description of the image used by assistive devices. */
   @property() alt: string;
 
-  /** When set, the image will animate. Otherwise, it will be paused. */
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
   @property({ type: Boolean, reflect: true }) play: boolean;
 
-  handleClick() {
+  private handleClick() {
     this.play = !this.play;
   }
 
-  handleLoad() {
+  private handleLoad() {
     const canvas = document.createElement('canvas');
     const { width, height } = this.animatedImage;
     canvas.width = width;
@@ -58,7 +61,7 @@ export default class SlAnimatedImage extends ShoelaceElement {
     }
   }
 
-  handleError() {
+  private handleError() {
     this.emit('sl-error');
   }
 
@@ -102,9 +105,8 @@ export default class SlAnimatedImage extends ShoelaceElement {
               />
 
               <div part="control-box" class="animated-image__control-box">
-                ${this.play
-                  ? html`<sl-icon part="pause-icon" name="pause-fill" library="system"></sl-icon>`
-                  : html`<sl-icon part="play-icon" name="play-fill" library="system"></sl-icon>`}
+                <slot name="play-icon"><sl-icon name="play-fill" library="system"></sl-icon></slot>
+                <slot name="pause-icon"><sl-icon name="pause-fill" library="system"></sl-icon></slot>
               </div>
             `
           : ''}

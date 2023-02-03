@@ -1,14 +1,16 @@
 import { arrow, autoUpdate, computePosition, flip, offset, shift, size } from '@floating-ui/dom';
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query } from 'lit/decorators.js';
+import { html } from 'lit';
 import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './popup.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Popup is a utility that lets you declaratively anchor "popup" containers to another element.
+ * @documentation https://shoelace.style/components/popup
  * @status stable
+ * @since 2.0
  *
  * @event sl-reposition - Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive
  *  operations in your listener or consider debouncing it.
@@ -36,12 +38,12 @@ import type { CSSResultGroup } from 'lit';
 export default class SlPopup extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  /** A reference to the internal popup container. Useful for animating and styling the popup with JavaScript. */
-  @query('.popup') public popup: HTMLElement;
-  @query('.popup__arrow') private arrowEl: HTMLElement;
-
   private anchorEl: HTMLElement | null;
   private cleanup: ReturnType<typeof autoUpdate> | undefined;
+
+  /** A reference to the internal popup container. Useful for animating and styling the popup with JavaScript. */
+  @query('.popup') popup: HTMLElement;
+  @query('.popup__arrow') private arrowEl: HTMLElement;
 
   /**
    * The element the popup will be anchored to. If the anchor lives outside of the popup, you can provide its `id` or a
@@ -134,10 +136,10 @@ export default class SlPopup extends ShoelaceElement {
 
   /**
    * When neither the preferred placement nor the fallback placements fit, this value will be used to determine whether
-   * the popup should be positioned as it was initially preferred or using the best available fit based on available
-   * space.
+   * the popup should be positioned using the best available fit based on available space or as it was initially
+   * preferred.
    */
-  @property({ attribute: 'flip-fallback-strategy' }) flipFallbackStrategy: 'best-fit' | 'initial' = 'initial';
+  @property({ attribute: 'flip-fallback-strategy' }) flipFallbackStrategy: 'best-fit' | 'initial' = 'best-fit';
 
   /**
    * The flip boundary describes clipping element(s) that overflow will be checked relative to when flipping. By
@@ -190,7 +192,31 @@ export default class SlPopup extends ShoelaceElement {
     this.stop();
   }
 
-  async handleAnchorChange() {
+  async updated(changedProps: Map<string, unknown>) {
+    super.updated(changedProps);
+
+    // Start or stop the positioner when active changes
+    if (changedProps.has('active')) {
+      if (this.active) {
+        this.start();
+      } else {
+        this.stop();
+      }
+    }
+
+    // Update the anchor when anchor changes
+    if (changedProps.has('anchor')) {
+      this.handleAnchorChange();
+    }
+
+    // All other properties will trigger a reposition when active
+    if (this.active) {
+      await this.updateComplete;
+      this.reposition();
+    }
+  }
+
+  private async handleAnchorChange() {
     await this.stop();
 
     if (this.anchor && typeof this.anchor === 'string') {
@@ -246,31 +272,7 @@ export default class SlPopup extends ShoelaceElement {
     });
   }
 
-  async updated(changedProps: Map<string, unknown>) {
-    super.updated(changedProps);
-
-    // Start or stop the positioner when active changes
-    if (changedProps.has('active')) {
-      if (this.active) {
-        this.start();
-      } else {
-        this.stop();
-      }
-    }
-
-    // Update the anchor when anchor changes
-    if (changedProps.has('anchor')) {
-      this.handleAnchorChange();
-    }
-
-    // All other properties will trigger a reposition when active
-    if (this.active) {
-      await this.updateComplete;
-      this.reposition();
-    }
-  }
-
-  /** Recalculate and repositions the popup. */
+  /** Forces the popup to recalculate and reposition itself. */
   reposition() {
     // Nothing to do if the popup is inactive or the anchor doesn't exist
     if (!this.active || !this.anchorEl) {

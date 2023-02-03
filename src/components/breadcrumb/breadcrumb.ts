@@ -1,38 +1,40 @@
-import { html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { LocalizeController } from '../../utilities/localize';
 import '../icon/icon';
+import { customElement, property, query } from 'lit/decorators.js';
+import { html } from 'lit';
+import { LocalizeController } from '../../utilities/localize';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './breadcrumb.styles';
-import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
 import type { CSSResultGroup } from 'lit';
+import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
 
 /**
- * @since 2.0
+ * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+ * @documentation https://shoelace.style/components/breadcrumb
  * @status stable
+ * @since 2.0
  *
  * @slot - One or more breadcrumb items to display.
- * @slot separator - The separator to use between breadcrumb items.
+ * @slot separator - The separator to use between breadcrumb items. Works best with `<sl-icon>`.
  *
  * @dependency sl-icon
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  */
 @customElement('sl-breadcrumb')
 export default class SlBreadcrumb extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  @query('slot') defaultSlot: HTMLSlotElement;
-  @query('slot[name="separator"]') separatorSlot: HTMLSlotElement;
-
   private readonly localize = new LocalizeController(this);
   private separatorDir = this.localize.dir();
 
+  @query('slot') defaultSlot: HTMLSlotElement;
+  @query('slot[name="separator"]') separatorSlot: HTMLSlotElement;
+
   /**
-   * The label to use for the breadcrumb control. This will not be shown, but it will be announced by screen readers and
-   * other assistive devices.
+   * The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+   * screen readers and other assistive devices to provide more context for users.
    */
-  @property() label = 'Breadcrumb';
+  @property() label = '';
 
   // Generates a clone of the separator element to use for each breadcrumb item
   private getSeparator() {
@@ -47,7 +49,7 @@ export default class SlBreadcrumb extends ShoelaceElement {
     return clone;
   }
 
-  handleSlotChange() {
+  private handleSlotChange() {
     const items = [...this.defaultSlot.assignedElements({ flatten: true })].filter(
       item => item.tagName.toLowerCase() === 'sl-breadcrumb-item'
     ) as SlBreadcrumbItem[];

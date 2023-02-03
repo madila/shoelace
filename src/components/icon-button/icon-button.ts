@@ -1,38 +1,43 @@
-import { customElement, property, query, state } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { html, literal } from 'lit/static-html.js';
-import ShoelaceElement from '../../internal/shoelace-element';
 import '../icon/icon';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import { html, literal } from 'lit/static-html.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './icon-button.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
+ * @documentation https://shoelace.style/components/icon-button
  * @status stable
+ * @since 2.0
  *
  * @dependency sl-icon
  *
  * @event sl-blur - Emitted when the icon button loses focus.
  * @event sl-focus - Emitted when the icon button gains focus.
  *
- * @csspart base - The component's internal wrapper.
+ * @csspart base - The component's base wrapper.
  */
 @customElement('sl-icon-button')
 export default class SlIconButton extends ShoelaceElement {
   static styles: CSSResultGroup = styles;
 
-  @state() private hasFocus = false;
-
   @query('.icon-button') button: HTMLButtonElement | HTMLLinkElement;
 
-  /** The name of the icon to draw. */
+  @state() private hasFocus = false;
+
+  /** The name of the icon to draw. Available names depend on the icon library being used. */
   @property() name?: string;
 
   /** The name of a registered custom icon library. */
   @property() library?: string;
 
-  /** An external URL of an SVG file. */
+  /**
+   * An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and
+   * can result in XSS attacks.
+   */
   @property() src?: string;
 
   /** When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`. */
@@ -45,13 +50,30 @@ export default class SlIconButton extends ShoelaceElement {
   @property() download?: string;
 
   /**
-   * A description that gets read by screen readers and other assistive devices. For optimal accessibility, you should
-   * always include a label that describes what the icon button does.
+   * A description that gets read by assistive devices. For optimal accessibility, you should always include a label
+   * that describes what the icon button does.
    */
   @property() label = '';
 
   /** Disables the button. */
   @property({ type: Boolean, reflect: true }) disabled = false;
+
+  private handleBlur() {
+    this.hasFocus = false;
+    this.emit('sl-blur');
+  }
+
+  private handleFocus() {
+    this.hasFocus = true;
+    this.emit('sl-focus');
+  }
+
+  private handleClick(event: MouseEvent) {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
 
   /** Simulates a click on the icon button. */
   click() {
@@ -66,23 +88,6 @@ export default class SlIconButton extends ShoelaceElement {
   /** Removes focus from the icon button. */
   blur() {
     this.button.blur();
-  }
-
-  handleBlur() {
-    this.hasFocus = false;
-    this.emit('sl-blur');
-  }
-
-  handleFocus() {
-    this.hasFocus = true;
-    this.emit('sl-focus');
-  }
-
-  handleClick(event: MouseEvent) {
-    if (this.disabled) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
   }
 
   render() {

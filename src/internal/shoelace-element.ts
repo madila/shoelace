@@ -21,3 +21,27 @@ export default class ShoelaceElement extends LitElement {
     return event;
   }
 }
+
+export interface ShoelaceFormControl extends ShoelaceElement {
+  // Standard form attributes
+  name: string;
+  value: unknown;
+  disabled?: boolean;
+  defaultValue?: unknown;
+  defaultChecked?: boolean;
+  form?: string;
+
+  // Standard validation attributes
+  pattern?: string;
+  min?: number | Date;
+  max?: number | Date;
+  step?: number | 'any';
+  required?: boolean;
+  minlength?: number;
+  maxlength?: number;
+
+  // Validation methods
+  checkValidity: () => boolean;
+  reportValidity: () => boolean;
+  setCustomValidity: (message: string) => void;
+}

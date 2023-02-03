@@ -2,8 +2,6 @@
 
 [component-header:sl-tree]
 
-Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
-
 ```html preview
 <sl-tree>
   <sl-tree-item>
@@ -81,9 +79,9 @@ The `selection` attribute lets you change the selection behavior of the tree.
 
 ```html preview
 <sl-select id="selection-mode" value="single" label="Selection">
-  <sl-menu-item value="single">Single</sl-menu-item>
-  <sl-menu-item value="multiple">Multiple</sl-menu-item>
-  <sl-menu-item value="leaf">Leaf</sl-menu-item>
+  <sl-option value="single">Single</sl-option>
+  <sl-option value="multiple">Multiple</sl-option>
+  <sl-option value="leaf">Leaf</sl-option>
 </sl-select>
 
 <br />
@@ -289,12 +287,12 @@ const App = () => {
 };
 ```
 
-### Custom expand/collapse icons
+### Customizing the Expand and Collapse Icons
 
-Use the `expand-icon` and `collapse-icon` slots to change the expand and collapse icons, respectively.
+Use the `expand-icon` and `collapse-icon` slots to change the expand and collapse icons, respectively. To disable the animation, override the `rotate` property on the `expand-button` part as shown below.
 
 ```html preview
-<sl-tree>
+<sl-tree class="custom-icons">
   <sl-icon name="plus-square" slot="expand-icon"></sl-icon>
   <sl-icon name="dash-square" slot="collapse-icon"></sl-icon>
 
@@ -324,6 +322,13 @@ Use the `expand-icon` and `collapse-icon` slots to change the expand and collaps
     <sl-tree-item>Fern</sl-tree-item>
   </sl-tree-item>
 </sl-tree>
+
+<style>
+  .custom-icons sl-tree-item::part(expand-button) {
+    /* Disable the expand/collapse animation */
+    rotate: none;
+  }
+</style>
 ```
 
 <!-- prettier-ignore -->
@@ -400,11 +405,11 @@ Decorative icons can be used before labels to provide hints for each node.
       </sl-tree-item>
       <sl-tree-item>
         <sl-icon name="file-pdf"></sl-icon>
-        final.pdg
+        final.pdf
       </sl-tree-item>
       <sl-tree-item>
         <sl-icon name="file-bar-graph"></sl-icon>
-        sales.txt
+        sales.xls
       </sl-tree-item>
     </sl-tree-item>
   </sl-tree-item>

@@ -1,21 +1,23 @@
-import { html } from 'lit';
-import { customElement, property, queryAsync } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import styles from './animation.styles';
 import { animations } from './animations';
+import { customElement, property, queryAsync } from 'lit/decorators.js';
+import { html } from 'lit';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
+import styles from './animation.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
- * @since 2.0
+ * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+ * @documentation https://shoelace.style/components/animation
  * @status stable
+ * @since 2.0
  *
  * @event sl-cancel - Emitted when the animation is canceled.
  * @event sl-finish - Emitted when the animation finishes.
  * @event sl-start - Emitted when the animation starts or restarts.
  *
- * @slot - The element to animate. If multiple elements are to be animated, wrap them in a single container or use
- * multiple animation elements.
+ * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To
+ *  animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
  */
 @customElement('sl-animation')
 export default class SlAnimation extends ShoelaceElement {
@@ -30,15 +32,18 @@ export default class SlAnimation extends ShoelaceElement {
   @property() name = 'none';
 
   /**
-   * Plays the animation. When omitted, the animation will be paused. This prop will be automatically removed when the
-   * animation finishes or gets canceled.
+   * Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
+   * the animation finishes or gets canceled.
    */
   @property({ type: Boolean, reflect: true }) play = false;
 
   /** The number of milliseconds to delay the start of the animation. */
   @property({ type: Number }) delay = 0;
 
-  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration. */
+  /**
+   * Determines the direction of playback as well as the behavior when reaching the end of an iteration.
+   * [Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)
+   */
   @property() direction: PlaybackDirection = 'normal';
 
   /** The number of milliseconds each iteration of the animation takes to complete. */
@@ -95,68 +100,24 @@ export default class SlAnimation extends ShoelaceElement {
     this.destroyAnimation();
   }
 
-  @watch('name')
-  @watch('delay')
-  @watch('direction')
-  @watch('duration')
-  @watch('easing')
-  @watch('endDelay')
-  @watch('fill')
-  @watch('iterations')
-  @watch('iterationsStart')
-  @watch('keyframes')
-  handleAnimationChange() {
-    if (!this.hasUpdated) {
-      return;
-    }
-
-    this.createAnimation();
-  }
-
-  handleAnimationFinish() {
+  private handleAnimationFinish() {
     this.play = false;
     this.hasStarted = false;
     this.emit('sl-finish');
   }
 
-  handleAnimationCancel() {
+  private handleAnimationCancel() {
     this.play = false;
     this.hasStarted = false;
     this.emit('sl-cancel');
   }
 
-  @watch('play')
-  handlePlayChange() {
-    if (this.animation) {
-      if (this.play && !this.hasStarted) {
-        this.hasStarted = true;
-        this.emit('sl-start');
-      }
-
-      if (this.play) {
-        this.animation.play();
-      } else {
-        this.animation.pause();
-      }
-
-      return true;
-    }
-    return false;
-  }
-
-  @watch('playbackRate')
-  handlePlaybackRateChange() {
-    if (this.animation) {
-      this.animation.playbackRate = this.playbackRate;
-    }
-  }
-
-  handleSlotChange() {
+  private handleSlotChange() {
     this.destroyAnimation();
     this.createAnimation();
   }
 
-  async createAnimation() {
+  private async createAnimation() {
     const easing = animations.easings[this.easing] ?? this.easing;
     const keyframes = this.keyframes ?? (animations as unknown as Partial<Record<string, Keyframe[]>>)[this.name];
     const slot = await this.defaultSlot;
@@ -191,7 +152,7 @@ export default class SlAnimation extends ShoelaceElement {
     return true;
   }
 
-  destroyAnimation() {
+  private destroyAnimation() {
     if (this.animation) {
       this.animation.cancel();
       this.animation.removeEventListener('cancel', this.handleAnimationCancel);
@@ -200,7 +161,53 @@ export default class SlAnimation extends ShoelaceElement {
     }
   }
 
-  /** Clears all KeyframeEffects caused by this animation and aborts its playback. */
+  @watch([
+    'name',
+    'delay',
+    'direction',
+    'duration',
+    'easing',
+    'endDelay',
+    'fill',
+    'iterations',
+    'iterationsStart',
+    'keyframes'
+  ])
+  handleAnimationChange() {
+    if (!this.hasUpdated) {
+      return;
+    }
+
+    this.createAnimation();
+  }
+
+  @watch('play')
+  handlePlayChange() {
+    if (this.animation) {
+      if (this.play && !this.hasStarted) {
+        this.hasStarted = true;
+        this.emit('sl-start');
+      }
+
+      if (this.play) {
+        this.animation.play();
+      } else {
+        this.animation.pause();
+      }
+
+      return true;
+    }
+    return false;
+  }
+
+  @watch('playbackRate')
+  handlePlaybackRateChange() {
+    if (this.animation) {
+      this.animation.playbackRate = this.playbackRate;
+    }
+  }
+
+  /** Clears all keyframe effects caused by this animation and aborts its playback. */
   cancel() {
     this.animation?.cancel();
   }

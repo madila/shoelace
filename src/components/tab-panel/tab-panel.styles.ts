@@ -7,15 +7,15 @@ export default css`
   :host {
     --padding: 0;
 
+    display: none;
+  }
+
+  :host([active]) {
     display: block;
   }
 
   .tab-panel {
-    border: solid 1px transparent;
+    display: block;
     padding: var(--padding);
-  }
-
-  .tab-panel:not(.tab-panel--active) {
-    display: none;
   }
 `;

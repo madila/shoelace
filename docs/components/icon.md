@@ -2,8 +2,6 @@
 
 [component-header:sl-icon]
 
-Icons are symbols that can be used to represent various options within an application.
-
 Shoelace comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These icons are part of the `default` icon library. If you prefer, you can register [custom icon libraries](#icon-libraries) as well.
 
 ?> Depending on how you're loading Shoelace, you may need to copy icon assets and/or [set the base path](getting-started/installation#setting-the-base-path) so Shoelace knows where to load them from. Otherwise, icons may not appear and you'll see 404 Not Found errors in the dev console.
@@ -22,9 +20,9 @@ All available icons in the `default` icon library are shown below. Click or tap 
       <sl-icon slot="prefix" name="search"></sl-icon>
     </sl-input>
     <sl-select value="outline">
-      <sl-menu-item value="outline">Outlined</sl-menu-item>
-      <sl-menu-item value="fill">Filled</sl-menu-item>
-      <sl-menu-item value="all">All icons</sl-menu-item>
+      <sl-option value="outline">Outlined</sl-option>
+      <sl-option value="fill">Filled</sl-option>
+      <sl-option value="all">All icons</sl-option>
     </sl-select>
   </div>
   <div class="icon-list"></div>

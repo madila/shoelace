@@ -43,6 +43,7 @@ export default css`
     border-top-left-radius: var(--sl-border-radius-medium);
     border-top-right-radius: var(--sl-border-radius-medium);
     cursor: crosshair;
+    forced-color-adjust: none;
   }
 
   .color-picker__grid-handle {
@@ -54,12 +55,12 @@ export default css`
     border: solid 2px white;
     margin-top: calc(var(--grid-handle-size) / -2);
     margin-left: calc(var(--grid-handle-size) / -2);
-    transition: var(--sl-transition-fast) transform;
+    transition: var(--sl-transition-fast) scale;
   }
 
   .color-picker__grid-handle--dragging {
     cursor: none;
-    transform: scale(1.5);
+    scale: 1.5;
   }
 
   .color-picker__grid-handle:focus-visible {
@@ -81,6 +82,7 @@ export default css`
     height: var(--slider-height);
     border-radius: var(--sl-border-radius-pill);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    forced-color-adjust: none;
   }
 
   .color-picker__slider:not(:last-of-type) {
@@ -137,6 +139,7 @@ export default css`
     background: none;
     margin-left: var(--sl-spacing-small);
     cursor: copy;
+    forced-color-adjust: none;
   }
 
   .color-picker__preview:before {
@@ -210,6 +213,7 @@ export default css`
     justify-items: center;
     border-top: solid 1px var(--sl-color-neutral-200);
     padding: var(--sl-spacing-small);
+    forced-color-adjust: none;
   }
 
   .color-picker__swatch {
@@ -277,6 +281,7 @@ export default css`
     background-color: transparent;
     border: none;
     cursor: pointer;
+    forced-color-adjust: none;
   }
 
   .color-dropdown__trigger.color-dropdown__trigger--small {

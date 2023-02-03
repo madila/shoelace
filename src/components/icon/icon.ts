@@ -1,24 +1,23 @@
-import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import ShoelaceElement from '../../internal/shoelace-element';
-import { watch } from '../../internal/watch';
-import styles from './icon.styles';
 import { getIconLibrary, unwatchIcon, watchIcon } from './library';
+import { html } from 'lit';
 import { requestIcon } from './request';
+import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
+import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
+import styles from './icon.styles';
 import type { CSSResultGroup } from 'lit';
 
 let parser: DOMParser;
 
 /**
- * @since 2.0
+ * @summary Icons are symbols that can be used to represent various options within an application.
+ * @documentation https://shoelace.style/components/icon
  * @status stable
+ * @since 2.0
  *
  * @event sl-load - Emitted when the icon has loaded.
  * @event sl-error - Emitted when the icon fails to load due to an error.
- *
- * @csspart base - The component's internal wrapper.
  */
 @customElement('sl-icon')
 export default class SlIcon extends ShoelaceElement {
@@ -26,17 +25,19 @@ export default class SlIcon extends ShoelaceElement {
 
   @state() private svg = '';
 
-  /** The name of the icon to draw. */
+  /** The name of the icon to draw. Available names depend on the icon library being used. */
   @property({ reflect: true }) name?: string;
 
   /**
-   * An external URL of an SVG file.
-   *
-   * WARNING: Be sure you trust the content you are including as it will be executed as code and can result in XSS attacks.
+   * An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and
+   * can result in XSS attacks.
    */
   @property() src?: string;
 
-  /** An alternate description to use for accessibility. If omitted, the icon will be ignored by assistive devices. */
+  /**
+   * An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and
+   * ignored by assistive devices.
+   */
   @property() label = '';
 
   /** The name of a registered custom icon library. */
@@ -64,14 +65,22 @@ export default class SlIcon extends ShoelaceElement {
     return this.src;
   }
 
-  /** @internal Fetches the icon and redraws it. Used to handle library registrations. */
-  redraw() {
-    this.setIcon();
+  @watch('label')
+  handleLabelChange() {
+    const hasLabel = typeof this.label === 'string' && this.label.length > 0;
+
+    if (hasLabel) {
+      this.setAttribute('role', 'img');
+      this.setAttribute('aria-label', this.label);
+      this.removeAttribute('aria-hidden');
+    } else {
+      this.removeAttribute('role');
+      this.removeAttribute('aria-label');
+      this.setAttribute('aria-hidden', 'true');
+    }
   }
 
-  @watch('name')
-  @watch('src')
-  @watch('library')
+  @watch(['name', 'src', 'library'])
   async setIcon() {
     const library = getIconLibrary(this.library);
     const url = this.getUrl();
@@ -113,22 +122,8 @@ export default class SlIcon extends ShoelaceElement {
     }
   }
 
-  handleChange() {
-    this.setIcon();
-  }
-
   render() {
-    const hasLabel = typeof this.label === 'string' && this.label.length > 0;
-
-    return html` <div
-      part="base"
-      class="icon"
-      role=${ifDefined(hasLabel ? 'img' : undefined)}
-      aria-label=${ifDefined(hasLabel ? this.label : undefined)}
-      aria-hidden=${ifDefined(hasLabel ? undefined : 'true')}
-    >
-      ${unsafeSVG(this.svg)}
-    </div>`;
+    return html` ${unsafeSVG(this.svg)} `;
   }
 }
 
