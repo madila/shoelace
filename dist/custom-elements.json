@@ -4,257 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "components/alert/alert.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAlert",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the optional icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the alert's main content.",
-              "name": "message"
-            },
-            {
-              "description": "The close button, an `<sl-icon-button>`.",
-              "name": "close-button"
-            },
-            {
-              "description": "The close button's exported `base` part.",
-              "name": "close-button__base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The alert's main content.",
-              "name": ""
-            },
-            {
-              "description": "An icon to show in the alert. Works best with `<sl-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "autoHideTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'icon', 'suffix')"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "base",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "attribute": "closable",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The alert's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "duration",
-              "default": "Infinity",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "attribute": "duration"
-            },
-            {
-              "kind": "method",
-              "name": "restartAutoHide",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleCloseClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDurationChange"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the alert."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the alert"
-            },
-            {
-              "kind": "method",
-              "name": "toast",
-              "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the alert opens.",
-              "name": "sl-show",
-              "reactName": "onSlShow"
-            },
-            {
-              "description": "Emitted after the alert opens and all animations are complete.",
-              "name": "sl-after-show",
-              "reactName": "onSlAfterShow"
-            },
-            {
-              "description": "Emitted when the alert closes.",
-              "name": "sl-hide",
-              "reactName": "onSlHide"
-            },
-            {
-              "description": "Emitted after the alert closes and all animations are complete.",
-              "name": "sl-after-hide",
-              "reactName": "onSlAfterHide"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "fieldName": "open"
-            },
-            {
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "fieldName": "closable"
-            },
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The alert's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "duration",
-              "default": "Infinity",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "resolveInitializer": {
-                "module": "src/components/alert/alert.ts"
-              },
-              "fieldName": "duration"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Alerts are used to display important messages inline or as toast notifications.",
-          "documentation": "https://shoelace.style/components/alert",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon-button"
-          ],
-          "animations": [
-            {
-              "name": "alert.show",
-              "description": "The animation to use when showing the alert."
-            },
-            {
-              "name": "alert.hide",
-              "description": "The animation to use when hiding the alert."
-            }
-          ],
-          "tagName": "sl-alert",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAlert",
-            "module": "components/alert/alert.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-alert",
-          "declaration": {
-            "name": "SlAlert",
-            "module": "components/alert/alert.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animated-image/animated-image.js",
       "declarations": [
         {
@@ -832,280 +581,233 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/autocomplete/autocomplete.js",
+      "path": "components/alert/alert.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlAutocomplete",
+          "name": "SlAlert",
           "cssParts": [
             {
-              "description": "The component's internal wrapper.",
+              "description": "The component's base wrapper.",
               "name": "base"
             },
             {
-              "description": "The wrapper for the trigger slot.",
-              "name": "trigger"
+              "description": "The container that wraps the optional icon.",
+              "name": "icon"
             },
             {
-              "description": "The empty text's wrapper.",
-              "name": "empty-text"
+              "description": "The container that wraps the alert's main content.",
+              "name": "message"
             },
             {
-              "description": "The loading text's wrapper.",
-              "name": "loading-test"
+              "description": "The close button, an `<sl-icon-button>`.",
+              "name": "close-button"
+            },
+            {
+              "description": "The close button's exported `base` part.",
+              "name": "close-button__base"
             }
           ],
           "slots": [
             {
-              "description": "The content that includes an input.",
+              "description": "The alert's main content.",
               "name": ""
             },
             {
-              "description": "The text or content that is displayed when there is no suggestion based on the input.",
-              "name": "empty-text"
-            },
-            {
-              "description": "The text or content that is displayed when the `loading` attribute evaluates to true.",
-              "name": "lading-text"
+              "description": "An icon to show in the alert. Works best with `<sl-icon>`.",
+              "name": "icon"
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "menu",
+              "name": "autoHideTimeout",
               "type": {
-                "text": "SlMenu"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "dropdown",
-              "type": {
-                "text": "SlDropdown"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
+                "text": "number"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
               "name": "hasSlotController",
               "privacy": "private",
-              "default": "new HasSlotController(this, 'loading-text', 'empty-text')"
+              "default": "new HasSlotController(this, 'icon', 'suffix')"
             },
             {
               "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
+              "name": "localize",
               "privacy": "private",
-              "default": "''"
+              "default": "new LocalizeController(this)"
             },
             {
               "kind": "field",
-              "name": "hasFocus",
+              "name": "base",
               "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "emptyText",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "emptyText",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "loading",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "loadingText",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "loadingText",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "autofilter",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "autofilter",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "highlight",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "highlight",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "threshold",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "attribute": "threshold",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSlInput",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "CustomEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeydown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlFocus"
-            },
-            {
-              "kind": "method",
-              "name": "handleSlAfterHide"
-            },
-            {
-              "kind": "method",
-              "name": "show"
-            },
-            {
-              "kind": "method",
-              "name": "hide"
-            },
-            {
-              "kind": "method",
-              "name": "reset"
-            },
-            {
-              "kind": "field",
-              "name": "options",
-              "type": {
-                "text": "SlMenuItem[]"
+                "text": "HTMLElement"
               }
             },
             {
               "kind": "field",
-              "name": "visibleOptions"
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "attribute": "open",
+              "reflects": true
             },
             {
               "kind": "field",
-              "name": "hasResults"
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "attribute": "closable",
+              "reflects": true
             },
             {
               "kind": "field",
-              "name": "shouldDisplayLoadingText"
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The alert's theme variant.",
+              "attribute": "variant",
+              "reflects": true
             },
             {
               "kind": "field",
-              "name": "shouldDisplayEmptyText"
+              "name": "duration",
+              "default": "Infinity",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "attribute": "duration"
             },
             {
-              "kind": "field",
-              "name": "shouldDisplayAutoComplete"
+              "kind": "method",
+              "name": "restartAutoHide",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleCloseClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDurationChange"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the alert."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the alert"
+            },
+            {
+              "kind": "method",
+              "name": "toast",
+              "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the alert opens.",
+              "name": "sl-show",
+              "reactName": "onSlShow"
+            },
+            {
+              "description": "Emitted after the alert opens and all animations are complete.",
+              "name": "sl-after-show",
+              "reactName": "onSlAfterShow"
+            },
+            {
+              "description": "Emitted when the alert closes.",
+              "name": "sl-hide",
+              "reactName": "onSlHide"
+            },
+            {
+              "description": "Emitted after the alert closes and all animations are complete.",
+              "name": "sl-after-hide",
+              "reactName": "onSlAfterHide"
             }
           ],
           "attributes": [
             {
-              "name": "emptyText",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "emptyText"
-            },
-            {
-              "name": "loading",
+              "name": "open",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "loading"
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "fieldName": "open"
             },
             {
-              "name": "loadingText",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "loadingText"
-            },
-            {
-              "name": "autofilter",
+              "name": "closable",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "autofilter"
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "fieldName": "closable"
             },
             {
-              "name": "highlight",
+              "name": "variant",
               "type": {
-                "text": "boolean"
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
               },
-              "default": "false",
-              "fieldName": "highlight"
+              "default": "'primary'",
+              "description": "The alert's theme variant.",
+              "fieldName": "variant"
             },
             {
-              "name": "threshold",
-              "type": {
-                "text": "number"
+              "name": "duration",
+              "default": "Infinity",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "resolveInitializer": {
+                "module": "src/components/alert/alert.ts"
               },
-              "default": "1",
-              "fieldName": "threshold"
+              "fieldName": "duration"
             }
           ],
           "superclass": {
-            "name": "LitElement",
-            "package": "lit"
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
           },
-          "summary": "Autocompletes displays suggestions as you type.",
-          "since": "unreleased",
-          "status": "unknown",
+          "summary": "Alerts are used to display important messages inline or as toast notifications.",
+          "documentation": "https://shoelace.style/components/alert",
+          "status": "stable",
+          "since": "2.0",
           "dependencies": [
-            "sl-dropdown",
-            "sl-menu"
+            "sl-icon-button"
           ],
-          "tagName": "sl-autocomplete",
+          "animations": [
+            {
+              "name": "alert.show",
+              "description": "The animation to use when showing the alert."
+            },
+            {
+              "name": "alert.hide",
+              "description": "The animation to use when hiding the alert."
+            }
+          ],
+          "tagName": "sl-alert",
           "customElement": true
         }
       ],
@@ -1114,16 +816,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlAutocomplete",
-            "module": "components/autocomplete/autocomplete.js"
+            "name": "SlAlert",
+            "module": "components/alert/alert.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-autocomplete",
+          "name": "sl-alert",
           "declaration": {
-            "name": "SlAutocomplete",
-            "module": "components/autocomplete/autocomplete.js"
+            "name": "SlAlert",
+            "module": "components/alert/alert.js"
           }
         }
       ]
@@ -1315,121 +1017,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "documentation": "https://shoelace.style/components/badge",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/breadcrumb/breadcrumb.js",
       "declarations": [
         {
@@ -1540,6 +1127,121 @@
           "declaration": {
             "name": "SlBreadcrumb",
             "module": "components/breadcrumb/breadcrumb.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "documentation": "https://shoelace.style/components/badge",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
           }
         }
       ]
@@ -8050,6 +7752,210 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/menu-item/menu-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenuItem",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The checked icon, which is only visible when the menu item is checked.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The prefix container.",
+              "name": "prefix"
+            },
+            {
+              "description": "The menu item label.",
+              "name": "label"
+            },
+            {
+              "description": "The suffix container.",
+              "name": "suffix"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The menu item's label.",
+              "name": ""
+            },
+            {
+              "description": "Used to prepend an icon or similar element to the menu item.",
+              "name": "prefix"
+            },
+            {
+              "description": "Used to append an icon or similar element to the menu item.",
+              "name": "suffix"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "cachedTextLabel",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "menuItem",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'normal' | 'checkbox'"
+              },
+              "default": "'normal'",
+              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a checked state.",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the menu item in a disabled state, preventing selection.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleDefaultSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleCheckedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleTypeChange"
+            },
+            {
+              "kind": "method",
+              "name": "getTextLabel",
+              "description": "Returns a text label based on the contents of the menu item's default slot."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "type",
+              "type": {
+                "text": "'normal' | 'checkbox'"
+              },
+              "default": "'normal'",
+              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
+              "fieldName": "type"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a checked state.",
+              "fieldName": "checked"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the menu item in a disabled state, preventing selection.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Menu items provide options for the user to pick from in a menu.",
+          "documentation": "https://shoelace.style/components/menu-item",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-menu-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenuItem",
+            "module": "components/menu-item/menu-item.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu-item",
+          "declaration": {
+            "name": "SlMenuItem",
+            "module": "components/menu-item/menu-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/menu-label/menu-label.js",
       "declarations": [
         {
@@ -8312,6 +8218,205 @@
           "declaration": {
             "name": "SlMutationObserver",
             "module": "components/mutation-observer/mutation-observer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/option/option.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlOption",
+          "cssParts": [
+            {
+              "description": "The checked icon, an `<sl-icon>` element.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The option's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix.",
+              "name": "suffix"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The option's label.",
+              "name": ""
+            },
+            {
+              "description": "Used to prepend an icon or similar element to the menu item.",
+              "name": "prefix"
+            },
+            {
+              "description": "Used to append an icon or similar element to the menu item.",
+              "name": "suffix"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "cachedTextLabel",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "current",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasHover",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the option in a disabled state, preventing selection.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleDefaultSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "getTextLabel",
+              "description": "Returns a plain text label based on the option's content."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the option in a disabled state, preventing selection.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Options define the selectable items within various form controls such as [select](/components/select).",
+          "documentation": "https://shoelace.style/components/option",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-option",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlOption",
+            "module": "components/option/option.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-option",
+          "declaration": {
+            "name": "SlOption",
+            "module": "components/option/option.js"
           }
         }
       ]
@@ -8849,409 +8954,6 @@
           "declaration": {
             "name": "SlPopup",
             "module": "components/popup/popup.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/option/option.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlOption",
-          "cssParts": [
-            {
-              "description": "The checked icon, an `<sl-icon>` element.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The option's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix.",
-              "name": "suffix"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The option's label.",
-              "name": ""
-            },
-            {
-              "description": "Used to prepend an icon or similar element to the menu item.",
-              "name": "prefix"
-            },
-            {
-              "description": "Used to append an icon or similar element to the menu item.",
-              "name": "suffix"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "cachedTextLabel",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "current",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasHover",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "attribute": "value",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the option in a disabled state, preventing selection.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleDefaultSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "getTextLabel",
-              "description": "Returns a plain text label based on the option's content."
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the option in a disabled state, preventing selection.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Options define the selectable items within various form controls such as [select](/components/select).",
-          "documentation": "https://shoelace.style/components/option",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-option",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlOption",
-            "module": "components/option/option.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-option",
-          "declaration": {
-            "name": "SlOption",
-            "module": "components/option/option.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/menu-item/menu-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenuItem",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The checked icon, which is only visible when the menu item is checked.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The prefix container.",
-              "name": "prefix"
-            },
-            {
-              "description": "The menu item label.",
-              "name": "label"
-            },
-            {
-              "description": "The suffix container.",
-              "name": "suffix"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The menu item's label.",
-              "name": ""
-            },
-            {
-              "description": "Used to prepend an icon or similar element to the menu item.",
-              "name": "prefix"
-            },
-            {
-              "description": "Used to append an icon or similar element to the menu item.",
-              "name": "suffix"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "cachedTextLabel",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "menuItem",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "type": {
-                "text": "'normal' | 'checkbox'"
-              },
-              "default": "'normal'",
-              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-              "attribute": "type"
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a checked state.",
-              "attribute": "checked",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the menu item in a disabled state, preventing selection.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleDefaultSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleCheckedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleTypeChange"
-            },
-            {
-              "kind": "method",
-              "name": "getTextLabel",
-              "description": "Returns a text label based on the contents of the menu item's default slot."
-            }
-          ],
-          "attributes": [
-            {
-              "name": "type",
-              "type": {
-                "text": "'normal' | 'checkbox'"
-              },
-              "default": "'normal'",
-              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-              "fieldName": "type"
-            },
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a checked state.",
-              "fieldName": "checked"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the menu item in a disabled state, preventing selection.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Menu items provide options for the user to pick from in a menu.",
-          "documentation": "https://shoelace.style/components/menu-item",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-menu-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenuItem",
-            "module": "components/menu-item/menu-item.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu-item",
-          "declaration": {
-            "name": "SlMenuItem",
-            "module": "components/menu-item/menu-item.js"
           }
         }
       ]
@@ -10186,6 +9888,362 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/radio-group/radio-group.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlRadioGroup",
+          "cssParts": [
+            {
+              "description": "The form control that wraps the label, input, and help text.",
+              "name": "form-control"
+            },
+            {
+              "description": "The label's wrapper.",
+              "name": "form-control-label"
+            },
+            {
+              "description": "The input's wrapper.",
+              "name": "form-control-input"
+            },
+            {
+              "description": "The help text's wrapper.",
+              "name": "form-control-help-text"
+            },
+            {
+              "description": "The button group that wraps radio buttons.",
+              "name": "button-group"
+            },
+            {
+              "description": "The button group's `base` part.",
+              "name": "button-group__base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot where `<sl-radio>` or `<sl-radio-button>` elements are placed.",
+              "name": ""
+            },
+            {
+              "description": "The radio group's label. Required for proper accessibility. Alternatively, you can use the `label` attribute.",
+              "name": "label"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "formControlController",
+              "privacy": "protected",
+              "default": "new FormControlController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'help-text', 'label')"
+            },
+            {
+              "kind": "field",
+              "name": "customValidityMessage",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "validationTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "validationInput",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasButtonGroup",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "errorMessage",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "helpText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
+              "attribute": "help-text"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'option'",
+              "description": "The name of the radio group, submitted as a name/value pair with form data.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "attribute": "form",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
+              "attribute": "required",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getAllRadios",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleRadioClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleLabelClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "updateCheckedRadio",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "description": "Checks for validity but does not show the browser's validation message."
+            },
+            {
+              "kind": "method",
+              "name": "setCustomValidity",
+              "parameters": [
+                {
+                  "name": "message",
+                  "default": "''"
+                }
+              ],
+              "description": "Sets a custom validation message. Pass an empty string to restore validity."
+            },
+            {
+              "kind": "method",
+              "name": "reportValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the radio group's selected value changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
+            },
+            {
+              "description": "Emitted when the radio group receives user input.",
+              "name": "sl-input",
+              "reactName": "onSlInput"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
+              "fieldName": "label"
+            },
+            {
+              "name": "help-text",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
+              "fieldName": "helpText"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'option'",
+              "description": "The name of the radio group, submitted as a name/value pair with form data.",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
+              "fieldName": "value"
+            },
+            {
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "fieldName": "form"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
+              "fieldName": "required"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.",
+          "documentation": "https://shoelace.style/components/radio-group",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-button-group"
+          ],
+          "tagName": "sl-radio-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlRadioGroup",
+            "module": "components/radio-group/radio-group.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-radio-group",
+          "declaration": {
+            "name": "SlRadioGroup",
+            "module": "components/radio-group/radio-group.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/range/range.js",
       "declarations": [
         {
@@ -10721,6 +10779,447 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/rating/rating.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlRating",
+          "cssProperties": [
+            {
+              "description": "The inactive color for symbols.",
+              "name": "--symbol-color"
+            },
+            {
+              "description": "The active color for symbols.",
+              "name": "--symbol-color-active"
+            },
+            {
+              "description": "The size of symbols.",
+              "name": "--symbol-size"
+            },
+            {
+              "description": "The spacing to use around symbols.",
+              "name": "--symbol-spacing"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "rating",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hoverValue",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "isHovering",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label that describes the rating to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "attribute": "precision"
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "attribute": "readonly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "attribute": "getSymbol"
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromMousePosition",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromTouchPosition",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getValueFromXCoordinate",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "coordinate",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "setValue",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "newValue",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchStart",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchMove",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTouchEnd",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "TouchEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "roundToPrecision",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "numberToRound",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "precision",
+                  "default": "0.5"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleHoverValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleIsHoveringChange"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the rating."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the rating."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the rating's value changes.",
+              "name": "sl-change",
+              "reactName": "onSlChange"
+            },
+            {
+              "type": {
+                "text": "{ phase: 'start' | 'move' | 'end', value: number }"
+              },
+              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.",
+              "name": "sl-hover",
+              "reactName": "onSlHover"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label that describes the rating to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current rating.",
+              "fieldName": "value"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The highest rating to show.",
+              "fieldName": "max"
+            },
+            {
+              "name": "precision",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "fieldName": "precision"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the rating readonly.",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the rating.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "getSymbol",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "fieldName": "getSymbol"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Ratings give users a way to quickly view and provide feedback.",
+          "documentation": "https://shoelace.style/components/rating",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-rating",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlRating",
+            "module": "components/rating/rating.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-rating",
+          "declaration": {
+            "name": "SlRating",
+            "module": "components/rating/rating.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/relative-time/relative-time.js",
       "declarations": [
         {
@@ -10875,6 +11374,121 @@
           "declaration": {
             "name": "SlRelativeTime",
             "module": "components/relative-time/relative-time.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/resize-observer/resize-observer.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlResizeObserver",
+          "slots": [
+            {
+              "description": "One or more elements to watch for resizing.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "type": {
+                "text": "ResizeObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "observedElements",
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "startObserver",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "stopObserver",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ entries: ResizeObserverEntry[] }"
+              },
+              "description": "Emitted when the element is resized.",
+              "name": "sl-resize",
+              "reactName": "onSlResize"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).",
+          "documentation": "https://shoelace.style/components/resize-observer",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-resize-observer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlResizeObserver",
+            "module": "components/resize-observer/resize-observer.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-resize-observer",
+          "declaration": {
+            "name": "SlResizeObserver",
+            "module": "components/resize-observer/resize-observer.js"
           }
         }
       ]
@@ -11772,362 +12386,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/radio-group/radio-group.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRadioGroup",
-          "cssParts": [
-            {
-              "description": "The form control that wraps the label, input, and help text.",
-              "name": "form-control"
-            },
-            {
-              "description": "The label's wrapper.",
-              "name": "form-control-label"
-            },
-            {
-              "description": "The input's wrapper.",
-              "name": "form-control-input"
-            },
-            {
-              "description": "The help text's wrapper.",
-              "name": "form-control-help-text"
-            },
-            {
-              "description": "The button group that wraps radio buttons.",
-              "name": "button-group"
-            },
-            {
-              "description": "The button group's `base` part.",
-              "name": "button-group__base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot where `<sl-radio>` or `<sl-radio-button>` elements are placed.",
-              "name": ""
-            },
-            {
-              "description": "The radio group's label. Required for proper accessibility. Alternatively, you can use the `label` attribute.",
-              "name": "label"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "formControlController",
-              "privacy": "protected",
-              "default": "new FormControlController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'help-text', 'label')"
-            },
-            {
-              "kind": "field",
-              "name": "customValidityMessage",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "validationTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "validationInput",
-              "type": {
-                "text": "HTMLInputElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hasButtonGroup",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "errorMessage",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "defaultValue",
-              "type": {
-                "text": "string"
-              },
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "helpText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "attribute": "help-text"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'option'",
-              "description": "The name of the radio group, submitted as a name/value pair with form data.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-              "attribute": "value",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "attribute": "form",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
-              "attribute": "required",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "getAllRadios",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleRadioClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleLabelClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "updateCheckedRadio",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "checkValidity",
-              "description": "Checks for validity but does not show the browser's validation message."
-            },
-            {
-              "kind": "method",
-              "name": "setCustomValidity",
-              "parameters": [
-                {
-                  "name": "message",
-                  "default": "''"
-                }
-              ],
-              "description": "Sets a custom validation message. Pass an empty string to restore validity."
-            },
-            {
-              "kind": "method",
-              "name": "reportValidity",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the radio group's selected value changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
-            },
-            {
-              "description": "Emitted when the radio group receives user input.",
-              "name": "sl-input",
-              "reactName": "onSlInput"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-              "fieldName": "label"
-            },
-            {
-              "name": "help-text",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "fieldName": "helpText"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'option'",
-              "description": "The name of the radio group, submitted as a name/value pair with form data.",
-              "fieldName": "name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-              "fieldName": "value"
-            },
-            {
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "fieldName": "form"
-            },
-            {
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
-              "fieldName": "required"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.",
-          "documentation": "https://shoelace.style/components/radio-group",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-button-group"
-          ],
-          "tagName": "sl-radio-group",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlRadioGroup",
-            "module": "components/radio-group/radio-group.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-radio-group",
-          "declaration": {
-            "name": "SlRadioGroup",
-            "module": "components/radio-group/radio-group.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/skeleton/skeleton.js",
       "declarations": [
         {
@@ -12208,447 +12466,6 @@
           "declaration": {
             "name": "SlSkeleton",
             "module": "components/skeleton/skeleton.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/rating/rating.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlRating",
-          "cssProperties": [
-            {
-              "description": "The inactive color for symbols.",
-              "name": "--symbol-color"
-            },
-            {
-              "description": "The active color for symbols.",
-              "name": "--symbol-color-active"
-            },
-            {
-              "description": "The size of symbols.",
-              "name": "--symbol-size"
-            },
-            {
-              "description": "The spacing to use around symbols.",
-              "name": "--symbol-spacing"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "rating",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hoverValue",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "0"
-            },
-            {
-              "kind": "field",
-              "name": "isHovering",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label that describes the rating to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "attribute": "precision"
-            },
-            {
-              "kind": "field",
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "attribute": "readonly",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "attribute": "getSymbol"
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromMousePosition",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromTouchPosition",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getValueFromXCoordinate",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "coordinate",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "setValue",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "newValue",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchStart",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchMove",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleTouchEnd",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "TouchEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "roundToPrecision",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "numberToRound",
-                  "type": {
-                    "text": "number"
-                  }
-                },
-                {
-                  "name": "precision",
-                  "default": "0.5"
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleHoverValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleIsHoveringChange"
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the rating."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the rating."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the rating's value changes.",
-              "name": "sl-change",
-              "reactName": "onSlChange"
-            },
-            {
-              "type": {
-                "text": "{ phase: 'start' | 'move' | 'end', value: number }"
-              },
-              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.",
-              "name": "sl-hover",
-              "reactName": "onSlHover"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label that describes the rating to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current rating.",
-              "fieldName": "value"
-            },
-            {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "description": "The highest rating to show.",
-              "fieldName": "max"
-            },
-            {
-              "name": "precision",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "fieldName": "precision"
-            },
-            {
-              "name": "readonly",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the rating readonly.",
-              "fieldName": "readonly"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the rating.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "getSymbol",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "fieldName": "getSymbol"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Ratings give users a way to quickly view and provide feedback.",
-          "documentation": "https://shoelace.style/components/rating",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-rating",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlRating",
-            "module": "components/rating/rating.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-rating",
-          "declaration": {
-            "name": "SlRating",
-            "module": "components/rating/rating.js"
           }
         }
       ]
@@ -14050,97 +13867,102 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/resize-observer/resize-observer.js",
+      "path": "components/tab-panel/tab-panel.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlResizeObserver",
+          "name": "SlTabPanel",
+          "cssProperties": [
+            {
+              "description": "The tab panel's padding.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
           "slots": [
             {
-              "description": "One or more elements to watch for resizing.",
+              "description": "The tab panel's content.",
               "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "resizeObserver",
+              "name": "attrId",
               "type": {
-                "text": "ResizeObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "observedElements",
-              "type": {
-                "text": "HTMLElement[]"
+                "text": "number"
               },
               "privacy": "private",
-              "default": "[]"
+              "default": "++id"
             },
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "componentId",
+              "privacy": "private",
+              "default": "`sl-tab-panel-${this.attrId}`"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Disables the observer.",
-              "attribute": "disabled",
+              "description": "When true, the tab panel will be shown.",
+              "attribute": "active",
               "reflects": true
             },
             {
               "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "startObserver",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "stopObserver",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ entries: ResizeObserverEntry[] }"
-              },
-              "description": "Emitted when the element is resized.",
-              "name": "sl-resize",
-              "reactName": "onSlResize"
+              "name": "handleActiveChange"
             }
           ],
           "attributes": [
             {
-              "name": "disabled",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "fieldName": "name"
+            },
+            {
+              "name": "active",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Disables the observer.",
-              "fieldName": "disabled"
+              "description": "When true, the tab panel will be shown.",
+              "fieldName": "active"
             }
           ],
           "superclass": {
             "name": "ShoelaceElement",
             "module": "/src/internal/shoelace-element"
           },
-          "summary": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).",
-          "documentation": "https://shoelace.style/components/resize-observer",
+          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
+          "documentation": "https://shoelace.style/components/tab-panel",
           "status": "stable",
           "since": "2.0",
-          "tagName": "sl-resize-observer",
+          "tagName": "sl-tab-panel",
           "customElement": true
         }
       ],
@@ -14149,16 +13971,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "components/resize-observer/resize-observer.js"
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "sl-resize-observer",
+          "name": "sl-tab-panel",
           "declaration": {
-            "name": "SlResizeObserver",
-            "module": "components/resize-observer/resize-observer.js"
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
           }
         }
       ]
@@ -14326,126 +14148,6 @@
           "declaration": {
             "name": "SlTag",
             "module": "components/tag/tag.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/tab-panel/tab-panel.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTabPanel",
-          "cssProperties": [
-            {
-              "description": "The tab panel's padding.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tab panel's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "attrId",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "++id"
-            },
-            {
-              "kind": "field",
-              "name": "componentId",
-              "privacy": "private",
-              "default": "`sl-tab-panel-${this.attrId}`"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "attribute": "name",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "attribute": "active",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleActiveChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "fieldName": "name"
-            },
-            {
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "fieldName": "active"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
-          "documentation": "https://shoelace.style/components/tab-panel",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-tab-panel",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tab-panel",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
           }
         }
       ]
@@ -15186,305 +14888,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/tree/tree.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTree",
-          "cssProperties": [
-            {
-              "description": "The size of the indentation for nested items.",
-              "name": "--indent-size",
-              "default": "var(--sl-spacing-medium)"
-            },
-            {
-              "description": "The color of the indentation line.",
-              "name": "--indent-guide-color",
-              "default": "var(--sl-color-neutral-200)"
-            },
-            {
-              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
-              "name": "--indent-guide-offset",
-              "default": "0"
-            },
-            {
-              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
-              "name": "--indent-guide-style",
-              "default": "solid"
-            },
-            {
-              "description": "The width of the indentation line.",
-              "name": "--indent-guide-width",
-              "default": "0"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "The icon to show when the tree item is expanded. Works best with `<sl-icon>`.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "collapsedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "attribute": "selection"
-            },
-            {
-              "kind": "field",
-              "name": "lastFocusedItem",
-              "type": {
-                "text": "SlTreeItem"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "mutationObserver",
-              "type": {
-                "text": "MutationObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getExpandButtonIcon",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "status",
-                  "type": {
-                    "text": "'expand' | 'collapse'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "initTreeItem",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleTreeChanged",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "mutations",
-                  "type": {
-                    "text": "MutationRecord[]"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "syncTreeItems",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "selectItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getAllTreeItems",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "focusItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "item",
-                  "optional": true,
-                  "type": {
-                    "text": "SlTreeItem | null"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleFocusOut",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "FocusEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleFocusIn",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "FocusEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectionChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ selection: TreeItem[] }"
-              },
-              "description": "Emitted when a tree item is selected or deselected.",
-              "name": "sl-selection-change",
-              "reactName": "onSlSelectionChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "fieldName": "selection"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.",
-          "documentation": "https://shoelace.style/components/tree",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-tree",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTree",
-            "module": "components/tree/tree.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tree",
-          "declaration": {
-            "name": "SlTree",
-            "module": "components/tree/tree.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/tooltip/tooltip.js",
       "declarations": [
         {
@@ -15861,6 +15264,305 @@
           "declaration": {
             "name": "SlTooltip",
             "module": "components/tooltip/tooltip.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/tree/tree.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTree",
+          "cssProperties": [
+            {
+              "description": "The size of the indentation for nested items.",
+              "name": "--indent-size",
+              "default": "var(--sl-spacing-medium)"
+            },
+            {
+              "description": "The color of the indentation line.",
+              "name": "--indent-guide-color",
+              "default": "var(--sl-color-neutral-200)"
+            },
+            {
+              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
+              "name": "--indent-guide-offset",
+              "default": "0"
+            },
+            {
+              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
+              "name": "--indent-guide-style",
+              "default": "solid"
+            },
+            {
+              "description": "The width of the indentation line.",
+              "name": "--indent-guide-width",
+              "default": "0"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "The icon to show when the tree item is expanded. Works best with `<sl-icon>`.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "collapsedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "attribute": "selection"
+            },
+            {
+              "kind": "field",
+              "name": "lastFocusedItem",
+              "type": {
+                "text": "SlTreeItem"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "type": {
+                "text": "MutationObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getExpandButtonIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "status",
+                  "type": {
+                    "text": "'expand' | 'collapse'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initTreeItem",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleTreeChanged",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "mutations",
+                  "type": {
+                    "text": "MutationRecord[]"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "syncTreeItems",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getAllTreeItems",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "focusItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": true,
+                  "type": {
+                    "text": "SlTreeItem | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocusOut",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "FocusEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocusIn",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "FocusEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectionChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ selection: TreeItem[] }"
+              },
+              "description": "Emitted when a tree item is selected or deselected.",
+              "name": "sl-selection-change",
+              "reactName": "onSlSelectionChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "fieldName": "selection"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.",
+          "documentation": "https://shoelace.style/components/tree",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-tree",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTree",
+            "module": "components/tree/tree.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tree",
+          "declaration": {
+            "name": "SlTree",
+            "module": "components/tree/tree.js"
           }
         }
       ]

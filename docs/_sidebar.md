@@ -67,7 +67,6 @@
   - [Tree](/components/tree)
   - [Tree Item](/components/tree-item)
   - [Flex](/components/flex)
-  - [Autocomplete](/components/autocomplete)
   <!--plop:component-->
 
 - Utilities
