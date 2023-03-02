@@ -24,6 +24,39 @@
       "references": []
     },
     {
+      "name": "sl-alert",
+      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+          "values": []
+        },
+        {
+          "name": "closable",
+          "description": "Enables a close button that allows the user to dismiss the alert.",
+          "values": []
+        },
+        {
+          "name": "variant",
+          "description": "The alert's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "duration",
+          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
       "attributes": [
@@ -80,39 +113,6 @@
         {
           "name": "playback-rate",
           "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-alert",
-      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-          "values": []
-        },
-        {
-          "name": "closable",
-          "description": "Enables a close button that allows the user to dismiss the alert.",
-          "values": []
-        },
-        {
-          "name": "variant",
-          "description": "The alert's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "duration",
-          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
           "values": []
         }
       ],
@@ -965,12 +965,6 @@
       "references": []
     },
     {
-      "name": "sl-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-input",
       "description": "Inputs collect data from the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when an alteration to the control's value is committed by the user.\n- **sl-clear** - Emitted when the clear button is activated.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-input** - Emitted when the control receives input.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the input.\n- **blur()** - Removes focus from the input.\n- **select()** - Selects all the text in the input.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.\n- **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).\n- **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.\n- **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the input.\n- **suffix** - Used to append a presentational icon or similar element to the input.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **show-password-icon** - An icon to use in lieu of the default show password icon.\n- **hide-password-icon** - An icon to use in lieu of the default hide password icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` control.\n- **prefix** - The container that wraps the prefix.\n- **clear-button** - The clear button.\n- **password-toggle-button** - The password toggle button.\n- **suffix** - The container that wraps the suffix.",
       "attributes": [
@@ -1166,6 +1160,12 @@
           ]
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
       "references": []
     },
     {
@@ -1952,6 +1952,23 @@
       "references": []
     },
     {
+      "name": "sl-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-tab-group",
       "description": "Tab groups organize content into a container that shows one section at a time.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-tab-show** - Emitted when a tab is shown.\n- **sl-tab-hide** - Emitted when a tab is hidden.\n\n### **Methods:**\n - **show(panel: _string_)** - Shows the specified tab panel.\n\n### **Slots:**\n - _default_ - Used for grouping tab panels in the tab group. Must be `<sl-tab-panel>` elements.\n- **nav** - Used for grouping tabs in the tab group. Must be `<sl-tab>` elements.\n\n### **CSS Properties:**\n - **--indicator-color** - The color of the active tab indicator. _(default: undefined)_\n- **--track-color** - The color of the indicator's track (the line that separates tabs from panels). _(default: undefined)_\n- **--track-width** - The width of the indicator's track (the line that separates tabs from panels). _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **nav** - The tab group's navigation container where tabs are slotted in.\n- **tabs** - The container that wraps the tabs.\n- **active-tab-indicator** - The line that highlights the currently selected tab.\n- **body** - The tab group's body where tab panels are slotted in.\n- **scroll-button** - The previous/next scroll buttons that show when tabs are scrollable, an `<sl-icon-button>`.\n- **scroll-button--start** - The starting scroll button.\n- **scroll-button--end** - The ending scroll button.\n- **scroll-button__base** - The scroll button's exported `base` part.",
       "attributes": [
@@ -1973,23 +1990,6 @@
         {
           "name": "no-scroll-controls",
           "description": "Disables the scroll arrows that appear when tabs overflow.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
           "values": []
         }
       ],
