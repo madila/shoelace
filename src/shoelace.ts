@@ -55,6 +55,7 @@ export { default as SlTreeItem } from './components/tree-item/tree-item';
 export { default as SlVisuallyHidden } from './components/visually-hidden/visually-hidden';
 export { default as SlFlex } from './components/flex/flex';
 export { default as SlOption } from './components/option/option';
+export { default as SlAutocomplete } from './components/autocomplete/autocomplete';
 /* plop:component */
 
 // Utilities
