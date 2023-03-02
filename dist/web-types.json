@@ -150,6 +150,107 @@
           ]
         },
         {
+          "name": "sl-animated-image",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -417,215 +518,6 @@
           "attributes": []
         },
         {
-          "name": "sl-animated-image",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-breadcrumb",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/breadcrumb",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "separatorDir",
-                "value": {}
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "separatorSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "getSeparator",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-autocomplete",
           "description": "",
           "doc-url": "https://shoelace.style/components/autocomplete",
@@ -885,6 +777,114 @@
               "description": "The shape of the avatar.",
               "value": {
                 "type": "'circle' | 'square' | 'rounded'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-badge",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-breadcrumb",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/breadcrumb",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "separatorDir",
+                "value": {}
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "separatorSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "getSeparator",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": {
+                "type": "string"
               }
             }
           ]
@@ -1345,21 +1345,6 @@
           ]
         },
         {
-          "name": "sl-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-button-group",
           "description": "",
           "doc-url": "https://shoelace.style/components/button-group",
@@ -1416,6 +1401,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-checkbox",
@@ -3697,6 +3697,48 @@
           "attributes": []
         },
         {
+          "name": "sl-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "isMenuItem",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
+        },
+        {
           "name": "sl-input",
           "description": "",
           "doc-url": "https://shoelace.style/components/input",
@@ -4302,155 +4344,6 @@
           ]
         },
         {
-          "name": "sl-menu",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "isMenuItem",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
-          },
-          "attributes": []
-        },
-        {
-          "name": "sl-menu-item",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu-item",
-          "js": {
-            "properties": [
-              {
-                "name": "cachedTextLabel",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "menuItem",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "type",
-                "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-                "value": {
-                  "type": "'normal' | 'checkbox'"
-                }
-              },
-              {
-                "name": "checked",
-                "description": "Draws the item in a checked state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "value",
-                "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Draws the menu item in a disabled state, preventing selection.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleDefaultSlotChange",
-                "value": {}
-              },
-              {
-                "name": "handleCheckedChange",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              },
-              {
-                "name": "handleTypeChange",
-                "value": {}
-              },
-              {
-                "name": "getTextLabel",
-                "description": "Returns a text label based on the contents of the menu item's default slot.",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "type",
-              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-              "value": {
-                "type": "'normal' | 'checkbox'"
-              }
-            },
-            {
-              "name": "checked",
-              "description": "Draws the item in a checked state.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "value",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Draws the menu item in a disabled state, preventing selection.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-menu-label",
           "description": "",
           "doc-url": "https://shoelace.style/components/menu-label",
@@ -5044,6 +4937,113 @@
           ]
         },
         {
+          "name": "sl-menu-item",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu-item",
+          "js": {
+            "properties": [
+              {
+                "name": "cachedTextLabel",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "menuItem",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "type",
+                "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
+                "value": {
+                  "type": "'normal' | 'checkbox'"
+                }
+              },
+              {
+                "name": "checked",
+                "description": "Draws the item in a checked state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "value",
+                "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Draws the menu item in a disabled state, preventing selection.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleDefaultSlotChange",
+                "value": {}
+              },
+              {
+                "name": "handleCheckedChange",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              },
+              {
+                "name": "handleTypeChange",
+                "value": {}
+              },
+              {
+                "name": "getTextLabel",
+                "description": "Returns a text label based on the contents of the menu item's default slot.",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "type",
+              "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
+              "value": {
+                "type": "'normal' | 'checkbox'"
+              }
+            },
+            {
+              "name": "checked",
+              "description": "Draws the item in a checked state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "value",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Draws the menu item in a disabled state, preventing selection.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-progress-bar",
           "description": "",
           "doc-url": "https://shoelace.style/components/progress-bar",
@@ -5510,204 +5510,6 @@
           ]
         },
         {
-          "name": "sl-radio-group",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/radio-group",
-          "js": {
-            "properties": [
-              {
-                "name": "formControlController",
-                "value": {}
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "customValidityMessage",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "validationTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "validationInput",
-                "value": {
-                  "type": "HTMLInputElement"
-                }
-              },
-              {
-                "name": "hasButtonGroup",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "errorMessage",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "defaultValue",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "label",
-                "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "helpText",
-                "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "name",
-                "description": "The name of the radio group, submitted as a name/value pair with form data.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "form",
-                "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "required",
-                "description": "Ensures a child radio is checked before allowing the containing form to submit.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "getAllRadios",
-                "value": {}
-              },
-              {
-                "name": "handleRadioClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleLabelClick",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "updateCheckedRadio",
-                "value": {}
-              },
-              {
-                "name": "handleValueChange",
-                "value": {}
-              },
-              {
-                "name": "checkValidity",
-                "description": "Checks for validity but does not show the browser's validation message.",
-                "value": {}
-              },
-              {
-                "name": "setCustomValidity",
-                "description": "Sets a custom validation message. Pass an empty string to restore validity.",
-                "value": {}
-              },
-              {
-                "name": "reportValidity",
-                "description": "Checks for validity and shows the browser's validation message if the control is invalid.",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-change",
-                "description": "Emitted when the radio group's selected value changes."
-              },
-              {
-                "name": "sl-input",
-                "description": "Emitted when the radio group receives user input."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "label",
-              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "help-text",
-              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "name",
-              "description": "The name of the radio group, submitted as a name/value pair with form data.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "value",
-              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "form",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "required",
-              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-range",
           "description": "",
           "doc-url": "https://shoelace.style/components/range",
@@ -6024,217 +5826,6 @@
           ]
         },
         {
-          "name": "sl-rating",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/rating",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "rating",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "hoverValue",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "isHovering",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A label that describes the rating to assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The current rating.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "max",
-                "description": "The highest rating to show.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "precision",
-                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "readonly",
-                "description": "Makes the rating readonly.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the rating.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "getSymbol",
-                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-                "value": {
-                  "type": "(value: number) => string"
-                }
-              },
-              {
-                "name": "getValueFromMousePosition",
-                "value": {}
-              },
-              {
-                "name": "getValueFromTouchPosition",
-                "value": {}
-              },
-              {
-                "name": "getValueFromXCoordinate",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "setValue",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseEnter",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleMouseLeave",
-                "value": {}
-              },
-              {
-                "name": "handleTouchStart",
-                "value": {}
-              },
-              {
-                "name": "handleTouchMove",
-                "value": {}
-              },
-              {
-                "name": "handleTouchEnd",
-                "value": {}
-              },
-              {
-                "name": "roundToPrecision",
-                "value": {}
-              },
-              {
-                "name": "handleHoverValueChange",
-                "value": {}
-              },
-              {
-                "name": "handleIsHoveringChange",
-                "value": {}
-              },
-              {
-                "name": "focus",
-                "description": "Sets focus on the rating.",
-                "value": {}
-              },
-              {
-                "name": "blur",
-                "description": "Removes focus from the rating.",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-change",
-                "description": "Emitted when the rating's value changes."
-              },
-              {
-                "name": "sl-hover",
-                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "label",
-              "description": "A label that describes the rating to assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "value",
-              "description": "The current rating.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "max",
-              "description": "The highest rating to show.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "precision",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "readonly",
-              "description": "Makes the rating readonly.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Disables the rating.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "getSymbol",
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-              "value": {
-                "type": "(value: number) => string"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-relative-time",
           "description": "",
           "doc-url": "https://shoelace.style/components/relative-time",
@@ -6324,65 +5915,6 @@
             {
               "name": "sync",
               "description": "Keep the displayed value up to date as time passes.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-resize-observer",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/resize-observer",
-          "js": {
-            "properties": [
-              {
-                "name": "resizeObserver",
-                "value": {
-                  "type": "ResizeObserver"
-                }
-              },
-              {
-                "name": "observedElements",
-                "value": {
-                  "type": "HTMLElement[]"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the observer.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "startObserver",
-                "value": {}
-              },
-              {
-                "name": "stopObserver",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-resize",
-                "description": "Emitted when the element is resized."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "disabled",
-              "description": "Disables the observer.",
               "value": {
                 "type": "boolean"
               }
@@ -6893,6 +6425,204 @@
           ]
         },
         {
+          "name": "sl-radio-group",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/radio-group",
+          "js": {
+            "properties": [
+              {
+                "name": "formControlController",
+                "value": {}
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "customValidityMessage",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "validationTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "validationInput",
+                "value": {
+                  "type": "HTMLInputElement"
+                }
+              },
+              {
+                "name": "hasButtonGroup",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "errorMessage",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "defaultValue",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "label",
+                "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "helpText",
+                "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "name",
+                "description": "The name of the radio group, submitted as a name/value pair with form data.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "value",
+                "description": "The current value of the radio group, submitted as a name/value pair with form data.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "form",
+                "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "required",
+                "description": "Ensures a child radio is checked before allowing the containing form to submit.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "getAllRadios",
+                "value": {}
+              },
+              {
+                "name": "handleRadioClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleLabelClick",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "updateCheckedRadio",
+                "value": {}
+              },
+              {
+                "name": "handleValueChange",
+                "value": {}
+              },
+              {
+                "name": "checkValidity",
+                "description": "Checks for validity but does not show the browser's validation message.",
+                "value": {}
+              },
+              {
+                "name": "setCustomValidity",
+                "description": "Sets a custom validation message. Pass an empty string to restore validity.",
+                "value": {}
+              },
+              {
+                "name": "reportValidity",
+                "description": "Checks for validity and shows the browser's validation message if the control is invalid.",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-change",
+                "description": "Emitted when the radio group's selected value changes."
+              },
+              {
+                "name": "sl-input",
+                "description": "Emitted when the radio group receives user input."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "help-text",
+              "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "name",
+              "description": "The name of the radio group, submitted as a name/value pair with form data.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "value",
+              "description": "The current value of the radio group, submitted as a name/value pair with form data.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "form",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "required",
+              "description": "Ensures a child radio is checked before allowing the containing form to submit.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-skeleton",
           "description": "",
           "doc-url": "https://shoelace.style/components/skeleton",
@@ -6914,6 +6644,217 @@
               "description": "Determines which effect the skeleton will use.",
               "value": {
                 "type": "'pulse' | 'sheen' | 'none'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-rating",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/rating",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "rating",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "hoverValue",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "isHovering",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "label",
+                "description": "A label that describes the rating to assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "value",
+                "description": "The current rating.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "max",
+                "description": "The highest rating to show.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "precision",
+                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "readonly",
+                "description": "Makes the rating readonly.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the rating.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "getSymbol",
+                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+                "value": {
+                  "type": "(value: number) => string"
+                }
+              },
+              {
+                "name": "getValueFromMousePosition",
+                "value": {}
+              },
+              {
+                "name": "getValueFromTouchPosition",
+                "value": {}
+              },
+              {
+                "name": "getValueFromXCoordinate",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "setValue",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseEnter",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleMouseLeave",
+                "value": {}
+              },
+              {
+                "name": "handleTouchStart",
+                "value": {}
+              },
+              {
+                "name": "handleTouchMove",
+                "value": {}
+              },
+              {
+                "name": "handleTouchEnd",
+                "value": {}
+              },
+              {
+                "name": "roundToPrecision",
+                "value": {}
+              },
+              {
+                "name": "handleHoverValueChange",
+                "value": {}
+              },
+              {
+                "name": "handleIsHoveringChange",
+                "value": {}
+              },
+              {
+                "name": "focus",
+                "description": "Sets focus on the rating.",
+                "value": {}
+              },
+              {
+                "name": "blur",
+                "description": "Removes focus from the rating.",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-change",
+                "description": "Emitted when the rating's value changes."
+              },
+              {
+                "name": "sl-hover",
+                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "label",
+              "description": "A label that describes the rating to assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "value",
+              "description": "The current rating.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "max",
+              "description": "The highest rating to show.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "precision",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "readonly",
+              "description": "Makes the rating readonly.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the rating.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "getSymbol",
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+              "value": {
+                "type": "(value: number) => string"
               }
             }
           ]
@@ -7632,6 +7573,65 @@
           ]
         },
         {
+          "name": "sl-resize-observer",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/resize-observer",
+          "js": {
+            "properties": [
+              {
+                "name": "resizeObserver",
+                "value": {
+                  "type": "ResizeObserver"
+                }
+              },
+              {
+                "name": "observedElements",
+                "value": {
+                  "type": "HTMLElement[]"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the observer.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "startObserver",
+                "value": {}
+              },
+              {
+                "name": "stopObserver",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-resize",
+                "description": "Emitted when the element is resized."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "disabled",
+              "description": "Disables the observer.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-tag",
           "description": "",
           "doc-url": "https://shoelace.style/components/tag",
@@ -8226,6 +8226,123 @@
           ]
         },
         {
+          "name": "sl-tree",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tree",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "expandedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "collapsedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "selection",
+                "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+                "value": {
+                  "type": "'single' | 'multiple' | 'leaf'"
+                }
+              },
+              {
+                "name": "lastFocusedItem",
+                "value": {
+                  "type": "SlTreeItem"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "mutationObserver",
+                "value": {
+                  "type": "MutationObserver"
+                }
+              },
+              {
+                "name": "getExpandButtonIcon",
+                "value": {}
+              },
+              {
+                "name": "initTreeItem",
+                "value": {}
+              },
+              {
+                "name": "handleTreeChanged",
+                "value": {}
+              },
+              {
+                "name": "syncTreeItems",
+                "value": {}
+              },
+              {
+                "name": "selectItem",
+                "value": {}
+              },
+              {
+                "name": "getAllTreeItems",
+                "value": {}
+              },
+              {
+                "name": "focusItem",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleFocusOut",
+                "value": {}
+              },
+              {
+                "name": "handleFocusIn",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "handleSelectionChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-selection-change",
+                "description": "Emitted when a tree item is selected or deselected."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "selection",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "value": {
+                "type": "'single' | 'multiple' | 'leaf'"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-tooltip",
           "description": "",
           "doc-url": "https://shoelace.style/components/tooltip",
@@ -8440,123 +8557,6 @@
               "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all,\nscenarios.",
               "value": {
                 "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-tree",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tree",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "expandedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "collapsedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "selection",
-                "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-                "value": {
-                  "type": "'single' | 'multiple' | 'leaf'"
-                }
-              },
-              {
-                "name": "lastFocusedItem",
-                "value": {
-                  "type": "SlTreeItem"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "mutationObserver",
-                "value": {
-                  "type": "MutationObserver"
-                }
-              },
-              {
-                "name": "getExpandButtonIcon",
-                "value": {}
-              },
-              {
-                "name": "initTreeItem",
-                "value": {}
-              },
-              {
-                "name": "handleTreeChanged",
-                "value": {}
-              },
-              {
-                "name": "syncTreeItems",
-                "value": {}
-              },
-              {
-                "name": "selectItem",
-                "value": {}
-              },
-              {
-                "name": "getAllTreeItems",
-                "value": {}
-              },
-              {
-                "name": "focusItem",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleFocusOut",
-                "value": {}
-              },
-              {
-                "name": "handleFocusIn",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "handleSelectionChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-selection-change",
-                "description": "Emitted when a tree item is selected or deselected."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "selection",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "value": {
-                "type": "'single' | 'multiple' | 'leaf'"
               }
             }
           ]

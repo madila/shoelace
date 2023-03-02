@@ -35,6 +35,28 @@
       "references": []
     },
     {
+      "name": "sl-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
       "attributes": [
@@ -97,68 +119,6 @@
       "references": []
     },
     {
-      "name": "sl-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-badge",
-      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges.",
-          "values": []
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-breadcrumb",
-      "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-autocomplete",
       "description": "Autocompletes displays suggestions as you type.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The content that includes an input.\n- **empty-text** - The text or content that is displayed when there is no suggestion based on the input.\n- **lading-text** - The text or content that is displayed when the `loading` attribute evaluates to true.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **trigger** - The wrapper for the trigger slot.\n- **empty-text** - The empty text's wrapper.\n- **loading-test** - The loading text's wrapper.",
       "attributes": [
@@ -203,6 +163,46 @@
             { "name": "square" },
             { "name": "rounded" }
           ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-badge",
+      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-breadcrumb",
+      "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+          "values": []
         }
       ],
       "references": []
@@ -373,12 +373,6 @@
       "references": []
     },
     {
-      "name": "sl-card",
-      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-button-group",
       "description": "Button groups can be used to group related buttons into sections.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - One or more `<sl-button>` elements to display in the button group.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -388,6 +382,12 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-card",
+      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
+      "attributes": [],
       "references": []
     },
     {
@@ -978,6 +978,12 @@
       "references": []
     },
     {
+      "name": "sl-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
+      "references": []
+    },
+    {
       "name": "sl-input",
       "description": "Inputs collect data from the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when an alteration to the control's value is committed by the user.\n- **sl-clear** - Emitted when the clear button is activated.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-input** - Emitted when the control receives input.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the input.\n- **blur()** - Removes focus from the input.\n- **select()** - Selects all the text in the input.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.\n- **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).\n- **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.\n- **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the input.\n- **suffix** - Used to append a presentational icon or similar element to the input.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **show-password-icon** - An icon to use in lieu of the default show password icon.\n- **hide-password-icon** - An icon to use in lieu of the default hide password icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` control.\n- **prefix** - The container that wraps the prefix.\n- **clear-button** - The clear button.\n- **password-toggle-button** - The password toggle button.\n- **suffix** - The container that wraps the suffix.",
       "attributes": [
@@ -1171,39 +1177,6 @@
             { "name": "email" },
             { "name": "url" }
           ]
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
-      "references": []
-    },
-    {
-      "name": "sl-menu-item",
-      "description": "Menu items provide options for the user to pick from in a menu.\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a text label based on the contents of the menu item's default slot.\n\n### **Slots:**\n - _default_ - The menu item's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **checked-icon** - The checked icon, which is only visible when the menu item is checked.\n- **prefix** - The prefix container.\n- **label** - The menu item label.\n- **suffix** - The suffix container.",
-      "attributes": [
-        {
-          "name": "type",
-          "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-          "values": [{ "name": "normal" }, { "name": "checkbox" }]
-        },
-        {
-          "name": "checked",
-          "description": "Draws the item in a checked state.",
-          "values": []
-        },
-        {
-          "name": "value",
-          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Draws the menu item in a disabled state, preventing selection.",
-          "values": []
         }
       ],
       "references": []
@@ -1408,6 +1381,33 @@
       "references": []
     },
     {
+      "name": "sl-menu-item",
+      "description": "Menu items provide options for the user to pick from in a menu.\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a text label based on the contents of the menu item's default slot.\n\n### **Slots:**\n - _default_ - The menu item's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **checked-icon** - The checked icon, which is only visible when the menu item is checked.\n- **prefix** - The prefix container.\n- **label** - The menu item label.\n- **suffix** - The suffix container.",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
+          "values": [{ "name": "normal" }, { "name": "checkbox" }]
+        },
+        {
+          "name": "checked",
+          "description": "Draws the item in a checked state.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Draws the menu item in a disabled state, preventing selection.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-progress-bar",
       "description": "Progress bars are used to show the status of an ongoing operation.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - A label to show inside the progress indicator.\n\n### **CSS Properties:**\n - **--height** - The progress bar's height. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--label-color** - The color of the label. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The progress bar's indicator.\n- **label** - The progress bar's label.",
       "attributes": [
@@ -1551,43 +1551,6 @@
       "references": []
     },
     {
-      "name": "sl-radio-group",
-      "description": "Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-change** - Emitted when the radio group's selected value changes.\n- **sl-input** - Emitted when the radio group receives user input.\n\n### **Methods:**\n - **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **setCustomValidity(message)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **reportValidity(): _boolean_** - Checks for validity and shows the browser's validation message if the control is invalid.\n\n### **Slots:**\n - _default_ - The default slot where `<sl-radio>` or `<sl-radio-button>` elements are placed.\n- **label** - The radio group's label. Required for proper accessibility. Alternatively, you can use the `label` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **button-group** - The button group that wraps radio buttons.\n- **button-group__base** - The button group's `base` part.",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-          "values": []
-        },
-        {
-          "name": "help-text",
-          "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-          "values": []
-        },
-        {
-          "name": "name",
-          "description": "The name of the radio group, submitted as a name/value pair with form data.",
-          "values": []
-        },
-        {
-          "name": "value",
-          "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-          "values": []
-        },
-        {
-          "name": "form",
-          "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-          "values": []
-        },
-        {
-          "name": "required",
-          "description": "Ensures a child radio is checked before allowing the containing form to submit.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-range",
       "description": "Ranges allow the user to select a single value within a given range using a slider.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when an alteration to the control's value is committed by the user.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-input** - Emitted when the control receives input.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
       "attributes": [
@@ -1650,44 +1613,6 @@
       "references": []
     },
     {
-      "name": "sl-rating",
-      "description": "Ratings give users a way to quickly view and provide feedback.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "A label that describes the rating to assistive devices.",
-          "values": []
-        },
-        { "name": "value", "description": "The current rating.", "values": [] },
-        {
-          "name": "max",
-          "description": "The highest rating to show.",
-          "values": []
-        },
-        {
-          "name": "precision",
-          "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-          "values": []
-        },
-        {
-          "name": "readonly",
-          "description": "Makes the rating readonly.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the rating.",
-          "values": []
-        },
-        {
-          "name": "getSymbol",
-          "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
-          "values": [{ "name": "(value: number) => string" }]
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-relative-time",
       "description": "Outputs a localized time phrase relative to the current date and time.\n\n\n---\n\n\n",
       "attributes": [
@@ -1713,18 +1638,6 @@
         {
           "name": "sync",
           "description": "Keep the displayed value up to date as time passes.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-resize-observer",
-      "description": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-resize** - Emitted when the element is resized.\n\n### **Slots:**\n - _default_ - One or more elements to watch for resizing.",
-      "attributes": [
-        {
-          "name": "disabled",
-          "description": "Disables the observer.",
           "values": []
         }
       ],
@@ -1827,6 +1740,43 @@
       "references": []
     },
     {
+      "name": "sl-radio-group",
+      "description": "Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-change** - Emitted when the radio group's selected value changes.\n- **sl-input** - Emitted when the radio group receives user input.\n\n### **Methods:**\n - **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **setCustomValidity(message)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **reportValidity(): _boolean_** - Checks for validity and shows the browser's validation message if the control is invalid.\n\n### **Slots:**\n - _default_ - The default slot where `<sl-radio>` or `<sl-radio-button>` elements are placed.\n- **label** - The radio group's label. Required for proper accessibility. Alternatively, you can use the `label` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **button-group** - The button group that wraps radio buttons.\n- **button-group__base** - The button group's `base` part.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
+          "values": []
+        },
+        {
+          "name": "help-text",
+          "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "The name of the radio group, submitted as a name/value pair with form data.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "The current value of the radio group, submitted as a name/value pair with form data.",
+          "values": []
+        },
+        {
+          "name": "form",
+          "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "Ensures a child radio is checked before allowing the containing form to submit.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-skeleton",
       "description": "Skeletons are used to provide a visual representation of where content will eventually be drawn.\n\n\n---\n\n\n\n\n### **CSS Properties:**\n - **--border-radius** - The skeleton's border radius. _(default: undefined)_\n- **--color** - The color of the skeleton. _(default: undefined)_\n- **--sheen-color** - The sheen color when the skeleton is in its loading state. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The skeleton's indicator which is responsible for its color and animation.",
       "attributes": [
@@ -1838,6 +1788,44 @@
             { "name": "sheen" },
             { "name": "none" }
           ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-rating",
+      "description": "Ratings give users a way to quickly view and provide feedback.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-change** - Emitted when the rating's value changes.\n- **sl-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "A label that describes the rating to assistive devices.",
+          "values": []
+        },
+        { "name": "value", "description": "The current rating.", "values": [] },
+        {
+          "name": "max",
+          "description": "The highest rating to show.",
+          "values": []
+        },
+        {
+          "name": "precision",
+          "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+          "values": []
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the rating readonly.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the rating.",
+          "values": []
+        },
+        {
+          "name": "getSymbol",
+          "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<sl-icon>` elements.",
+          "values": [{ "name": "(value: number) => string" }]
         }
       ],
       "references": []
@@ -1986,6 +1974,18 @@
         {
           "name": "no-scroll-controls",
           "description": "Disables the scroll arrows that appear when tabs overflow.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-resize-observer",
+      "description": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-resize** - Emitted when the element is resized.\n\n### **Slots:**\n - _default_ - One or more elements to watch for resizing.",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables the observer.",
           "values": []
         }
       ],
@@ -2197,6 +2197,22 @@
       "references": []
     },
     {
+      "name": "sl-tree",
+      "description": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-selection-change** - Emitted when a tree item is selected or deselected.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded. Works best with `<sl-icon>`.\n- **collapse-icon** - The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--indent-size** - The size of the indentation for nested items. _(default: var(--sl-spacing-medium))_\n- **--indent-guide-color** - The color of the indentation line. _(default: var(--sl-color-neutral-200))_\n- **--indent-guide-offset** - The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position. _(default: 0)_\n- **--indent-guide-style** - The style of the indentation line, e.g. solid, dotted, dashed. _(default: solid)_\n- **--indent-guide-width** - The width of the indentation line. _(default: 0)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "selection",
+          "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+          "values": [
+            { "name": "single" },
+            { "name": "multiple" },
+            { "name": "leaf" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-tooltip",
       "description": "Tooltips display additional information based on a specific action.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the tooltip begins to show.\n- **sl-after-show** - Emitted after the tooltip has shown and all animations are complete.\n- **sl-hide** - Emitted when the tooltip begins to hide.\n- **sl-after-hide** - Emitted after the tooltip has hidden and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the tooltip.\n- **hide()** - Hides the tooltip\n\n### **Slots:**\n - _default_ - The tooltip's target element. Avoid slotting in more than one element, as subsequent ones will be ignored.\n- **content** - The content to render in the tooltip. Alternatively, you can use the `content` attribute.\n\n### **CSS Properties:**\n - **--max-width** - The maximum width of the tooltip before its content will wrap. _(default: undefined)_\n- **--hide-delay** - The amount of time to wait before hiding the tooltip when hovering. _(default: undefined)_\n- **--show-delay** - The amount of time to wait before showing the tooltip when hovering. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper, an `<sl-popup>` element.\n- **base__popup** - The popup's exported `popup` part. Use this to target the tooltip's popup container.\n- **base__arrow** - The popup's exported `arrow` part. Use this to target the tooltip's arrow.\n- **body** - The tooltip's body where its content is rendered.",
       "attributes": [
@@ -2253,22 +2269,6 @@
           "name": "hoist",
           "description": "Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with\n`overflow: auto|hidden|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all,\nscenarios.",
           "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-tree",
-      "description": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-selection-change** - Emitted when a tree item is selected or deselected.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded. Works best with `<sl-icon>`.\n- **collapse-icon** - The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--indent-size** - The size of the indentation for nested items. _(default: var(--sl-spacing-medium))_\n- **--indent-guide-color** - The color of the indentation line. _(default: var(--sl-color-neutral-200))_\n- **--indent-guide-offset** - The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position. _(default: 0)_\n- **--indent-guide-style** - The style of the indentation line, e.g. solid, dotted, dashed. _(default: solid)_\n- **--indent-guide-width** - The width of the indentation line. _(default: 0)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "selection",
-          "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-          "values": [
-            { "name": "single" },
-            { "name": "multiple" },
-            { "name": "leaf" }
-          ]
         }
       ],
       "references": []
