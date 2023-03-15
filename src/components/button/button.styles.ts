@@ -77,113 +77,113 @@ export default css`
   .button--standard.button--default {
     background-color: var(--sl-color-neutral-0);
     border-color: var(--sl-color-neutral-300);
-    color: var(--sl-color-neutral-700);
+    color: var(--sl-button-color-default);
   }
 
   .button--standard.button--default:hover:not(.button--disabled) {
     background-color: var(--sl-color-primary-50);
     border-color: var(--sl-color-primary-300);
-    color: var(--sl-color-primary-700);
+    color: var(--sl-button-color-default);
   }
 
   .button--standard.button--default:active:not(.button--disabled) {
     background-color: var(--sl-color-primary-100);
     border-color: var(--sl-color-primary-400);
-    color: var(--sl-color-primary-700);
+    color: var(--sl-button-color-default);
   }
 
   /* Primary */
   .button--standard.button--primary {
     background-color: var(--sl-color-primary-600);
     border-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-primary);
   }
 
   .button--standard.button--primary:hover:not(.button--disabled) {
     background-color: var(--sl-color-primary-500);
     border-color: var(--sl-color-primary-500);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-primary);
   }
 
   .button--standard.button--primary:active:not(.button--disabled) {
     background-color: var(--sl-color-primary-600);
     border-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-primary);
   }
 
   /* Success */
   .button--standard.button--success {
     background-color: var(--sl-color-success-600);
     border-color: var(--sl-color-success-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-success);
   }
 
   .button--standard.button--success:hover:not(.button--disabled) {
     background-color: var(--sl-color-success-500);
     border-color: var(--sl-color-success-500);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-success);
   }
 
   .button--standard.button--success:active:not(.button--disabled) {
     background-color: var(--sl-color-success-600);
     border-color: var(--sl-color-success-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-success);
   }
 
   /* Neutral */
   .button--standard.button--neutral {
     background-color: var(--sl-color-neutral-600);
     border-color: var(--sl-color-neutral-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-neutral);
   }
 
   .button--standard.button--neutral:hover:not(.button--disabled) {
     background-color: var(--sl-color-neutral-500);
     border-color: var(--sl-color-neutral-500);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-neutral);
   }
 
   .button--standard.button--neutral:active:not(.button--disabled) {
     background-color: var(--sl-color-neutral-600);
     border-color: var(--sl-color-neutral-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-neutral);
   }
 
   /* Warning */
   .button--standard.button--warning {
     background-color: var(--sl-color-warning-600);
     border-color: var(--sl-color-warning-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-warning);
   }
   .button--standard.button--warning:hover:not(.button--disabled) {
     background-color: var(--sl-color-warning-500);
     border-color: var(--sl-color-warning-500);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-warning);
   }
 
   .button--standard.button--warning:active:not(.button--disabled) {
     background-color: var(--sl-color-warning-600);
     border-color: var(--sl-color-warning-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-warning);
   }
 
   /* Danger */
   .button--standard.button--danger {
     background-color: var(--sl-color-danger-600);
     border-color: var(--sl-color-danger-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-danger);
   }
 
   .button--standard.button--danger:hover:not(.button--disabled) {
     background-color: var(--sl-color-danger-500);
     border-color: var(--sl-color-danger-500);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-danger);
   }
 
   .button--standard.button--danger:active:not(.button--disabled) {
     background-color: var(--sl-color-danger-600);
     border-color: var(--sl-color-danger-600);
-    color: var(--sl-color-neutral-0);
+    color: var(--sl-button-color-danger);
   }
 
   /*
@@ -317,25 +317,25 @@ export default css`
   .button--text {
     background-color: transparent;
     border-color: transparent;
-    color: var(--sl-color-primary-600);
+    color: var(--sl-button-color-text);
   }
 
   .button--text:hover:not(.button--disabled) {
     background-color: transparent;
     border-color: transparent;
-    color: var(--sl-color-primary-500);
+    color: var(--sl-button-color-text);
   }
 
   .button--text:focus-visible:not(.button--disabled) {
     background-color: transparent;
     border-color: transparent;
-    color: var(--sl-color-primary-500);
+    color: var(--sl-button-color-text);
   }
 
   .button--text:active:not(.button--disabled) {
     background-color: transparent;
     border-color: transparent;
-    color: var(--sl-color-primary-700);
+    color: var(--sl-button-color-text-disabled);
   }
 
   /*

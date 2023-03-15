@@ -14,107 +14,6 @@
     "html": {
       "elements": [
         {
-          "name": "sl-animated-image",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-alert",
           "description": "",
           "doc-url": "https://shoelace.style/components/alert",
@@ -247,6 +146,107 @@
               "name": "duration",
               "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
               "value": {}
+            }
+          ]
+        },
+        {
+          "name": "sl-animated-image",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": {
+                "type": "boolean"
+              }
             }
           ]
         },
@@ -518,6 +518,60 @@
           "attributes": []
         },
         {
+          "name": "sl-badge",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-avatar",
           "description": "",
           "doc-url": "https://shoelace.style/components/avatar",
@@ -659,60 +713,6 @@
               "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
               "value": {
                 "type": "string"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
               }
             }
           ]
@@ -1231,21 +1231,6 @@
           ]
         },
         {
-          "name": "sl-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-checkbox",
           "description": "",
           "doc-url": "https://shoelace.style/components/checkbox",
@@ -1474,6 +1459,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-color-picker",
@@ -7276,60 +7276,6 @@
           ]
         },
         {
-          "name": "sl-tab-panel",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tab-panel",
-          "js": {
-            "properties": [
-              {
-                "name": "attrId",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "componentId",
-                "value": {}
-              },
-              {
-                "name": "name",
-                "description": "The tab panel's name.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "active",
-                "description": "When true, the tab panel will be shown.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleActiveChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The tab panel's name.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "active",
-              "description": "When true, the tab panel will be shown.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-tab-group",
           "description": "",
           "doc-url": "https://shoelace.style/components/tab-group",
@@ -7507,6 +7453,60 @@
             {
               "name": "no-scroll-controls",
               "description": "Disables the scroll arrows that appear when tabs overflow.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-tab-panel",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tab-panel",
+          "js": {
+            "properties": [
+              {
+                "name": "attrId",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "componentId",
+                "value": {}
+              },
+              {
+                "name": "name",
+                "description": "The tab panel's name.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "active",
+                "description": "When true, the tab panel will be shown.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleActiveChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The tab panel's name.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "active",
+              "description": "When true, the tab panel will be shown.",
               "value": {
                 "type": "boolean"
               }

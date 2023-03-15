@@ -4,181 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "sl-load",
-              "reactName": "onSlLoad"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "sl-error",
-              "reactName": "onSlError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "documentation": "https://shoelace.style/components/animated-image",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-animated-image",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-animated-image",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/alert/alert.js",
       "declarations": [
         {
@@ -424,6 +249,181 @@
           "declaration": {
             "name": "SlAlert",
             "module": "components/alert/alert.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<sl-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<sl-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "sl-load",
+              "reactName": "onSlLoad"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "sl-error",
+              "reactName": "onSlError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "documentation": "https://shoelace.style/components/animated-image",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-animated-image",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-animated-image",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -832,6 +832,121 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "documentation": "https://shoelace.style/components/badge",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/avatar/avatar.js",
       "declarations": [
         {
@@ -1127,121 +1242,6 @@
           "declaration": {
             "name": "SlBreadcrumb",
             "module": "components/breadcrumb/breadcrumb.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "documentation": "https://shoelace.style/components/badge",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
           }
         }
       ]
@@ -2146,111 +2146,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/card/card.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for the card's edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of the card's borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for the card's sections.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the card's image.",
-              "name": "image"
-            },
-            {
-              "description": "The container that wraps the card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The container that wraps the card's main content.",
-              "name": "body"
-            },
-            {
-              "description": "The container that wraps the card's footer.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's main content.",
-              "name": ""
-            },
-            {
-              "description": "An optional header for the card.",
-              "name": "header"
-            },
-            {
-              "description": "An optional footer for the card.",
-              "name": "footer"
-            },
-            {
-              "description": "An optional image to render at the start of the card.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Cards can be used to group related subjects in a container.",
-          "documentation": "https://shoelace.style/components/card",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "components/card/card.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "components/card/card.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/checkbox/checkbox.js",
       "declarations": [
         {
@@ -2628,6 +2523,111 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "components/checkbox/checkbox.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/card/card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for the card's edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of the card's borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for the card's sections.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the card's image.",
+              "name": "image"
+            },
+            {
+              "description": "The container that wraps the card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The container that wraps the card's main content.",
+              "name": "body"
+            },
+            {
+              "description": "The container that wraps the card's footer.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's main content.",
+              "name": ""
+            },
+            {
+              "description": "An optional header for the card.",
+              "name": "header"
+            },
+            {
+              "description": "An optional footer for the card.",
+              "name": "footer"
+            },
+            {
+              "description": "An optional image to render at the start of the card.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Cards can be used to group related subjects in a container.",
+          "documentation": "https://shoelace.style/components/card",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "components/card/card.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "components/card/card.js"
           }
         }
       ]
@@ -13483,126 +13483,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/tab-panel/tab-panel.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTabPanel",
-          "cssProperties": [
-            {
-              "description": "The tab panel's padding.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tab panel's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "attrId",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "++id"
-            },
-            {
-              "kind": "field",
-              "name": "componentId",
-              "privacy": "private",
-              "default": "`sl-tab-panel-${this.attrId}`"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "attribute": "name",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "attribute": "active",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleActiveChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "fieldName": "name"
-            },
-            {
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "fieldName": "active"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
-          "documentation": "https://shoelace.style/components/tab-panel",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-tab-panel",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tab-panel",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/tab-group/tab-group.js",
       "declarations": [
         {
@@ -13981,6 +13861,126 @@
           "declaration": {
             "name": "SlTabGroup",
             "module": "components/tab-group/tab-group.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/tab-panel/tab-panel.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTabPanel",
+          "cssProperties": [
+            {
+              "description": "The tab panel's padding.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The tab panel's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "attrId",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "++id"
+            },
+            {
+              "kind": "field",
+              "name": "componentId",
+              "privacy": "private",
+              "default": "`sl-tab-panel-${this.attrId}`"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleActiveChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "fieldName": "name"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "fieldName": "active"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
+          "documentation": "https://shoelace.style/components/tab-panel",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-tab-panel",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tab-panel",
+          "declaration": {
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
           }
         }
       ]

@@ -1,7 +1,4 @@
 import {
-  animated_image_styles_default
-} from "./chunk.7YIQTKVU.js";
-import {
   watch
 } from "./chunk.VQ3XOPCT.js";
 import {
@@ -11,6 +8,9 @@ import {
   i,
   t
 } from "./chunk.2TGDKYZZ.js";
+import {
+  animated_image_styles_default
+} from "./chunk.7YIQTKVU.js";
 import {
   y
 } from "./chunk.CBCVEM3I.js";

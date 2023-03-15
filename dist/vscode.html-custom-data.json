@@ -2,28 +2,6 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "sl-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-alert",
       "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
       "attributes": [
@@ -51,6 +29,28 @@
         {
           "name": "duration",
           "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
           "values": []
         }
       ],
@@ -119,6 +119,34 @@
       "references": []
     },
     {
+      "name": "sl-badge",
+      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-avatar",
       "description": "Avatars are used to represent a person or object.\n\n\n---\n\n\n\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
       "attributes": [
@@ -161,34 +189,6 @@
         {
           "name": "label",
           "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-badge",
-      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges.",
-          "values": []
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention.",
           "values": []
         }
       ],
@@ -372,12 +372,6 @@
       "references": []
     },
     {
-      "name": "sl-card",
-      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-checkbox",
       "description": "Checkboxes allow the user to toggle an option on or off.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the checkbox loses focus.\n- **sl-change** - Emitted when the checked state changes.\n- **sl-focus** - Emitted when the checkbox gains focus.\n- **sl-input** - Emitted when the checkbox receives input.\n\n### **Methods:**\n - **click()** - Simulates a click on the checkbox.\n- **focus(options: _FocusOptions_)** - Sets focus on the checkbox.\n- **blur()** - Removes focus from the checkbox.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns true when valid and false when invalid.\n- **reportValidity()** - Checks for validity and shows a validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. The value provided will be shown to the user when the form is submitted. To clear\nthe custom validation message, call this method with an empty string.\n\n### **Slots:**\n - _default_ - The checkbox's label.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **control** - The square container that wraps the checkbox's checked state.\n- **control--checked** - Matches the control part when the checkbox is checked.\n- **control--indeterminate** - Matches the control part when the checkbox is indeterminate.\n- **checked-icon** - The checked icon, an `<sl-icon>` element.\n- **indeterminate-icon** - The indeterminate icon, an `<sl-icon>` element.\n- **label** - The container that wraps the checkbox's label.",
       "attributes": [
@@ -427,6 +421,12 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-card",
+      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
+      "attributes": [],
       "references": []
     },
     {
@@ -1952,23 +1952,6 @@
       "references": []
     },
     {
-      "name": "sl-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-tab-group",
       "description": "Tab groups organize content into a container that shows one section at a time.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-tab-show** - Emitted when a tab is shown.\n- **sl-tab-hide** - Emitted when a tab is hidden.\n\n### **Methods:**\n - **show(panel: _string_)** - Shows the specified tab panel.\n\n### **Slots:**\n - _default_ - Used for grouping tab panels in the tab group. Must be `<sl-tab-panel>` elements.\n- **nav** - Used for grouping tabs in the tab group. Must be `<sl-tab>` elements.\n\n### **CSS Properties:**\n - **--indicator-color** - The color of the active tab indicator. _(default: undefined)_\n- **--track-color** - The color of the indicator's track (the line that separates tabs from panels). _(default: undefined)_\n- **--track-width** - The width of the indicator's track (the line that separates tabs from panels). _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **nav** - The tab group's navigation container where tabs are slotted in.\n- **tabs** - The container that wraps the tabs.\n- **active-tab-indicator** - The line that highlights the currently selected tab.\n- **body** - The tab group's body where tab panels are slotted in.\n- **scroll-button** - The previous/next scroll buttons that show when tabs are scrollable, an `<sl-icon-button>`.\n- **scroll-button--start** - The starting scroll button.\n- **scroll-button--end** - The ending scroll button.\n- **scroll-button__base** - The scroll button's exported `base` part.",
       "attributes": [
@@ -1990,6 +1973,23 @@
         {
           "name": "no-scroll-controls",
           "description": "Disables the scroll arrows that appear when tabs overflow.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
           "values": []
         }
       ],

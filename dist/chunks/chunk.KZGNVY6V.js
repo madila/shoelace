@@ -1,6 +1,6 @@
 import {
   SlRadioButton
-} from "./chunk.X443CCNO.js";
+} from "./chunk.IYZN63OV.js";
 
 // src/react/radio-button/index.ts
 import * as React from "react";

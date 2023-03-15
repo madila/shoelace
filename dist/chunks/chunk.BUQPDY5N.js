@@ -1,6 +1,6 @@
 import {
   SlAnimation
-} from "./chunk.5QM3CMSZ.js";
+} from "./chunk.LNQE6LZX.js";
 
 // src/react/animation/index.ts
 import * as React from "react";
