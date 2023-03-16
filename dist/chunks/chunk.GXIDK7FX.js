@@ -1,6 +1,6 @@
 import {
   SlTextarea
-} from "./chunk.ITWOYPIW.js";
+} from "./chunk.VIOPGDXY.js";
 
 // src/react/textarea/index.ts
 import * as React from "react";

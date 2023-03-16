@@ -1,13 +1,13 @@
 import {
-  SlDrawer
-} from "./chunk.QGYHXUZQ.js";
+  SlDialog
+} from "./chunk.K57EC3XV.js";
 
-// src/react/drawer/index.ts
+// src/react/dialog/index.ts
 import * as React from "react";
 import { createComponent } from "@lit-labs/react";
-var drawer_default = createComponent({
-  tagName: "sl-drawer",
-  elementClass: SlDrawer,
+var dialog_default = createComponent({
+  tagName: "sl-dialog",
+  elementClass: SlDialog,
   react: React,
   events: {
     onSlShow: "sl-show",
@@ -20,5 +20,5 @@ var drawer_default = createComponent({
 });
 
 export {
-  drawer_default
+  dialog_default
 };

@@ -1,7 +1,7 @@
-import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import { html } from 'lit';
 import { watch } from '../../internal/watch';
+import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './flex.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -27,12 +27,12 @@ export default class SlFlex extends ShoelaceElement {
   /** An example property. */
   @property() direction = 'row';
   @property() gap = null;
+  @property() wrap = null;
   @property() alignItems = 'flex-start';
   @property() justify = 'flex-start';
 
   @watch('row')
   directionChanged() {
-    // Example event
     this.emit('sl-layout-direction-changed');
   }
 

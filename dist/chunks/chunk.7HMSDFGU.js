@@ -1,6 +1,6 @@
 import {
   SlButton
-} from "./chunk.6XQ2ZFMD.js";
+} from "./chunk.DGIS6OBP.js";
 
 // src/react/button/index.ts
 import * as React from "react";

@@ -59,6 +59,10 @@ export default css`
         margin-right: auto;
     }
 
+    :host([wrap]) .flex-container {
+        flex-wrap: wrap;
+    }
+
     :host([layout-contained="wide"]) {
         width: var(--layout-width-wide, 1200px);
     }

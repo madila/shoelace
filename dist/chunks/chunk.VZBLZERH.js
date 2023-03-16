@@ -1,6 +1,6 @@
 import {
   SlInput
-} from "./chunk.E4DTEJFP.js";
+} from "./chunk.VN5N3RJN.js";
 
 // src/react/input/index.ts
 import * as React from "react";

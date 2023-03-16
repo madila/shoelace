@@ -1,6 +1,6 @@
 import {
   flex_styles_default
-} from "./chunk.MUDGKIFZ.js";
+} from "./chunk.W73JONNG.js";
 import {
   watch
 } from "./chunk.VQ3XOPCT.js";
@@ -22,6 +22,7 @@ var SlFlex = class extends ShoelaceElement {
     super(...arguments);
     this.direction = "row";
     this.gap = null;
+    this.wrap = null;
     this.alignItems = "flex-start";
     this.justify = "flex-start";
   }
@@ -39,6 +40,9 @@ __decorateClass([
 __decorateClass([
   e2()
 ], SlFlex.prototype, "gap", 2);
+__decorateClass([
+  e2()
+], SlFlex.prototype, "wrap", 2);
 __decorateClass([
   e2()
 ], SlFlex.prototype, "alignItems", 2);

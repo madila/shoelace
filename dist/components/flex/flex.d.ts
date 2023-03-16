@@ -4,6 +4,7 @@ export default class SlFlex extends ShoelaceElement {
     static styles: CSSResultGroup;
     direction: string;
     gap: null;
+    wrap: null;
     alignItems: string;
     justify: string;
     directionChanged(): void;
