@@ -11,11 +11,11 @@ import {
   LocalizeController
 } from "./chunk.LLXYF66Q.js";
 import {
-  o as o2
-} from "./chunk.KGFCQ6E5.js";
-import {
   o
 } from "./chunk.3GBEUYH3.js";
+import {
+  o as o2
+} from "./chunk.KGFCQ6E5.js";
 import {
   watch
 } from "./chunk.VQ3XOPCT.js";

@@ -1,6 +1,6 @@
 import {
   SlFlex
-} from "./chunk.LTBUYXUT.js";
+} from "./chunk.46R6PB7F.js";
 
 // src/react/flex/index.ts
 import * as React from "react";

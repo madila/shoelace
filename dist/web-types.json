@@ -14,6 +14,243 @@
     "html": {
       "elements": [
         {
+          "name": "sl-alert",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/alert",
+          "js": {
+            "properties": [
+              {
+                "name": "autoHideTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "closable",
+                "description": "Enables a close button that allows the user to dismiss the alert.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "variant",
+                "description": "The alert's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "duration",
+                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+                "value": {}
+              },
+              {
+                "name": "restartAutoHide",
+                "value": {}
+              },
+              {
+                "name": "handleCloseClick",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              },
+              {
+                "name": "handleDurationChange",
+                "value": {}
+              },
+              {
+                "name": "show",
+                "description": "Shows the alert.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the alert",
+                "value": {}
+              },
+              {
+                "name": "toast",
+                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-show",
+                "description": "Emitted when the alert opens."
+              },
+              {
+                "name": "sl-after-show",
+                "description": "Emitted after the alert opens and all animations are complete."
+              },
+              {
+                "name": "sl-hide",
+                "description": "Emitted when the alert closes."
+              },
+              {
+                "name": "sl-after-hide",
+                "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "closable",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "variant",
+              "description": "The alert's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "duration",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "value": {}
+            }
+          ]
+        },
+        {
+          "name": "sl-animated-image",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -281,243 +518,6 @@
           "attributes": []
         },
         {
-          "name": "sl-animated-image",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-alert",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/alert",
-          "js": {
-            "properties": [
-              {
-                "name": "autoHideTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "closable",
-                "description": "Enables a close button that allows the user to dismiss the alert.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "variant",
-                "description": "The alert's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "duration",
-                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-                "value": {}
-              },
-              {
-                "name": "restartAutoHide",
-                "value": {}
-              },
-              {
-                "name": "handleCloseClick",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
-                "value": {}
-              },
-              {
-                "name": "handleDurationChange",
-                "value": {}
-              },
-              {
-                "name": "show",
-                "description": "Shows the alert.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the alert",
-                "value": {}
-              },
-              {
-                "name": "toast",
-                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-show",
-                "description": "Emitted when the alert opens."
-              },
-              {
-                "name": "sl-after-show",
-                "description": "Emitted after the alert opens and all animations are complete."
-              },
-              {
-                "name": "sl-hide",
-                "description": "Emitted when the alert closes."
-              },
-              {
-                "name": "sl-after-hide",
-                "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "open",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "closable",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "variant",
-              "description": "The alert's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "duration",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "value": {}
-            }
-          ]
-        },
-        {
           "name": "sl-avatar",
           "description": "",
           "doc-url": "https://shoelace.style/components/avatar",
@@ -610,60 +610,6 @@
           ]
         },
         {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-breadcrumb",
           "description": "",
           "doc-url": "https://shoelace.style/components/breadcrumb",
@@ -718,34 +664,30 @@
           ]
         },
         {
-          "name": "sl-breadcrumb-item",
+          "name": "sl-badge",
           "description": "",
-          "doc-url": "https://shoelace.style/components/breadcrumb-item",
+          "doc-url": "https://shoelace.style/components/badge",
           "js": {
             "properties": [
               {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "href",
-                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "name": "variant",
+                "description": "The badge's theme variant.",
                 "value": {
-                  "type": "string | undefined"
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
                 }
               },
               {
-                "name": "target",
-                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
                 "value": {
-                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                  "type": "boolean"
                 }
               },
               {
-                "name": "rel",
-                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
                 "value": {
-                  "type": "string"
+                  "type": "boolean"
                 }
               }
             ],
@@ -753,24 +695,24 @@
           },
           "attributes": [
             {
-              "name": "href",
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "name": "variant",
+              "description": "The badge's theme variant.",
               "value": {
-                "type": "string | undefined"
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
               }
             },
             {
-              "name": "target",
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
               "value": {
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                "type": "boolean"
               }
             },
             {
-              "name": "rel",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
               "value": {
-                "type": "string"
+                "type": "boolean"
               }
             }
           ]
@@ -1168,6 +1110,64 @@
               "description": "Used to override the form owner's `target` attribute.",
               "value": {
                 "type": "'_self' | '_blank' | '_parent' | '_top' | string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-breadcrumb-item",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/breadcrumb-item",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "href",
+                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "value": {
+                  "type": "string | undefined"
+                }
+              },
+              {
+                "name": "target",
+                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "value": {
+                  "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                }
+              },
+              {
+                "name": "rel",
+                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "value": {
+                  "type": "string"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "href",
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "value": {
+                "type": "string | undefined"
+              }
+            },
+            {
+              "name": "target",
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "value": {
+                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              }
+            },
+            {
+              "name": "rel",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "value": {
+                "type": "string"
               }
             }
           ]
@@ -3537,6 +3537,48 @@
           "attributes": []
         },
         {
+          "name": "sl-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "isMenuItem",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
+        },
+        {
           "name": "sl-input",
           "description": "",
           "doc-url": "https://shoelace.style/components/input",
@@ -4140,48 +4182,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "sl-menu",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "isMenuItem",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
-          },
-          "attributes": []
         },
         {
           "name": "sl-menu-item",
@@ -6759,21 +6759,6 @@
           ]
         },
         {
-          "name": "sl-spinner",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/spinner",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-split-panel",
           "description": "",
           "doc-url": "https://shoelace.style/components/split-panel",
@@ -6951,6 +6936,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-spinner",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/spinner",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-switch",

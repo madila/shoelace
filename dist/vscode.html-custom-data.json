@@ -2,6 +2,61 @@
   "version": 1.1,
   "tags": [
     {
+      "name": "sl-alert",
+      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+          "values": []
+        },
+        {
+          "name": "closable",
+          "description": "Enables a close button that allows the user to dismiss the alert.",
+          "values": []
+        },
+        {
+          "name": "variant",
+          "description": "The alert's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "duration",
+          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
       "attributes": [
@@ -64,61 +119,6 @@
       "references": []
     },
     {
-      "name": "sl-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-alert",
-      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-          "values": []
-        },
-        {
-          "name": "closable",
-          "description": "Enables a close button that allows the user to dismiss the alert.",
-          "values": []
-        },
-        {
-          "name": "variant",
-          "description": "The alert's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "duration",
-          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-avatar",
       "description": "Avatars are used to represent a person or object.\n\n\n---\n\n\n\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
       "attributes": [
@@ -155,6 +155,18 @@
       "references": []
     },
     {
+      "name": "sl-breadcrumb",
+      "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-badge",
       "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -177,45 +189,6 @@
         {
           "name": "pulse",
           "description": "Makes the badge pulsate to draw attention.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-breadcrumb",
-      "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "label",
-          "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-breadcrumb-item",
-      "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
-      "attributes": [
-        {
-          "name": "href",
-          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-          "values": []
-        },
-        {
-          "name": "target",
-          "description": "Tells the browser where to open the link. Only used when `href` is set.",
-          "values": [
-            { "name": "_blank" },
-            { "name": "_parent" },
-            { "name": "_self" },
-            { "name": "_top" }
-          ]
-        },
-        {
-          "name": "rel",
-          "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
           "values": []
         }
       ],
@@ -355,6 +328,33 @@
             { "name": "_parent" },
             { "name": "_top" }
           ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-breadcrumb-item",
+      "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+          "values": []
+        },
+        {
+          "name": "target",
+          "description": "Tells the browser where to open the link. Only used when `href` is set.",
+          "values": [
+            { "name": "_blank" },
+            { "name": "_parent" },
+            { "name": "_self" },
+            { "name": "_top" }
+          ]
+        },
+        {
+          "name": "rel",
+          "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+          "values": []
         }
       ],
       "references": []
@@ -966,6 +966,12 @@
       "references": []
     },
     {
+      "name": "sl-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
+      "references": []
+    },
+    {
       "name": "sl-input",
       "description": "Inputs collect data from the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when an alteration to the control's value is committed by the user.\n- **sl-clear** - Emitted when the clear button is activated.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-input** - Emitted when the control receives input.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the input.\n- **blur()** - Removes focus from the input.\n- **select()** - Selects all the text in the input.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.\n- **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).\n- **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.\n- **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show the browser's validation message.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the input.\n- **suffix** - Used to append a presentational icon or similar element to the input.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **show-password-icon** - An icon to use in lieu of the default show password icon.\n- **hide-password-icon** - An icon to use in lieu of the default hide password icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` control.\n- **prefix** - The container that wraps the prefix.\n- **clear-button** - The clear button.\n- **password-toggle-button** - The password toggle button.\n- **suffix** - The container that wraps the suffix.",
       "attributes": [
@@ -1161,12 +1167,6 @@
           ]
         }
       ],
-      "references": []
-    },
-    {
-      "name": "sl-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
       "references": []
     },
     {
@@ -1831,12 +1831,6 @@
       "references": []
     },
     {
-      "name": "sl-spinner",
-      "description": "Spinners are used to show the progress of an indeterminate operation.\n\n\n---\n\n\n\n\n### **CSS Properties:**\n - **--track-width** - The width of the track. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the spinner's indicator. _(default: undefined)_\n- **--speed** - The time it takes for the spinner to complete one animation cycle. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-split-panel",
       "description": "Split panels display two adjacent panels, allowing the user to reposition them.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-reposition** - Emitted when the divider's position changes.\n\n### **Slots:**\n - **start** - Content to place in the start panel.\n- **end** - Content to place in the end panel.\n- **divider** - The divider. Useful for slotting in a custom icon that renders as a handle.\n\n### **CSS Properties:**\n - **--divider-width** - The width of the visible divider. _(default: 4px)_\n- **--divider-hit-area** - The invisible region around the divider where dragging can occur. This is usually wider than the divider to facilitate easier dragging. _(default: 12px)_\n- **--min** - The minimum allowed size of the primary panel. _(default: 0)_\n- **--max** - The maximum allowed size of the primary panel. _(default: 100%)_\n\n### **CSS Parts:**\n - **start** - The start panel.\n- **end** - The end panel.\n- **panel** - Targets both the start and end panels.\n- **divider** - The divider that separates the start and end panels.",
       "attributes": [
@@ -1876,6 +1870,12 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-spinner",
+      "description": "Spinners are used to show the progress of an indeterminate operation.\n\n\n---\n\n\n\n\n### **CSS Properties:**\n - **--track-width** - The width of the track. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the spinner's indicator. _(default: undefined)_\n- **--speed** - The time it takes for the spinner to complete one animation cycle. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [],
       "references": []
     },
     {

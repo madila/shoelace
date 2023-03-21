@@ -1,6 +1,6 @@
 import {
   SlAlert
-} from "./chunk.2UPT7RXX.js";
+} from "./chunk.5A22EQV6.js";
 
 // src/react/alert/index.ts
 import * as React from "react";

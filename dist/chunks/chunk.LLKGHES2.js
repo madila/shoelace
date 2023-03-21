@@ -1,6 +1,6 @@
 import {
   SlRange
-} from "./chunk.RTM2JDAR.js";
+} from "./chunk.25NL4GA3.js";
 
 // src/react/range/index.ts
 import * as React from "react";

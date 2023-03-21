@@ -1,6 +1,6 @@
 import {
   SlBreadcrumbItem
-} from "./chunk.TTL6Z7IA.js";
+} from "./chunk.NNRVMOKM.js";
 
 // src/react/breadcrumb-item/index.ts
 import * as React from "react";

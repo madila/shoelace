@@ -1,7 +1,4 @@
 import {
-  avatar_styles_default
-} from "./chunk.VCGP3TIU.js";
-import {
   o
 } from "./chunk.KGFCQ6E5.js";
 import {
@@ -13,6 +10,9 @@ import {
   e2,
   t
 } from "./chunk.2TGDKYZZ.js";
+import {
+  avatar_styles_default
+} from "./chunk.VCGP3TIU.js";
 import {
   y
 } from "./chunk.CBCVEM3I.js";

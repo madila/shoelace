@@ -1,6 +1,6 @@
 import {
   SlRating
-} from "./chunk.VWNV24S4.js";
+} from "./chunk.6MA5OGCH.js";
 
 // src/react/rating/index.ts
 import * as React from "react";

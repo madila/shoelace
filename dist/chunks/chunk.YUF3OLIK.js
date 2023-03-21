@@ -34,7 +34,7 @@ var flex_styles_default = i`
   }
 
   :host([direction="column"]) .flex-container {
-    flex-direction: column;
+    flex-direction: var(--flex-direction, column);
     flex: 1;
   }
 
